@@ -1,0 +1,28 @@
+Jul 01 17:18:21 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 01 17:18:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 01 17:18:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 01 17:18:21 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 01 17:18:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 01 17:18:21 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 01 17:18:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 01 17:18:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 01 17:18:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 01 17:18:21 symfony [info] {sfWebDebugLogger} Configuration 178.34 ms (9)
+Jul 01 17:18:21 symfony [info] {sfWebDebugLogger} Factories 162.81 ms (1)
+Jul 01 17:18:21 symfony [info] {sfWebDebugLogger} Action "default/index" 0.44 ms (1)
+Jul 01 17:18:21 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 32.10 ms (1)
+Jul 01 17:18:22 symfony [info] {sfWebResponse} Send content (28557 o)
+Jul 01 17:20:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 01 17:20:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 01 17:20:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 01 17:20:18 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 01 17:20:18 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 01 17:20:18 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 01 17:20:18 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 01 17:20:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 01 17:20:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} Configuration 2.63 ms (9)
+Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} Factories 57.77 ms (1)
+Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} Action "default/index" 0.22 ms (1)
+Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 18.71 ms (1)
+Jul 01 17:20:18 symfony [info] {sfWebResponse} Send content (28554 o)
