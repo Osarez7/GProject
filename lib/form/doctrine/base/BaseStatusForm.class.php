@@ -15,12 +15,12 @@ abstract class BaseStatusForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'           => new sfWidgetFormInputHidden(),
+      'idStatus'     => new sfWidgetFormInputHidden(),
       'nombreStatus' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idStatus'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idStatus')), 'empty_value' => $this->getObject()->get('idStatus'), 'required' => false)),
       'nombreStatus' => new sfValidatorString(array('max_length' => 50)),
     ));
 

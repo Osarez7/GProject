@@ -15,15 +15,13 @@ abstract class BaseGrupo_UsuarioForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                => new sfWidgetFormInputHidden(),
-      'usuario_idUsuario' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'), 'add_empty' => false)),
-      'grupo_idGrupo'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
+      'usuario_idUsuario' => new sfWidgetFormInputHidden(),
+      'grupo_idGrupo'     => new sfWidgetFormInputHidden(),
     ));
 
     $this->setValidators(array(
-      'id'                => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'usuario_idUsuario' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'))),
-      'grupo_idGrupo'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),
+      'usuario_idUsuario' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_idUsuario')), 'empty_value' => $this->getObject()->get('usuario_idUsuario'), 'required' => false)),
+      'grupo_idGrupo'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('grupo_idGrupo')), 'empty_value' => $this->getObject()->get('grupo_idGrupo'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('grupo_usuario[%s]');

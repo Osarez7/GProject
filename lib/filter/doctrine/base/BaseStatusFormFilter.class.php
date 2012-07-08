@@ -37,7 +37,7 @@ abstract class BaseStatusFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'           => 'Number',
+      'idStatus'     => 'Number',
       'nombreStatus' => 'Text',
     );
   }

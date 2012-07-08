@@ -15,7 +15,7 @@ abstract class BaseRegistro_Estado_ProyectoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                  => new sfWidgetFormInputHidden(),
+      'idRegistroProyecto'  => new sfWidgetFormInputHidden(),
       'fecha_cambio_estado' => new sfWidgetFormDateTime(),
       'status_idStatus'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
       'proyecto_idProyecto' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
@@ -24,7 +24,7 @@ abstract class BaseRegistro_Estado_ProyectoForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idRegistroProyecto'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idRegistroProyecto')), 'empty_value' => $this->getObject()->get('idRegistroProyecto'), 'required' => false)),
       'fecha_cambio_estado' => new sfValidatorDateTime(),
       'status_idStatus'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
       'proyecto_idProyecto' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),

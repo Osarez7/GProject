@@ -13,27 +13,27 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'tipo_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tipo_usuario'), 'add_empty' => true)),
-      'usr_nombre'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'usr_apellido1' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'usr_apellido2' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'email'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'usr_nick'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'password'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'created_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'updated_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'tipo_idTipoUsuario' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tipo_usuario'), 'add_empty' => true)),
+      'usr_nombre'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'usr_apellido1'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'usr_apellido2'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'email'              => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'usr_nick'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'password'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'created_at'         => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'updated_at'         => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'tipo_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tipo_usuario'), 'column' => 'id')),
-      'usr_nombre'    => new sfValidatorPass(array('required' => false)),
-      'usr_apellido1' => new sfValidatorPass(array('required' => false)),
-      'usr_apellido2' => new sfValidatorPass(array('required' => false)),
-      'email'         => new sfValidatorPass(array('required' => false)),
-      'usr_nick'      => new sfValidatorPass(array('required' => false)),
-      'password'      => new sfValidatorPass(array('required' => false)),
-      'created_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'updated_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'tipo_idTipoUsuario' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tipo_usuario'), 'column' => 'idTipoUsuario')),
+      'usr_nombre'         => new sfValidatorPass(array('required' => false)),
+      'usr_apellido1'      => new sfValidatorPass(array('required' => false)),
+      'usr_apellido2'      => new sfValidatorPass(array('required' => false)),
+      'email'              => new sfValidatorPass(array('required' => false)),
+      'usr_nick'           => new sfValidatorPass(array('required' => false)),
+      'password'           => new sfValidatorPass(array('required' => false)),
+      'created_at'         => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'updated_at'         => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_filters[%s]');
@@ -53,16 +53,16 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'            => 'Number',
-      'tipo_id'       => 'ForeignKey',
-      'usr_nombre'    => 'Text',
-      'usr_apellido1' => 'Text',
-      'usr_apellido2' => 'Text',
-      'email'         => 'Text',
-      'usr_nick'      => 'Text',
-      'password'      => 'Text',
-      'created_at'    => 'Date',
-      'updated_at'    => 'Date',
+      'idUsuario'          => 'Number',
+      'tipo_idTipoUsuario' => 'ForeignKey',
+      'usr_nombre'         => 'Text',
+      'usr_apellido1'      => 'Text',
+      'usr_apellido2'      => 'Text',
+      'email'              => 'Text',
+      'usr_nick'           => 'Text',
+      'password'           => 'Text',
+      'created_at'         => 'Date',
+      'updated_at'         => 'Date',
     );
   }
 }

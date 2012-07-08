@@ -15,7 +15,7 @@ abstract class BaseRelacion_TareaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                   => new sfWidgetFormInputHidden(),
+      'idRelacionTarea'      => new sfWidgetFormInputHidden(),
       'fecha_relacion'       => new sfWidgetFormDateTime(),
       'tareaOrigen_idTarea'  => new sfWidgetFormInputText(),
       'tareaDestino_idTarea' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
@@ -25,7 +25,7 @@ abstract class BaseRelacion_TareaForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idRelacionTarea'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idRelacionTarea')), 'empty_value' => $this->getObject()->get('idRelacionTarea'), 'required' => false)),
       'fecha_relacion'       => new sfValidatorDateTime(),
       'tareaOrigen_idTarea'  => new sfValidatorInteger(),
       'tareaDestino_idTarea' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),

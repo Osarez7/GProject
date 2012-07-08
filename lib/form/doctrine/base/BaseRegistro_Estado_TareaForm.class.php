@@ -15,7 +15,7 @@ abstract class BaseRegistro_Estado_TareaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                  => new sfWidgetFormInputHidden(),
+      'idRegistroTarea'     => new sfWidgetFormInputHidden(),
       'fecha_cambio_estado' => new sfWidgetFormDateTime(),
       'status_idStatus'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
       'tarea_idTarea'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
@@ -24,7 +24,7 @@ abstract class BaseRegistro_Estado_TareaForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idRegistroTarea'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idRegistroTarea')), 'empty_value' => $this->getObject()->get('idRegistroTarea'), 'required' => false)),
       'fecha_cambio_estado' => new sfValidatorDateTime(),
       'status_idStatus'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
       'tarea_idTarea'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),

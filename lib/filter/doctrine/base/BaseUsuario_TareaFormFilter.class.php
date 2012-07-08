@@ -13,13 +13,9 @@ abstract class BaseUsuario_TareaFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'usuario_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'), 'add_empty' => true)),
-      'tarea_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'usuario_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Usuario'), 'column' => 'id')),
-      'tarea_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_tarea_filters[%s]');
@@ -39,9 +35,8 @@ abstract class BaseUsuario_TareaFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'         => 'Number',
-      'usuario_id' => 'ForeignKey',
-      'tarea_id'   => 'ForeignKey',
+      'usuario_id' => 'Number',
+      'tarea_id'   => 'Number',
     );
   }
 }

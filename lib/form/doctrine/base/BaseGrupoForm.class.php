@@ -15,13 +15,13 @@ abstract class BaseGrupoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'          => new sfWidgetFormInputHidden(),
+      'idGrupo'     => new sfWidgetFormInputHidden(),
       'nombreGrupo' => new sfWidgetFormInputText(),
       'descGrupo'   => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idGrupo'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idGrupo')), 'empty_value' => $this->getObject()->get('idGrupo'), 'required' => false)),
       'nombreGrupo' => new sfValidatorString(array('max_length' => 50)),
       'descGrupo'   => new sfValidatorString(array('max_length' => 200)),
     ));

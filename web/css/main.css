@@ -1,0 +1,15 @@
+#conteiner{
+    width: 80%;
+   margin: auto;     
+}
+
+
+#header{
+ background: #007A6D ;   
+  height: 40px;
+}
+
+#footer{
+     background: #0B2E56;  
+     height: 200px; 
+}

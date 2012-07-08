@@ -37,7 +37,7 @@ abstract class BasePrioridadFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'              => 'Number',
+      'idPrioridad'     => 'Number',
       'nombrePrioridad' => 'Text',
     );
   }

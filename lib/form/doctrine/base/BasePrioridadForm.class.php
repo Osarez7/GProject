@@ -15,12 +15,12 @@ abstract class BasePrioridadForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'              => new sfWidgetFormInputHidden(),
+      'idPrioridad'     => new sfWidgetFormInputHidden(),
       'nombrePrioridad' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idPrioridad'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPrioridad')), 'empty_value' => $this->getObject()->get('idPrioridad'), 'required' => false)),
       'nombrePrioridad' => new sfValidatorString(array('max_length' => 50)),
     ));
 

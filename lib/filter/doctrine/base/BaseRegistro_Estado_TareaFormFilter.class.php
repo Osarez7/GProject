@@ -22,8 +22,8 @@ abstract class BaseRegistro_Estado_TareaFormFilter extends BaseFormFilterDoctrin
 
     $this->setValidators(array(
       'fecha_cambio_estado' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'status_idStatus'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Status'), 'column' => 'id')),
-      'tarea_idTarea'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'id')),
+      'status_idStatus'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Status'), 'column' => 'idStatus')),
+      'tarea_idTarea'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'idTarea')),
       'created_at'          => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'          => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -45,7 +45,7 @@ abstract class BaseRegistro_Estado_TareaFormFilter extends BaseFormFilterDoctrin
   public function getFields()
   {
     return array(
-      'id'                  => 'Number',
+      'idRegistroTarea'     => 'Number',
       'fecha_cambio_estado' => 'Date',
       'status_idStatus'     => 'ForeignKey',
       'tarea_idTarea'       => 'ForeignKey',

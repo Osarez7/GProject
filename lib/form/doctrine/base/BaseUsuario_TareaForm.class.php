@@ -15,15 +15,13 @@ abstract class BaseUsuario_TareaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'usuario_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'), 'add_empty' => false)),
-      'tarea_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
+      'usuario_id' => new sfWidgetFormInputHidden(),
+      'tarea_id'   => new sfWidgetFormInputHidden(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'usuario_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'))),
-      'tarea_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),
+      'usuario_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_id')), 'empty_value' => $this->getObject()->get('usuario_id'), 'required' => false)),
+      'tarea_id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('tarea_id')), 'empty_value' => $this->getObject()->get('tarea_id'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_tarea[%s]');

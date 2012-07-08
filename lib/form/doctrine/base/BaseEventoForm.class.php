@@ -15,7 +15,7 @@ abstract class BaseEventoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                  => new sfWidgetFormInputHidden(),
+      'idEvento'            => new sfWidgetFormInputHidden(),
       'fechaEvento'         => new sfWidgetFormDateTime(),
       'nombreEvento'        => new sfWidgetFormInputText(),
       'descEvento'          => new sfWidgetFormInputText(),
@@ -25,7 +25,7 @@ abstract class BaseEventoForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idEvento'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idEvento')), 'empty_value' => $this->getObject()->get('idEvento'), 'required' => false)),
       'fechaEvento'         => new sfValidatorDateTime(),
       'nombreEvento'        => new sfValidatorString(array('max_length' => 50)),
       'descEvento'          => new sfValidatorString(array('max_length' => 200)),

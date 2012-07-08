@@ -26,3 +26,479 @@ Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} Factories 57.77 ms (1)
 Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} Action "default/index" 0.22 ms (1)
 Jul 01 17:20:18 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 18.71 ms (1)
 Jul 01 17:20:18 symfony [info] {sfWebResponse} Send content (28554 o)
+Jul 02 21:03:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 02 21:03:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 02 21:03:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 02 21:03:31 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 02 21:03:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 02 21:03:31 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 02 21:03:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 02 21:03:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 02 21:03:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 02 21:03:31 symfony [info] {sfWebDebugLogger} Configuration 2.59 ms (9)
+Jul 02 21:03:31 symfony [info] {sfWebDebugLogger} Factories 58.00 ms (1)
+Jul 02 21:03:31 symfony [info] {sfWebDebugLogger} Action "default/index" 0.22 ms (1)
+Jul 02 21:03:31 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 19.06 ms (1)
+Jul 02 21:03:31 symfony [info] {sfWebResponse} Send content (28553 o)
+Jul 03 21:17:41 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:17:41 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:17:41 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:17:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:17:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:17:41 symfony [info] {sfWebDebugLogger} Configuration 3.22 ms (5)
+Jul 03 21:17:41 symfony [info] {sfWebDebugLogger} Factories 251.98 ms (1)
+Jul 03 21:19:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:19:18 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:19:18 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:19:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:19:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:19:18 symfony [info] {sfWebDebugLogger} Configuration 1.45 ms (5)
+Jul 03 21:19:18 symfony [info] {sfWebDebugLogger} Factories 60.37 ms (1)
+Jul 03 21:19:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:19:20 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:19:20 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:19:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:19:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:19:20 symfony [info] {sfWebDebugLogger} Configuration 1.37 ms (5)
+Jul 03 21:19:20 symfony [info] {sfWebDebugLogger} Factories 54.74 ms (1)
+Jul 03 21:20:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:20:48 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:20:48 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:20:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:20:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:20:48 symfony [info] {sfWebDebugLogger} Configuration 1.39 ms (5)
+Jul 03 21:20:48 symfony [info] {sfWebDebugLogger} Factories 62.35 ms (1)
+Jul 03 21:20:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:20:50 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:20:50 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:20:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:20:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:20:50 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (5)
+Jul 03 21:20:50 symfony [info] {sfWebDebugLogger} Factories 54.69 ms (1)
+Jul 03 21:21:09 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 03 21:21:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 03 21:21:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 03 21:21:10 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 03 21:21:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 03 21:21:10 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 03 21:21:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 03 21:21:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 03 21:21:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:21:10 symfony [info] {sfWebDebugLogger} Configuration 3.87 ms (9)
+Jul 03 21:21:10 symfony [info] {sfWebDebugLogger} Factories 59.44 ms (1)
+Jul 03 21:21:10 symfony [info] {sfWebDebugLogger} Action "default/index" 0.40 ms (1)
+Jul 03 21:21:10 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 91.82 ms (1)
+Jul 03 21:21:10 symfony [info] {sfWebResponse} Send content (28548 o)
+Jul 03 21:21:14 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:21:14 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:21:14 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:21:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:21:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:21:14 symfony [info] {sfWebDebugLogger} Configuration 1.38 ms (5)
+Jul 03 21:21:14 symfony [info] {sfWebDebugLogger} Factories 54.70 ms (1)
+Jul 03 21:24:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 03 21:24:09 symfony [info] {sfFrontWebController} Action "job/index" does not exist
+Jul 03 21:24:09 symfony [err] {sfError404Exception} Action "job/index" does not exist.
+Jul 03 21:24:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 03 21:24:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 03 21:24:09 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (5)
+Jul 03 21:24:09 symfony [info] {sfWebDebugLogger} Factories 59.99 ms (1)
+Jul 07 11:11:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 07 11:11:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 11:11:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 11:11:00 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 07 11:11:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 07 11:11:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:11:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:11:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 11:11:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 11:11:00 symfony [info] {sfWebDebugLogger} Configuration 3.61 ms (9)
+Jul 07 11:11:00 symfony [info] {sfWebDebugLogger} Factories 113.23 ms (1)
+Jul 07 11:11:00 symfony [info] {sfWebDebugLogger} Action "default/index" 1.39 ms (1)
+Jul 07 11:11:00 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 28.00 ms (1)
+Jul 07 11:11:00 symfony [info] {sfWebResponse} Send content (28274 o)
+Jul 07 11:26:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 07 11:26:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 11:26:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 11:26:59 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 07 11:26:59 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 07 11:27:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:27:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:27:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 11:27:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 11:27:00 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 07 11:27:00 symfony [info] {sfWebDebugLogger} Factories 58.67 ms (1)
+Jul 07 11:27:00 symfony [info] {sfWebDebugLogger} Action "default/index" 0.52 ms (1)
+Jul 07 11:27:00 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 37.67 ms (1)
+Jul 07 11:27:00 symfony [info] {sfWebResponse} Send content (28554 o)
+Jul 07 11:55:09 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 07 11:55:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 11:55:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 11:55:10 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 07 11:55:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 07 11:55:10 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:55:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 11:55:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 11:55:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 11:55:10 symfony [info] {sfWebDebugLogger} Configuration 5.30 ms (9)
+Jul 07 11:55:10 symfony [info] {sfWebDebugLogger} Factories 1479.36 ms (1)
+Jul 07 11:55:10 symfony [info] {sfWebDebugLogger} Action "default/index" 0.39 ms (1)
+Jul 07 11:55:10 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 204.52 ms (1)
+Jul 07 11:55:10 symfony [info] {sfWebResponse} Send content (28557 o)
+Jul 07 13:50:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 13:50:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 13:50:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 13:50:29 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 13:50:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 13:50:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 13:50:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 13:50:29 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:50:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:50:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 13:50:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 13:50:29 symfony [info] {sfWebDebugLogger} Configuration 33.10 ms (10)
+Jul 07 13:50:29 symfony [info] {sfWebDebugLogger} Factories 56.58 ms (1)
+Jul 07 13:50:29 symfony [info] {sfWebDebugLogger} Action "tarea/index" 63.51 ms (1)
+Jul 07 13:50:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 13:50:29 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 22.47 ms (1)
+Jul 07 13:50:29 symfony [info] {sfWebResponse} Send content (31521 o)
+Jul 07 13:50:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/new with parameters array (  'module' => 'tarea',  'action' => 'new',)
+Jul 07 13:50:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 13:50:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 13:50:38 symfony [info] {tareaActions} Call "tareaActions->executeNew()"
+Jul 07 13:50:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/newSuccess.php"
+Jul 07 13:50:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/_form.php"
+Jul 07 13:50:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 13:50:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 07 13:50:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 07 13:50:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT g.idgrupo AS g__idgrupo, g.nombregrupo AS g__nombregrupo, g.descgrupo AS g__descgrupo FROM grupo g - ()
+Jul 07 13:50:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.fecha_cracion AS p__fecha_cracion, p.fecha_actualizacion AS p__fecha_actualizacion, p.descproyecto AS p__descproyecto, p.status_idstatus AS p__status_idstatus, p.prioridad_idprioridad AS p__prioridad_idprioridad, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM proyecto p - ()
+Jul 07 13:50:38 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:50:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:50:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 13:50:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (9)
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} Factories 62.55 ms (1)
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} Action "tarea/new" 72.86 ms (1)
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/new" 190.14 ms (1)
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} Partial "tarea/_form" 171.29 ms (1)
+Jul 07 13:50:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (5)
+Jul 07 13:50:38 symfony [info] {sfWebResponse} Send content (63803 o)
+Jul 07 13:54:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/new with parameters array (  'module' => 'tarea',  'action' => 'new',)
+Jul 07 13:54:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 13:54:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 13:54:15 symfony [info] {tareaActions} Call "tareaActions->executeNew()"
+Jul 07 13:54:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/newSuccess.php"
+Jul 07 13:54:15 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/_form.php"
+Jul 07 13:54:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 13:54:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 07 13:54:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 07 13:54:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT g.idgrupo AS g__idgrupo, g.nombregrupo AS g__nombregrupo, g.descgrupo AS g__descgrupo FROM grupo g - ()
+Jul 07 13:54:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.fecha_cracion AS p__fecha_cracion, p.fecha_actualizacion AS p__fecha_actualizacion, p.descproyecto AS p__descproyecto, p.status_idstatus AS p__status_idstatus, p.prioridad_idprioridad AS p__prioridad_idprioridad, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM proyecto p - ()
+Jul 07 13:54:15 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:54:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:54:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 13:54:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} Configuration 190.13 ms (9)
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} Factories 150.62 ms (1)
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} Action "tarea/new" 61.79 ms (1)
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/new" 161.66 ms (1)
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} Partial "tarea/_form" 139.19 ms (1)
+Jul 07 13:54:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (5)
+Jul 07 13:54:15 symfony [info] {sfWebResponse} Send content (63574 o)
+Jul 07 13:56:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/new with parameters array (  'module' => 'tarea',  'action' => 'new',)
+Jul 07 13:56:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 13:56:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 13:56:16 symfony [info] {tareaActions} Call "tareaActions->executeNew()"
+Jul 07 13:56:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/newSuccess.php"
+Jul 07 13:56:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/_form.php"
+Jul 07 13:56:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 13:56:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 07 13:56:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 07 13:56:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT g.idgrupo AS g__idgrupo, g.nombregrupo AS g__nombregrupo, g.descgrupo AS g__descgrupo FROM grupo g - ()
+Jul 07 13:56:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.fecha_cracion AS p__fecha_cracion, p.fecha_actualizacion AS p__fecha_actualizacion, p.descproyecto AS p__descproyecto, p.status_idstatus AS p__status_idstatus, p.prioridad_idprioridad AS p__prioridad_idprioridad, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM proyecto p - ()
+Jul 07 13:56:17 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:56:17 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 13:56:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 13:56:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} Factories 56.55 ms (1)
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} Action "tarea/new" 64.38 ms (1)
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/new" 149.28 ms (1)
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} Partial "tarea/_form" 129.60 ms (1)
+Jul 07 13:56:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (5)
+Jul 07 13:56:17 symfony [info] {sfWebResponse} Send content (63415 o)
+Jul 07 14:42:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 14:42:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 14:42:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 14:42:53 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 14:42:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 14:42:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 14:42:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 14:42:53 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:42:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:42:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 14:42:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 14:42:53 symfony [info] {sfWebDebugLogger} Configuration 2.80 ms (9)
+Jul 07 14:42:53 symfony [info] {sfWebDebugLogger} Factories 59.66 ms (1)
+Jul 07 14:42:53 symfony [info] {sfWebDebugLogger} Action "tarea/index" 71.48 ms (1)
+Jul 07 14:42:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 14:42:53 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 18.98 ms (1)
+Jul 07 14:42:53 symfony [info] {sfWebResponse} Send content (31518 o)
+Jul 07 14:53:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 14:53:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 14:53:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 14:53:45 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 14:53:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 14:53:45 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 14:53:45 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 14:53:45 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:53:45 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:53:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 14:53:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 14:53:45 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 07 14:53:45 symfony [info] {sfWebDebugLogger} Factories 57.83 ms (1)
+Jul 07 14:53:45 symfony [info] {sfWebDebugLogger} Action "tarea/index" 63.62 ms (1)
+Jul 07 14:53:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 14:53:45 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 18.42 ms (1)
+Jul 07 14:53:45 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 14:58:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/new with parameters array (  'module' => 'tarea',  'action' => 'new',)
+Jul 07 14:58:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 14:58:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 14:58:22 symfony [info] {tareaActions} Call "tareaActions->executeNew()"
+Jul 07 14:58:22 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/newSuccess.php"
+Jul 07 14:58:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/_form.php"
+Jul 07 14:58:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 14:58:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 07 14:58:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 07 14:58:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT g.idgrupo AS g__idgrupo, g.nombregrupo AS g__nombregrupo, g.descgrupo AS g__descgrupo FROM grupo g - ()
+Jul 07 14:58:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.fecha_cracion AS p__fecha_cracion, p.fecha_actualizacion AS p__fecha_actualizacion, p.descproyecto AS p__descproyecto, p.status_idstatus AS p__status_idstatus, p.prioridad_idprioridad AS p__prioridad_idprioridad, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM proyecto p - ()
+Jul 07 14:58:22 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:58:22 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 14:58:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 14:58:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} Configuration 2.67 ms (9)
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} Factories 52.92 ms (1)
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} Action "tarea/new" 102.75 ms (1)
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/new" 182.40 ms (1)
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} Partial "tarea/_form" 164.37 ms (1)
+Jul 07 14:58:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (5)
+Jul 07 14:58:22 symfony [info] {sfWebResponse} Send content (63384 o)
+Jul 07 18:17:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jul 07 18:17:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:17:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:17:42 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jul 07 18:17:42 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Jul 07 18:17:42 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 18:17:42 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Jul 07 18:17:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:17:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:17:42 symfony [info] {sfWebDebugLogger} Configuration 156.25 ms (10)
+Jul 07 18:17:42 symfony [info] {sfWebDebugLogger} Factories 216.61 ms (1)
+Jul 07 18:17:42 symfony [info] {sfWebDebugLogger} Action "default/index" 0.26 ms (1)
+Jul 07 18:17:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 72.25 ms (1)
+Jul 07 18:17:42 symfony [info] {sfWebResponse} Send content (28285 o)
+Jul 07 18:17:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:17:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:17:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:17:48 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:17:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:17:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:17:48 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:17:48 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:17:48 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:17:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:17:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:17:48 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 07 18:17:48 symfony [info] {sfWebDebugLogger} Factories 53.39 ms (1)
+Jul 07 18:17:48 symfony [info] {sfWebDebugLogger} Action "tarea/index" 172.42 ms (1)
+Jul 07 18:17:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:17:48 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 34.16 ms (1)
+Jul 07 18:17:48 symfony [info] {sfWebResponse} Send content (31716 o)
+Jul 07 18:21:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:21:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:21:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:21:11 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:21:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:21:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:21:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:21:12 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:21:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:21:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:21:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:21:12 symfony [info] {sfWebDebugLogger} Configuration 2.51 ms (9)
+Jul 07 18:21:12 symfony [info] {sfWebDebugLogger} Factories 53.04 ms (1)
+Jul 07 18:21:12 symfony [info] {sfWebDebugLogger} Action "tarea/index" 101.72 ms (1)
+Jul 07 18:21:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:21:12 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 40.60 ms (1)
+Jul 07 18:21:12 symfony [info] {sfWebResponse} Send content (31749 o)
+Jul 07 18:21:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:21:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:21:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:21:59 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:22:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:22:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:22:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:22:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:22:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:22:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:22:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:22:00 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Jul 07 18:22:00 symfony [info] {sfWebDebugLogger} Factories 52.96 ms (1)
+Jul 07 18:22:00 symfony [info] {sfWebDebugLogger} Action "tarea/index" 56.03 ms (1)
+Jul 07 18:22:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:22:00 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 17.70 ms (1)
+Jul 07 18:22:00 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:24:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:24:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:24:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:24:45 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:24:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:24:45 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:24:45 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:24:45 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:24:45 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:24:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:24:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:24:45 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 07 18:24:45 symfony [info] {sfWebDebugLogger} Factories 52.83 ms (1)
+Jul 07 18:24:45 symfony [info] {sfWebDebugLogger} Action "tarea/index" 55.90 ms (1)
+Jul 07 18:24:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:24:45 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 16.83 ms (1)
+Jul 07 18:24:45 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:25:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:25:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:25:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:25:29 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:25:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:25:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:25:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:25:29 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:25:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:25:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:25:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:25:29 symfony [info] {sfWebDebugLogger} Configuration 2.41 ms (9)
+Jul 07 18:25:29 symfony [info] {sfWebDebugLogger} Factories 58.35 ms (1)
+Jul 07 18:25:29 symfony [info] {sfWebDebugLogger} Action "tarea/index" 91.60 ms (1)
+Jul 07 18:25:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:25:29 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 18.65 ms (1)
+Jul 07 18:25:29 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:28:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:28:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:28:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:28:52 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:28:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:28:52 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:28:52 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:28:52 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:28:52 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:28:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:28:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:28:52 symfony [info] {sfWebDebugLogger} Configuration 2.89 ms (9)
+Jul 07 18:28:52 symfony [info] {sfWebDebugLogger} Factories 211.12 ms (1)
+Jul 07 18:28:52 symfony [info] {sfWebDebugLogger} Action "tarea/index" 128.47 ms (1)
+Jul 07 18:28:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 07 18:28:52 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 72.10 ms (1)
+Jul 07 18:28:52 symfony [info] {sfWebResponse} Send content (31718 o)
+Jul 07 18:29:21 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:29:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:29:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:29:21 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:29:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:29:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:29:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:29:21 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:29:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:29:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:29:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:29:21 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 07 18:29:21 symfony [info] {sfWebDebugLogger} Factories 53.40 ms (1)
+Jul 07 18:29:21 symfony [info] {sfWebDebugLogger} Action "tarea/index" 57.25 ms (1)
+Jul 07 18:29:21 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:29:21 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 17.61 ms (1)
+Jul 07 18:29:21 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:33:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:33:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:33:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:33:04 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:33:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:33:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:33:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:33:04 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:33:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:33:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:33:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:33:04 symfony [info] {sfWebDebugLogger} Configuration 3.07 ms (9)
+Jul 07 18:33:04 symfony [info] {sfWebDebugLogger} Factories 171.33 ms (1)
+Jul 07 18:33:04 symfony [info] {sfWebDebugLogger} Action "tarea/index" 231.39 ms (1)
+Jul 07 18:33:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 07 18:33:04 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 70.19 ms (1)
+Jul 07 18:33:04 symfony [info] {sfWebResponse} Send content (31750 o)
+Jul 07 18:33:51 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:33:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:33:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:33:51 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:33:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:33:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:33:51 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:33:51 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:33:51 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:33:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:33:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:33:51 symfony [info] {sfWebDebugLogger} Configuration 2.32 ms (9)
+Jul 07 18:33:51 symfony [info] {sfWebDebugLogger} Factories 52.70 ms (1)
+Jul 07 18:33:51 symfony [info] {sfWebDebugLogger} Action "tarea/index" 56.30 ms (1)
+Jul 07 18:33:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:33:51 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 17.40 ms (1)
+Jul 07 18:33:51 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:35:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:35:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:35:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:35:57 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:35:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:35:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:35:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:35:57 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:35:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:35:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:35:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:35:57 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 07 18:35:57 symfony [info] {sfWebDebugLogger} Factories 53.57 ms (1)
+Jul 07 18:35:57 symfony [info] {sfWebDebugLogger} Action "tarea/index" 60.15 ms (1)
+Jul 07 18:35:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:35:57 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 17.03 ms (1)
+Jul 07 18:35:57 symfony [info] {sfWebResponse} Send content (31747 o)
+Jul 07 18:36:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:36:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:36:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:36:10 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:36:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:36:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:36:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:36:10 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:36:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:36:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:36:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:36:10 symfony [info] {sfWebDebugLogger} Configuration 2.30 ms (9)
+Jul 07 18:36:10 symfony [info] {sfWebDebugLogger} Factories 53.02 ms (1)
+Jul 07 18:36:10 symfony [info] {sfWebDebugLogger} Action "tarea/index" 55.32 ms (1)
+Jul 07 18:36:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:36:10 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 38.85 ms (1)
+Jul 07 18:36:10 symfony [info] {sfWebResponse} Send content (31748 o)
+Jul 07 18:37:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 07 18:37:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 07 18:37:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 07 18:37:32 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 07 18:37:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 07 18:37:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.tar_nombre AS t__tar_nombre, t.tar_estado AS t__tar_estado, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion, t.status_idstatus AS t__status_idstatus, t.prioridad_idprioridad AS t__prioridad_idprioridad, t.grupo_idgrupo AS t__grupo_idgrupo, t.proyecto_idproyecto AS t__proyecto_idproyecto, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM tarea t - ()
+Jul 07 18:37:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 07 18:37:32 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:37:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 07 18:37:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 07 18:37:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 07 18:37:32 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Jul 07 18:37:32 symfony [info] {sfWebDebugLogger} Factories 54.28 ms (1)
+Jul 07 18:37:32 symfony [info] {sfWebDebugLogger} Action "tarea/index" 68.38 ms (1)
+Jul 07 18:37:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 07 18:37:32 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 22.48 ms (1)
+Jul 07 18:37:32 symfony [info] {sfWebResponse} Send content (31748 o)

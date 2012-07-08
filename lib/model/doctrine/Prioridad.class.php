@@ -12,4 +12,9 @@
  */
 class Prioridad extends BasePrioridad
 {
+
+ public function __toString()
+  {
+    return $this->nombrePrioridad;
+  }
 }

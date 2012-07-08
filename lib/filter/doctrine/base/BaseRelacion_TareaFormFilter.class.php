@@ -24,8 +24,8 @@ abstract class BaseRelacion_TareaFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'fecha_relacion'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'tareaOrigen_idTarea'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'tareaDestino_idTarea' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'id')),
-      'relacion_idRelacion'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Relacion'), 'column' => 'id')),
+      'tareaDestino_idTarea' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'idTarea')),
+      'relacion_idRelacion'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Relacion'), 'column' => 'idRelacion')),
       'created_at'           => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'           => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -47,7 +47,7 @@ abstract class BaseRelacion_TareaFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'                   => 'Number',
+      'idRelacionTarea'      => 'Number',
       'fecha_relacion'       => 'Date',
       'tareaOrigen_idTarea'  => 'Number',
       'tareaDestino_idTarea' => 'ForeignKey',

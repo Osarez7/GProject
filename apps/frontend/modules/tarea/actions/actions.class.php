@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * tarea actions.
+ *
+ * @package    gproject
+ * @subpackage tarea
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class tareaActions extends sfActions
+{
+  public function executeIndex(sfWebRequest $request)
+  {
+    $this->tareas = Doctrine_Core::getTable('Tarea')
+      ->createQuery('a')
+      ->execute();
+  }
+
+  public function executeShow(sfWebRequest $request)
+  {
+    $this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea')));
+    $this->forward404Unless($this->tarea);
+  }
+
+  public function executeNew(sfWebRequest $request)
+  {
+    $this->form = new TareaForm();
+  }
+
+  public function executeCreate(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isMethod(sfRequest::POST));
+
+    $this->form = new TareaForm();
+
+    $this->processForm($request, $this->form);
+
+    $this->setTemplate('new');
+  }
+
+  public function executeEdit(sfWebRequest $request)
+  {
+    $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+    $this->form = new TareaForm($tarea);
+  }
+
+  public function executeUpdate(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
+    $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+    $this->form = new TareaForm($tarea);
+
+    $this->processForm($request, $this->form);
+
+    $this->setTemplate('edit');
+  }
+
+  public function executeDelete(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+
+    $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+    $tarea->delete();
+
+    $this->redirect('tarea/index');
+  }
+
+  protected function processForm(sfWebRequest $request, sfForm $form)
+  {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid())
+    {
+      $tarea = $form->save();
+
+      $this->redirect('tarea/edit?id_tarea='.$tarea->getIdTarea());
+    }
+  }
+}

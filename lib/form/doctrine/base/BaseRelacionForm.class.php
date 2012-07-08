@@ -15,12 +15,12 @@ abstract class BaseRelacionForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'            => new sfWidgetFormInputHidden(),
+      'idRelacion'    => new sfWidgetFormInputHidden(),
       'nombreRelaion' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idRelacion'    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idRelacion')), 'empty_value' => $this->getObject()->get('idRelacion'), 'required' => false)),
       'nombreRelaion' => new sfValidatorString(array('max_length' => 50)),
     ));
 

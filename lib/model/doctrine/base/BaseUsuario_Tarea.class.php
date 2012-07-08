@@ -31,11 +31,11 @@ abstract class BaseUsuario_Tarea extends sfDoctrineRecord
         $this->setTableName('usuario__tarea');
         $this->hasColumn('usuario_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'primary' => true,
              ));
         $this->hasColumn('tarea_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
+             'primary' => true,
              ));
     }
 
@@ -44,12 +44,12 @@ abstract class BaseUsuario_Tarea extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Usuario', array(
              'local' => 'usuario_id',
-             'foreign' => 'id',
+             'foreign' => 'idUsuario',
              'onDelete' => 'CASCADE'));
 
         $this->hasOne('Tarea', array(
              'local' => 'tarea_id',
-             'foreign' => 'id',
+             'foreign' => 'idTarea',
              'onDelete' => 'CASCADE'));
     }
 }

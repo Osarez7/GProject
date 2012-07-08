@@ -1,0 +1,10 @@
+## YAML Template.
+---
+
+Prioridad:
+  alta:
+     nombrePrioridad: alta
+  media:
+     nombrePrioridad: tarea
+  baja:
+     nombrePrioridad: baja

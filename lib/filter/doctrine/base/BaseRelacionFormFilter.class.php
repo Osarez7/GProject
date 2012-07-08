@@ -37,7 +37,7 @@ abstract class BaseRelacionFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'            => 'Number',
+      'idRelacion'    => 'Number',
       'nombreRelaion' => 'Text',
     );
   }

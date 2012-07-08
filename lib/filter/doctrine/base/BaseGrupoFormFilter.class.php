@@ -39,7 +39,7 @@ abstract class BaseGrupoFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'          => 'Number',
+      'idGrupo'     => 'Number',
       'nombreGrupo' => 'Text',
       'descGrupo'   => 'Text',
     );

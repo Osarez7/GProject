@@ -15,29 +15,29 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                  => new sfWidgetFormInputHidden(),
-      'nombre'              => new sfWidgetFormInputText(),
-      'tiempo_estimado'     => new sfWidgetFormInputText(),
-      'fecha_cracion'       => new sfWidgetFormDateTime(),
-      'fecha_actualizacion' => new sfWidgetFormDateTime(),
-      'descProyecto'        => new sfWidgetFormInputText(),
-      'idStatus'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
-      'idPrioridad'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
-      'created_at'          => new sfWidgetFormDateTime(),
-      'updated_at'          => new sfWidgetFormDateTime(),
+      'idProyecto'            => new sfWidgetFormInputHidden(),
+      'nombre'                => new sfWidgetFormInputText(),
+      'tiempo_estimado'       => new sfWidgetFormInputText(),
+      'fecha_cracion'         => new sfWidgetFormDateTime(),
+      'fecha_actualizacion'   => new sfWidgetFormDateTime(),
+      'descProyecto'          => new sfWidgetFormInputText(),
+      'status_idStatus'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
+      'prioridad_idPrioridad' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
+      'created_at'            => new sfWidgetFormDateTime(),
+      'updated_at'            => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'nombre'              => new sfValidatorString(array('max_length' => 50)),
-      'tiempo_estimado'     => new sfValidatorInteger(),
-      'fecha_cracion'       => new sfValidatorDateTime(),
-      'fecha_actualizacion' => new sfValidatorDateTime(),
-      'descProyecto'        => new sfValidatorNumber(),
-      'idStatus'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
-      'idPrioridad'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
-      'created_at'          => new sfValidatorDateTime(),
-      'updated_at'          => new sfValidatorDateTime(),
+      'idProyecto'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idProyecto')), 'empty_value' => $this->getObject()->get('idProyecto'), 'required' => false)),
+      'nombre'                => new sfValidatorString(array('max_length' => 50)),
+      'tiempo_estimado'       => new sfValidatorInteger(),
+      'fecha_cracion'         => new sfValidatorDateTime(),
+      'fecha_actualizacion'   => new sfValidatorDateTime(),
+      'descProyecto'          => new sfValidatorNumber(),
+      'status_idStatus'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
+      'prioridad_idPrioridad' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
+      'created_at'            => new sfValidatorDateTime(),
+      'updated_at'            => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('proyecto[%s]');
