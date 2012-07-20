@@ -15,13 +15,13 @@ abstract class BaseGrupo_UsuarioForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'usuario_idUsuario' => new sfWidgetFormInputHidden(),
-      'grupo_idGrupo'     => new sfWidgetFormInputHidden(),
+      'usuario' => new sfWidgetFormInputHidden(),
+      'grupo'   => new sfWidgetFormInputHidden(),
     ));
 
     $this->setValidators(array(
-      'usuario_idUsuario' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_idUsuario')), 'empty_value' => $this->getObject()->get('usuario_idUsuario'), 'required' => false)),
-      'grupo_idGrupo'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('grupo_idGrupo')), 'empty_value' => $this->getObject()->get('grupo_idGrupo'), 'required' => false)),
+      'usuario' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario')), 'empty_value' => $this->getObject()->get('usuario'), 'required' => false)),
+      'grupo'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('grupo')), 'empty_value' => $this->getObject()->get('grupo'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('grupo_usuario[%s]');

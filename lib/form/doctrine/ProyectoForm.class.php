@@ -12,5 +12,9 @@ class ProyectoForm extends BaseProyectoForm
 {
   public function configure()
   {
+  unset(
+      $this['fecha_actualizacion'], $this['fecha_creacion']
+    );
+      
   }
 }

@@ -46,10 +46,10 @@ abstract class BasePrioridad extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Proyecto as Proyectos', array(
              'local' => 'idPrioridad',
-             'foreign' => 'prioridad_idPrioridad'));
+             'foreign' => 'prioridadPK'));
 
         $this->hasMany('Tarea as Tareas', array(
              'local' => 'idPrioridad',
-             'foreign' => 'prioridad_idPrioridad'));
+             'foreign' => 'prioridadPK'));
     }
 }

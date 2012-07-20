@@ -8,43 +8,37 @@
  * @property integer $idProyecto
  * @property string $nombre
  * @property integer $tiempo_estimado
- * @property timestamp $fecha_cracion
- * @property timestamp $fecha_actualizacion
- * @property float $descProyecto
- * @property integer $status_idStatus
- * @property integer $prioridad_idPrioridad
+ * @property string $descProyecto
+ * @property integer $statusPK
+ * @property integer $prioridadPK
  * @property Status $Status
  * @property Prioridad $Prioridad
  * @property Doctrine_Collection $Tareas
  * @property Doctrine_Collection $RegistroEstados
  * @property Doctrine_Collection $Eventos
  * 
- * @method integer             getIdProyecto()            Returns the current record's "idProyecto" value
- * @method string              getNombre()                Returns the current record's "nombre" value
- * @method integer             getTiempoEstimado()        Returns the current record's "tiempo_estimado" value
- * @method timestamp           getFechaCracion()          Returns the current record's "fecha_cracion" value
- * @method timestamp           getFechaActualizacion()    Returns the current record's "fecha_actualizacion" value
- * @method float               getDescProyecto()          Returns the current record's "descProyecto" value
- * @method integer             getStatusIdStatus()        Returns the current record's "status_idStatus" value
- * @method integer             getPrioridadIdPrioridad()  Returns the current record's "prioridad_idPrioridad" value
- * @method Status              getStatus()                Returns the current record's "Status" value
- * @method Prioridad           getPrioridad()             Returns the current record's "Prioridad" value
- * @method Doctrine_Collection getTareas()                Returns the current record's "Tareas" collection
- * @method Doctrine_Collection getRegistroEstados()       Returns the current record's "RegistroEstados" collection
- * @method Doctrine_Collection getEventos()               Returns the current record's "Eventos" collection
- * @method Proyecto            setIdProyecto()            Sets the current record's "idProyecto" value
- * @method Proyecto            setNombre()                Sets the current record's "nombre" value
- * @method Proyecto            setTiempoEstimado()        Sets the current record's "tiempo_estimado" value
- * @method Proyecto            setFechaCracion()          Sets the current record's "fecha_cracion" value
- * @method Proyecto            setFechaActualizacion()    Sets the current record's "fecha_actualizacion" value
- * @method Proyecto            setDescProyecto()          Sets the current record's "descProyecto" value
- * @method Proyecto            setStatusIdStatus()        Sets the current record's "status_idStatus" value
- * @method Proyecto            setPrioridadIdPrioridad()  Sets the current record's "prioridad_idPrioridad" value
- * @method Proyecto            setStatus()                Sets the current record's "Status" value
- * @method Proyecto            setPrioridad()             Sets the current record's "Prioridad" value
- * @method Proyecto            setTareas()                Sets the current record's "Tareas" collection
- * @method Proyecto            setRegistroEstados()       Sets the current record's "RegistroEstados" collection
- * @method Proyecto            setEventos()               Sets the current record's "Eventos" collection
+ * @method integer             getIdProyecto()      Returns the current record's "idProyecto" value
+ * @method string              getNombre()          Returns the current record's "nombre" value
+ * @method integer             getTiempoEstimado()  Returns the current record's "tiempo_estimado" value
+ * @method string              getDescProyecto()    Returns the current record's "descProyecto" value
+ * @method integer             getStatusPK()        Returns the current record's "statusPK" value
+ * @method integer             getPrioridadPK()     Returns the current record's "prioridadPK" value
+ * @method Status              getStatus()          Returns the current record's "Status" value
+ * @method Prioridad           getPrioridad()       Returns the current record's "Prioridad" value
+ * @method Doctrine_Collection getTareas()          Returns the current record's "Tareas" collection
+ * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
+ * @method Doctrine_Collection getEventos()         Returns the current record's "Eventos" collection
+ * @method Proyecto            setIdProyecto()      Sets the current record's "idProyecto" value
+ * @method Proyecto            setNombre()          Sets the current record's "nombre" value
+ * @method Proyecto            setTiempoEstimado()  Sets the current record's "tiempo_estimado" value
+ * @method Proyecto            setDescProyecto()    Sets the current record's "descProyecto" value
+ * @method Proyecto            setStatusPK()        Sets the current record's "statusPK" value
+ * @method Proyecto            setPrioridadPK()     Sets the current record's "prioridadPK" value
+ * @method Proyecto            setStatus()          Sets the current record's "Status" value
+ * @method Proyecto            setPrioridad()       Sets the current record's "Prioridad" value
+ * @method Proyecto            setTareas()          Sets the current record's "Tareas" collection
+ * @method Proyecto            setRegistroEstados() Sets the current record's "RegistroEstados" collection
+ * @method Proyecto            setEventos()         Sets the current record's "Eventos" collection
  * 
  * @package    gproject
  * @subpackage model
@@ -70,23 +64,16 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('fecha_cracion', 'timestamp', null, array(
-             'type' => 'timestamp',
+        $this->hasColumn('descProyecto', 'string', 200, array(
+             'type' => 'string',
              'notnull' => true,
+             'length' => 200,
              ));
-        $this->hasColumn('fecha_actualizacion', 'timestamp', null, array(
-             'type' => 'timestamp',
-             'notnull' => true,
-             ));
-        $this->hasColumn('descProyecto', 'float', null, array(
-             'type' => 'float',
-             'notnull' => true,
-             ));
-        $this->hasColumn('status_idStatus', 'integer', null, array(
+        $this->hasColumn('statusPK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('prioridad_idPrioridad', 'integer', null, array(
+        $this->hasColumn('prioridadPK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -96,28 +83,39 @@ abstract class BaseProyecto extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Status', array(
-             'local' => 'status_idStatus',
+             'local' => 'statusPK',
              'foreign' => 'idStatus',
              'onDelete' => 'CASCADE'));
 
         $this->hasOne('Prioridad', array(
-             'local' => 'prioridad_idPrioridad',
+             'local' => 'prioridadPK',
              'foreign' => 'idPrioridad',
              'onDelete' => 'CASCADE'));
 
         $this->hasMany('Tarea as Tareas', array(
              'local' => 'idProyecto',
-             'foreign' => 'proyecto_idProyecto'));
+             'foreign' => 'proyectoPK'));
 
         $this->hasMany('Registro_Estado_Proyecto as RegistroEstados', array(
              'local' => 'idProyecto',
-             'foreign' => 'proyecto_idProyecto'));
+             'foreign' => 'proyectoPK'));
 
         $this->hasMany('Evento as Eventos', array(
              'local' => 'idProyecto',
-             'foreign' => 'proyecto_idProyecto'));
+             'foreign' => 'proyectoPK'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             'created' => 
+             array(
+              'name' => 'fecha_creacion',
+              'type' => 'timestamp',
+             ),
+             'updated' => 
+             array(
+              'name' => 'fecha_actualizacion',
+              'type' => 'timestamp',
+             ),
+             ));
         $this->actAs($timestampable0);
     }
 }

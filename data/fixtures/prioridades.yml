@@ -5,6 +5,6 @@ Prioridad:
   alta:
      nombrePrioridad: alta
   media:
-     nombrePrioridad: tarea
+     nombrePrioridad: media
   baja:
      nombrePrioridad: baja

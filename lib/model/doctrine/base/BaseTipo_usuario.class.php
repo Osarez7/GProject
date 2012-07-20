@@ -43,9 +43,6 @@ abstract class BaseTipo_usuario extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Usuario as Usuarios', array(
              'local' => 'idTipoUsuario',
-             'foreign' => 'tipo_idTipoUsuario'));
-
-        $timestampable0 = new Doctrine_Template_Timestampable();
-        $this->actAs($timestampable0);
+             'foreign' => 'tipoUsuarioPK'));
     }
 }

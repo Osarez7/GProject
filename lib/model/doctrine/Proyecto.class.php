@@ -12,4 +12,11 @@
  */
 class Proyecto extends BaseProyecto
 {
+
+    public  function __toString(){
+        return $this->getStatus();
+    }
+   
+
+
 }

@@ -1,0 +1,7 @@
+## YAML Template.
+---
+
+
+default:
+is_secute: true
+credentials: gerente

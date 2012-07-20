@@ -19,19 +19,19 @@ abstract class BaseEventoForm extends BaseFormDoctrine
       'fechaEvento'         => new sfWidgetFormDateTime(),
       'nombreEvento'        => new sfWidgetFormInputText(),
       'descEvento'          => new sfWidgetFormInputText(),
-      'proyecto_idProyecto' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
-      'created_at'          => new sfWidgetFormDateTime(),
-      'updated_at'          => new sfWidgetFormDateTime(),
+      'proyectoPK'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
+      'fecha_cambio_estado' => new sfWidgetFormDateTime(),
+      'fecha_actualizacion' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'idEvento'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idEvento')), 'empty_value' => $this->getObject()->get('idEvento'), 'required' => false)),
       'fechaEvento'         => new sfValidatorDateTime(),
       'nombreEvento'        => new sfValidatorString(array('max_length' => 50)),
-      'descEvento'          => new sfValidatorString(array('max_length' => 200)),
-      'proyecto_idProyecto' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
-      'created_at'          => new sfValidatorDateTime(),
-      'updated_at'          => new sfValidatorDateTime(),
+      'descEvento'          => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'proyectoPK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
+      'fecha_cambio_estado' => new sfValidatorDateTime(),
+      'fecha_actualizacion' => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('evento[%s]');

@@ -13,9 +13,13 @@ abstract class BaseUsuario_TareaFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'fecha_asignacion'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'fecha_actualizacion' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
+      'fecha_asignacion'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'fecha_actualizacion' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_tarea_filters[%s]');
@@ -35,8 +39,10 @@ abstract class BaseUsuario_TareaFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'usuario_id' => 'Number',
-      'tarea_id'   => 'Number',
+      'usuario'             => 'Number',
+      'tarea'               => 'Number',
+      'fecha_asignacion'    => 'Date',
+      'fecha_actualizacion' => 'Date',
     );
   }
 }

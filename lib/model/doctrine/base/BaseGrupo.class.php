@@ -54,10 +54,10 @@ abstract class BaseGrupo extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Tarea as Tareas', array(
              'local' => 'idGrupo',
-             'foreign' => 'grupo_idGrupo'));
+             'foreign' => 'grupoPK'));
 
         $this->hasMany('Grupo_Usuario', array(
              'local' => 'idGrupo',
-             'foreign' => 'grupo_idGrupo'));
+             'foreign' => 'grupo'));
     }
 }

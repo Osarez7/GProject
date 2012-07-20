@@ -9,21 +9,21 @@
  * @property timestamp $fechaEvento
  * @property string $nombreEvento
  * @property string $descEvento
- * @property integer $proyecto_idProyecto
+ * @property integer $proyectoPK
  * @property Proyecto $Proyecto
  * 
- * @method integer   getIdEvento()            Returns the current record's "idEvento" value
- * @method timestamp getFechaEvento()         Returns the current record's "fechaEvento" value
- * @method string    getNombreEvento()        Returns the current record's "nombreEvento" value
- * @method string    getDescEvento()          Returns the current record's "descEvento" value
- * @method integer   getProyectoIdProyecto()  Returns the current record's "proyecto_idProyecto" value
- * @method Proyecto  getProyecto()            Returns the current record's "Proyecto" value
- * @method Evento    setIdEvento()            Sets the current record's "idEvento" value
- * @method Evento    setFechaEvento()         Sets the current record's "fechaEvento" value
- * @method Evento    setNombreEvento()        Sets the current record's "nombreEvento" value
- * @method Evento    setDescEvento()          Sets the current record's "descEvento" value
- * @method Evento    setProyectoIdProyecto()  Sets the current record's "proyecto_idProyecto" value
- * @method Evento    setProyecto()            Sets the current record's "Proyecto" value
+ * @method integer   getIdEvento()     Returns the current record's "idEvento" value
+ * @method timestamp getFechaEvento()  Returns the current record's "fechaEvento" value
+ * @method string    getNombreEvento() Returns the current record's "nombreEvento" value
+ * @method string    getDescEvento()   Returns the current record's "descEvento" value
+ * @method integer   getProyectoPK()   Returns the current record's "proyectoPK" value
+ * @method Proyecto  getProyecto()     Returns the current record's "Proyecto" value
+ * @method Evento    setIdEvento()     Sets the current record's "idEvento" value
+ * @method Evento    setFechaEvento()  Sets the current record's "fechaEvento" value
+ * @method Evento    setNombreEvento() Sets the current record's "nombreEvento" value
+ * @method Evento    setDescEvento()   Sets the current record's "descEvento" value
+ * @method Evento    setProyectoPK()   Sets the current record's "proyectoPK" value
+ * @method Evento    setProyecto()     Sets the current record's "Proyecto" value
  * 
  * @package    gproject
  * @subpackage model
@@ -51,10 +51,10 @@ abstract class BaseEvento extends sfDoctrineRecord
              ));
         $this->hasColumn('descEvento', 'string', 200, array(
              'type' => 'string',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 200,
              ));
-        $this->hasColumn('proyecto_idProyecto', 'integer', null, array(
+        $this->hasColumn('proyectoPK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -64,11 +64,22 @@ abstract class BaseEvento extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Proyecto', array(
-             'local' => 'proyecto_idProyecto',
+             'local' => 'proyectoPK',
              'foreign' => 'idProyecto',
              'onDelete' => 'CASCADE'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             'created' => 
+             array(
+              'name' => 'fecha_cambio_estado',
+              'type' => 'timestamp',
+             ),
+             'updated' => 
+             array(
+              'name' => 'fecha_actualizacion',
+              'type' => 'timestamp',
+             ),
+             ));
         $this->actAs($timestampable0);
     }
 }

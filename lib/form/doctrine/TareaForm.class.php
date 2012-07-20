@@ -12,5 +12,7 @@ class TareaForm extends BaseTareaForm
 {
   public function configure()
   {
+      unset($this['tar_fecha_creacion'],$this['tar_fecha_actulizacion']);
+      
   }
 }

@@ -2,15 +2,27 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 # default rules
+
+logout:
+  url: /login/logout
+  param: { module: login, action: logout }
+
+prueba:
+  url:  /prueba
+  param: { module: proyecto, action: prueba }
 homepage:
   url:   /
   param: { module: default, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
+
+default:
+  url:   /:module/:action/*
+
+
 default_index:
   url:   /:module
   param: { action: index }
 
-default:
-  url:   /:module/:action/*
+

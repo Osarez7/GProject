@@ -9,28 +9,36 @@
     <body>
         <div id="conteiner">
             <div id="header">
-
+                <ul class="menu">
+                    <li><a href="">Proyectos</a></li>
+                    <li><a href="">Tareas</a></li>
+                    <li><a href="">Eventos</a></li>
+                    <li><a href="">Usuarios</a></li> 
+                </ul>
             </div>
-            
-            
+
+
             <div id="sidebar">
 
             </div>
-            
-             
+
+
             <div id="content">
-                 <?php echo $sf_content ?>
+                
+             
+                
+                <?php echo $sf_content ?>
             </div>
-         
-            
+
+
             <div id="footer">
 
             </div>
-            
+
 
         </div>
 
 
-       
+
     </body>
 </html>

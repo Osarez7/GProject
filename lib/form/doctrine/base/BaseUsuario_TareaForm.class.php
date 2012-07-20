@@ -15,13 +15,17 @@ abstract class BaseUsuario_TareaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'usuario_id' => new sfWidgetFormInputHidden(),
-      'tarea_id'   => new sfWidgetFormInputHidden(),
+      'usuario'             => new sfWidgetFormInputHidden(),
+      'tarea'               => new sfWidgetFormInputHidden(),
+      'fecha_asignacion'    => new sfWidgetFormDateTime(),
+      'fecha_actualizacion' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'usuario_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario_id')), 'empty_value' => $this->getObject()->get('usuario_id'), 'required' => false)),
-      'tarea_id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('tarea_id')), 'empty_value' => $this->getObject()->get('tarea_id'), 'required' => false)),
+      'usuario'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('usuario')), 'empty_value' => $this->getObject()->get('usuario'), 'required' => false)),
+      'tarea'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('tarea')), 'empty_value' => $this->getObject()->get('tarea'), 'required' => false)),
+      'fecha_asignacion'    => new sfValidatorDateTime(),
+      'fecha_actualizacion' => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_tarea[%s]');

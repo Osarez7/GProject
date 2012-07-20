@@ -13,21 +13,19 @@ abstract class BaseRelacion_TareaFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'fecha_relacion'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'tareaOrigen_idTarea'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'tareaDestino_idTarea' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => true)),
-      'relacion_idRelacion'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Relacion'), 'add_empty' => true)),
-      'created_at'           => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'updated_at'           => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'tareaOrigen'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'tareaDestino'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => true)),
+      'relacion_idRelacion' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Relacion'), 'add_empty' => true)),
+      'fecha_creacion'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'fecha_actualizacion' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'fecha_relacion'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'tareaOrigen_idTarea'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'tareaDestino_idTarea' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'idTarea')),
-      'relacion_idRelacion'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Relacion'), 'column' => 'idRelacion')),
-      'created_at'           => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'updated_at'           => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'tareaOrigen'         => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'tareaDestino'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'idTarea')),
+      'relacion_idRelacion' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Relacion'), 'column' => 'idRelacion')),
+      'fecha_creacion'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'fecha_actualizacion' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
 
     $this->widgetSchema->setNameFormat('relacion_tarea_filters[%s]');
@@ -47,13 +45,12 @@ abstract class BaseRelacion_TareaFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'idRelacionTarea'      => 'Number',
-      'fecha_relacion'       => 'Date',
-      'tareaOrigen_idTarea'  => 'Number',
-      'tareaDestino_idTarea' => 'ForeignKey',
-      'relacion_idRelacion'  => 'ForeignKey',
-      'created_at'           => 'Date',
-      'updated_at'           => 'Date',
+      'idRelacionTarea'     => 'Number',
+      'tareaOrigen'         => 'Number',
+      'tareaDestino'        => 'ForeignKey',
+      'relacion_idRelacion' => 'ForeignKey',
+      'fecha_creacion'      => 'Date',
+      'fecha_actualizacion' => 'Date',
     );
   }
 }

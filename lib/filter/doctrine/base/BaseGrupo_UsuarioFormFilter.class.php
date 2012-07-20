@@ -35,8 +35,8 @@ abstract class BaseGrupo_UsuarioFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'usuario_idUsuario' => 'Number',
-      'grupo_idGrupo'     => 'Number',
+      'usuario' => 'Number',
+      'grupo'   => 'Number',
     );
   }
 }

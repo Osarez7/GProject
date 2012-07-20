@@ -5,12 +5,28 @@
       <td><?php echo $tarea->getIdTarea() ?></td>
     </tr>
     <tr>
-      <th>Tar nombre:</th>
-      <td><?php echo $tarea->getTarNombre() ?></td>
+      <th>Nombre tarea:</th>
+      <td><?php echo $tarea->getNombreTarea() ?></td>
     </tr>
     <tr>
-      <th>Tar estado:</th>
-      <td><?php echo $tarea->getTarEstado() ?></td>
+      <th>Duracion:</th>
+      <td><?php echo $tarea->getDuracion() ?></td>
+    </tr>
+    <tr>
+      <th>Status pk:</th>
+      <td><?php echo $tarea->getStatusPK() ?></td>
+    </tr>
+    <tr>
+      <th>Prioridad pk:</th>
+      <td><?php echo $tarea->getPrioridadPK() ?></td>
+    </tr>
+    <tr>
+      <th>Grupo pk:</th>
+      <td><?php echo $tarea->getGrupoPK() ?></td>
+    </tr>
+    <tr>
+      <th>Proyecto pk:</th>
+      <td><?php echo $tarea->getProyectoPK() ?></td>
     </tr>
     <tr>
       <th>Tar fecha creacion:</th>
@@ -19,30 +35,6 @@
     <tr>
       <th>Tar fecha actulizacion:</th>
       <td><?php echo $tarea->getTarFechaActulizacion() ?></td>
-    </tr>
-    <tr>
-      <th>Status id status:</th>
-      <td><?php echo $tarea->getStatusIdStatus() ?></td>
-    </tr>
-    <tr>
-      <th>Prioridad id prioridad:</th>
-      <td><?php echo $tarea->getPrioridadIdPrioridad() ?></td>
-    </tr>
-    <tr>
-      <th>Grupo id grupo:</th>
-      <td><?php echo $tarea->getGrupoIdGrupo() ?></td>
-    </tr>
-    <tr>
-      <th>Proyecto id proyecto:</th>
-      <td><?php echo $tarea->getProyectoIdProyecto() ?></td>
-    </tr>
-    <tr>
-      <th>Created at:</th>
-      <td><?php echo $tarea->getCreatedAt() ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $tarea->getUpdatedAt() ?></td>
     </tr>
   </tbody>
 </table>
