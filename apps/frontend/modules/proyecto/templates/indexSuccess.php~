@@ -7,7 +7,6 @@
               
     <h1>Proyectos List</h1>
     <input type="button"  value="LLamar Ajax" onclick="javascript:tareasAJax(); "   />
-
 <div id="mi-nueva-lista">
     <table class="lista">
         <thead>

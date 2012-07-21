@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 <div class="login">
-    <h1>Ingreso a usuarios</h1>
+    <h1>Acceso a clientes</h1>
     <form action="<?php echo url_for('login/index')?>" method="post">
         <table>
             <tbody>
@@ -14,7 +14,7 @@
                 <tr>
                     <th></th>
                     <td>
-                        <input type="submit" value="Ingresar" name="login">
+                        <input type="submit" value="Acceder" name="login">
                     </td>
                 </tr>
             </tbody>

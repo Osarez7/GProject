@@ -8126,3 +8126,1708 @@ Jul 20 11:14:58 symfony [info] {sfWebDebugLogger} Factories 157.56 ms (1)
 Jul 20 11:14:58 symfony [info] {sfWebDebugLogger} Action "login/index" 17.35 ms (1)
 Jul 20 11:14:58 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 25.64 ms (1)
 Jul 20 11:14:58 symfony [info] {sfWebResponse} Send content (31211 o)
+Jul 20 11:48:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 11:48:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:48:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:48:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:48:39 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 11:48:39 symfony [info] {myUser} User is authenticated
+Jul 20 11:48:39 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 11:48:39 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 11:48:39 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 11:48:39 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 11:48:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 11:48:39 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 11:48:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:48:39 symfony [info] {sfWebDebugLogger} Configuration 645.20 ms (8)
+Jul 20 11:48:39 symfony [info] {sfWebDebugLogger} Factories 376.43 ms (1)
+Jul 20 11:48:39 symfony [info] {sfWebDebugLogger} Action "login/index" 34.60 ms (1)
+Jul 20 11:48:39 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 11:48:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 11:48:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:48:40 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:48:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:48:40 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 11:48:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 11:48:41 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 11:48:41 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 11:48:41 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 11:48:41 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 11:48:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 11:48:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:48:41 symfony [info] {sfWebDebugLogger} Configuration 77.22 ms (10)
+Jul 20 11:48:41 symfony [info] {sfWebDebugLogger} Factories 90.19 ms (1)
+Jul 20 11:48:41 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 952.70 ms (1)
+Jul 20 11:48:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 11:48:41 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 354.78 ms (1)
+Jul 20 11:48:41 symfony [info] {sfWebResponse} Send content (33374 o)
+Jul 20 11:54:58 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 11:54:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:54:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:54:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:54:58 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 11:54:58 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:54:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 11:54:58 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:54:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:54:58 symfony [info] {sfWebDebugLogger} Configuration 2.69 ms (8)
+Jul 20 11:54:58 symfony [info] {sfWebDebugLogger} Factories 696.76 ms (1)
+Jul 20 11:54:58 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.81 ms (1)
+Jul 20 11:54:58 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 11:54:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:54:59 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 11:54:59 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 11:55:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 11:55:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 11:55:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 11:55:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 11:55:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 11:55:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} Configuration 6.88 ms (9)
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} Factories 70.88 ms (1)
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 596.82 ms (1)
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 940.27 ms (1)
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 798.52 ms (1)
+Jul 20 11:55:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (3)
+Jul 20 11:55:00 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 11:55:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 11:55:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:55:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:55:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:55:05 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 11:55:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 11:55:05 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 11:55:05 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 11:55:05 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 11:55:05 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 11:55:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 11:55:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:05 symfony [info] {sfWebDebugLogger} Configuration 2.38 ms (9)
+Jul 20 11:55:05 symfony [info] {sfWebDebugLogger} Factories 55.22 ms (1)
+Jul 20 11:55:05 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 62.65 ms (1)
+Jul 20 11:55:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 11:55:05 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 99.30 ms (1)
+Jul 20 11:55:05 symfony [info] {sfWebResponse} Send content (33379 o)
+Jul 20 11:55:15 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 11:55:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:55:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:55:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:55:15 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 11:55:15 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:55:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 11:55:15 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:55:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:15 symfony [info] {sfWebDebugLogger} Configuration 2.27 ms (8)
+Jul 20 11:55:15 symfony [info] {sfWebDebugLogger} Factories 140.79 ms (1)
+Jul 20 11:55:15 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.89 ms (1)
+Jul 20 11:55:15 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 11:55:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 11:55:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:55:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:55:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:55:17 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 11:55:17 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 11:55:17 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 11:55:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 11:55:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 11:55:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 11:55:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 11:55:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} Configuration 2.43 ms (9)
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} Factories 72.65 ms (1)
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 149.18 ms (1)
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 153.84 ms (1)
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 121.38 ms (1)
+Jul 20 11:55:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 11:55:17 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 11:55:24 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:55:25 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 11:55:25 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:55:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 11:55:25 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 11:55:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:25 symfony [info] {sfWebDebugLogger} Configuration 2.38 ms (8)
+Jul 20 11:55:25 symfony [info] {sfWebDebugLogger} Factories 212.37 ms (1)
+Jul 20 11:55:25 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 3.70 ms (1)
+Jul 20 11:55:25 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 11:55:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 11:55:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 11:55:25 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 11:55:26 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 11:55:26 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 11:55:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 11:55:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 11:55:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 11:55:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 11:55:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} Configuration 2.56 ms (9)
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} Factories 68.45 ms (1)
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 162.87 ms (1)
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 136.90 ms (1)
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 95.16 ms (1)
+Jul 20 11:55:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 11:55:26 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 17:36:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 17:36:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:36:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:36:36 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 17:36:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:36:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:36:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 17:36:36 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 17:36:36 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 17:36:36 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:36:36 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:36:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 17:36:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 17:36:36 symfony [info] {sfWebDebugLogger} Configuration 368.97 ms (12)
+Jul 20 17:36:36 symfony [info] {sfWebDebugLogger} Factories 520.95 ms (1)
+Jul 20 17:36:36 symfony [info] {sfWebDebugLogger} Action "login/index" 109.44 ms (1)
+Jul 20 17:36:36 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 374.96 ms (1)
+Jul 20 17:36:36 symfony [info] {sfWebResponse} Send content (31202 o)
+Jul 20 17:49:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 17:49:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:49:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:49:46 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 17:49:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:49:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:49:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 17:49:46 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 17:49:46 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 17:49:46 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:49:46 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:49:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 17:49:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 17:49:46 symfony [info] {sfWebDebugLogger} Configuration 8.00 ms (12)
+Jul 20 17:49:46 symfony [info] {sfWebDebugLogger} Factories 269.19 ms (1)
+Jul 20 17:49:46 symfony [info] {sfWebDebugLogger} Action "login/index" 111.48 ms (1)
+Jul 20 17:49:46 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 232.09 ms (1)
+Jul 20 17:49:46 symfony [info] {sfWebResponse} Send content (31413 o)
+Jul 20 17:54:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 17:54:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:54:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:54:57 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 17:54:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:54:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:54:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 17:54:57 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 17:54:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 17:54:57 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:54:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:54:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 17:54:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 17:54:57 symfony [info] {sfWebDebugLogger} Configuration 4.67 ms (12)
+Jul 20 17:54:57 symfony [info] {sfWebDebugLogger} Factories 588.44 ms (1)
+Jul 20 17:54:57 symfony [info] {sfWebDebugLogger} Action "login/index" 65.79 ms (1)
+Jul 20 17:54:57 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 134.41 ms (1)
+Jul 20 17:54:57 symfony [info] {sfWebResponse} Send content (31474 o)
+Jul 20 17:56:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 17:56:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:56:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:56:16 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 17:56:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:56:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:56:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 17:56:16 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 17:56:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 17:56:16 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:56:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:56:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 17:56:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 17:56:16 symfony [info] {sfWebDebugLogger} Configuration 3.32 ms (12)
+Jul 20 17:56:16 symfony [info] {sfWebDebugLogger} Factories 70.01 ms (1)
+Jul 20 17:56:16 symfony [info] {sfWebDebugLogger} Action "login/index" 15.14 ms (1)
+Jul 20 17:56:16 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 26.37 ms (1)
+Jul 20 17:56:16 symfony [info] {sfWebResponse} Send content (31494 o)
+Jul 20 17:58:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 17:58:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:58:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:58:08 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 17:58:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 17:58:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 17:58:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 17:58:08 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 17:58:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 17:58:08 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:58:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 17:58:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 17:58:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 17:58:08 symfony [info] {sfWebDebugLogger} Configuration 3.04 ms (12)
+Jul 20 17:58:08 symfony [info] {sfWebDebugLogger} Factories 58.52 ms (1)
+Jul 20 17:58:08 symfony [info] {sfWebDebugLogger} Action "login/index" 13.13 ms (1)
+Jul 20 17:58:08 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 23.95 ms (1)
+Jul 20 17:58:08 symfony [info] {sfWebResponse} Send content (31494 o)
+Jul 20 18:04:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:04:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:07 symfony [info] {sfBasicSecurityFilter} Action "proyecto/index" requires authentication, forwarding to "login/index"
+Jul 20 18:04:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:07 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:04:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:04:08 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:04:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:08 symfony [info] {sfWebDebugLogger} Configuration 11.03 ms (12)
+Jul 20 18:04:08 symfony [info] {sfWebDebugLogger} Factories 83.08 ms (1)
+Jul 20 18:04:08 symfony [info] {sfWebDebugLogger} Action "login/index" 20.92 ms (1)
+Jul 20 18:04:08 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 310.82 ms (1)
+Jul 20 18:04:08 symfony [info] {sfWebResponse} Send content (31413 o)
+Jul 20 18:04:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:17 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:04:17 symfony [info] {myUser} User is authenticated
+Jul 20 18:04:17 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 18:04:17 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 18:04:17 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 18:04:17 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:04:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:04:17 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:04:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:17 symfony [info] {sfWebDebugLogger} Configuration 2.13 ms (8)
+Jul 20 18:04:17 symfony [info] {sfWebDebugLogger} Factories 79.75 ms (1)
+Jul 20 18:04:17 symfony [info] {sfWebDebugLogger} Action "login/index" 64.87 ms (1)
+Jul 20 18:04:17 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 18:04:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:17 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:04:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:04:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:04:18 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:04:19 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:19 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:04:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:19 symfony [info] {sfWebDebugLogger} Configuration 134.87 ms (10)
+Jul 20 18:04:19 symfony [info] {sfWebDebugLogger} Factories 60.00 ms (1)
+Jul 20 18:04:19 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 799.43 ms (1)
+Jul 20 18:04:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Jul 20 18:04:19 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 259.93 ms (1)
+Jul 20 18:04:19 symfony [info] {sfWebResponse} Send content (33520 o)
+Jul 20 18:04:23 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:04:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:23 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:04:23 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:04:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:04:23 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:04:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:23 symfony [info] {sfWebDebugLogger} Configuration 2.06 ms (8)
+Jul 20 18:04:23 symfony [info] {sfWebDebugLogger} Factories 57.97 ms (1)
+Jul 20 18:04:23 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.67 ms (1)
+Jul 20 18:04:23 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:04:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:04:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:24 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:24 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:04:24 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:04:24 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:04:24 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:04:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:04:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:04:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:04:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} Configuration 2.79 ms (9)
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} Factories 58.74 ms (1)
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 240.30 ms (1)
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 134.11 ms (1)
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 86.01 ms (1)
+Jul 20 18:04:24 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:04:24 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:04:27 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:27 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Jul 20 18:04:27 symfony [info] {myUser} User is not authenticated
+Jul 20 18:04:27 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Configuration 2.23 ms (8)
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Factories 61.01 ms (1)
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Action "login/logout" 2.17 ms (1)
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send content (125 o)
+Jul 20 18:04:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:04:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:04:27 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:04:27 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:04:27 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:27 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Factories 56.51 ms (1)
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} Action "login/index" 12.33 ms (1)
+Jul 20 18:04:27 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 24.00 ms (1)
+Jul 20 18:04:27 symfony [info] {sfWebResponse} Send content (30081 o)
+Jul 20 18:06:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:06:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:06:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:06:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:06:42 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:06:42 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:06:42 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:42 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:06:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:06:42 symfony [info] {sfWebDebugLogger} Configuration 2.34 ms (9)
+Jul 20 18:06:42 symfony [info] {sfWebDebugLogger} Factories 72.02 ms (1)
+Jul 20 18:06:42 symfony [info] {sfWebDebugLogger} Action "login/index" 11.17 ms (1)
+Jul 20 18:06:42 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 32.00 ms (1)
+Jul 20 18:06:42 symfony [info] {sfWebResponse} Send content (30113 o)
+Jul 20 18:06:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:06:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:06:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:06:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:06:50 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:06:50 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:06:50 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:50 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:06:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:06:50 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 20 18:06:50 symfony [info] {sfWebDebugLogger} Factories 64.01 ms (1)
+Jul 20 18:06:50 symfony [info] {sfWebDebugLogger} Action "login/index" 11.72 ms (1)
+Jul 20 18:06:50 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 21.82 ms (1)
+Jul 20 18:06:50 symfony [info] {sfWebResponse} Send content (30125 o)
+Jul 20 18:06:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:06:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:06:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:06:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:06:53 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:06:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:06:53 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:06:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:06:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:06:53 symfony [info] {sfWebDebugLogger} Configuration 4.26 ms (9)
+Jul 20 18:06:53 symfony [info] {sfWebDebugLogger} Factories 76.80 ms (1)
+Jul 20 18:06:53 symfony [info] {sfWebDebugLogger} Action "login/index" 19.61 ms (1)
+Jul 20 18:06:53 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 29.90 ms (1)
+Jul 20 18:06:53 symfony [info] {sfWebResponse} Send content (30125 o)
+Jul 20 18:07:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:07:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:07:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:07:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:07:11 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:07:11 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:07:11 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:07:11 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:07:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:07:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:07:11 symfony [info] {sfWebDebugLogger} Configuration 360.92 ms (9)
+Jul 20 18:07:11 symfony [info] {sfWebDebugLogger} Factories 228.01 ms (1)
+Jul 20 18:07:11 symfony [info] {sfWebDebugLogger} Action "login/index" 15.97 ms (1)
+Jul 20 18:07:11 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 32.15 ms (1)
+Jul 20 18:07:11 symfony [info] {sfWebResponse} Send content (30128 o)
+Jul 20 18:14:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:15:00 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:15:00 symfony [info] {myUser} User is authenticated
+Jul 20 18:15:00 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 18:15:00 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 18:15:00 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 18:15:00 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:15:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:15:00 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:15:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:15:00 symfony [info] {sfWebDebugLogger} Configuration 7.42 ms (8)
+Jul 20 18:15:00 symfony [info] {sfWebDebugLogger} Factories 272.12 ms (1)
+Jul 20 18:15:00 symfony [info] {sfWebDebugLogger} Action "login/index" 66.87 ms (1)
+Jul 20 18:15:00 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 18:15:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:15:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:15:00 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:15:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:15:01 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:15:02 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:15:02 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:15:02 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:15:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:15:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:15:02 symfony [info] {sfWebDebugLogger} Configuration 244.61 ms (10)
+Jul 20 18:15:02 symfony [info] {sfWebDebugLogger} Factories 55.21 ms (1)
+Jul 20 18:15:02 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 1251.36 ms (1)
+Jul 20 18:15:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 18:15:02 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 682.69 ms (1)
+Jul 20 18:15:02 symfony [info] {sfWebResponse} Send content (33518 o)
+Jul 20 18:15:06 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:15:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:15:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:15:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:15:06 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:15:06 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:15:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:15:06 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:15:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:15:06 symfony [info] {sfWebDebugLogger} Configuration 2.07 ms (8)
+Jul 20 18:15:06 symfony [info] {sfWebDebugLogger} Factories 58.59 ms (1)
+Jul 20 18:15:06 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.73 ms (1)
+Jul 20 18:15:06 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:15:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:15:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:15:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:15:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:15:08 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:15:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:15:08 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:15:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:15:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:15:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:15:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:15:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} Factories 56.21 ms (1)
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 348.17 ms (1)
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 128.43 ms (1)
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 79.87 ms (1)
+Jul 20 18:15:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:15:08 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:15:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:15:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:15:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:15:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:15:11 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:15:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:15:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:15:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:15:12 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:15:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:15:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:15:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:15:12 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Jul 20 18:15:12 symfony [info] {sfWebDebugLogger} Factories 54.44 ms (1)
+Jul 20 18:15:12 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 63.50 ms (1)
+Jul 20 18:15:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:15:12 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 29.00 ms (1)
+Jul 20 18:15:12 symfony [info] {sfWebResponse} Send content (33543 o)
+Jul 20 18:16:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:16:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:16:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:16:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:16:38 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:16:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:16:39 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:16:39 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:16:39 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:16:39 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:16:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:16:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:16:39 symfony [info] {sfWebDebugLogger} Configuration 3.07 ms (9)
+Jul 20 18:16:39 symfony [info] {sfWebDebugLogger} Factories 67.87 ms (1)
+Jul 20 18:16:39 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 136.40 ms (1)
+Jul 20 18:16:39 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:16:39 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 34.18 ms (1)
+Jul 20 18:16:39 symfony [info] {sfWebResponse} Send content (33546 o)
+Jul 20 18:16:44 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:16:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:16:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:16:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:16:44 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:16:44 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:16:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:16:44 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:16:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:16:44 symfony [info] {sfWebDebugLogger} Configuration 2.08 ms (8)
+Jul 20 18:16:44 symfony [info] {sfWebDebugLogger} Factories 71.83 ms (1)
+Jul 20 18:16:44 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.78 ms (1)
+Jul 20 18:16:44 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:16:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:16:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:16:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:16:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:16:46 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:16:46 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:16:46 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:16:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:16:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:16:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:16:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:16:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} Configuration 2.30 ms (9)
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} Factories 53.22 ms (1)
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 61.85 ms (1)
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 74.94 ms (1)
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 53.55 ms (1)
+Jul 20 18:16:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:16:46 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:16:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:16:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:16:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:16:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:16:50 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:16:50 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:16:50 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:16:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:16:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:16:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:16:50 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:16:50 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:16:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:16:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} Factories 54.08 ms (1)
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 56.69 ms (1)
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 91.34 ms (1)
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 72.51 ms (1)
+Jul 20 18:16:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:16:50 symfony [info] {sfWebResponse} Send content (38514 o)
+Jul 20 18:18:47 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:18:47 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Jul 20 18:18:47 symfony [info] {myUser} User is not authenticated
+Jul 20 18:18:47 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Configuration 2.52 ms (8)
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Factories 69.10 ms (1)
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Action "login/logout" 3.63 ms (1)
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send content (125 o)
+Jul 20 18:18:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:18:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:18:47 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:18:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:18:47 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:18:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Configuration 2.33 ms (9)
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Factories 55.08 ms (1)
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} Action "login/index" 51.50 ms (1)
+Jul 20 18:18:47 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 24.32 ms (1)
+Jul 20 18:18:47 symfony [info] {sfWebResponse} Send content (30093 o)
+Jul 20 18:20:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:20:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:20:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:20:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:20:20 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:20:20 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:20:20 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:20 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:20:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:20:20 symfony [info] {sfWebDebugLogger} Configuration 5.88 ms (9)
+Jul 20 18:20:20 symfony [info] {sfWebDebugLogger} Factories 59.96 ms (1)
+Jul 20 18:20:20 symfony [info] {sfWebDebugLogger} Action "login/index" 11.86 ms (1)
+Jul 20 18:20:20 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 43.52 ms (1)
+Jul 20 18:20:20 symfony [info] {sfWebResponse} Send content (30124 o)
+Jul 20 18:20:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:20:31 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:20:31 symfony [info] {myUser} User is authenticated
+Jul 20 18:20:31 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 18:20:31 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 18:20:31 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 18:20:31 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Configuration 2.05 ms (8)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Factories 54.19 ms (1)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Action "login/index" 19.15 ms (1)
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 18:20:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:20:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:20:31 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:20:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:20:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:20:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:20:31 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Factories 53.95 ms (1)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 77.76 ms (1)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:20:31 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.20 ms (1)
+Jul 20 18:20:31 symfony [info] {sfWebResponse} Send content (33513 o)
+Jul 20 18:20:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:20:55 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:20:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:20:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:20:55 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:20:55 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:55 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:20:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:20:55 symfony [info] {sfWebDebugLogger} Configuration 2.41 ms (9)
+Jul 20 18:20:55 symfony [info] {sfWebDebugLogger} Factories 84.80 ms (1)
+Jul 20 18:20:55 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 88.80 ms (1)
+Jul 20 18:20:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:20:55 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.76 ms (1)
+Jul 20 18:20:55 symfony [info] {sfWebResponse} Send content (33544 o)
+Jul 20 18:20:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:20:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:20:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:20:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:20:59 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:20:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:20:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:20:59 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:20:59 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:59 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:20:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:20:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:20:59 symfony [info] {sfWebDebugLogger} Configuration 2.48 ms (9)
+Jul 20 18:20:59 symfony [info] {sfWebDebugLogger} Factories 55.44 ms (1)
+Jul 20 18:20:59 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 78.55 ms (1)
+Jul 20 18:20:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:20:59 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 39.11 ms (1)
+Jul 20 18:20:59 symfony [info] {sfWebResponse} Send content (33545 o)
+Jul 20 18:21:05 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:05 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:21:05 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Configuration 2.04 ms (8)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Factories 54.10 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 2.67 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:21:05 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:05 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Jul 20 18:21:05 symfony [info] {myUser} User is not authenticated
+Jul 20 18:21:05 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Configuration 2.09 ms (8)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Factories 55.46 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Action "login/logout" 3.49 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send content (125 o)
+Jul 20 18:21:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:05 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:21:05 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:21:05 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:05 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Factories 53.43 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} Action "login/index" 11.81 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 22.67 ms (1)
+Jul 20 18:21:05 symfony [info] {sfWebResponse} Send content (30094 o)
+Jul 20 18:21:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:21:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:14 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:21:14 symfony [info] {myUser} User is authenticated
+Jul 20 18:21:14 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 18:21:14 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 18:21:14 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 18:21:14 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:21:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:21:14 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:21:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:14 symfony [info] {sfWebDebugLogger} Configuration 2.06 ms (8)
+Jul 20 18:21:14 symfony [info] {sfWebDebugLogger} Factories 107.50 ms (1)
+Jul 20 18:21:14 symfony [info] {sfWebDebugLogger} Action "login/index" 3.28 ms (1)
+Jul 20 18:21:14 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 18:21:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:21:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:15 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:21:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:21:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:21:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:21:15 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:21:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:15 symfony [info] {sfWebDebugLogger} Configuration 2.55 ms (9)
+Jul 20 18:21:15 symfony [info] {sfWebDebugLogger} Factories 54.73 ms (1)
+Jul 20 18:21:15 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 89.55 ms (1)
+Jul 20 18:21:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:21:15 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 39.88 ms (1)
+Jul 20 18:21:15 symfony [info] {sfWebResponse} Send content (33513 o)
+Jul 20 18:21:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:21:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:44 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:21:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:21:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:21:44 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:21:44 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:44 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:21:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:44 symfony [info] {sfWebDebugLogger} Configuration 2.31 ms (9)
+Jul 20 18:21:44 symfony [info] {sfWebDebugLogger} Factories 53.24 ms (1)
+Jul 20 18:21:44 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 62.10 ms (1)
+Jul 20 18:21:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:21:44 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 28.61 ms (1)
+Jul 20 18:21:44 symfony [info] {sfWebResponse} Send content (33516 o)
+Jul 20 18:21:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:21:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:49 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:21:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:21:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:21:49 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:21:49 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:49 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:21:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:49 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Jul 20 18:21:49 symfony [info] {sfWebDebugLogger} Factories 53.25 ms (1)
+Jul 20 18:21:49 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 64.85 ms (1)
+Jul 20 18:21:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:21:49 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 29.58 ms (1)
+Jul 20 18:21:49 symfony [info] {sfWebResponse} Send content (33516 o)
+Jul 20 18:21:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:21:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:21:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:21:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:21:53 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:21:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:21:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:21:54 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:21:54 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:54 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:21:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:21:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:21:54 symfony [info] {sfWebDebugLogger} Configuration 115.42 ms (10)
+Jul 20 18:21:54 symfony [info] {sfWebDebugLogger} Factories 52.70 ms (1)
+Jul 20 18:21:54 symfony [info] {sfWebDebugLogger} Action "tarea/index" 142.13 ms (1)
+Jul 20 18:21:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:21:54 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 188.23 ms (1)
+Jul 20 18:21:54 symfony [info] {sfWebResponse} Send content (40499 o)
+Jul 20 18:22:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:23:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:23:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:23:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:23:00 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:23:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:23:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:23:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:23:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:23:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:23:00 symfony [info] {sfWebDebugLogger} Configuration 2.66 ms (9)
+Jul 20 18:23:00 symfony [info] {sfWebDebugLogger} Factories 70.56 ms (1)
+Jul 20 18:23:00 symfony [info] {sfWebDebugLogger} Action "tarea/index" 82.43 ms (1)
+Jul 20 18:23:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:23:00 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 107.27 ms (1)
+Jul 20 18:23:00 symfony [info] {sfWebResponse} Send content (40528 o)
+Jul 20 18:23:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:23:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:23:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:23:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:23:06 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:23:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:23:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:23:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:23:07 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:23:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:23:07 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Jul 20 18:23:07 symfony [info] {sfWebDebugLogger} Factories 94.17 ms (1)
+Jul 20 18:23:07 symfony [info] {sfWebDebugLogger} Action "tarea/index" 90.82 ms (1)
+Jul 20 18:23:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:23:07 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 126.08 ms (1)
+Jul 20 18:23:07 symfony [info] {sfWebResponse} Send content (40573 o)
+Jul 20 18:23:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:23:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:23:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:23:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:23:10 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:23:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:23:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:23:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:23:11 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:11 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:23:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:23:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:23:11 symfony [info] {sfWebDebugLogger} Configuration 9.35 ms (9)
+Jul 20 18:23:11 symfony [info] {sfWebDebugLogger} Factories 76.90 ms (1)
+Jul 20 18:23:11 symfony [info] {sfWebDebugLogger} Action "tarea/index" 101.85 ms (1)
+Jul 20 18:23:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:23:11 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 104.46 ms (1)
+Jul 20 18:23:11 symfony [info] {sfWebResponse} Send content (40574 o)
+Jul 20 18:24:35 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /tarea with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:24:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:35 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:24:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:24:35 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:24:35 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:35 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:35 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Jul 20 18:24:35 symfony [info] {sfWebDebugLogger} Factories 60.40 ms (1)
+Jul 20 18:24:35 symfony [info] {sfWebDebugLogger} Action "tarea/index" 130.89 ms (1)
+Jul 20 18:24:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:24:35 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 145.67 ms (1)
+Jul 20 18:24:35 symfony [info] {sfWebResponse} Send content (40728 o)
+Jul 20 18:24:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:24:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:40 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:40 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:24:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:24:40 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:24:40 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:40 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:40 symfony [info] {sfWebDebugLogger} Configuration 2.38 ms (9)
+Jul 20 18:24:40 symfony [info] {sfWebDebugLogger} Factories 56.40 ms (1)
+Jul 20 18:24:40 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 60.90 ms (1)
+Jul 20 18:24:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:24:40 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.11 ms (1)
+Jul 20 18:24:40 symfony [info] {sfWebResponse} Send content (33630 o)
+Jul 20 18:24:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:24:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:41 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:41 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:24:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:41 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:24:41 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:24:41 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:41 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:41 symfony [info] {sfWebDebugLogger} Configuration 2.43 ms (9)
+Jul 20 18:24:41 symfony [info] {sfWebDebugLogger} Factories 65.54 ms (1)
+Jul 20 18:24:41 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 78.53 ms (1)
+Jul 20 18:24:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:24:41 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 43.43 ms (1)
+Jul 20 18:24:42 symfony [info] {sfWebResponse} Send content (33630 o)
+Jul 20 18:24:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/index with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:24:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:47 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:24:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:24:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:24:47 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:47 symfony [info] {sfWebDebugLogger} Configuration 2.41 ms (9)
+Jul 20 18:24:47 symfony [info] {sfWebDebugLogger} Factories 53.51 ms (1)
+Jul 20 18:24:47 symfony [info] {sfWebDebugLogger} Action "tarea/index" 72.90 ms (1)
+Jul 20 18:24:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:24:47 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 98.04 ms (1)
+Jul 20 18:24:47 symfony [info] {sfWebResponse} Send content (40737 o)
+Jul 20 18:24:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/index with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:24:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:48 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:24:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:24:48 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:24:48 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:48 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:48 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (9)
+Jul 20 18:24:48 symfony [info] {sfWebDebugLogger} Factories 52.02 ms (1)
+Jul 20 18:24:48 symfony [info] {sfWebDebugLogger} Action "tarea/index" 80.73 ms (1)
+Jul 20 18:24:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:24:48 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 112.16 ms (1)
+Jul 20 18:24:48 symfony [info] {sfWebResponse} Send content (40738 o)
+Jul 20 18:24:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /evento/index with parameters array (  'module' => 'evento',  'action' => 'index',)
+Jul 20 18:24:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:24:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:24:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:24:51 symfony [info] {eventoActions} Call "eventoActions->executeIndex()"
+Jul 20 18:24:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:24:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.idevento AS e__idevento, e.fechaevento AS e__fechaevento, e.nombreevento AS e__nombreevento, e.descevento AS e__descevento, e.proyectopk AS e__proyectopk, e.fecha_cambio_estado AS e__fecha_cambio_estado, e.fecha_actualizacion AS e__fecha_actualizacion FROM evento e - ()
+Jul 20 18:24:51 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/evento/templates/indexSuccess.php"
+Jul 20 18:24:51 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:51 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:24:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:24:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:51 symfony [info] {sfWebDebugLogger} Configuration 116.19 ms (10)
+Jul 20 18:24:51 symfony [info] {sfWebDebugLogger} Factories 55.67 ms (1)
+Jul 20 18:24:51 symfony [info] {sfWebDebugLogger} Action "evento/index" 478.14 ms (1)
+Jul 20 18:24:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 18:24:51 symfony [info] {sfWebDebugLogger} View "Success" for "evento/index" 67.30 ms (1)
+Jul 20 18:24:51 symfony [info] {sfWebResponse} Send content (32289 o)
+Jul 20 18:24:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/index with parameters array (  'module' => 'usuario',  'action' => 'index',)
+Jul 20 18:24:56 symfony [info] {sfFrontWebController} Action "usuario/index" does not exist
+Jul 20 18:24:56 symfony [err] {sfError404Exception} Action "usuario/index" does not exist.
+Jul 20 18:24:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jul 20 18:24:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:24:56 symfony [info] {sfWebDebugLogger} Configuration 1.41 ms (5)
+Jul 20 18:24:56 symfony [info] {sfWebDebugLogger} Factories 56.05 ms (1)
+Jul 20 18:27:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /evento/index with parameters array (  'module' => 'evento',  'action' => 'index',)
+Jul 20 18:27:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:27:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:27:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:27:53 symfony [info] {eventoActions} Call "eventoActions->executeIndex()"
+Jul 20 18:27:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:27:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.idevento AS e__idevento, e.fechaevento AS e__fechaevento, e.nombreevento AS e__nombreevento, e.descevento AS e__descevento, e.proyectopk AS e__proyectopk, e.fecha_cambio_estado AS e__fecha_cambio_estado, e.fecha_actualizacion AS e__fecha_actualizacion FROM evento e - ()
+Jul 20 18:27:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/evento/templates/indexSuccess.php"
+Jul 20 18:27:53 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:53 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:27:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:27:53 symfony [info] {sfWebDebugLogger} Configuration 298.32 ms (9)
+Jul 20 18:27:53 symfony [info] {sfWebDebugLogger} Factories 257.81 ms (1)
+Jul 20 18:27:53 symfony [info] {sfWebDebugLogger} Action "evento/index" 62.39 ms (1)
+Jul 20 18:27:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:27:53 symfony [info] {sfWebDebugLogger} View "Success" for "evento/index" 24.08 ms (1)
+Jul 20 18:27:53 symfony [info] {sfWebResponse} Send content (32289 o)
+Jul 20 18:27:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/index with parameters array (  'module' => 'usuario',  'action' => 'index',)
+Jul 20 18:27:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:27:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:27:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:27:57 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Jul 20 18:27:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:27:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.idusuario AS u__idusuario, u.tipousuariopk AS u__tipousuariopk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u - ()
+Jul 20 18:27:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/usuario/templates/indexSuccess.php"
+Jul 20 18:27:57 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:57 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:27:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:27:57 symfony [info] {sfWebDebugLogger} Configuration 35.18 ms (10)
+Jul 20 18:27:57 symfony [info] {sfWebDebugLogger} Factories 54.39 ms (1)
+Jul 20 18:27:57 symfony [info] {sfWebDebugLogger} Action "usuario/index" 161.84 ms (1)
+Jul 20 18:27:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 18:27:57 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 38.81 ms (1)
+Jul 20 18:27:57 symfony [info] {sfWebResponse} Send content (32776 o)
+Jul 20 18:27:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /usuario/index with parameters array (  'module' => 'usuario',  'action' => 'index',)
+Jul 20 18:27:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:27:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:27:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:27:58 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Jul 20 18:27:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:27:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.idusuario AS u__idusuario, u.tipousuariopk AS u__tipousuariopk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u - ()
+Jul 20 18:27:58 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/usuario/templates/indexSuccess.php"
+Jul 20 18:27:58 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:58 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:27:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:27:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:27:58 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (9)
+Jul 20 18:27:58 symfony [info] {sfWebDebugLogger} Factories 54.97 ms (1)
+Jul 20 18:27:58 symfony [info] {sfWebDebugLogger} Action "usuario/index" 59.38 ms (1)
+Jul 20 18:27:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:27:58 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 20.07 ms (1)
+Jul 20 18:27:59 symfony [info] {sfWebResponse} Send content (32772 o)
+Jul 20 18:28:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /evento/index with parameters array (  'module' => 'evento',  'action' => 'index',)
+Jul 20 18:28:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:28:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:28:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:28:04 symfony [info] {eventoActions} Call "eventoActions->executeIndex()"
+Jul 20 18:28:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:28:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.idevento AS e__idevento, e.fechaevento AS e__fechaevento, e.nombreevento AS e__nombreevento, e.descevento AS e__descevento, e.proyectopk AS e__proyectopk, e.fecha_cambio_estado AS e__fecha_cambio_estado, e.fecha_actualizacion AS e__fecha_actualizacion FROM evento e - ()
+Jul 20 18:28:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/evento/templates/indexSuccess.php"
+Jul 20 18:28:04 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:28:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:28:04 symfony [info] {sfWebDebugLogger} Configuration 3.81 ms (9)
+Jul 20 18:28:04 symfony [info] {sfWebDebugLogger} Factories 55.91 ms (1)
+Jul 20 18:28:04 symfony [info] {sfWebDebugLogger} Action "evento/index" 58.03 ms (1)
+Jul 20 18:28:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:28:04 symfony [info] {sfWebDebugLogger} View "Success" for "evento/index" 19.81 ms (1)
+Jul 20 18:28:04 symfony [info] {sfWebResponse} Send content (32287 o)
+Jul 20 18:28:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/index with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 18:28:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:28:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:28:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:28:07 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 18:28:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:28:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 18:28:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 18:28:07 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:28:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:28:07 symfony [info] {sfWebDebugLogger} Configuration 34.44 ms (10)
+Jul 20 18:28:07 symfony [info] {sfWebDebugLogger} Factories 55.54 ms (1)
+Jul 20 18:28:07 symfony [info] {sfWebDebugLogger} Action "tarea/index" 74.73 ms (1)
+Jul 20 18:28:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:28:07 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 112.92 ms (1)
+Jul 20 18:28:07 symfony [info] {sfWebResponse} Send content (40738 o)
+Jul 20 18:28:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:28:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:28:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:28:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:28:15 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:28:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:28:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:28:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:28:15 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:28:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:28:15 symfony [info] {sfWebDebugLogger} Configuration 33.14 ms (10)
+Jul 20 18:28:15 symfony [info] {sfWebDebugLogger} Factories 54.30 ms (1)
+Jul 20 18:28:15 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 63.28 ms (1)
+Jul 20 18:28:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:28:15 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 37.27 ms (1)
+Jul 20 18:28:15 symfony [info] {sfWebResponse} Send content (33639 o)
+Jul 20 18:28:23 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Jul 20 18:28:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:28:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:28:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:28:23 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Jul 20 18:28:23 symfony [info] {myUser} User is not authenticated
+Jul 20 18:28:23 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:28:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:28:23 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/login/index"
+Jul 20 18:28:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:28:23 symfony [info] {sfWebDebugLogger} Configuration 32.94 ms (9)
+Jul 20 18:28:23 symfony [info] {sfWebDebugLogger} Factories 54.02 ms (1)
+Jul 20 18:28:23 symfony [info] {sfWebDebugLogger} Action "login/logout" 20.93 ms (1)
+Jul 20 18:28:23 symfony [info] {sfWebResponse} Send content (125 o)
+Jul 20 18:28:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:28:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:28:24 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:28:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:28:24 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:28:24 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:28:24 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:24 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:28:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:28:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:28:24 symfony [info] {sfWebDebugLogger} Configuration 20.75 ms (10)
+Jul 20 18:28:24 symfony [info] {sfWebDebugLogger} Factories 55.59 ms (1)
+Jul 20 18:28:24 symfony [info] {sfWebDebugLogger} Action "login/index" 51.99 ms (1)
+Jul 20 18:28:24 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 77.20 ms (1)
+Jul 20 18:28:24 symfony [info] {sfWebResponse} Send content (30219 o)
+Jul 20 18:29:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:29:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:29:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:29:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:29:02 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:29:02 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:29:02 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:29:02 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:29:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:29:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:29:02 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 20 18:29:02 symfony [info] {sfWebDebugLogger} Factories 56.26 ms (1)
+Jul 20 18:29:02 symfony [info] {sfWebDebugLogger} Action "login/index" 11.52 ms (1)
+Jul 20 18:29:02 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 23.97 ms (1)
+Jul 20 18:29:02 symfony [info] {sfWebResponse} Send content (30250 o)
+Jul 20 18:32:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:32:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:32:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:32:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:32:07 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:32:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 18:32:07 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:32:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:32:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:32:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:32:07 symfony [info] {sfWebDebugLogger} Configuration 2.67 ms (9)
+Jul 20 18:32:07 symfony [info] {sfWebDebugLogger} Factories 83.84 ms (1)
+Jul 20 18:32:07 symfony [info] {sfWebDebugLogger} Action "login/index" 15.79 ms (1)
+Jul 20 18:32:07 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 32.10 ms (1)
+Jul 20 18:32:07 symfony [info] {sfWebResponse} Send content (30250 o)
+Jul 20 18:32:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:32:17 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 18:32:17 symfony [info] {myUser} User is authenticated
+Jul 20 18:32:17 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 18:32:17 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 18:32:17 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 18:32:17 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Configuration 2.22 ms (8)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Factories 54.62 ms (1)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Action "login/index" 13.65 ms (1)
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 18:32:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:32:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:32:17 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:32:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:32:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:32:17 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:32:17 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:32:17 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Configuration 2.38 ms (9)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Factories 53.69 ms (1)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 58.22 ms (1)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:32:17 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 28.92 ms (1)
+Jul 20 18:32:17 symfony [info] {sfWebResponse} Send content (33636 o)
+Jul 20 18:33:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:33:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:33:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:33:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:33:37 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:33:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:33:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:33:37 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:33:37 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:33:37 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:33:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:33:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:33:37 symfony [info] {sfWebDebugLogger} Configuration 314.09 ms (9)
+Jul 20 18:33:37 symfony [info] {sfWebDebugLogger} Factories 222.02 ms (1)
+Jul 20 18:33:37 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 73.53 ms (1)
+Jul 20 18:33:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:33:37 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 72.88 ms (1)
+Jul 20 18:33:38 symfony [info] {sfWebResponse} Send content (33672 o)
+Jul 20 18:33:56 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:33:56 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:33:56 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:33:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:33:56 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:33:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:33:56 symfony [info] {sfWebDebugLogger} Configuration 2.27 ms (8)
+Jul 20 18:33:56 symfony [info] {sfWebDebugLogger} Factories 62.14 ms (1)
+Jul 20 18:33:56 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 2.00 ms (1)
+Jul 20 18:33:56 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:33:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:33:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:33:56 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:33:56 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:33:56 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:33:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:33:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:33:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:33:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:33:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} Configuration 2.32 ms (9)
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} Factories 53.89 ms (1)
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 140.72 ms (1)
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 172.22 ms (1)
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 122.02 ms (1)
+Jul 20 18:33:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:33:57 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:35:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:35:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:35:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:35:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:35:07 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:35:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:35:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:35:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:35:07 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:35:07 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:35:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:35:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:35:07 symfony [info] {sfWebDebugLogger} Configuration 2.79 ms (9)
+Jul 20 18:35:07 symfony [info] {sfWebDebugLogger} Factories 80.12 ms (1)
+Jul 20 18:35:07 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 71.21 ms (1)
+Jul 20 18:35:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 18:35:07 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.06 ms (1)
+Jul 20 18:35:07 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:36:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:36:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:36:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:36:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:36:29 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:36:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:36:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:36:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:36:29 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:36:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:36:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:36:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:36:29 symfony [info] {sfWebDebugLogger} Configuration 2.56 ms (9)
+Jul 20 18:36:29 symfony [info] {sfWebDebugLogger} Factories 63.34 ms (1)
+Jul 20 18:36:29 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 65.30 ms (1)
+Jul 20 18:36:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:36:29 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 42.68 ms (1)
+Jul 20 18:36:29 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:38:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:38:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:38:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:38:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:38:31 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:38:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:38:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:38:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:38:31 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:38:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:38:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:38:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:38:31 symfony [info] {sfWebDebugLogger} Configuration 2.52 ms (9)
+Jul 20 18:38:31 symfony [info] {sfWebDebugLogger} Factories 56.10 ms (1)
+Jul 20 18:38:31 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 63.76 ms (1)
+Jul 20 18:38:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:38:31 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 32.72 ms (1)
+Jul 20 18:38:31 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:40:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:40:42 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:40:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:40:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:40:43 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:40:43 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:40:43 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:40:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:40:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:40:43 symfony [info] {sfWebDebugLogger} Configuration 3.32 ms (9)
+Jul 20 18:40:43 symfony [info] {sfWebDebugLogger} Factories 58.54 ms (1)
+Jul 20 18:40:43 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 63.80 ms (1)
+Jul 20 18:40:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:40:43 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 35.75 ms (1)
+Jul 20 18:40:43 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:40:48 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:40:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:40:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:40:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:40:48 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:40:48 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:40:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:40:48 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:40:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:40:48 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (8)
+Jul 20 18:40:48 symfony [info] {sfWebDebugLogger} Factories 56.73 ms (1)
+Jul 20 18:40:48 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 2.89 ms (1)
+Jul 20 18:40:48 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:40:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:40:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:40:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:40:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:40:49 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:40:49 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:40:49 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:40:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:40:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:40:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:40:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:40:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} Factories 54.27 ms (1)
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 58.76 ms (1)
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 84.10 ms (1)
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 68.53 ms (1)
+Jul 20 18:40:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:40:49 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:41:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:41:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:41:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:41:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:41:27 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:41:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:41:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:41:27 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:41:27 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:41:27 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:41:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:41:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:41:27 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Jul 20 18:41:27 symfony [info] {sfWebDebugLogger} Factories 55.47 ms (1)
+Jul 20 18:41:27 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 59.47 ms (1)
+Jul 20 18:41:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:41:27 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.43 ms (1)
+Jul 20 18:41:27 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:44:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:44:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:44:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:44:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:44:38 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:44:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:44:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:44:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:44:38 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:44:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:44:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:44:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:44:38 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Jul 20 18:44:38 symfony [info] {sfWebDebugLogger} Factories 55.45 ms (1)
+Jul 20 18:44:38 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 60.27 ms (1)
+Jul 20 18:44:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 18:44:38 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 30.08 ms (1)
+Jul 20 18:44:38 symfony [info] {sfWebResponse} Send content (33668 o)
+Jul 20 18:45:33 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:45:33 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 18:45:33 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Configuration 6.09 ms (8)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Factories 53.35 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.70 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 18:45:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:45:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:45:33 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 18:45:33 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 18:45:33 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 18:45:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:45:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 18:45:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (9)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Factories 53.71 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 54.57 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 68.96 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 53.96 ms (1)
+Jul 20 18:45:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 18:45:33 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 18:59:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 18:59:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 18:59:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 18:59:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 18:59:16 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 18:59:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 18:59:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 18:59:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 18:59:17 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:59:17 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 18:59:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 18:59:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 18:59:17 symfony [info] {sfWebDebugLogger} Configuration 5.74 ms (9)
+Jul 20 18:59:17 symfony [info] {sfWebDebugLogger} Factories 351.52 ms (1)
+Jul 20 18:59:17 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 415.82 ms (1)
+Jul 20 18:59:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 18:59:17 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 197.01 ms (1)
+Jul 20 18:59:17 symfony [info] {sfWebResponse} Send content (33643 o)
+Jul 20 19:29:25 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:29:25 symfony [info] {myUser} Automatic user logout due to timeout
+Jul 20 19:29:25 symfony [info] {myUser} User is not authenticated
+Jul 20 19:29:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:29:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:29:25 symfony [info] {sfBasicSecurityFilter} Action "proyecto/prueba" requires authentication, forwarding to "login/index"
+Jul 20 19:29:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:29:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:29:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:29:26 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:29:26 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 19:29:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:29:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:29:26 symfony [info] {sfWebDebugLogger} Configuration 208.73 ms (13)
+Jul 20 19:29:26 symfony [info] {sfWebDebugLogger} Factories 387.13 ms (1)
+Jul 20 19:29:26 symfony [info] {sfWebDebugLogger} Action "login/index" 83.85 ms (1)
+Jul 20 19:29:26 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 152.33 ms (1)
+Jul 20 19:29:26 symfony [info] {sfWebResponse} Send content (906 o)
+Jul 20 19:33:27 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:33:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:28 symfony [info] {sfBasicSecurityFilter} Action "proyecto/prueba" requires authentication, forwarding to "login/index"
+Jul 20 19:33:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:28 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:33:28 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 19:33:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:28 symfony [info] {sfWebDebugLogger} Configuration 5.43 ms (12)
+Jul 20 19:33:28 symfony [info] {sfWebDebugLogger} Factories 611.74 ms (1)
+Jul 20 19:33:28 symfony [info] {sfWebDebugLogger} Action "login/index" 403.06 ms (1)
+Jul 20 19:33:28 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 218.85 ms (1)
+Jul 20 19:33:28 symfony [info] {sfWebResponse} Send content (906 o)
+Jul 20 19:33:31 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:33:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:31 symfony [info] {sfBasicSecurityFilter} Action "proyecto/prueba" requires authentication, forwarding to "login/index"
+Jul 20 19:33:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:31 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:33:31 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 19:33:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:31 symfony [info] {sfWebDebugLogger} Configuration 3.03 ms (12)
+Jul 20 19:33:31 symfony [info] {sfWebDebugLogger} Factories 62.70 ms (1)
+Jul 20 19:33:31 symfony [info] {sfWebDebugLogger} Action "login/index" 11.88 ms (1)
+Jul 20 19:33:31 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 21.49 ms (1)
+Jul 20 19:33:31 symfony [info] {sfWebResponse} Send content (906 o)
+Jul 20 19:33:32 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:33:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:32 symfony [info] {sfBasicSecurityFilter} Action "proyecto/prueba" requires authentication, forwarding to "login/index"
+Jul 20 19:33:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:32 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:33:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 19:33:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:32 symfony [info] {sfWebDebugLogger} Configuration 3.54 ms (12)
+Jul 20 19:33:32 symfony [info] {sfWebDebugLogger} Factories 55.72 ms (1)
+Jul 20 19:33:32 symfony [info] {sfWebDebugLogger} Action "login/index" 14.66 ms (1)
+Jul 20 19:33:32 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 29.66 ms (1)
+Jul 20 19:33:32 symfony [info] {sfWebResponse} Send content (906 o)
+Jul 20 19:33:34 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Jul 20 19:33:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:34 symfony [info] {sfBasicSecurityFilter} Action "login/logout" requires authentication, forwarding to "login/index"
+Jul 20 19:33:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:34 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:33:34 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/login/templates/indexSuccess.php"
+Jul 20 19:33:34 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:34 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:34 symfony [info] {sfWebDebugLogger} Configuration 3.16 ms (12)
+Jul 20 19:33:34 symfony [info] {sfWebDebugLogger} Factories 59.60 ms (1)
+Jul 20 19:33:34 symfony [info] {sfWebDebugLogger} Action "login/index" 11.77 ms (1)
+Jul 20 19:33:34 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 84.86 ms (1)
+Jul 20 19:33:34 symfony [info] {sfWebResponse} Send content (31605 o)
+Jul 20 19:33:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:45 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Jul 20 19:33:45 symfony [info] {myUser} User is authenticated
+Jul 20 19:33:45 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 35 (Undefined variable: query)
+Jul 20 19:33:45 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/gProject/apps/frontend/modules/login/actions/actions.class.php on line 37 (Undefined variable: query)
+Jul 20 19:33:45 symfony [info] {myUser} Add credential(s) "gerente"
+Jul 20 19:33:45 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 19:33:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 19:33:45 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/index"
+Jul 20 19:33:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:45 symfony [info] {sfWebDebugLogger} Configuration 4.97 ms (8)
+Jul 20 19:33:45 symfony [info] {sfWebDebugLogger} Factories 590.43 ms (1)
+Jul 20 19:33:45 symfony [info] {sfWebDebugLogger} Action "login/index" 41.66 ms (1)
+Jul 20 19:33:45 symfony [info] {sfWebResponse} Send content (128 o)
+Jul 20 19:33:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:45 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 19:33:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:33:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 19:33:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 19:33:47 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:47 symfony [info] {sfWebDebugLogger} Configuration 8.31 ms (9)
+Jul 20 19:33:47 symfony [info] {sfWebDebugLogger} Factories 83.45 ms (1)
+Jul 20 19:33:47 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 1833.55 ms (1)
+Jul 20 19:33:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jul 20 19:33:47 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 105.57 ms (1)
+Jul 20 19:33:47 symfony [info] {sfWebResponse} Send content (33639 o)
+Jul 20 19:33:51 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:51 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 19:33:51 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Configuration 2.14 ms (8)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Factories 58.51 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 2.75 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 19:33:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:51 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 19:33:51 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 19:33:51 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 19:33:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:33:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 19:33:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Factories 56.23 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 200.66 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 126.93 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 72.66 ms (1)
+Jul 20 19:33:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 19:33:51 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 19:33:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 19:33:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:33:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:33:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:33:54 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 19:33:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:33:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 19:33:54 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 19:33:54 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:54 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:33:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:33:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:33:54 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Jul 20 19:33:54 symfony [info] {sfWebDebugLogger} Factories 96.71 ms (1)
+Jul 20 19:33:54 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 73.46 ms (1)
+Jul 20 19:33:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 19:33:54 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 43.47 ms (1)
+Jul 20 19:33:54 symfony [info] {sfWebResponse} Send content (33639 o)
+Jul 20 19:34:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 19:34:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:01 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 19:34:01 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 19:34:01 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 19:34:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:34:01 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 19:34:01 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 19:34:01 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:01 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:34:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} Configuration 4.14 ms (9)
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} Factories 52.74 ms (1)
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 233.37 ms (1)
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 156.59 ms (1)
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 136.24 ms (1)
+Jul 20 19:34:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (3)
+Jul 20 19:34:01 symfony [info] {sfWebResponse} Send content (38639 o)
+Jul 20 19:34:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/index with parameters array (  'module' => 'proyecto',  'action' => 'index',)
+Jul 20 19:34:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:03 symfony [info] {proyectoActions} Call "proyectoActions->executeIndex()"
+Jul 20 19:34:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:34:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idproyecto AS p__idproyecto, p.nombre AS p__nombre, p.tiempo_estimado AS p__tiempo_estimado, p.descproyecto AS p__descproyecto, p.statuspk AS p__statuspk, p.prioridadpk AS p__prioridadpk, p.fecha_creacion AS p__fecha_creacion, p.fecha_actualizacion AS p__fecha_actualizacion FROM proyecto p - ()
+Jul 20 19:34:03 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/indexSuccess.php"
+Jul 20 19:34:03 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:03 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:34:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:03 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Jul 20 19:34:03 symfony [info] {sfWebDebugLogger} Factories 61.79 ms (1)
+Jul 20 19:34:03 symfony [info] {sfWebDebugLogger} Action "proyecto/index" 63.68 ms (1)
+Jul 20 19:34:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 19:34:03 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/index" 34.51 ms (1)
+Jul 20 19:34:03 symfony [info] {sfWebResponse} Send content (33637 o)
+Jul 20 19:34:07 symfony [info] {sfPatternRouting} Match route "prueba" (/prueba) for /prueba with parameters array (  'module' => 'proyecto',  'action' => 'prueba',)
+Jul 20 19:34:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:07 symfony [info] {proyectoActions} Call "proyectoActions->executePrueba()"
+Jul 20 19:34:07 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 19:34:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jul 20 19:34:07 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/frontend_dev.php/proyecto/new"
+Jul 20 19:34:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:07 symfony [info] {sfWebDebugLogger} Configuration 2.13 ms (8)
+Jul 20 19:34:07 symfony [info] {sfWebDebugLogger} Factories 54.25 ms (1)
+Jul 20 19:34:07 symfony [info] {sfWebDebugLogger} Action "proyecto/prueba" 1.70 ms (1)
+Jul 20 19:34:07 symfony [info] {sfWebResponse} Send content (126 o)
+Jul 20 19:34:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 19:34:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:08 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 19:34:08 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 19:34:08 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 19:34:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:34:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 19:34:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 19:34:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:34:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} Configuration 2.31 ms (9)
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} Factories 52.49 ms (1)
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 53.84 ms (1)
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 74.62 ms (1)
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 59.07 ms (1)
+Jul 20 19:34:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 19:34:08 symfony [info] {sfWebResponse} Send content (1685 o)
+Jul 20 19:34:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /proyecto/new with parameters array (  'module' => 'proyecto',  'action' => 'new',)
+Jul 20 19:34:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:09 symfony [info] {proyectoActions} Call "proyectoActions->executeNew()"
+Jul 20 19:34:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/newSuccess.php"
+Jul 20 19:34:10 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/apps/frontend/modules/proyecto/templates/_form.php"
+Jul 20 19:34:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:34:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.idstatus AS s__idstatus, s.nombrestatus AS s__nombrestatus FROM status s - ()
+Jul 20 19:34:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idprioridad AS p__idprioridad, p.nombreprioridad AS p__nombreprioridad FROM prioridad p - ()
+Jul 20 19:34:10 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:10 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:34:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} Configuration 2.45 ms (9)
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} Factories 60.84 ms (1)
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} Action "proyecto/new" 56.37 ms (1)
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} View "Success" for "proyecto/new" 88.22 ms (1)
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} Partial "proyecto/_form" 63.79 ms (1)
+Jul 20 19:34:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Jul 20 19:34:10 symfony [info] {sfWebResponse} Send content (38637 o)
+Jul 20 19:34:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /tarea/index with parameters array (  'module' => 'tarea',  'action' => 'index',)
+Jul 20 19:34:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 20 19:34:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 20 19:34:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 20 19:34:15 symfony [info] {tareaActions} Call "tareaActions->executeIndex()"
+Jul 20 19:34:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 20 19:34:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.idtarea AS t__idtarea, t.nombretarea AS t__nombretarea, t.duracion AS t__duracion, t.statuspk AS t__statuspk, t.prioridadpk AS t__prioridadpk, t.grupopk AS t__grupopk, t.proyectopk AS t__proyectopk, t.tar_fecha_creacion AS t__tar_fecha_creacion, t.tar_fecha_actulizacion AS t__tar_fecha_actulizacion FROM tarea t - ()
+Jul 20 19:34:15 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/modules/tarea/templates/indexSuccess.php"
+Jul 20 19:34:16 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/frontend/templates/layout.php"
+Jul 20 19:34:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 20 19:34:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 20 19:34:16 symfony [info] {sfWebDebugLogger} Configuration 121.11 ms (10)
+Jul 20 19:34:16 symfony [info] {sfWebDebugLogger} Factories 61.09 ms (1)
+Jul 20 19:34:16 symfony [info] {sfWebDebugLogger} Action "tarea/index" 95.62 ms (1)
+Jul 20 19:34:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Jul 20 19:34:16 symfony [info] {sfWebDebugLogger} View "Success" for "tarea/index" 128.41 ms (1)
+Jul 20 19:34:16 symfony [info] {sfWebResponse} Send content (40826 o)

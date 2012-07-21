@@ -1,3 +1,5 @@
+<?php use_javascript("treeTable.js") ?>
+
 <h1>Tareas List</h1>
 
 <table>

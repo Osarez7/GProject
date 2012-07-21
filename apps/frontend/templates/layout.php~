@@ -10,10 +10,10 @@
         <div id="conteiner">
             <div id="header">
                 <ul class="menu">
-                    <li><a href="<?php echo url_for('proyecto/index') ?>">Proyectos</a></li>
-                    <li><a href="<?php echo url_for('tarea/index') ?>">Tareas</a></li>
-                    <li><a href="<?php echo url_for('evento/index') ?>">Eventos</a></li>
-                    <li><a href="<?php echo url_for('usuario/index') ?>">Usuarios</a></li> 
+                    <li><a href="">Proyectos</a></li>
+                    <li><a href="">Tareas</a></li>
+                    <li><a href="">Eventos</a></li>
+                    <li><a href="">Usuarios</a></li> 
                 </ul>
                <?php if($sf_user->isAuthenticated()): ?>
                <a href="<?php echo url_for('login/logout') ?>" style="float:right; ">Cerrar Sesi&oacute;n</a>
