@@ -1,11 +1,13 @@
 <?php use_javascript("treeTable.js") ?>
+<?php use_javascript("myTreeTable.js") ?>
+<?php use_stylesheet("treeTable.css") ?>
 
-<h1>Tareas List</h1>
 
-<table>
+<h1>Arb&oacute;l de Tareas</h1>
+
+<table id="tbl-tareas">
   <thead>
     <tr>
-      <th>Id tarea</th>
       <th>Nombre tarea</th>
       <th>Duracion</th>
       <th>Status pk</th>
@@ -17,9 +19,9 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($tareas as $tarea): ?>
-    <tr>
-      <td><a href="<?php echo url_for('tarea/show?id_tarea='.$tarea->getIdTarea()) ?>"><?php echo $tarea->getIdTarea() ?></a></td>
+    <?php foreach ($tareas as $key=>$tarea): ?>
+    <tr id="<?php echo "node-".($key+1); ?>"  <?php  if(($key) % 2 != 0) { echo "class='child-of-node-".$key."'";} ?>>
+     
       <td><?php echo $tarea->getNombreTarea() ?></td>
       <td><?php echo $tarea->getDuracion() ?></td>
       <td><?php echo $tarea->getStatusPK() ?></td>

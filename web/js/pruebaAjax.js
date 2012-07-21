@@ -7,7 +7,7 @@ function tareasAJax(){
               
     jQuery.ajax({
         type:"POST",
-         data: "dato=hola",
+        // data: "dato=hola",
         contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
         url:"/frontend_dev.php/prueba",
         dataType:"html",
