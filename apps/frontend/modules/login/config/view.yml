@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css,menu_style.css]
+  stylesheets:    [main.css,login.css,menu_style.css]
 
-  javascripts:    [jquery-1.7.2.js,pruebaAjax.js]
+  javascripts:    [jquery-1.7.2.js]
 
   has_layout:     true
-  layout:         layout
+  layout:         layout_login

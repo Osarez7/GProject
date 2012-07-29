@@ -1,8 +1,8 @@
 
 function tareasAJax(){
+  
+  /* 
     
-   
-    jQuery("#mi-lista-proyectos").show();
     jQuery("#wait-icon").show();
               
     jQuery.ajax({
@@ -12,8 +12,7 @@ function tareasAJax(){
         url:"/frontend_dev.php/prueba",
         dataType:"html",
         success:function (msg) {
-
-                
+      
             jQuery("#mi-nueva-lista").html(msg);
             jQuery("#wait-icon").hide();
             jQuery(".flash_error").slideToggle();
@@ -23,7 +22,9 @@ function tareasAJax(){
     });
 
 
-    
+    */
+   
+   jQuery("#mi-nueva-lista").html('<img src=" /images/ajax-loader.gif" alt="ajax-loader" />').load("/            frontend_dev.php/prueba");
     
 }
 

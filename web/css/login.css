@@ -1,3 +1,32 @@
-lable{
+label{
     padding: 5px;
 }
+
+
+
+
+#login-content{
+
+    margin: 0;
+    min-height: 740px;
+    width: 100%;
+
+}
+
+#login-box{
+
+  background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 45px 45px 45px 45px;
+    font-family: helvetica;
+    font-size: 14px;
+    height: 192.2px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+#cssmenu{
+ height: 30px;
+}
+

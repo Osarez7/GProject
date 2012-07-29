@@ -6,42 +6,41 @@
         <?php include_javascripts() ?>
         <?php include_stylesheets() ?>
     </head>
-    <body>
-        <div id="conteiner">
-            <div id="header">
-                <ul class="menu">
-                    <li><a href="<?php echo url_for('proyecto/index') ?>">Proyectos</a></li>
-                    <li><a href="<?php echo url_for('tarea/index') ?>">Tareas</a></li>
-                    <li><a href="<?php echo url_for('evento/index') ?>">Eventos</a></li>
-                    <li><a href="<?php echo url_for('usuario/index') ?>">Usuarios</a></li> 
-                </ul>
-               <?php if($sf_user->isAuthenticated()): ?>
-               <a href="<?php echo url_for('login/logout') ?>" style="float:right; ">Cerrar Sesi&oacute;n</a>
-              <?php endif; ?>
-                </div>
 
+ <body>
+   <div id="contenedor">
+     <div id="cssmenu">
+      <ul>
+        <li class='active'><a href='index.html'><span>Home</span></a></li>
+        <li class='has-sub' ><a href="#">Proyectos</a>
+          <ul>
+           <li ><a href="<?php echo url_for('proyecto/index') ?>">Mis Proyectos</a></li>
+           <li ><a href="<?php echo url_for('proyecto/new') ?>">Nuevo Proyecto</a></li>
+         </ul>
 
-            <div id="sidebar">
+ 
+ <li ><a href="<?php echo url_for('tarea/index') ?>">Tareas</a></li>
+ <li ><a href="<?php echo url_for('evento/index') ?>">Eventos</a></li>
+ <li ><a href="<?php echo url_for('usuario/index') ?>">Usuarios</a></li> 
 
+                <?php if ($sf_user->isAuthenticated()): ?>
+                   <li id="btn-cerrar"> <a href="<?php echo url_for('login/logout') ?>" >Cerrar Sesi&oacute;n</a></li>
+                <?php endif; ?>
+
+</ul>
             </div>
 
-
-            <div id="content">
-                
-             
-                
-                <?php echo $sf_content ?>
+            <div id="lateral">
+              
             </div>
 
-
-            <div id="footer">
-
+            <div id="contenido">
+                 <?php echo $sf_content ?>
             </div>
 
-
+            <div id="pie">
+            </div>
         </div>
-
-
-
     </body>
+    
 </html>

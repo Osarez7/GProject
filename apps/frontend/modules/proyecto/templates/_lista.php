@@ -1,10 +1,22 @@
+
+
+<table id="tabla-carga" onload="tareasAJax();">
+ <tr>
+     <th>Nombre <th>
+ </tr>
+
+</table>
+
+
+
+
+
+
 <?php
+
 
 foreach ($proyectos as $proyecto) {
     
-    echo $proyecto->getIdProyecto()."   </br>" ;
-  
+    echo "<tr><td>".$proyecto->getIdProyecto()."</tr></td> </br>" ;
 }
-?>
-
-<input type="button" value="Ocultar" onclick="ocultar();" />
+            ?>

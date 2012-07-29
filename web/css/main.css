@@ -1,4 +1,4 @@
-body{
+/* body{
     background: url("../images/temaui/fondoGeneral.jpg");
     font-family: Arial,Helvetica,sans-serif;
 
@@ -25,11 +25,11 @@ table {
     color:#C83B36;
 }
 
-/*#conteiner{
+#conteiner{
     width: 100%;
     padding: 0px;
     margin: 0px;     
-}*/
+}
 
 
 
@@ -48,7 +48,7 @@ table {
      background: #0B2E56;  
      height: 200px;
      clear: both;
-}
+}/home/jint/Escritorio/cssmenu/menu_assets/styles.css
 
 table.lista{
     text-align: center;
@@ -72,3 +72,73 @@ ul.menu li{
   background-color: #f33;
   color: #fff;
 }
+*/
+
+ body{
+    background: -moz-linear-gradient(center top , #B9B9B9 0%, #FFF 100%) repeat scroll 0 0 transparent;
+    border-radius: 5px 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    margin:0 auto;
+    padding: 0px;
+    
+}  
+
+#btn-cerrar{
+ float: right;
+ color: #FFF;
+}
+
+
+#contenedor {
+  width: 100%;
+  magin: 0 auto;
+
+}
+
+
+
+/*
+ul.menu li{
+    list-style-type: none;
+    display: inline;
+}
+
+ul.menu{
+ display: inline;
+}
+
+ul.menu li a{
+    color: #FFF;
+}*/
+
+#lateral {
+  float: left;
+  width: 14%;
+  min-height: 300px;
+}
+
+#contenido {
+    float: left;
+    margin: 0 10px;
+    min-height: 690px;
+    padding: 0 20px;
+    width: 80%;
+}
+#pie {
+  clear: both;
+  height: 50px;
+   background: -moz-linear-gradient(center top , #333333 0%, #222222 100%) repeat scroll 0 0 transparent;
+    border-radius: 5px 5px;
+
+}
+
+#menucss{
+ clear: both;
+}
+ 
+
+

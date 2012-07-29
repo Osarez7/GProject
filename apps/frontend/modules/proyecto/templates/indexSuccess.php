@@ -32,15 +32,5 @@
     <a href="<?php echo url_for('proyecto/new') ?>">New</a>
 
 
-    <div id="resultado-ajax">
-
-    </div>
-
-    
 
 
-    <div id="wait-icon" style="display:none">
-        <img src=" /images/ajax-loader.gif" alt="" />
-    </div>
-
-    <div>

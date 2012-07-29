@@ -16,12 +16,11 @@ class loginActions extends sfActions {
      * @param sfRequest $request A request object
      */
     public function executeIndex(sfWebRequest $request) {
-        
-     
-        
+
+
+
         if ($request->getParameter('login')) {
 //Hacemos la consulta para ver si existe cliente con ese usuario y esa contraseña.
-       
 //Comprobamos que existe el usuario, si no creamos un mensaje flash y redireccionamos al index
             if ($request->getParameter('user') != 'julio') {
                 $this->getUser()->setFlash('error', 'Usuario o contraseña inválidos');
@@ -37,6 +36,7 @@ class loginActions extends sfActions {
                 $this->getUser()->setAttribute('apellidos', $query[0]['apellidos'], 'cliente');
 //Le damos las credenciales correspondientes, en este caso de cliente.
                 $this->getUser()->addCredential('gerente');
+                $this->getUser()->addCredential('admin');
                 $this->redirect('proyecto/index');
             }
         }
@@ -51,8 +51,8 @@ class loginActions extends sfActions {
     }
 
 //Esta es la acción que se ejecuta cuando queremos hacer logout(deslogearse).
-    
-    
+
+
     public function executeLogout(sfWebRequest $request) {
 //Borramos todas las variables de sesion creadas bajo el namespace de cliente.     
         $this->getUser()->getAttributeHolder()->removeNamespace('gerente');

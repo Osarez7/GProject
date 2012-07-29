@@ -9,6 +9,7 @@ public function configure()
         'user' => new sfWidgetFormInputText(),
         'password' => new sfWidgetFormInputPassword(),
     ));
+
     $this->setValidators(array(
         'user' => new sfValidatorEmail(array('required' => true), array('required' => 'Escribe tu usuario')),
         'password' => new sfValidatorString(array('required' => true), array('required' => 'Escribe tu password')),
