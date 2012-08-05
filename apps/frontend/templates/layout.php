@@ -11,18 +11,23 @@
    <div id="contenedor">
      <div id="cssmenu">
       <ul>
-        <li class='active'><a href='index.html'><span>Home</span></a></li>
+        <li class='active'><a href='/'><span>Inicio</span></a></li>
         <li class='has-sub' ><a href="#">Proyectos</a>
           <ul>
            <li ><a href="<?php echo url_for('proyecto/index') ?>">Mis Proyectos</a></li>
-           <li ><a href="<?php echo url_for('proyecto/new') ?>">Nuevo Proyecto</a></li>
+           <?php if ($sf_user->hasCredential('gerente')): ?>
+                  <li ><a href="<?php echo url_for('proyecto/new') ?>">Nuevo Proyecto</a></li>
+                <?php endif; ?>
          </ul>
 
  
- <li ><a href="<?php echo url_for('tarea/index') ?>">Tareas</a></li>
- <li ><a href="<?php echo url_for('evento/index') ?>">Eventos</a></li>
+  <li ><a href="<?php echo url_for('tarea/index') ?>">Tareas</a></li>
+  <li ><a href="<?php echo url_for('evento/index') ?>">Eventos</a></li>
+  <li><a href="<?php echo url_for('show_usuario',array('idUsuario' => $sf_user->getAttribute('idUsuario'))) ?>">Mis Datos</a></li>
+ 
+ <?php if ($sf_user->hasCredential('admin')): ?>
  <li ><a href="<?php echo url_for('usuario/index') ?>">Usuarios</a></li> 
-
+<?php endif; ?>
                 <?php if ($sf_user->isAuthenticated()): ?>
                    <li id="btn-cerrar"> <a href="<?php echo url_for('login/logout') ?>" >Cerrar Sesi&oacute;n</a></li>
                 <?php endif; ?>
@@ -41,6 +46,7 @@
             <div id="pie">
             </div>
         </div>
+
     </body>
     
 </html>

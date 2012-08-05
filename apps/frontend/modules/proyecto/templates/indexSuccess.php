@@ -1,15 +1,6 @@
+<h1>Proyectos</h1>
 
-
-
-<div id="mi-lista-proyectos">
-     
-                    <div class="flash_error"><?php echo $sf_user->getFlash('prueba'); ?></div>
-              
-    <h1>Proyectos List</h1>
-    <input type="button"  value="LLamar Ajax" onclick="javascript:tareasAJax(); "   />
-
-<div id="mi-nueva-lista">
-    <table class="lista">
+<table class="lista">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -28,8 +19,9 @@
         <?php endforeach; ?>
         </tbody>
     </table>
-</div>
-    <a href="<?php echo url_for('proyecto/new') ?>">New</a>
+
+  <a href="<?php echo url_for('grupo/new') ?>">New</a>
+
 
 
 

@@ -16,4 +16,21 @@ class UsuarioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Usuario');
     }
+    
+    
+       
+    public function existeUsuario($nombreUsuario , $password){
+        
+        $q = Doctrine_Query::create()
+          ->select('u.* , p.perfilNombre')      
+          ->from('Usuario u')
+          ->leftJoin('u.Perfil p') 
+          ->where('u.usr_nick = ?', $nombreUsuario)
+          ->andWhere('u.password = ?', $password);
+             
+          return $q->execute()->getFirst();
+    
+        
+        }
+        
 }

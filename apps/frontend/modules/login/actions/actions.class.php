@@ -22,21 +22,22 @@ class loginActions extends sfActions {
         if ($request->getParameter('login')) {
 //Hacemos la consulta para ver si existe cliente con ese usuario y esa contraseña.
 //Comprobamos que existe el usuario, si no creamos un mensaje flash y redireccionamos al index
-            if ($request->getParameter('user') != 'julio') {
+        $usuario = Doctrine::getTable('Usuario')->existeUsuario($request->getParameter('user'), $request->getParameter('password'));
+            if (!$usuario) {
                 $this->getUser()->setFlash('error', 'Usuario o contraseña inválidos');
                 $this->redirect('login/index');
             } else {
 //Autenticamos al usuario
                 $this->getUser()->setAuthenticated(true);
 //Creamos variables de sesión con sus datos personales, para lo que nos pueda valer.
-                $this->getUser()->setAttribute('id', 1);
+                $this->getUser()->setAttribute('idUsuario', $usuario->getIdUsuario());
 //En este caso 'nombre' es el nombre de la variable, seguido por el valor y por último el namespace.
-                $this->getUser()->setAttribute('nombre', $query[0]['nombre'], 'cliente');
+                $this->getUser()->setAttribute('nombre', $usuario->getNombreCompleto());
 //Si queremos acceder a estas variables no tenemos mas que poner: $this->getUser()->getAttribute('nombre', null, 'cliente');
-                $this->getUser()->setAttribute('apellidos', $query[0]['apellidos'], 'cliente');
+          
 //Le damos las credenciales correspondientes, en este caso de cliente.
-                $this->getUser()->addCredential('gerente');
-                $this->getUser()->addCredential('admin');
+                $this->getUser()->addCredential($usuario->getPerfil());
+               // $this->getUser()->addCredential('admin');
                 $this->redirect('proyecto/index');
             }
         }

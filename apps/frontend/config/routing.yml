@@ -6,7 +6,23 @@
 logout:
   url: /login/logout
   param: { module: login, action: logout }
-
+  
+  
+  
+  
+show_usuario:
+  url:     /usuario/show/:idUsuario
+  class:   sfDoctrineRoute
+  options:
+    model: Usuario
+    type:  object
+#  method_for_query: getUsuario
+  param:   { module: usuario, action: show }
+  requirements:
+    id: \d+
+    sf_method: [GET]
+    
+    
 prueba:
   url:  /prueba
   param: { module: proyecto, action: prueba }

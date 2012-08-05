@@ -20,13 +20,13 @@
 }
 
 .treeTable tr.collapsed td a.expander {
-/*  background-image: url(../images/toggle-expand-dark.png);*/
-    background-image: url(../images/toggle-expand-light.png);
+ background-image: url(../images/toggle-expand-dark.png);
+ /*    background-image: url(../images/toggle-expand-light.png); */
 }
 
 .treeTable tr.expanded td a.expander {
-/*  background-image: url(../images/toggle-collapse-dark.png);*/
-    background-image: url(../images/toggle-collapse-light.png);
+ background-image: url(../images/toggle-collapse-dark.png);
+ /*    background-image: url(../images/toggle-collapse-light.png);*/
 }
 
 /* jquery.treeTable.sortable

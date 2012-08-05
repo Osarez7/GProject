@@ -1,0 +1,25 @@
+Usuario:
+ <?php for ($i = 1; $i <= 4; $i++): ?>
+ ejectuor_<?php echo $i ?>:
+    perfilFK: 2
+    usr_nombre: Julio César 	
+    usr_apellido1: Saldaña
+    usr_apellido2: Báez
+    email: impresionesosarez7@gmail.com
+    usr_nick: Ejecutor<?php echo $i."\n" ?> 
+    password: ejecutor<?php echo $i."\n" ?> 
+ <?php endfor ?>
+ admin:
+    perfilFK: 4
+    usr_nombre: Admin	
+    usr_apellido1: Usuario
+    usr_apellido2: Administrador
+    email: julio.minato@gmail.com
+    usr_nick: Admin 
+    password: admin123
+
+   
+   
+
+
+ 

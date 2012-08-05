@@ -19,7 +19,7 @@ class usuarioActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('id_usuario')));
+    $this->usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('idUsuario')));
     $this->forward404Unless($this->usuario);
   }
 

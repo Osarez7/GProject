@@ -136,12 +136,14 @@ Evento:
       
       
       
-Tipo_usuario:
+Perfil:
  columns:
-  idTipoUsuario: { type: integer , primary: true, autoincrement: true} 
-  tipo_nombre: { type: string(50), notnull: true}
-    
-Usuario:
+  idPerfil: { type: integer , primary: true, autoincrement: true} 
+  perfilNombre: { type: string(50), notnull: true}
+
+
+  
+Usuario:  
   actAs: 
     Timestampable: 
      created:
@@ -152,7 +154,7 @@ Usuario:
        type: timestamp
   columns:
     idUsuario: { type: integer , primary: true, autoincrement: true} 
-    tipoUsuarioPK: { type: integer, notnull: true}
+    perfilFK: { type: integer, notnull: true}
     usr_nombre: { type: string(50), notnull: true }
     usr_apellido1: { type: string(20), notnull: true }
     usr_apellido2: { type: string(20), notnull: true }
@@ -160,7 +162,7 @@ Usuario:
     usr_nick: { type: string(20), notnull: true, unique: true }
     password: { type: string(32), notnull: true }
   relations:
-   Tipo_usuario: {onDelete: CASCADE, local: tipoUsuarioPK, foreign: idTipoUsuario, foreignAlias: Usuarios}
+   Perfil: {onDelete: CASCADE, local: perfilFK, foreign: idPerfil, foreignAlias: Usuarios}
 
 
 Usuario_Tarea:
@@ -178,7 +180,9 @@ Usuario_Tarea:
   relations:
    Usuario: { onDelete: CASCADE, local: usuario, foreign:  idUsuario}
    Tarea: { onDelete: CASCADE, local: tarea, foreign: idTarea }
+
        
+
 
     
 Grupo_Usuario:

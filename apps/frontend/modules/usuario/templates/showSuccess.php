@@ -5,8 +5,8 @@
       <td><?php echo $usuario->getIdUsuario() ?></td>
     </tr>
     <tr>
-      <th>Tipo usuario pk:</th>
-      <td><?php echo $usuario->getTipoUsuarioPK() ?></td>
+      <th>Perfil:</th>
+      <td><?php echo $usuario->getPerfil() ?></td>
     </tr>
     <tr>
       <th>Usr nombre:</th>

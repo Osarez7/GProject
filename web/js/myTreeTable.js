@@ -1,5 +1,5 @@
 jQuery(document).ready(function()  {
-  jQuery("#tbl-tareas").treeTable({
+  jQuery("#dnd-example").treeTable({
    // initialState: 'expanded'
   });
 });

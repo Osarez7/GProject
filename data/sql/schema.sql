@@ -1,6 +1,7 @@
 CREATE TABLE evento (idevento BIGINT AUTO_INCREMENT, fechaevento DATETIME NOT NULL, nombreevento VARCHAR(50) NOT NULL, descevento VARCHAR(200), proyectopk BIGINT NOT NULL, fecha_cambio_estado DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX proyectopk_idx (proyectopk), PRIMARY KEY(idevento)) ENGINE = INNODB;
 CREATE TABLE grupo (idgrupo BIGINT AUTO_INCREMENT, nombregrupo VARCHAR(50) NOT NULL, descgrupo VARCHAR(200) NOT NULL, PRIMARY KEY(idgrupo)) ENGINE = INNODB;
 CREATE TABLE grupo__usuario (usuario BIGINT, grupo BIGINT, PRIMARY KEY(usuario, grupo)) ENGINE = INNODB;
+CREATE TABLE perfil (idperfil BIGINT AUTO_INCREMENT, perfilnombre VARCHAR(50) NOT NULL, PRIMARY KEY(idperfil)) ENGINE = INNODB;
 CREATE TABLE prioridad (idprioridad BIGINT AUTO_INCREMENT, nombreprioridad VARCHAR(50) NOT NULL, PRIMARY KEY(idprioridad)) ENGINE = INNODB;
 CREATE TABLE proyecto (idproyecto BIGINT AUTO_INCREMENT, nombre VARCHAR(50) NOT NULL, tiempo_estimado BIGINT NOT NULL, descproyecto VARCHAR(200) NOT NULL, statuspk BIGINT NOT NULL, prioridadpk BIGINT NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX statuspk_idx (statuspk), INDEX prioridadpk_idx (prioridadpk), PRIMARY KEY(idproyecto)) ENGINE = INNODB;
 CREATE TABLE registro__estado__proyecto (idregistroproyecto BIGINT AUTO_INCREMENT, statuspk BIGINT NOT NULL, proyectopk BIGINT NOT NULL, fecha_cambio_estado DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX statuspk_idx (statuspk), INDEX proyectopk_idx (proyectopk), PRIMARY KEY(idregistroproyecto)) ENGINE = INNODB;
@@ -10,7 +11,7 @@ CREATE TABLE relacion__tarea (idrelaciontarea BIGINT AUTO_INCREMENT, tareaorigen
 CREATE TABLE status (idstatus BIGINT AUTO_INCREMENT, nombrestatus VARCHAR(50) NOT NULL, PRIMARY KEY(idstatus)) ENGINE = INNODB;
 CREATE TABLE tarea (idtarea BIGINT AUTO_INCREMENT, nombretarea VARCHAR(50) NOT NULL, duracion BIGINT NOT NULL, statuspk BIGINT NOT NULL, prioridadpk BIGINT NOT NULL, grupopk BIGINT, proyectopk BIGINT NOT NULL, tar_fecha_creacion DATETIME NOT NULL, tar_fecha_actulizacion DATETIME NOT NULL, INDEX statuspk_idx (statuspk), INDEX prioridadpk_idx (prioridadpk), INDEX proyectopk_idx (proyectopk), INDEX grupopk_idx (grupopk), PRIMARY KEY(idtarea)) ENGINE = INNODB;
 CREATE TABLE tipo_usuario (idtipousuario BIGINT AUTO_INCREMENT, tipo_nombre VARCHAR(50) NOT NULL, PRIMARY KEY(idtipousuario)) ENGINE = INNODB;
-CREATE TABLE usuario (idusuario BIGINT AUTO_INCREMENT, tipousuariopk BIGINT NOT NULL, usr_nombre VARCHAR(50) NOT NULL, usr_apellido1 VARCHAR(20) NOT NULL, usr_apellido2 VARCHAR(20) NOT NULL, email VARCHAR(100) NOT NULL, usr_nick VARCHAR(20) NOT NULL UNIQUE, password VARCHAR(32) NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX tipousuariopk_idx (tipousuariopk), PRIMARY KEY(idusuario)) ENGINE = INNODB;
+CREATE TABLE usuario (idusuario BIGINT AUTO_INCREMENT, perfilfk BIGINT NOT NULL, usr_nombre VARCHAR(50) NOT NULL, usr_apellido1 VARCHAR(20) NOT NULL, usr_apellido2 VARCHAR(20) NOT NULL, email VARCHAR(100) NOT NULL, usr_nick VARCHAR(20) NOT NULL UNIQUE, password VARCHAR(32) NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX perfilfk_idx (perfilfk), PRIMARY KEY(idusuario)) ENGINE = INNODB;
 CREATE TABLE usuario__tarea (usuario BIGINT, tarea BIGINT, fecha_asignacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, PRIMARY KEY(usuario, tarea)) ENGINE = INNODB;
 ALTER TABLE evento ADD CONSTRAINT evento_proyectopk_proyecto_idproyecto FOREIGN KEY (proyectopk) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE grupo__usuario ADD CONSTRAINT grupo__usuario_usuario_usuario_idusuario FOREIGN KEY (usuario) REFERENCES usuario(idusuario) ON DELETE CASCADE;
@@ -27,6 +28,6 @@ ALTER TABLE tarea ADD CONSTRAINT tarea_statuspk_status_idstatus FOREIGN KEY (sta
 ALTER TABLE tarea ADD CONSTRAINT tarea_proyectopk_proyecto_idproyecto FOREIGN KEY (proyectopk) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_prioridadpk_prioridad_idprioridad FOREIGN KEY (prioridadpk) REFERENCES prioridad(idprioridad) ON DELETE CASCADE;
 ALTER TABLE tarea ADD CONSTRAINT tarea_grupopk_grupo_idgrupo FOREIGN KEY (grupopk) REFERENCES grupo(idgrupo) ON DELETE CASCADE;
-ALTER TABLE usuario ADD CONSTRAINT usuario_tipousuariopk_tipo_usuario_idtipousuario FOREIGN KEY (tipousuariopk) REFERENCES tipo_usuario(idtipousuario) ON DELETE CASCADE;
+ALTER TABLE usuario ADD CONSTRAINT usuario_perfilfk_perfil_idperfil FOREIGN KEY (perfilfk) REFERENCES perfil(idperfil) ON DELETE CASCADE;
 ALTER TABLE usuario__tarea ADD CONSTRAINT usuario__tarea_usuario_usuario_idusuario FOREIGN KEY (usuario) REFERENCES usuario(idusuario) ON DELETE CASCADE;
 ALTER TABLE usuario__tarea ADD CONSTRAINT usuario__tarea_tarea_tarea_idtarea FOREIGN KEY (tarea) REFERENCES tarea(idtarea) ON DELETE CASCADE;

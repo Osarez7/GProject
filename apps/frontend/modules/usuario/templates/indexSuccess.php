@@ -18,8 +18,8 @@
   <tbody>
     <?php foreach ($usuarios as $usuario): ?>
     <tr>
-      <td><a href="<?php echo url_for('usuario/show?id_usuario='.$usuario->getIdUsuario()) ?>"><?php echo $usuario->getIdUsuario() ?></a></td>
-      <td><?php echo $usuario->getTipoUsuarioPK() ?></td>
+      <td><a href="<?php echo url_for('show_usuario',array('idUsuario'=>$usuario->getIdUsuario())) ?>"><?php echo $usuario->getIdUsuario() ?></a></td>
+      <td><?php echo $usuario->getPerfilFK() ?></td>
       <td><?php echo $usuario->getUsrNombre() ?></td>
       <td><?php echo $usuario->getUsrApellido1() ?></td>
       <td><?php echo $usuario->getUsrApellido2() ?></td>

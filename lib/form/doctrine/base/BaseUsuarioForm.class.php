@@ -16,7 +16,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'idUsuario'           => new sfWidgetFormInputHidden(),
-      'tipoUsuarioPK'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tipo_usuario'), 'add_empty' => false)),
+      'perfilFK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'), 'add_empty' => false)),
       'usr_nombre'          => new sfWidgetFormInputText(),
       'usr_apellido1'       => new sfWidgetFormInputText(),
       'usr_apellido2'       => new sfWidgetFormInputText(),
@@ -29,7 +29,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idUsuario'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idUsuario')), 'empty_value' => $this->getObject()->get('idUsuario'), 'required' => false)),
-      'tipoUsuarioPK'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tipo_usuario'))),
+      'perfilFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'))),
       'usr_nombre'          => new sfValidatorString(array('max_length' => 50)),
       'usr_apellido1'       => new sfValidatorString(array('max_length' => 20)),
       'usr_apellido2'       => new sfValidatorString(array('max_length' => 20)),

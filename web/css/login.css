@@ -8,9 +8,13 @@ label{
 #login-content{
 
     margin: 0;
-    min-height: 740px;
     width: 100%;
 
+}
+
+
+#login-contenido{
+      min-height: 740px;
 }
 
 #login-box{
@@ -26,7 +30,5 @@ label{
     width: 400px;
 }
 
-#cssmenu{
- height: 30px;
-}
+
 

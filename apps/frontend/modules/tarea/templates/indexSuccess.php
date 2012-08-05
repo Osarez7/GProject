@@ -1,11 +1,12 @@
 <?php use_javascript("treeTable.js") ?>
 <?php use_javascript("myTreeTable.js") ?>
+<?php use_javascript("myTreeTableDrop.js") ?>
 <?php use_stylesheet("treeTable.css") ?>
 
 
 <h1>Arb&oacute;l de Tareas</h1>
 
-<table id="tbl-tareas">
+<table class="example" id="dnd-example">
   <thead>
     <tr>
       <th>Nombre tarea</th>

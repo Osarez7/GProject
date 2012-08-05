@@ -10,13 +10,22 @@
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class Proyecto extends BaseProyecto
-{
+class Proyecto extends BaseProyecto {
 
-    public  function __toString(){
+    public function __toString() {
         return $this->getStatus();
     }
-   
+    
 
+    public function getProyectoPorPrioridad($prioridadId = 1) {
+        $query = Doctrine_Query::create()
+                ->from('Proyecto p')
+                ->where("p.statusPK = ?", $prioridadId);
+        
+        return $query->execute();
+    }
+    
+    
+    
 
 }
