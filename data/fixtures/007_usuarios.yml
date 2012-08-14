@@ -1,0 +1,42 @@
+Usuario:
+ <?php for ($i = 1; $i <= 4; $i++): ?>
+ consultor_<?php echo $i ?>:
+    idUsuario: <?php echo $i."\n" ?> 
+    perfilFK: 1
+    usr_nombre: Usuario	
+    usr_apellido1: Consultor
+    usr_apellido2: <?php echo $i."\n" ?> 
+    email: impresionesosarez7@gmail.com
+    usr_nick: consultor<?php echo $i."\n" ?> 
+    password: consultor<?php echo $i."\n" ?> 
+ <?php endfor ?>
+ 
+ <?php for ($i = 1; $i <= 4; $i++): ?>
+ ejecutor_<?php echo $i ?>:
+    idUsuario: <?php echo ($i+5) ."\n" ?> 
+    perfilFK: 2
+    usr_nombre: Usuario 	
+    usr_apellido1: Ejecutor
+    usr_apellido2: <?php echo $i."\n" ?> 
+    email: impresionesosarez7@gmail.com
+    usr_nick: ejecutor<?php echo $i."\n" ?> 
+    password: ejecutor<?php echo $i."\n" ?> 
+ <?php endfor ?>
+ 
+ <?php for ($i = 1; $i <= 4; $i++): ?>
+ gerente_<?php echo $i ?>:
+    idUsuario: <?php echo ($i+9)."\n" ?> 
+    perfilFK: 3
+    usr_nombre: Usuario 	
+    usr_apellido1: Gerente
+    usr_apellido2: <?php echo $i."\n" ?> 
+    email: julio.minato@gmail.com
+    usr_nick: gerente<?php echo $i."\n" ?> 
+    password: gerente<?php echo $i."\n" ?> 
+ <?php endfor ?>
+ 
+
+
+
+
+

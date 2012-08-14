@@ -75,7 +75,7 @@ ul.menu li{
 */
 
  body{
-    background: -moz-linear-gradient(center top , #B9B9B9 0%, #FFF 100%) repeat scroll 0 0 transparent;
+   /* background: -moz-linear-gradient(center top , #B9B9B9 0%, #FFF 100%) repeat scroll 0 0 transparent;*/
     border-radius: 5px 5px;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 15px;
@@ -107,8 +107,7 @@ ul.menu li{
   width: 14%;
   min-height: 300px;
 }
-
-#contenido {
+;;
     float: left;
     margin: 0 10px;
     min-height: 690px;
@@ -128,12 +127,35 @@ ul.menu li{
 
  
 h1{
-   background: -moz-linear-gradient(center top , #333333 0%, #222222 100%) repeat scroll 0 0 transparent;
+   background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent;
     border-radius: 5px 5px;
    color: #FFF;
-   font-size: 24px;
+   font-size: 21px;
     padding: 0 20px;
 }
 
+table.tbl-show th{
+    text-align: left;
+}
+
+input.icon-button {
+    width: auto;
+    height: auto;
+}
+
+.icon-button{
+background: url("../images/jquery-ui/ui-icons_222222_256x240.png");
+}
+
+a.button{
+    background:  -moz-linear-gradient(center top , #87AEDD 0%, #FFF 100%) repeat scroll 0 0 transparent;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+a:hover.button{
+color:#0066CC;
+}
 
 

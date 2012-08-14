@@ -17,10 +17,10 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'idProyecto'          => new sfWidgetFormInputHidden(),
       'nombre'              => new sfWidgetFormInputText(),
-      'tiempo_estimado'     => new sfWidgetFormInputText(),
+      'fechaInicio'         => new sfWidgetFormDateTime(),
       'descProyecto'        => new sfWidgetFormInputText(),
-      'statusPK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
-      'prioridadPK'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
+      'statusFK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
+      'prioridadFK'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
       'fecha_creacion'      => new sfWidgetFormDateTime(),
       'fecha_actualizacion' => new sfWidgetFormDateTime(),
     ));
@@ -28,10 +28,10 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
     $this->setValidators(array(
       'idProyecto'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idProyecto')), 'empty_value' => $this->getObject()->get('idProyecto'), 'required' => false)),
       'nombre'              => new sfValidatorString(array('max_length' => 50)),
-      'tiempo_estimado'     => new sfValidatorInteger(),
+      'fechaInicio'         => new sfValidatorDateTime(array('required' => false)),
       'descProyecto'        => new sfValidatorString(array('max_length' => 200)),
-      'statusPK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
-      'prioridadPK'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
+      'statusFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
+      'prioridadFK'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
       'fecha_creacion'      => new sfValidatorDateTime(),
       'fecha_actualizacion' => new sfValidatorDateTime(),
     ));

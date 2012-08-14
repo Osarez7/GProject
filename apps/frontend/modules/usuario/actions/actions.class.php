@@ -19,9 +19,23 @@ class usuarioActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
+    
+   if($this->getUser()->hasCredential('admin')  || $this->getUser()->getAttribute('idUsuario') == $request->getParameter('idUsuario') )
+   {  
+       
     $this->usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('idUsuario')));
+    
     $this->forward404Unless($this->usuario);
+    
+    
+    }else{
+          $this->forward404Unless('false');
+          
+
+    }
   }
+  
+ 
 
   public function executeNew(sfWebRequest $request)
   {
@@ -40,9 +54,15 @@ class usuarioActions extends sfActions
   }
 
   public function executeEdit(sfWebRequest $request)
+          
   {
+    if($this->getUser()->hasCredential('admin')  ||$this->getUser()->getAttribute('idUsuario') == $request->getParameter('idUsuario') )
+   {  
     $this->forward404Unless($usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('id_usuario'))), sprintf('Object usuario does not exist (%s).', $request->getParameter('id_usuario')));
     $this->form = new UsuarioForm($usuario);
+   }else{
+        $this->forward404Unless('false');
+   }
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -73,7 +93,7 @@ class usuarioActions extends sfActions
     {
       $usuario = $form->save();
 
-      $this->redirect('usuario/edit?id_usuario='.$usuario->getIdUsuario());
+      $this->redirect('show_usuario',array('idUsuario'=>$usuario->getIdUsuario()));
     }
   }
 }

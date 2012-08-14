@@ -8,18 +8,15 @@
  * @property integer $idGrupo
  * @property string $nombreGrupo
  * @property string $descGrupo
- * @property Doctrine_Collection $Tareas
  * @property Doctrine_Collection $Grupo_Usuario
  * 
  * @method integer             getIdGrupo()       Returns the current record's "idGrupo" value
  * @method string              getNombreGrupo()   Returns the current record's "nombreGrupo" value
  * @method string              getDescGrupo()     Returns the current record's "descGrupo" value
- * @method Doctrine_Collection getTareas()        Returns the current record's "Tareas" collection
  * @method Doctrine_Collection getGrupoUsuario()  Returns the current record's "Grupo_Usuario" collection
  * @method Grupo               setIdGrupo()       Sets the current record's "idGrupo" value
  * @method Grupo               setNombreGrupo()   Sets the current record's "nombreGrupo" value
  * @method Grupo               setDescGrupo()     Sets the current record's "descGrupo" value
- * @method Grupo               setTareas()        Sets the current record's "Tareas" collection
  * @method Grupo               setGrupoUsuario()  Sets the current record's "Grupo_Usuario" collection
  * 
  * @package    gproject
@@ -52,10 +49,6 @@ abstract class BaseGrupo extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Tarea as Tareas', array(
-             'local' => 'idGrupo',
-             'foreign' => 'grupoPK'));
-
         $this->hasMany('Grupo_Usuario', array(
              'local' => 'idGrupo',
              'foreign' => 'grupo'));

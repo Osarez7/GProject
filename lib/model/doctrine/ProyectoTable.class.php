@@ -16,4 +16,15 @@ class ProyectoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Proyecto');
     }
+    
+    public function getProyectos(){
+        
+       return   Doctrine_Query::create()
+           ->select('p.*, s.nombreStatus, p.nombrePrioridad' )
+           ->from('Proyecto p, p.statusFK s, p.prioridadFK p')
+           ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)->execute();     ;
+        
+         
+                
+    }
 }

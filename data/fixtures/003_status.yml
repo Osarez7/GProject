@@ -1,0 +1,22 @@
+## YAML Template.
+---
+Status:
+  pendiente:
+   idStatus: 1 
+   nombreStatus: pendiente
+  proceso:
+    idStatus: 2 
+    nombreStatus: en proceso
+  asigando:
+    idStatus: 3
+    nombreStatus: asignado
+  detenido:
+    nombreStatus: detenido
+  terminado:
+    idStatus: 5 
+    nombreStatus: terminado
+  enriesgo:
+    idStatus: 6
+    nombreStatus: en riesgo
+   
+   

@@ -11,7 +11,7 @@ logout:
   
   
 show_usuario:
-  url:     /usuario/show/:idUsuario
+  url:     /usuario/detalle/:idUsuario
   class:   sfDoctrineRoute
   options:
     model: Usuario
@@ -19,13 +19,28 @@ show_usuario:
 #  method_for_query: getUsuario
   param:   { module: usuario, action: show }
   requirements:
-    id: \d+
+    idUsuario: \d+
     sf_method: [GET]
     
-    
-prueba:
-  url:  /prueba
-  param: { module: proyecto, action: prueba }
+prueba_login:
+  url: /login/prueba
+  param: {module: login, action: prueba}
+   
+arbol_tareas:
+  url:  /proyecto/tareas
+  param: {module: tarea, action: arbol}
+  
+add_child:
+  url:  /tarea/hija/:idTarea
+  class: sfDoctrineRoute
+  options:
+     model: Tarea
+     type:  object
+  param: {module: tarea, action: addChild}
+  requirements:
+    idTarea: \d+
+    sf_method: [GET]
+
 homepage:
   url:   /
   param: { module: default, action: index }

@@ -1,0 +1,18 @@
+## YAML Template.
+---
+
+Perfil:
+  consultor:
+     idPerfil: 1
+     perfilNombre: consultor
+  ejecutor:
+     idPerfil: 2
+     perfilNombre: ejecutor
+  gerente:
+     idPerfil: 3
+     perfilNombre: gerente
+  admin:
+     idPerfil: 4    
+     perfilNombre: admin
+ 
+  

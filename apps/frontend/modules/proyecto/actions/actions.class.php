@@ -18,6 +18,10 @@ class proyectoActions extends sfActions {
 
     public function executeShow(sfWebRequest $request) {
         $this->proyecto = Doctrine_Core::getTable('Proyecto')->find(array($request->getParameter('id_proyecto')));
+        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getArbolTareas($this->proyecto->getIdProyecto());
+         $this->logMessage('Id de proyecto es '. $request->getParameter('id_proyecto'). '
+        y la respuesta es '. $this->arbolTarea[2], 'notice');
+        
         $this->forward404Unless($this->proyecto);
     }
 

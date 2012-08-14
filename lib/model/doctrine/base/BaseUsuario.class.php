@@ -14,7 +14,7 @@
  * @property string $usr_nick
  * @property string $password
  * @property Perfil $Perfil
- * @property Doctrine_Collection $Usuario_Tarea
+ * @property Doctrine_Collection $Tarea
  * @property Doctrine_Collection $Grupo_Usuario
  * 
  * @method integer             getIdUsuario()     Returns the current record's "idUsuario" value
@@ -26,7 +26,7 @@
  * @method string              getUsrNick()       Returns the current record's "usr_nick" value
  * @method string              getPassword()      Returns the current record's "password" value
  * @method Perfil              getPerfil()        Returns the current record's "Perfil" value
- * @method Doctrine_Collection getUsuarioTarea()  Returns the current record's "Usuario_Tarea" collection
+ * @method Doctrine_Collection getTarea()         Returns the current record's "Tarea" collection
  * @method Doctrine_Collection getGrupoUsuario()  Returns the current record's "Grupo_Usuario" collection
  * @method Usuario             setIdUsuario()     Sets the current record's "idUsuario" value
  * @method Usuario             setPerfilFK()      Sets the current record's "perfilFK" value
@@ -37,7 +37,7 @@
  * @method Usuario             setUsrNick()       Sets the current record's "usr_nick" value
  * @method Usuario             setPassword()      Sets the current record's "password" value
  * @method Usuario             setPerfil()        Sets the current record's "Perfil" value
- * @method Usuario             setUsuarioTarea()  Sets the current record's "Usuario_Tarea" collection
+ * @method Usuario             setTarea()         Sets the current record's "Tarea" collection
  * @method Usuario             setGrupoUsuario()  Sets the current record's "Grupo_Usuario" collection
  * 
  * @package    gproject
@@ -100,9 +100,10 @@ abstract class BaseUsuario extends sfDoctrineRecord
              'foreign' => 'idPerfil',
              'onDelete' => 'CASCADE'));
 
-        $this->hasMany('Usuario_Tarea', array(
+        $this->hasMany('Tarea', array(
+             'refClass' => 'UsuarioTarea',
              'local' => 'idUsuario',
-             'foreign' => 'usuario'));
+             'foreign' => 'idTarea'));
 
         $this->hasMany('Grupo_Usuario', array(
              'local' => 'idUsuario',

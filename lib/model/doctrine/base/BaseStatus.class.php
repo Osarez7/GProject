@@ -49,14 +49,14 @@ abstract class BaseStatus extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Proyecto as Proyectos', array(
              'local' => 'idStatus',
-             'foreign' => 'statusPK'));
+             'foreign' => 'statusFK'));
 
         $this->hasMany('Tarea as Tareas', array(
              'local' => 'idStatus',
-             'foreign' => 'statusPK'));
+             'foreign' => 'statusFK'));
 
         $this->hasMany('Registro_Estado_Tarea as RegistroEstados', array(
              'local' => 'idStatus',
-             'foreign' => 'statusPK'));
+             'foreign' => 'statusFK'));
     }
 }

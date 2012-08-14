@@ -13,9 +13,10 @@
 class Usuario extends BaseUsuario 
 {
 
-    public function _toString(){
+    public function __toString(){
   
         return $this->getUsrNick();
+        
     }
     
     

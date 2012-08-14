@@ -16,16 +16,16 @@ abstract class BaseRegistro_Estado_TareaForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'idRegistroTarea'     => new sfWidgetFormInputHidden(),
-      'statusPK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
-      'tareaPK'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
+      'statusFK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
+      'tareaFK'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => false)),
       'fecha_cambio_estado' => new sfWidgetFormDateTime(),
       'updated_at'          => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'idRegistroTarea'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idRegistroTarea')), 'empty_value' => $this->getObject()->get('idRegistroTarea'), 'required' => false)),
-      'statusPK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
-      'tareaPK'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),
+      'statusFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
+      'tareaFK'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'))),
       'fecha_cambio_estado' => new sfValidatorDateTime(),
       'updated_at'          => new sfValidatorDateTime(),
     ));

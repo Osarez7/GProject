@@ -18,24 +18,32 @@ abstract class BaseTareaForm extends BaseFormDoctrine
       'idTarea'                => new sfWidgetFormInputHidden(),
       'nombreTarea'            => new sfWidgetFormInputText(),
       'duracion'               => new sfWidgetFormInputText(),
-      'statusPK'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
-      'prioridadPK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
-      'grupoPK'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Grupo'), 'add_empty' => true)),
-      'proyectoPK'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
+      'statusFK'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
+      'prioridadFK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
+      'proyectoFK'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
       'tar_fecha_creacion'     => new sfWidgetFormDateTime(),
       'tar_fecha_actulizacion' => new sfWidgetFormDateTime(),
+      'root_id'                => new sfWidgetFormInputText(),
+      'lft'                    => new sfWidgetFormInputText(),
+      'rgt'                    => new sfWidgetFormInputText(),
+      'level'                  => new sfWidgetFormInputText(),
+      'usuario_list'           => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Usuario')),
     ));
 
     $this->setValidators(array(
       'idTarea'                => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idTarea')), 'empty_value' => $this->getObject()->get('idTarea'), 'required' => false)),
       'nombreTarea'            => new sfValidatorString(array('max_length' => 50)),
       'duracion'               => new sfValidatorInteger(),
-      'statusPK'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
-      'prioridadPK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
-      'grupoPK'                => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Grupo'), 'required' => false)),
-      'proyectoPK'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
+      'statusFK'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
+      'prioridadFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
+      'proyectoFK'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
       'tar_fecha_creacion'     => new sfValidatorDateTime(),
       'tar_fecha_actulizacion' => new sfValidatorDateTime(),
+      'root_id'                => new sfValidatorInteger(array('required' => false)),
+      'lft'                    => new sfValidatorInteger(array('required' => false)),
+      'rgt'                    => new sfValidatorInteger(array('required' => false)),
+      'level'                  => new sfValidatorInteger(array('required' => false)),
+      'usuario_list'           => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Usuario', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('tarea[%s]');
@@ -50,6 +58,62 @@ abstract class BaseTareaForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'Tarea';
+  }
+
+  public function updateDefaultsFromObject()
+  {
+    parent::updateDefaultsFromObject();
+
+    if (isset($this->widgetSchema['usuario_list']))
+    {
+      $this->setDefault('usuario_list', $this->object->Usuario->getPrimaryKeys());
+    }
+
+  }
+
+  protected function doSave($con = null)
+  {
+    $this->saveUsuarioList($con);
+
+    parent::doSave($con);
+  }
+
+  public function saveUsuarioList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['usuario_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Usuario->getPrimaryKeys();
+    $values = $this->getValue('usuario_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Usuario', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Usuario', array_values($link));
+    }
   }
 
 }

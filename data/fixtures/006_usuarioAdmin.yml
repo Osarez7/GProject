@@ -1,0 +1,12 @@
+## YAML Template.
+---
+Usuario:
+  admin:
+    idUsuario: 14
+    perfilFK: 4
+    usr_nombre: Admin	
+    usr_apellido1: Usuario
+    usr_apellido2: Administrador
+    email: julio.minato@gmail.com
+    usr_nick: Admin 
+    password: admin123

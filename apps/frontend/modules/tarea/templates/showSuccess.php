@@ -13,20 +13,20 @@
       <td><?php echo $tarea->getDuracion() ?></td>
     </tr>
     <tr>
-      <th>Status pk:</th>
-      <td><?php echo $tarea->getStatusPK() ?></td>
+      <th>Status</th>
+      <td><?php echo $tarea->getStatus() ?></td>
     </tr>
     <tr>
-      <th>Prioridad pk:</th>
-      <td><?php echo $tarea->getPrioridadPK() ?></td>
+      <th>Prioridad :</th>
+      <td><?php echo $tarea->getPrioridad() ?></td>
     </tr>
     <tr>
-      <th>Grupo pk:</th>
-      <td><?php echo $tarea->getGrupoPK() ?></td>
+      <th>Grupo :</th>
+      <td><?php echo $tarea->getGrupo() ?></td>
     </tr>
     <tr>
-      <th>Proyecto pk:</th>
-      <td><?php echo $tarea->getProyectoPK() ?></td>
+      <th>Proyecto :</th>
+      <td><?php echo $tarea->getProyecto() ?></td>
     </tr>
     <tr>
       <th>Tar fecha creacion:</th>

@@ -9,20 +9,20 @@
  * @property timestamp $fechaEvento
  * @property string $nombreEvento
  * @property string $descEvento
- * @property integer $proyectoPK
+ * @property integer $proyectoFK
  * @property Proyecto $Proyecto
  * 
  * @method integer   getIdEvento()     Returns the current record's "idEvento" value
  * @method timestamp getFechaEvento()  Returns the current record's "fechaEvento" value
  * @method string    getNombreEvento() Returns the current record's "nombreEvento" value
  * @method string    getDescEvento()   Returns the current record's "descEvento" value
- * @method integer   getProyectoPK()   Returns the current record's "proyectoPK" value
+ * @method integer   getProyectoFK()   Returns the current record's "proyectoFK" value
  * @method Proyecto  getProyecto()     Returns the current record's "Proyecto" value
  * @method Evento    setIdEvento()     Sets the current record's "idEvento" value
  * @method Evento    setFechaEvento()  Sets the current record's "fechaEvento" value
  * @method Evento    setNombreEvento() Sets the current record's "nombreEvento" value
  * @method Evento    setDescEvento()   Sets the current record's "descEvento" value
- * @method Evento    setProyectoPK()   Sets the current record's "proyectoPK" value
+ * @method Evento    setProyectoFK()   Sets the current record's "proyectoFK" value
  * @method Evento    setProyecto()     Sets the current record's "Proyecto" value
  * 
  * @package    gproject
@@ -54,7 +54,7 @@ abstract class BaseEvento extends sfDoctrineRecord
              'notnull' => false,
              'length' => 200,
              ));
-        $this->hasColumn('proyectoPK', 'integer', null, array(
+        $this->hasColumn('proyectoFK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -64,7 +64,7 @@ abstract class BaseEvento extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Proyecto', array(
-             'local' => 'proyectoPK',
+             'local' => 'proyectoFK',
              'foreign' => 'idProyecto',
              'onDelete' => 'CASCADE'));
 

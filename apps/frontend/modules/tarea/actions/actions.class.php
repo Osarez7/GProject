@@ -12,13 +12,29 @@ class tareaActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->tareas = Doctrine_Core::getTable('Tarea')
-      ->createQuery('a')
-      ->execute();
+      /*
+$this->arbolTarea = Doctrine_Core::getTable('UsuarioTarea')->getArbolTareasByUsuario($this->getUser()->getAttribute('idUsuario'));
+$this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'). '
+    y la respuesta es '. $this->arbolTarea, 'notice');*/
+    
+  $this->tareas =  Doctrine_Core::getTable('Tarea')->getUsuarioTarea($this->getUser()->getAttribute('idUsuario'));
+    
   }
+  
+  public function addChild(sfWebRequest $request){
+    Doctrine_Core:: getTable('Tarea')->addChild($request->getParameter('idTarea'));   
+  }
+  
+  
+  public function executeArbol(sfWebRequest $request){
+      
+     $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getArbolTareas();
+      
+  }
+  
 
-  public function executeShow(sfWebRequest $request)
-  {
+  public function executeShow(sfWebRequest $request){
+ 
     $this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea')));
     $this->forward404Unless($this->tarea);
   }
@@ -61,7 +77,7 @@ class tareaActions extends sfActions
     $request->checkCSRFProtection();
 
     $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
-    $tarea->delete();
+    $tarea->getNode()->delete();
 
     $this->redirect('tarea/index');
   }

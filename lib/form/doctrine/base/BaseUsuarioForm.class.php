@@ -25,6 +25,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'password'            => new sfWidgetFormInputText(),
       'fecha_creacion'      => new sfWidgetFormDateTime(),
       'fecha_actualizacion' => new sfWidgetFormDateTime(),
+      'tarea_list'          => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Tarea')),
     ));
 
     $this->setValidators(array(
@@ -38,6 +39,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'password'            => new sfValidatorString(array('max_length' => 32)),
       'fecha_creacion'      => new sfValidatorDateTime(),
       'fecha_actualizacion' => new sfValidatorDateTime(),
+      'tarea_list'          => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Tarea', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -56,6 +58,62 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'Usuario';
+  }
+
+  public function updateDefaultsFromObject()
+  {
+    parent::updateDefaultsFromObject();
+
+    if (isset($this->widgetSchema['tarea_list']))
+    {
+      $this->setDefault('tarea_list', $this->object->Tarea->getPrimaryKeys());
+    }
+
+  }
+
+  protected function doSave($con = null)
+  {
+    $this->saveTareaList($con);
+
+    parent::doSave($con);
+  }
+
+  public function saveTareaList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['tarea_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Tarea->getPrimaryKeys();
+    $values = $this->getValue('tarea_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Tarea', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Tarea', array_values($link));
+    }
   }
 
 }

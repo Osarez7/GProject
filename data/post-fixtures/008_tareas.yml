@@ -1,0 +1,65 @@
+Tarea:
+  t1:
+    idTarea: 1
+    nombreTarea: Root1
+    statusFk: 1
+    prioridadFK: 1
+    proyectoFK: 1
+    children:
+      t2:
+        idTarea: 2
+        nombreTarea: Child 1
+        statusFk: 1
+        prioridadFK: 1
+        proyectoFK: 1
+      t3:
+        idTarea: 3
+        nombreTarea: Child 2
+        statusFk: 1
+        prioridadFK: 1
+        proyectoFK: 1
+        children:
+          t4:
+            idTarea: 4
+            nombreTarea: GrandChild 1
+            statusFk: 1
+            prioridadFK: 1
+            proyectoFK: 1
+          t5:
+            idTarea: 5
+            nombreTarea: GrandChild 2
+            statusFk: 1
+            prioridadFK: 1
+            proyectoFK: 1
+          t6:
+            idTarea: 6
+            nombreTarea: GrandChild 3
+            statusFk: 1
+            prioridadFK: 1
+            proyectoFK: 1
+      t7:
+        idTarea: 7
+        nombreTarea: Another child 3
+        statusFk: 1
+        prioridadFK: 1
+        proyectoFK: 1
+      t8:
+        idTarea: 8
+        nombreTarea: Last child
+        statusFk: 1
+        prioridadFK: 1
+        proyectoFK: 1
+        children:
+          t9:
+            idTarea: 9
+            nombreTarea: Last grandchild
+            statusFk: 1
+            prioridadFK: 1
+            proyectoFK: 1
+  t10:
+    idTarea: 10
+    nombreTarea: One more Root element
+    statusFk: 1
+    prioridadFK: 1
+    proyectoFK: 2
+

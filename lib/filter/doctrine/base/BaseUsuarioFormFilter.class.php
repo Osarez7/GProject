@@ -22,6 +22,7 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'password'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'fecha_creacion'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'fecha_actualizacion' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'tarea_list'          => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Tarea')),
     ));
 
     $this->setValidators(array(
@@ -34,6 +35,7 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'password'            => new sfValidatorPass(array('required' => false)),
       'fecha_creacion'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'fecha_actualizacion' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'tarea_list'          => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Tarea', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('usuario_filters[%s]');
@@ -43,6 +45,24 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
     $this->setupInheritance();
 
     parent::setup();
+  }
+
+  public function addTareaListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.UsuarioTarea UsuarioTarea')
+      ->andWhereIn('UsuarioTarea.idTarea', $values)
+    ;
   }
 
   public function getModelName()
@@ -63,6 +83,7 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'password'            => 'Text',
       'fecha_creacion'      => 'Date',
       'fecha_actualizacion' => 'Date',
+      'tarea_list'          => 'ManyKey',
     );
   }
 }

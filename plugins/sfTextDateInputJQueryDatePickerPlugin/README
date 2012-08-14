@@ -1,0 +1,59 @@
+#sfTextDateInputJQueryDatePickerPlugin#
+
+For high-speed data entry, there's nothing like being able to enter a date or date/time in any of the normally accepted formats and have it automatically re-format for you.  Datejs is the key to enabling this functionality.  We've also thrown in the jQuery DatePicker component for good measure, which allows you to browse a calendar to select a date.  This is activated by a button to the right of the date input field.
+
+All of the date and date/time widgets which come with Symfony are clumsy, difficult to use, and not suited for high-speed data entry.
+
+This widget plugin will allow you to use a normal text input field for date or date/time entry, and have a button next to the input which pops up a jQuery DatePicker component for selecting the date by hand.  It uses Datejs to auto-reformat any manually-entered date or date/time into standard YYYY-MM-DD or YYYY-MM-DD hh:mm:ss format.
+
+
+## Installation ##
+
+  * Install jQuery (http://www.jquery.com) somewhere under your web folder (preferably under web/js).
+
+  * Install jQuery-UI (http://www.jqueryui.com) somewhere under your web folder (preferably under web/js).
+
+  * Install Datejs (http://www.datejs.com) somewhere under your web folder (preferably under web/js).
+
+  * Add the jQuery, jQuery-UI and Datejs JavaScript files to the javascripts list in your application's config/view.yml file.
+
+  * Add any CSS files you want to use for jQuery-UI, and add them to the stylesheets list in view.yml.
+
+  * Install the plugin.
+      Using symfony command line:
+          ./symfony plugin:install sfTextDateInputJQueryDatePickerPlugin
+      Or get the latest version from the subversion repository:
+          svn co http://svn.symfony-project.com/plugins/sfTextDateInputJQueryDatePickerPlugin plugins/sfTextDateInputJQueryDatePickerPlugin
+
+  * If you installed by subversion, activate the plugin in the config/ProjectConfiguration.class.php file (this will have already been done automatically if you used the plugin:install symfony command).
+
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            ...
+            $this->enablePlugins('sfTextDateInputJQueryDatePickerPlugin');
+            ...
+          }
+        }
+
+
+
+## How to use ##
+
+  * Edit a form, for example lib/form/doctrine/MyForm.class.php.  To use the date component, do something like this:
+            $this->widgetSchema['posting_date'] = new sfWidgetFormTextDateInputJQueryDatePicker();
+
+  * Clear your cache.
+        ./symfony cc
+
+  * Test your form.
+
+## Options accepted ##
+
+  * image: The URI to an image containing the icon which will trigger the date picker, or false for none.  Defaults to false.
+
+  * include_time: true to include the time in 24-hour format (hh:mm:ss), or false to include only the date.  Defaults to false.
+
+  * date_widget: The widget used for manual date entry.  Defaults to an instance of sfWidgetFormInput.

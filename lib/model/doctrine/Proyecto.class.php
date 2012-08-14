@@ -13,7 +13,7 @@
 class Proyecto extends BaseProyecto {
 
     public function __toString() {
-        return $this->getStatus();
+        return $this->getNombre();
     }
     
 
@@ -24,7 +24,6 @@ class Proyecto extends BaseProyecto {
         
         return $query->execute();
     }
-    
     
     
 

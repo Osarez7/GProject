@@ -7,7 +7,7 @@
       <th>Fecha evento</th>
       <th>Nombre evento</th>
       <th>Desc evento</th>
-      <th>Proyecto pk</th>
+      <th>Proyecto</th>
       <th>Fecha cambio estado</th>
       <th>Fecha actualizacion</th>
     </tr>
@@ -19,7 +19,7 @@
       <td><?php echo $evento->getFechaEvento() ?></td>
       <td><?php echo $evento->getNombreEvento() ?></td>
       <td><?php echo $evento->getDescEvento() ?></td>
-      <td><?php echo $evento->getProyectoPK() ?></td>
+      <td><?php echo $evento->getProyecto() ?></td>
       <td><?php echo $evento->getFechaCambioEstado() ?></td>
       <td><?php echo $evento->getFechaActualizacion() ?></td>
     </tr>

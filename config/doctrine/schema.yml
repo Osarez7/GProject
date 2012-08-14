@@ -9,6 +9,13 @@ Prioridad:
    idPrioridad : { type: integer , primary: true, autoincrement: true} 
    nombrePrioridad: { type: string(50), notnull: true} 
 
+Perfil:
+ columns:
+  idPerfil: { type: integer , primary: true, autoincrement: true} 
+  perfilNombre: { type: string(50), notnull: true}
+
+
+
        
 Proyecto:
   actAs:  
@@ -23,13 +30,13 @@ Proyecto:
   columns:
    idProyecto: { type: integer , primary: true, autoincrement: true} 
    nombre: { type: string(50) , notnull: true }
-   tiempo_estimado: { type: integer , notnull: true} 
+   fechaInicio:  { type: timestamp, notnull: false}
    descProyecto: { type: string(200) , notnull: true}
-   statusPK: { type: integer , notnull: true}
-   prioridadPK: { type: integer , notnull: true} 
+   statusFK: { type: integer , notnull: true}
+   prioridadFK: { type: integer , notnull: true} 
   relations:
-   Status: {onDelete: CASCADE , local: statusPK, foreign: idStatus, foreignAlias: Proyectos}
-   Prioridad: {onDelete: CASCADE , local: prioridadPK, foreign: idPrioridad, foreignAlias: Proyectos} 
+   Status: {onDelete: CASCADE , local: statusFK, foreign: idStatus, foreignAlias: Proyectos}
+   Prioridad: {onDelete: CASCADE , local: prioridadFK, foreign: idPrioridad, foreignAlias: Proyectos} 
 
 Grupo:
   columns:
@@ -47,102 +54,23 @@ Tarea:
      updated:
        name: tar_fecha_actulizacion
        type: timestamp
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id  
   columns:
     idTarea: { type: integer , primary: true, autoincrement: true} 
     nombreTarea: { type: string(50), notnull: true}
     duracion: { type: integer , notnull: true}
-    
-    statusPK: { type: integer , notnull: true}
-    prioridadPK: { type: integer , notnull: true} 
-    grupoPK : { type: integer , notnull: false}
-    proyectoPK: { type: integer , notnull: true}
+    statusFK: { type: integer , notnull: true}
+    prioridadFK: { type: integer , notnull: true} 
+
+    proyectoFK: { type: integer , notnull: true}
   relations:
-     Status: {onDelete: CASCADE , local: statusPK, foreign: idStatus, foreignAlias: Tareas}
-     Prioridad: {onDelete: CASCADE , local: prioridadPK, foreign: idPrioridad, foreignAlias: Tareas} 
-     Proyecto: {onDelete: CASCADE , local: proyectoPK, foreign: idProyecto, foreignAlias: Tareas} 
-     Grupo: {onDelete: CASCADE , local: grupoPK, foreign: idGrupo, foreignAlias: Tareas} 
-
-Relacion:
-  columns:
-   idRelacion: { type: integer , primary: true, autoincrement: true} 
-   nombreRelaion: { type: string(50), notnull: true}
-   
-Relacion_Tarea:
- actAs: 
-   Timestampable: 
-     created:
-      name: fecha_creacion
-      type: timestamp 
-     updated:
-       name: fecha_actualizacion
-       type: timestamp
- columns:
-  idRelacionTarea: { type: integer , primary: true, autoincrement: true} 
-  tareaOrigen:  { type: integer , notnull: true}
-  tareaDestino: { type: integer , notnull: true}
-  relacion_idRelacion:  { type: integer , notnull: true}
- relations:
-  Tarea: { onDelete: CASCADE, local:  tareaOrigen, foreign: idTarea }
-  Tarea: { onDelete: CASCADE, local:  tareaDestino, foreign: idTarea }
-  Relacion: { onDelete: CASCADE, local: relacion_idRelacion, foreign: idRelacion }
+     Status: {onDelete: RESTRICT , local: statusFK, foreign: idStatus, foreignAlias: Tareas}
+     Prioridad: {onDelete: RESTRICT , local: prioridadFK, foreign: idPrioridad, foreignAlias: Tareas} 
+     Proyecto: {onDelete: RESTRICT , local: proyectoFK, foreign: idProyecto, foreignAlias: Tareas} 
+     Usuario: {local: idTarea, foreign: idUsuario,foreignAlias: Usuarios, refClass: UsuarioTarea}
  
- 
-Registro_Estado_Tarea:
- actAs: 
-  Timestampable:
-    created:
-      name: fecha_cambio_estado
-      type: timestamp   
- columns:
-  idRegistroTarea: { type: integer , primary: true, autoincrement: true}
-  statusPK:  { type: integer , notnull: true}
-  tareaPK:  { type: integer , notnull: true}
- relations:
-  Status: {onDelete: CASCADE , local:  statusPK, foreign: idStatus, foreignAlias: RegistroEstados}
-  Tarea:  { onDelete: CASCADE, local:  tareaPK, foreign: idTarea , foreignAlias: RegistroEstados}
-
-
-Registro_Estado_Proyecto:
- actAs: 
-   Timestampable:
-    created:
-      name: fecha_cambio_estado
-      type: timestamp   
- columns:
-  idRegistroProyecto: { type: integer , primary: true, autoincrement: true} 
-  statusPK:  { type: integer , notnull: true}
-  proyectoPK:  { type: integer , notnull: true}
- relations:
-   Status: {onDelete: CASCADE , local: statusPK, foreign: idStatus, foreignAlias: RegistroEstados}
-   Proyecto:  { onDelete: CASCADE, local: proyectoPK, foreign: idProyecto , foreignAlias: RegistroEstados}
-
-Evento:
-  actAs: 
-   Timestampable:
-    created:
-      name: fecha_cambio_estado
-      type: timestamp   
-    updated:
-      name: fecha_actualizacion
-      type: timestamp
-  columns:
-    idEvento: { type: integer , primary: true, autoincrement: true} 
-    fechaEvento: { type: timestamp, notnull: true}
-    nombreEvento: { type: string(50), notnull: true}
-    descEvento: { type: string(200), notnull: false}
-    proyectoPK:  { type: integer , notnull: true}
-  relations:
-   Proyecto:  { onDelete: CASCADE, local: proyectoPK, foreign: idProyecto , foreignAlias: Eventos}    
-      
-      
-      
-Perfil:
- columns:
-  idPerfil: { type: integer , primary: true, autoincrement: true} 
-  perfilNombre: { type: string(50), notnull: true}
-
-
-  
 Usuario:  
   actAs: 
     Timestampable: 
@@ -163,28 +91,74 @@ Usuario:
     password: { type: string(32), notnull: true }
   relations:
    Perfil: {onDelete: CASCADE, local: perfilFK, foreign: idPerfil, foreignAlias: Usuarios}
-
-
-Usuario_Tarea:
-  actAs: 
-    Timestampable: 
-     created:
-      name: fecha_asignacion
-      type: timestamp 
-     updated:
-       name: fecha_actualizacion
-       type: timestamp
-  columns:
-    usuario: { type: integer , notnull: true, primary: true}
-    tarea: { type: integer , notnull: true,   primary: true}
-  relations:
-   Usuario: { onDelete: CASCADE, local: usuario, foreign:  idUsuario}
-   Tarea: { onDelete: CASCADE, local: tarea, foreign: idTarea }
+   Tarea: {local: idUsuario, foreign: idTarea, foreignAlias: Tareas, refClass: UsuarioTarea}
 
        
+UsuarioTarea:
+  actAs: 
+   Timestampable:
+    created:
+      name: fecha_asignacion
+      type: timestamp   
+    updated:
+      name: fecha_actualizacion
+      type: timestamp
+  columns:
+     idUsuario: { type: integer , primary: true}
+     idTarea: { type: integer , primary: true} 
+  relations:
+    usuario: {local: idUsuario, foreign: idUsuario, onDelete: CASCADE}
+    tarea: {local: idTarea, foreign: idTarea, onDelete: CASCADE}
+ 
+Registro_Estado_Tarea:
+ actAs: 
+  Timestampable:
+    created:
+      name: fecha_cambio_estado
+      type: timestamp   
+ columns:
+  idRegistroTarea: { type: integer , primary: true, autoincrement: true}
+  statusFK:  { type: integer , notnull: true}
+  tareaFK:  { type: integer , notnull: true}
+ relations:
+  Status: {onDelete: CASCADE , local:  statusFK, foreign: idStatus, foreignAlias: RegistroEstados}
+  Tarea:  { onDelete: CASCADE, local:  tareaFK, foreign: idTarea , foreignAlias: RegistroEstados}
 
 
+Registro_Estado_Proyecto:
+ actAs: 
+   Timestampable:
+    created:
+      name: fecha_cambio_estado
+      type: timestamp   
+ columns:
+  idRegistroProyecto: { type: integer , primary: true, autoincrement: true} 
+  statusFK:  { type: integer , notnull: true}
+  proyectoFK:  { type: integer , notnull: true}
+ relations:
+   Status: {onDelete: CASCADE , local: statusFK, foreign: idStatus, foreignAlias: RegistroEstados}
+   Proyecto:  { onDelete: CASCADE, local: proyectoFK, foreign: idProyecto , foreignAlias: RegistroEstados}
+
+Evento:
+  actAs: 
+   Timestampable:
+    created:
+      name: fecha_cambio_estado
+      type: timestamp   
+    updated:
+      name: fecha_actualizacion
+      type: timestamp
+  columns:
+    idEvento: { type: integer , primary: true, autoincrement: true} 
+    fechaEvento: { type: timestamp, notnull: true}
+    nombreEvento: { type: string(50), notnull: true}
+    descEvento: { type: string(200), notnull: false}
+    proyectoFK:  { type: integer , notnull: true}
+  relations:
+   Proyecto:  { onDelete: CASCADE, local: proyectoFK, foreign: idProyecto , foreignAlias: Eventos}    
+      
     
+
 Grupo_Usuario:
   columns:
     usuario: { type: integer , notnull: true, primary: true}
@@ -194,3 +168,5 @@ Grupo_Usuario:
    Grupo: { onDelete: CASCADE, local: grupo, foreign: idGrupo}
   
   
+
+

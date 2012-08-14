@@ -8,46 +8,37 @@
  * @property integer $idTarea
  * @property string $nombreTarea
  * @property integer $duracion
- * @property integer $statusPK
- * @property integer $prioridadPK
- * @property integer $grupoPK
- * @property integer $proyectoPK
+ * @property integer $statusFK
+ * @property integer $prioridadFK
+ * @property integer $proyectoFK
  * @property Status $Status
  * @property Prioridad $Prioridad
  * @property Proyecto $Proyecto
- * @property Grupo $Grupo
- * @property Doctrine_Collection $Relacion_Tarea
+ * @property Doctrine_Collection $Usuario
  * @property Doctrine_Collection $RegistroEstados
- * @property Doctrine_Collection $Usuario_Tarea
  * 
  * @method integer             getIdTarea()         Returns the current record's "idTarea" value
  * @method string              getNombreTarea()     Returns the current record's "nombreTarea" value
  * @method integer             getDuracion()        Returns the current record's "duracion" value
- * @method integer             getStatusPK()        Returns the current record's "statusPK" value
- * @method integer             getPrioridadPK()     Returns the current record's "prioridadPK" value
- * @method integer             getGrupoPK()         Returns the current record's "grupoPK" value
- * @method integer             getProyectoPK()      Returns the current record's "proyectoPK" value
+ * @method integer             getStatusFK()        Returns the current record's "statusFK" value
+ * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
+ * @method integer             getProyectoFK()      Returns the current record's "proyectoFK" value
  * @method Status              getStatus()          Returns the current record's "Status" value
  * @method Prioridad           getPrioridad()       Returns the current record's "Prioridad" value
  * @method Proyecto            getProyecto()        Returns the current record's "Proyecto" value
- * @method Grupo               getGrupo()           Returns the current record's "Grupo" value
- * @method Doctrine_Collection getRelacionTarea()   Returns the current record's "Relacion_Tarea" collection
+ * @method Doctrine_Collection getUsuario()         Returns the current record's "Usuario" collection
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
- * @method Doctrine_Collection getUsuarioTarea()    Returns the current record's "Usuario_Tarea" collection
  * @method Tarea               setIdTarea()         Sets the current record's "idTarea" value
  * @method Tarea               setNombreTarea()     Sets the current record's "nombreTarea" value
  * @method Tarea               setDuracion()        Sets the current record's "duracion" value
- * @method Tarea               setStatusPK()        Sets the current record's "statusPK" value
- * @method Tarea               setPrioridadPK()     Sets the current record's "prioridadPK" value
- * @method Tarea               setGrupoPK()         Sets the current record's "grupoPK" value
- * @method Tarea               setProyectoPK()      Sets the current record's "proyectoPK" value
+ * @method Tarea               setStatusFK()        Sets the current record's "statusFK" value
+ * @method Tarea               setPrioridadFK()     Sets the current record's "prioridadFK" value
+ * @method Tarea               setProyectoFK()      Sets the current record's "proyectoFK" value
  * @method Tarea               setStatus()          Sets the current record's "Status" value
  * @method Tarea               setPrioridad()       Sets the current record's "Prioridad" value
  * @method Tarea               setProyecto()        Sets the current record's "Proyecto" value
- * @method Tarea               setGrupo()           Sets the current record's "Grupo" value
- * @method Tarea               setRelacionTarea()   Sets the current record's "Relacion_Tarea" collection
+ * @method Tarea               setUsuario()         Sets the current record's "Usuario" collection
  * @method Tarea               setRegistroEstados() Sets the current record's "RegistroEstados" collection
- * @method Tarea               setUsuarioTarea()    Sets the current record's "Usuario_Tarea" collection
  * 
  * @package    gproject
  * @subpackage model
@@ -73,19 +64,15 @@ abstract class BaseTarea extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('statusPK', 'integer', null, array(
+        $this->hasColumn('statusFK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('prioridadPK', 'integer', null, array(
+        $this->hasColumn('prioridadFK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('grupoPK', 'integer', null, array(
-             'type' => 'integer',
-             'notnull' => false,
-             ));
-        $this->hasColumn('proyectoPK', 'integer', null, array(
+        $this->hasColumn('proyectoFK', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));
@@ -95,36 +82,28 @@ abstract class BaseTarea extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('Status', array(
-             'local' => 'statusPK',
+             'local' => 'statusFK',
              'foreign' => 'idStatus',
-             'onDelete' => 'CASCADE'));
+             'onDelete' => 'RESTRICT'));
 
         $this->hasOne('Prioridad', array(
-             'local' => 'prioridadPK',
+             'local' => 'prioridadFK',
              'foreign' => 'idPrioridad',
-             'onDelete' => 'CASCADE'));
+             'onDelete' => 'RESTRICT'));
 
         $this->hasOne('Proyecto', array(
-             'local' => 'proyectoPK',
+             'local' => 'proyectoFK',
              'foreign' => 'idProyecto',
-             'onDelete' => 'CASCADE'));
+             'onDelete' => 'RESTRICT'));
 
-        $this->hasOne('Grupo', array(
-             'local' => 'grupoPK',
-             'foreign' => 'idGrupo',
-             'onDelete' => 'CASCADE'));
-
-        $this->hasMany('Relacion_Tarea', array(
+        $this->hasMany('Usuario', array(
+             'refClass' => 'UsuarioTarea',
              'local' => 'idTarea',
-             'foreign' => 'tareaDestino'));
+             'foreign' => 'idUsuario'));
 
         $this->hasMany('Registro_Estado_Tarea as RegistroEstados', array(
              'local' => 'idTarea',
-             'foreign' => 'tareaPK'));
-
-        $this->hasMany('Usuario_Tarea', array(
-             'local' => 'idTarea',
-             'foreign' => 'tarea'));
+             'foreign' => 'tareaFK'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              'created' => 
@@ -138,6 +117,11 @@ abstract class BaseTarea extends sfDoctrineRecord
               'type' => 'timestamp',
              ),
              ));
+        $nestedset0 = new Doctrine_Template_NestedSet(array(
+             'hasManyRoots' => true,
+             'rootColumnName' => 'root_id',
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($nestedset0);
     }
 }

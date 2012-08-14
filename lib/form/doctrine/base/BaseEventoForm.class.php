@@ -19,7 +19,7 @@ abstract class BaseEventoForm extends BaseFormDoctrine
       'fechaEvento'         => new sfWidgetFormDateTime(),
       'nombreEvento'        => new sfWidgetFormInputText(),
       'descEvento'          => new sfWidgetFormInputText(),
-      'proyectoPK'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
+      'proyectoFK'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
       'fecha_cambio_estado' => new sfWidgetFormDateTime(),
       'fecha_actualizacion' => new sfWidgetFormDateTime(),
     ));
@@ -29,7 +29,7 @@ abstract class BaseEventoForm extends BaseFormDoctrine
       'fechaEvento'         => new sfValidatorDateTime(),
       'nombreEvento'        => new sfValidatorString(array('max_length' => 50)),
       'descEvento'          => new sfValidatorString(array('max_length' => 200, 'required' => false)),
-      'proyectoPK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
+      'proyectoFK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
       'fecha_cambio_estado' => new sfValidatorDateTime(),
       'fecha_actualizacion' => new sfValidatorDateTime(),
     ));
