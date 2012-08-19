@@ -37,12 +37,37 @@ Proyecto:
   relations:
    Status: {onDelete: CASCADE , local: statusFK, foreign: idStatus, foreignAlias: Proyectos}
    Prioridad: {onDelete: CASCADE , local: prioridadFK, foreign: idPrioridad, foreignAlias: Proyectos} 
+   Usuario: {local: idProyecto, foreign: idUsuario,foreignAlias: Proyectos, refClass: ProyectoUsuario}
 
 Grupo:
   columns:
     idGrupo: { type: integer , primary: true, autoincrement: true} 
     nombreGrupo: { type: string(50), notnull: true}
     descGrupo:   { type: string(200), notnull: true}
+    
+Usuario:  
+  actAs: 
+    Timestampable: 
+     created:
+      name: fecha_creacion
+      type: timestamp 
+     updated:
+       name: fecha_actualizacion
+       type: timestamp
+  columns:
+    idUsuario: { type: integer , primary: true, autoincrement: true} 
+    perfilFK: { type: integer, notnull: true}
+    usr_nombre: { type: string(50), notnull: true }
+    usr_apellido1: { type: string(20), notnull: true }
+    usr_apellido2: { type: string(20), notnull: true }
+    email: { type: string(100), notnull: true}
+    usr_nick: { type: string(20), notnull: true, unique: true }
+    password: { type: string(32), notnull: true }
+  relations:
+   Perfil: {onDelete: CASCADE, local: perfilFK, foreign: idPerfil, foreignAlias: Usuarios}
+   Tarea: {local: idUsuario, foreign: idTarea, foreignAlias: Tareas, refClass: UsuarioTarea}
+   Proyecto: {local: idUsuario, foreign: idProyecto, foreignAlias: Usuarios, refClass: ProyectoUsuario}
+
     
     
 Tarea:
@@ -71,27 +96,6 @@ Tarea:
      Proyecto: {onDelete: RESTRICT , local: proyectoFK, foreign: idProyecto, foreignAlias: Tareas} 
      Usuario: {local: idTarea, foreign: idUsuario,foreignAlias: Usuarios, refClass: UsuarioTarea}
  
-Usuario:  
-  actAs: 
-    Timestampable: 
-     created:
-      name: fecha_creacion
-      type: timestamp 
-     updated:
-       name: fecha_actualizacion
-       type: timestamp
-  columns:
-    idUsuario: { type: integer , primary: true, autoincrement: true} 
-    perfilFK: { type: integer, notnull: true}
-    usr_nombre: { type: string(50), notnull: true }
-    usr_apellido1: { type: string(20), notnull: true }
-    usr_apellido2: { type: string(20), notnull: true }
-    email: { type: string(100), notnull: true}
-    usr_nick: { type: string(20), notnull: true, unique: true }
-    password: { type: string(32), notnull: true }
-  relations:
-   Perfil: {onDelete: CASCADE, local: perfilFK, foreign: idPerfil, foreignAlias: Usuarios}
-   Tarea: {local: idUsuario, foreign: idTarea, foreignAlias: Tareas, refClass: UsuarioTarea}
 
        
 UsuarioTarea:
@@ -109,6 +113,17 @@ UsuarioTarea:
   relations:
     usuario: {local: idUsuario, foreign: idUsuario, onDelete: CASCADE}
     tarea: {local: idTarea, foreign: idTarea, onDelete: CASCADE}
+ 
+ 
+ProyectoUsuario:
+    columns:
+     idUsuario: { type: integer , primary: true}
+     idProyecto: { type: integer , primary: true} 
+    relations:
+     usuario: {local: idUsuario, foreign: idUsuario, onDelete: CASCADE}
+     proyecto: {local: idProyecto, foreign: idProyecto, onDelete: CASCADE}
+   
+ 
  
 Registro_Estado_Tarea:
  actAs: 

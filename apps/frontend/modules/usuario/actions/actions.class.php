@@ -36,6 +36,13 @@ class usuarioActions extends sfActions
   }
   
  
+  public function executeGetProyectos(sfWebRequest $request) {
+      
+      $this->proyectos = $this->getRoute()->getObjet()->getProyecto();;
+      
+  }
+  
+  
 
   public function executeNew(sfWebRequest $request)
   {

@@ -15,6 +15,13 @@ class ProyectoForm extends BaseProyectoForm
   unset(
       $this['fecha_actualizacion'], $this['fecha_creacion']
     );
-      
+    
+   
+     
+      $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/toggle-expand-dark.png',
+		'include_time'=> false));
+		;
+   $this->widgetSchema['descProyecto'] = new sfWidgetFormTextarea();
   }
 }

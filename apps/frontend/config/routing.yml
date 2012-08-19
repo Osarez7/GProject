@@ -41,6 +41,26 @@ add_child:
     idTarea: \d+
     sf_method: [GET]
 
+
+
+asignar:
+  url:  /asignar/:idTarea
+  class: sfDoctrineRoute
+  options:
+     model: Tarea
+     type:  object
+  param: {module: tarea, action: asignarUsuario}
+  requirements:
+    idTarea: \d+
+    sf_method: [GET]
+    
+    
+update_asignar:
+   url: /update/asignar
+   param: {module: tarea, action: updateAsignar}
+   
+
+
 homepage:
   url:   /
   param: { module: default, action: index }

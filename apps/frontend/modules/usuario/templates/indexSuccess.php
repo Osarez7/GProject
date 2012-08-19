@@ -3,11 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Usuario NickName</th>
-      <th>Tipo usuario pk</th>
-      <th>Usr nombre</th>
-      <th>Usr apellido1</th>
-      <th>Usr apellido2</th>
+      <th>NickName</th>
+      <th>Nombre</th>
       <th>Email</th>
     </tr>
   </thead>
@@ -15,10 +12,7 @@
     <?php foreach ($usuarios as $usuario): ?>
     <tr>
       <td><a href="<?php echo url_for('show_usuario',array('idUsuario'=>$usuario->getIdUsuario())) ?>"><?php echo $usuario->getUsrNick() ?></a></td>
-      <td><?php echo $usuario->getPerfil() ?></td>
-      <td><?php echo $usuario->getUsrNombre() ?></td>
-      <td><?php echo $usuario->getUsrApellido1() ?></td>
-      <td><?php echo $usuario->getUsrApellido2() ?></td>
+      <td><?php echo $usuario->getUsrNombre()." " .$usuario->getUsrApellido1()." ".$usuario->getUsrApellido2() ?> </td>
       <td><?php echo $usuario->getEmail() ?></td>
     </tr>
     <?php endforeach; ?>

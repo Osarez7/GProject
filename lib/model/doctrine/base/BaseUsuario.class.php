@@ -15,6 +15,7 @@
  * @property string $password
  * @property Perfil $Perfil
  * @property Doctrine_Collection $Tarea
+ * @property Doctrine_Collection $Proyecto
  * @property Doctrine_Collection $Grupo_Usuario
  * 
  * @method integer             getIdUsuario()     Returns the current record's "idUsuario" value
@@ -27,6 +28,7 @@
  * @method string              getPassword()      Returns the current record's "password" value
  * @method Perfil              getPerfil()        Returns the current record's "Perfil" value
  * @method Doctrine_Collection getTarea()         Returns the current record's "Tarea" collection
+ * @method Doctrine_Collection getProyecto()      Returns the current record's "Proyecto" collection
  * @method Doctrine_Collection getGrupoUsuario()  Returns the current record's "Grupo_Usuario" collection
  * @method Usuario             setIdUsuario()     Sets the current record's "idUsuario" value
  * @method Usuario             setPerfilFK()      Sets the current record's "perfilFK" value
@@ -38,6 +40,7 @@
  * @method Usuario             setPassword()      Sets the current record's "password" value
  * @method Usuario             setPerfil()        Sets the current record's "Perfil" value
  * @method Usuario             setTarea()         Sets the current record's "Tarea" collection
+ * @method Usuario             setProyecto()      Sets the current record's "Proyecto" collection
  * @method Usuario             setGrupoUsuario()  Sets the current record's "Grupo_Usuario" collection
  * 
  * @package    gproject
@@ -104,6 +107,11 @@ abstract class BaseUsuario extends sfDoctrineRecord
              'refClass' => 'UsuarioTarea',
              'local' => 'idUsuario',
              'foreign' => 'idTarea'));
+
+        $this->hasMany('Proyecto', array(
+             'refClass' => 'ProyectoUsuario',
+             'local' => 'idUsuario',
+             'foreign' => 'idProyecto'));
 
         $this->hasMany('Grupo_Usuario', array(
              'local' => 'idUsuario',

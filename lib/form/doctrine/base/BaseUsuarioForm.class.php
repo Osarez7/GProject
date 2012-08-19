@@ -26,6 +26,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'fecha_creacion'      => new sfWidgetFormDateTime(),
       'fecha_actualizacion' => new sfWidgetFormDateTime(),
       'tarea_list'          => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Tarea')),
+      'proyecto_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Proyecto')),
     ));
 
     $this->setValidators(array(
@@ -40,6 +41,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'fecha_creacion'      => new sfValidatorDateTime(),
       'fecha_actualizacion' => new sfValidatorDateTime(),
       'tarea_list'          => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Tarea', 'required' => false)),
+      'proyecto_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Proyecto', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -69,11 +71,17 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       $this->setDefault('tarea_list', $this->object->Tarea->getPrimaryKeys());
     }
 
+    if (isset($this->widgetSchema['proyecto_list']))
+    {
+      $this->setDefault('proyecto_list', $this->object->Proyecto->getPrimaryKeys());
+    }
+
   }
 
   protected function doSave($con = null)
   {
     $this->saveTareaList($con);
+    $this->saveProyectoList($con);
 
     parent::doSave($con);
   }
@@ -113,6 +121,44 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('Tarea', array_values($link));
+    }
+  }
+
+  public function saveProyectoList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['proyecto_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Proyecto->getPrimaryKeys();
+    $values = $this->getValue('proyecto_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Proyecto', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Proyecto', array_values($link));
     }
   }
 

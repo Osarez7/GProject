@@ -19,4 +19,9 @@ class Tarea extends BaseTarea
     }
     
     
+    public function getId(){
+
+        return $this->getIdTarea();
+    }
+    
 }

@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css,menu_style.css,jquery-ui-1.8.22.custom.css]
+  stylesheets:    [main.css,menu_style.css,jquery-ui-1.8.22.custom.css,gh-buttons.css,double_list_widget_style.css]
 
-  javascripts:    [jquery-1.7.2.js,pruebaAjax.js,jquery-ui-1.8.21.min.js,date.js]
+  javascripts:    [jquery-1.7.2.js,pruebaAjax.js,jquery-ui-1.8.21.min.js,date.js,double_list.js]
 
   has_layout:     true
   layout:         layout

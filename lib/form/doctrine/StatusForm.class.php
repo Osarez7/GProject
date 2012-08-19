@@ -12,5 +12,8 @@ class StatusForm extends BaseStatusForm
 {
   public function configure()
   {
-  }
+  
+  
+  
+}
 }

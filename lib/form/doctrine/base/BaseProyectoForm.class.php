@@ -23,6 +23,7 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
       'prioridadFK'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
       'fecha_creacion'      => new sfWidgetFormDateTime(),
       'fecha_actualizacion' => new sfWidgetFormDateTime(),
+      'usuario_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Usuario')),
     ));
 
     $this->setValidators(array(
@@ -34,6 +35,7 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
       'prioridadFK'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
       'fecha_creacion'      => new sfValidatorDateTime(),
       'fecha_actualizacion' => new sfValidatorDateTime(),
+      'usuario_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Usuario', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('proyecto[%s]');
@@ -48,6 +50,62 @@ abstract class BaseProyectoForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'Proyecto';
+  }
+
+  public function updateDefaultsFromObject()
+  {
+    parent::updateDefaultsFromObject();
+
+    if (isset($this->widgetSchema['usuario_list']))
+    {
+      $this->setDefault('usuario_list', $this->object->Usuario->getPrimaryKeys());
+    }
+
+  }
+
+  protected function doSave($con = null)
+  {
+    $this->saveUsuarioList($con);
+
+    parent::doSave($con);
+  }
+
+  public function saveUsuarioList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['usuario_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Usuario->getPrimaryKeys();
+    $values = $this->getValue('usuario_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Usuario', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Usuario', array_values($link));
+    }
   }
 
 }

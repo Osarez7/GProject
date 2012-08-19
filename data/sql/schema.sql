@@ -4,6 +4,7 @@ CREATE TABLE grupo__usuario (usuario BIGINT, grupo BIGINT, PRIMARY KEY(usuario, 
 CREATE TABLE perfil (idperfil BIGINT AUTO_INCREMENT, perfilnombre VARCHAR(50) NOT NULL, PRIMARY KEY(idperfil)) ENGINE = INNODB;
 CREATE TABLE prioridad (idprioridad BIGINT AUTO_INCREMENT, nombreprioridad VARCHAR(50) NOT NULL, PRIMARY KEY(idprioridad)) ENGINE = INNODB;
 CREATE TABLE proyecto (idproyecto BIGINT AUTO_INCREMENT, nombre VARCHAR(50) NOT NULL, fechainicio DATETIME, descproyecto VARCHAR(200) NOT NULL, statusfk BIGINT NOT NULL, prioridadfk BIGINT NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX statusfk_idx (statusfk), INDEX prioridadfk_idx (prioridadfk), PRIMARY KEY(idproyecto)) ENGINE = INNODB;
+CREATE TABLE proyecto_usuario (idusuario BIGINT, idproyecto BIGINT, PRIMARY KEY(idusuario, idproyecto)) ENGINE = INNODB;
 CREATE TABLE registro__estado__proyecto (idregistroproyecto BIGINT AUTO_INCREMENT, statusfk BIGINT NOT NULL, proyectofk BIGINT NOT NULL, fecha_cambio_estado DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX statusfk_idx (statusfk), INDEX proyectofk_idx (proyectofk), PRIMARY KEY(idregistroproyecto)) ENGINE = INNODB;
 CREATE TABLE registro__estado__tarea (idregistrotarea BIGINT AUTO_INCREMENT, statusfk BIGINT NOT NULL, tareafk BIGINT NOT NULL, fecha_cambio_estado DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX statusfk_idx (statusfk), INDEX tareafk_idx (tareafk), PRIMARY KEY(idregistrotarea)) ENGINE = INNODB;
 CREATE TABLE status (idstatus BIGINT AUTO_INCREMENT, nombrestatus VARCHAR(50) NOT NULL, PRIMARY KEY(idstatus)) ENGINE = INNODB;
@@ -15,6 +16,8 @@ ALTER TABLE grupo__usuario ADD CONSTRAINT grupo__usuario_usuario_usuario_idusuar
 ALTER TABLE grupo__usuario ADD CONSTRAINT grupo__usuario_grupo_grupo_idgrupo FOREIGN KEY (grupo) REFERENCES grupo(idgrupo) ON DELETE CASCADE;
 ALTER TABLE proyecto ADD CONSTRAINT proyecto_statusfk_status_idstatus FOREIGN KEY (statusfk) REFERENCES status(idstatus) ON DELETE CASCADE;
 ALTER TABLE proyecto ADD CONSTRAINT proyecto_prioridadfk_prioridad_idprioridad FOREIGN KEY (prioridadfk) REFERENCES prioridad(idprioridad) ON DELETE CASCADE;
+ALTER TABLE proyecto_usuario ADD CONSTRAINT proyecto_usuario_idusuario_usuario_idusuario FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE;
+ALTER TABLE proyecto_usuario ADD CONSTRAINT proyecto_usuario_idproyecto_proyecto_idproyecto FOREIGN KEY (idproyecto) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE registro__estado__proyecto ADD CONSTRAINT registro__estado__proyecto_statusfk_status_idstatus FOREIGN KEY (statusfk) REFERENCES status(idstatus) ON DELETE CASCADE;
 ALTER TABLE registro__estado__proyecto ADD CONSTRAINT registro__estado__proyecto_proyectofk_proyecto_idproyecto FOREIGN KEY (proyectofk) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE registro__estado__tarea ADD CONSTRAINT registro__estado__tarea_tareafk_tarea_idtarea FOREIGN KEY (tareafk) REFERENCES tarea(idtarea) ON DELETE CASCADE;

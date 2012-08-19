@@ -78,7 +78,7 @@ ul.menu li{
    /* background: -moz-linear-gradient(center top , #B9B9B9 0%, #FFF 100%) repeat scroll 0 0 transparent;*/
     border-radius: 5px 5px;
     font-family: Arial,Helvetica,sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -94,8 +94,9 @@ ul.menu li{
 
 
 #contenedor {
-  width: 100%;
-  magin: 0 auto;
+   border: medium solid #E3E4E3;
+    margin: 0 auto;
+    width: 83%;
 
 }
 
@@ -104,17 +105,16 @@ ul.menu li{
 
 #lateral {
   float: left;
-  width: 14%;
+  width: 20%;
+  background: #4D7290;
   min-height: 300px;
 }
-;;
-    float: left;
-    margin: 0 10px;
-    min-height: 690px;
-    padding: 0 20px;
-    width: 79%;
+    
+#contenido{
+  float: left;
+    padding: 0 15px;
+    width: 75%;
 }
-
 
 #pie {
   clear: both;
@@ -124,18 +124,31 @@ ul.menu li{
 
 }
 
-
+#cssmenu a{
+    font-size: 10px;
+}
  
 h1{
-   background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent;
+  /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
     border-radius: 5px 5px;
-   color: #FFF;
+   color: #3791B5;
    font-size: 21px;
     padding: 0 20px;
 }
 
 table.tbl-show th{
     text-align: left;
+}
+
+
+
+table.info td , table.info th{
+    text-align: center;
+    
+}
+
+.odd{
+    
 }
 
 input.icon-button {
@@ -147,7 +160,7 @@ input.icon-button {
 background: url("../images/jquery-ui/ui-icons_222222_256x240.png");
 }
 
-a.button{
+/* a.button{
     background:  -moz-linear-gradient(center top , #87AEDD 0%, #FFF 100%) repeat scroll 0 0 transparent;
     text-decoration: none;
     border-radius: 10px;
@@ -157,5 +170,7 @@ a.button{
 a:hover.button{
 color:#0066CC;
 }
+
+*/
 
 

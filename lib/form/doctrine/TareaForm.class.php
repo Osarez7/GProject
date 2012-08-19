@@ -15,16 +15,12 @@ class TareaForm extends BaseTareaForm
         
       
       
-      $this->widgetSchema['tar_fecha_creacion'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
-              array('image'=> '/images/toggle-expand-dark.png',
-		'include_time'=> false));
-		
-     
-      
    $this->setWidget('parent', new sfWidgetFormDoctrineChoiceNestedSet(array(
 	      'model'     => 'Tarea',
 	      'add_empty' => 'No es sub-tarea'
 	    )));  
+   
+   
    
    if ($this->getObject()->getNode()->hasParent())
 	    {
@@ -46,7 +42,10 @@ class TareaForm extends BaseTareaForm
       
       unset(
               $this['root_id'],$this['level'],
-              $this['rgt'],$this['lft']);
+              $this['rgt'],$this['lft'],$this['tar_fecha_creacion'],
+              $this['usuario_list']
+              
+    );
 
       
   }

@@ -12,5 +12,6 @@ class Tipo_usuarioForm extends BaseTipo_usuarioForm
 {
   public function configure()
   {
+      
   }
 }

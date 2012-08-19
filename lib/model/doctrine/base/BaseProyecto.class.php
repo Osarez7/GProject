@@ -13,6 +13,7 @@
  * @property integer $prioridadFK
  * @property Status $Status
  * @property Prioridad $Prioridad
+ * @property Doctrine_Collection $Usuario
  * @property Doctrine_Collection $Tareas
  * @property Doctrine_Collection $RegistroEstados
  * @property Doctrine_Collection $Eventos
@@ -25,6 +26,7 @@
  * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
  * @method Status              getStatus()          Returns the current record's "Status" value
  * @method Prioridad           getPrioridad()       Returns the current record's "Prioridad" value
+ * @method Doctrine_Collection getUsuario()         Returns the current record's "Usuario" collection
  * @method Doctrine_Collection getTareas()          Returns the current record's "Tareas" collection
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
  * @method Doctrine_Collection getEventos()         Returns the current record's "Eventos" collection
@@ -36,6 +38,7 @@
  * @method Proyecto            setPrioridadFK()     Sets the current record's "prioridadFK" value
  * @method Proyecto            setStatus()          Sets the current record's "Status" value
  * @method Proyecto            setPrioridad()       Sets the current record's "Prioridad" value
+ * @method Proyecto            setUsuario()         Sets the current record's "Usuario" collection
  * @method Proyecto            setTareas()          Sets the current record's "Tareas" collection
  * @method Proyecto            setRegistroEstados() Sets the current record's "RegistroEstados" collection
  * @method Proyecto            setEventos()         Sets the current record's "Eventos" collection
@@ -91,6 +94,11 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'local' => 'prioridadFK',
              'foreign' => 'idPrioridad',
              'onDelete' => 'CASCADE'));
+
+        $this->hasMany('Usuario', array(
+             'refClass' => 'ProyectoUsuario',
+             'local' => 'idProyecto',
+             'foreign' => 'idUsuario'));
 
         $this->hasMany('Tarea as Tareas', array(
              'local' => 'idProyecto',

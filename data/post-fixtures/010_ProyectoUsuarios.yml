@@ -1,0 +1,33 @@
+## YAML Template.
+---
+ProyectoUsuario:
+  relacion1:
+    idProyecto: 1
+    idUsuario: 13
+  relacion2:
+    idProyecto: 2
+    idUsuario: 13 
+  relacion3:
+    idProyecto: 3
+    idUsuario: 13 
+  relacion4:
+    idProyecto: 4
+    idUsuario: 13 
+  relacion5:
+    idProyecto: 5
+    idUsuario: 13  
+  relacion11:
+    idProyecto: 6
+    idUsuario: 10
+  relacion12:
+    idProyecto: 7
+    idUsuario: 10 
+  relacion13:
+    idProyecto: 8
+    idUsuario: 10 
+  relacion14:
+    idProyecto: 9
+    idUsuario: 10 
+  relacion15:
+    idProyecto: 10
+    idUsuario: 10  

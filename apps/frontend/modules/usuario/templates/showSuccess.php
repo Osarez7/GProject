@@ -48,3 +48,8 @@
 <a href="<?php echo url_for('usuario/edit?id_usuario='.$usuario->getIdUsuario()) ?>">Edit</a>
 &nbsp;
 <a href="<?php echo url_for('usuario/index') ?>">List</a>
+
+
+
+
+
