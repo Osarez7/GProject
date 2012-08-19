@@ -96,7 +96,25 @@ Tarea:
      Proyecto: {onDelete: RESTRICT , local: proyectoFK, foreign: idProyecto, foreignAlias: Tareas} 
      Usuario: {local: idTarea, foreign: idUsuario,foreignAlias: Usuarios, refClass: UsuarioTarea}
  
-
+Avance:
+  actAs:
+    Timestampable: 
+     created:
+      name: fechaCreacion
+      type: timestamp 
+     updated:
+       name: fechaActulizacion
+       type: timestamp
+  columns:
+    idAvance:  { type: integer , primary: true, autoincrement: true} 
+    tituloAvance: { type: string(100), notnull: true}
+    resumen: { type: string(200), notnull: true}
+    duracion:  { type: integer , notnull: false} 
+    fechaInicio: { type: timestamp, notnull: true}
+    fechaFinal: { type: timestamp, notnull: false}
+    tareaFK: { type: integer , notnull: true}  
+  relations:
+    Tarea: {onDelete: CASCADE , local: tareaFK, foreign: idTarea, foreignAlias: Avances} 
        
 UsuarioTarea:
   actAs: 
@@ -113,6 +131,9 @@ UsuarioTarea:
   relations:
     usuario: {local: idUsuario, foreign: idUsuario, onDelete: CASCADE}
     tarea: {local: idTarea, foreign: idTarea, onDelete: CASCADE}
+ 
+ 
+ 
  
  
 ProyectoUsuario:

@@ -15,6 +15,7 @@
  * @property Prioridad $Prioridad
  * @property Proyecto $Proyecto
  * @property Doctrine_Collection $Usuario
+ * @property Doctrine_Collection $Avances
  * @property Doctrine_Collection $RegistroEstados
  * 
  * @method integer             getIdTarea()         Returns the current record's "idTarea" value
@@ -27,6 +28,7 @@
  * @method Prioridad           getPrioridad()       Returns the current record's "Prioridad" value
  * @method Proyecto            getProyecto()        Returns the current record's "Proyecto" value
  * @method Doctrine_Collection getUsuario()         Returns the current record's "Usuario" collection
+ * @method Doctrine_Collection getAvances()         Returns the current record's "Avances" collection
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
  * @method Tarea               setIdTarea()         Sets the current record's "idTarea" value
  * @method Tarea               setNombreTarea()     Sets the current record's "nombreTarea" value
@@ -38,6 +40,7 @@
  * @method Tarea               setPrioridad()       Sets the current record's "Prioridad" value
  * @method Tarea               setProyecto()        Sets the current record's "Proyecto" value
  * @method Tarea               setUsuario()         Sets the current record's "Usuario" collection
+ * @method Tarea               setAvances()         Sets the current record's "Avances" collection
  * @method Tarea               setRegistroEstados() Sets the current record's "RegistroEstados" collection
  * 
  * @package    gproject
@@ -100,6 +103,10 @@ abstract class BaseTarea extends sfDoctrineRecord
              'refClass' => 'UsuarioTarea',
              'local' => 'idTarea',
              'foreign' => 'idUsuario'));
+
+        $this->hasMany('Avance as Avances', array(
+             'local' => 'idTarea',
+             'foreign' => 'tareaFK'));
 
         $this->hasMany('Registro_Estado_Tarea as RegistroEstados', array(
              'local' => 'idTarea',

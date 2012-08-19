@@ -87,6 +87,50 @@ ul.menu li{
     
 }  
 
+textarea{
+   font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal; 
+}
+
+
+ 
+h1{
+  /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
+    border-radius: 5px 5px;
+   color: #3791B5;
+   font-size: 21px;
+    padding: 0 20px;
+}
+
+input , textarea{
+	border: 1px solid #888;
+	padding: 4px;
+	font-size: 1em;
+	background-color: #F8F8F8;
+}
+
+input:focus {
+	border-color: #1C94C4;
+	background-color: #F7F6BE;
+        outline: none;
+
+}
+
+
+textarea:focus{
+      
+         outline: none;
+        border-color: #1C94C4;
+	background-color: #F7F6BE;
+       
+
+}
+
+
+
 #btn-cerrar{
  float: right;
  color: #FFF;
@@ -112,7 +156,7 @@ ul.menu li{
     
 #contenido{
   float: left;
-    padding: 0 15px;
+    padding: 0 15px 20px 15px;
     width: 75%;
 }
 
@@ -127,14 +171,8 @@ ul.menu li{
 #cssmenu a{
     font-size: 10px;
 }
- 
-h1{
-  /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
-    border-radius: 5px 5px;
-   color: #3791B5;
-   font-size: 21px;
-    padding: 0 20px;
-}
+
+
 
 table.tbl-show th{
     text-align: left;
@@ -151,14 +189,30 @@ table.info td , table.info th{
     
 }
 
-input.icon-button {
-    width: auto;
-    height: auto;
+
+span.customStyleSelectBox { 
+    font-size:11px;
+    background-color: #f5f0de;
+    color:#7c7c7c; 
+    padding:5px 7px; 
+    border:1px solid #e7dab0; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px; 
+    line-height: 11px; }
+
+span.customStyleSelectBox.changed {
+    background-color: #f0dea4; 
+} 
+
+.customStyleSelectBoxInner { 
+    background:url(../images/raster/gray_dark/check_12x10.png) no-repeat center right;
 }
 
-.icon-button{
-background: url("../images/jquery-ui/ui-icons_222222_256x240.png");
-}
+
+
+
+
 
 /* a.button{
     background:  -moz-linear-gradient(center top , #87AEDD 0%, #FFF 100%) repeat scroll 0 0 transparent;

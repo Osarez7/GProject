@@ -15,23 +15,23 @@
 
 <td>
     
-    <td><?php echo link_to('Añadir Tarea', 'tarea/add_child',array("idTarea"=>$node['idTarea'],
+    <td><?php echo link_to(' ', 'tarea/add_child',array("idTarea"=>$node['idTarea'],
 
-'class' => 'button icon add'
+'class' => 'custom-button icon add-hija  '
 )) 
         ?>
         
 
-        <?php echo link_to('Borrar Tarea', 'tarea/add_child',array("idTarea"=>$node['idTarea'],
+        <?php echo link_to(' ', 'tarea/edit?id_tarea='.$node['idTarea'],array(
 
-'class' => 'button danger icon trash'
+'class' => 'custom-button icon eliminar'
 )) 
         ?>
         
 
- <?php echo link_to('Asignar', 'tarea/asignarUsuario?idTarea='.$node['idTarea'],array(
+ <?php echo link_to(' ', 'tarea/asignarUsuario?idTarea='.$node['idTarea'],array(
 
-'class' => 'button  icon add'
+'class' => 'custom-button icon asignar'
 )) 
         ?>
   

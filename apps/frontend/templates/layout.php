@@ -14,7 +14,7 @@
          
                 <div id="cssmenu">
       <ul>
-        <li class='active '><a href='/'class=" icon user"><span>Inicio</span></a></li>
+        <li class='active '><a href='/'class=" icon home"><span>Inicio</span></a></li>
         <li class='has-sub' ><a href="#">Proyectos</a>
           <ul>
            <li ><a href="<?php echo url_for('proyecto/index') ?>">Mis Proyectos</a></li>

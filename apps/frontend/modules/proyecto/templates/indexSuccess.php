@@ -1,6 +1,6 @@
 <h1>Proyectos</h1>
 
-<table class="lista">
+<table class="lista info">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -23,7 +23,7 @@
         </tbody>
     </table>
 
-  <a href="<?php echo url_for('proyecto/new') ?>">New</a>
+  <a href="<?php echo url_for('proyecto/new') ?>" class="button  icon add">Nuevo Proyecto</a>
 
 
 

@@ -27,7 +27,7 @@ class  LinkTareaUsuario extends BaseTareaForm
       'model'           => 'Usuario',
       'add_empty'       =>  false,
        'query'          => $queryUsuario,
-      'renderer_class'  => 'sfWidgetFormSelectDoubleList',
+      'renderer_class'  => 'sfWidgetFormSelectDoubleList',  
     ));
 
   }

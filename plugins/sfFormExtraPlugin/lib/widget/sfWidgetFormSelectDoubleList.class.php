@@ -58,8 +58,8 @@ class sfWidgetFormSelectDoubleList extends sfWidgetForm
     $this->addOption('class', 'double_list');
     $this->addOption('class_select', 'double_list_select');
     $this->addOption('associated_first', true);
-    $this->addOption('label_unassociated', 'Unassociated');
-    $this->addOption('label_associated', 'Associated');
+    $this->addOption('label_unassociated', 'No asociados');
+    $this->addOption('label_associated', 'Asociados');
     $associated_first = isset($options['associated_first']) ? $options['associated_first'] : true;
 
     if ($associated_first)
