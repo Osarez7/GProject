@@ -28,3 +28,12 @@
 </table>
 
   <a href="<?php echo url_for('evento/new') ?>">New</a>
+  
+  
+  <div id="calendario-content">
+   <?php 
+   
+     include_partial('evento/mini-calendario', array("calendario" => $calendario, "listaEventos"=>$listaEventos));
+   ?>
+  
+  </div>

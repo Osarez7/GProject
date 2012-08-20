@@ -16,4 +16,7 @@ class ProyectoUsuarioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('ProyectoUsuario');
     }
+    
+   
+    
 }

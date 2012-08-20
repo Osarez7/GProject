@@ -21,7 +21,7 @@ $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'
     
   }
   
-  public function addChild(sfWebRequest $request){
+  public function executeAddChild(sfWebRequest $request){
     Doctrine_Core:: getTable('Tarea')->addChild($request->getParameter('idTarea'));   
   }
   
@@ -50,8 +50,12 @@ $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'
 
     $this->form = new TareaForm();
 
-    $this->processForm($request, $this->form);
-
+   $tarea = $this->processForm($request, $this->form);
+    
+    if($tarea){
+        $this->redirect('tarea/edit?id_tarea='.$tarea->getIdTarea());
+    }
+    
     $this->setTemplate('new');
   }
 
@@ -67,7 +71,13 @@ $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'
     $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
     $this->form = new TareaForm($tarea);
 
-    $this->processForm($request, $this->form);
+
+    
+    $tarea = $this->processForm($request, $this->form);
+    
+    if($tarea){
+        $this->redirect('tarea/edit?id_tarea='.$tarea->getIdTarea());
+    }
 
     $this->setTemplate('edit');
   }
@@ -104,9 +114,9 @@ $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'
     $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('idTarea')));
     $this->form = new LinkTareaUsuario($tarea);
 
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('edit'); 
+    $this->tarea = $this->processForm($request, $this->form);
+    $this->getUser()->setFlash('OK', 'Asignación correcta');
+    $this->setTemplate('asignarUsuario'); 
         
     }   
 
@@ -117,12 +127,17 @@ $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'
     if ($form->isValid())
     {
       $tarea = $form->save();
-
-      $this->redirect('tarea/edit?id_tarea='.$tarea->getIdTarea());
+      
+       
+      return $tarea;
+     
+      
     }
+    
+    return false;
   }
 
-
+ 
 
 
 }

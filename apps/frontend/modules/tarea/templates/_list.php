@@ -51,3 +51,5 @@
 
 
   <a href="<?php echo url_for('tarea/new') ?>">New</a>
+  
+  <button id="create-user" class="button icon add">Crear nueva Tarea</button>

@@ -16,4 +16,36 @@ class EventoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Evento');
     }
+    
+    
+    
+     public function getEventosByUsuario($idUsuario = 1){
+         
+         $proyectos = Doctrine_Core::getTable('Proyecto')->getProyectoByUsuario($idUsuario);
+         
+        
+            $query  = Doctrine_Query::create()
+                ->select('e.fechaEvento')    
+                ->from('Evento e')
+                ->whereIn('e.proyectoPK=?',$proyectos);
+            
+            return $query  ->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)->execute();               
+     }
+   
+    
+    
+    public function getEventosByProyecto($idProyecto= 1){
+        
+            $query  = Doctrine_Query::create()
+                ->select('e.fechaEvento')    
+                ->from('Evento e')
+                ->where('e.proyectoPK=?',$idProyecto);
+            
+            $eventos = $query->execute();
+        
+        
+    }
+    
+   
+    
 }

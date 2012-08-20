@@ -145,19 +145,45 @@ textarea:focus{
 }
 
 
+div#menu-lateral{
+    with:150px;
+    margin-bottom: 10px;
+}
+
+#menu-lateral a.button{
+    display: block;
+    text-align: left;
+}
+
+#menu-lateral li{
+    list-style: none;
+    
+}
 
 
 #lateral {
   float: left;
-  width: 20%;
   background: #4D7290;
   min-height: 300px;
+   padding: 5px 10px;
+    width: 27%;
 }
     
 #contenido{
   float: left;
     padding: 0 15px 20px 15px;
-    width: 75%;
+    width: 65%;
+}
+
+#header{
+    color: #FFF;
+     background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#3072b3));
+    background-image: -moz-linear-gradient(#333333, #222222);
+    background-image: -o-linear-gradient(#333333, #222222);
+    background-image: linear-gradient(#333333, #222222);
+   padding: 8px 5px;
+   height: 15px;
 }
 
 #pie {
@@ -167,6 +193,13 @@ textarea:focus{
     border-radius: 5px 5px;
 
 }
+
+div.flash_ok{
+    background: #F7F6BE url("../images/raster/green/check_12x10.png") no-repeat;
+    background-position: 4px 6px;
+    padding: 4px 2px 3px 20px;
+}
+
 
 #cssmenu a{
     font-size: 10px;
@@ -187,6 +220,10 @@ table.info td , table.info th{
 
 .odd{
     
+}
+
+#componente-calendario{
+    font-size: 7px;
 }
 
 

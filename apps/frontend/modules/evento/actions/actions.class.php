@@ -15,6 +15,9 @@ class eventoActions extends sfActions
     $this->eventos = Doctrine_Core::getTable('Evento')
       ->createQuery('a')
       ->execute();
+    
+    $this->calendario = new Calendario();
+    $this->listaEventos = array(1,2,5);
   }
 
   public function executeShow(sfWebRequest $request)
@@ -66,6 +69,16 @@ class eventoActions extends sfActions
     $this->redirect('evento/index');
   }
 
+  
+  
+  public function executeShowCalendario(sfWebRequest $request){
+      
+     $this->calendario = new Calendario();
+      
+     
+  }
+  
+  
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
