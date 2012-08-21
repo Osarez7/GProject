@@ -24,7 +24,7 @@ class PruebaForm extends BaseForm {
         $this->setWidgets(array(
             'autocompletar' => new sfWidgetFormChoiceAutocomplete(array(
                 'choices'=>array('uno','dos','tres','cuatro'),
-                'source'=>array('one','two','three','four')
+                'source'=>array('uno','dos')
                 
             ))));
                 

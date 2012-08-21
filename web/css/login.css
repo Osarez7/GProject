@@ -31,5 +31,9 @@ label{
     width: 400px;
 }
 
+label{
+    display: block;
+}
+
 
 

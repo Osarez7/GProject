@@ -43,7 +43,7 @@ class TareaForm extends BaseTareaForm
       unset(
               $this['root_id'],$this['level'],
               $this['rgt'],$this['lft'],$this['tar_fecha_creacion'],
-              $this['usuario_list']
+              $this['usuario_list'],$this['tar_fecha_actulizacion']
               
     );
 

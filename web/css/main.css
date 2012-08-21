@@ -130,6 +130,13 @@ textarea:focus{
 }
 
 
+a:link {
+font-weight: bold;
+text-decoration: none;
+color: #3792b3;
+}
+
+
 
 #btn-cerrar{
  float: right;

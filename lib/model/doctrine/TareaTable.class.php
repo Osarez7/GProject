@@ -70,7 +70,7 @@ class TareaTable extends Doctrine_Table {
 
     public function addChild($idTarea) {
 
-        $tareaPadre = $this->find($idTarea)->getNode();
+        $tareaPadre = $this->find($idTarea);
         $tareaPadre->getNode();
     }
 
