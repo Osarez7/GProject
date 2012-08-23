@@ -185,7 +185,7 @@ div#menu-lateral{
 #header{
     color: #FFF;
      background-color: #3c8dde;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#3072b3));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#2E373F));
     background-image: -moz-linear-gradient(#333333, #222222);
     background-image: -o-linear-gradient(#333333, #222222);
     background-image: linear-gradient(#333333, #222222);
