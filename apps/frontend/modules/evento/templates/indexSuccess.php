@@ -1,46 +1,8 @@
-<h1>Eventos List</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id evento</th>
-      <th>Fecha evento</th>
-      <th>Nombre evento</th>
-      <th>Desc evento</th>
-      <th>Proyecto</th>
-      <th>Fecha cambio estado</th>
-      <th>Fecha actualizacion</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($eventos as $evento): ?>
-    <tr>
-      <td><a href="<?php echo url_for('evento/show?id_evento='.$evento->getIdEvento()) ?>"><?php echo $evento->getIdEvento() ?></a></td>
-      <td><?php echo $evento->getFechaEvento() ?></td>
-      <td><?php echo $evento->getNombreEvento() ?></td>
-      <td><?php echo $evento->getDescEvento() ?></td>
-      <td><?php echo $evento->getProyecto() ?></td>
-      <td><?php echo $evento->getFechaCambioEstado() ?></td>
-      <td><?php echo $evento->getFechaActualizacion() ?></td>
-    </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
-
-  <a href="<?php echo url_for('evento/new') ?>">New</a>
-  
-  
-  <div id="calendario-content">
-   <?php 
-   
-     include_partial('evento/mini-calendario', array("calendario" => $calendario, "listaEventos"=>$listaEventos));
-   ?>
-  
-  </div>
 
 
-
-
+<?php use_javascript('jquery.ui.core.js') ?>
+<?php use_javascript('jquery.ui.draggable.js') ?>
+<?php use_javascript('jquery.ui.droppable.js') ?>
 
 <script type='text/javascript'>
  
@@ -51,7 +13,14 @@ var y = d.getFullYear();
 var m = d.getMonth();
  
 $('#calendar').fullCalendar({
-draggable: true,
+header: {
+left: 'prev,next today',
+center: 'title',
+right: 'month,basicWeek,basicDay'
+},
+height: 100,
+editable: true,
+theme:true,
 events: [
 <?php $total = 21; $i=0; ?>
 <?php foreach ($eventos as $evento):?>
