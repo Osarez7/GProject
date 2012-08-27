@@ -2,6 +2,8 @@ CREATE TABLE avance (idavance BIGINT AUTO_INCREMENT, tituloavance VARCHAR(100) N
 CREATE TABLE evento (idevento BIGINT AUTO_INCREMENT, fechaevento DATETIME NOT NULL, nombreevento VARCHAR(50) NOT NULL, descevento VARCHAR(200), proyectofk BIGINT NOT NULL, fecha_cambio_estado DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX proyectofk_idx (proyectofk), PRIMARY KEY(idevento)) ENGINE = INNODB;
 CREATE TABLE grupo (idgrupo BIGINT AUTO_INCREMENT, nombregrupo VARCHAR(50) NOT NULL, descgrupo VARCHAR(200) NOT NULL, PRIMARY KEY(idgrupo)) ENGINE = INNODB;
 CREATE TABLE grupo__usuario (usuario BIGINT, grupo BIGINT, PRIMARY KEY(usuario, grupo)) ENGINE = INNODB;
+CREATE TABLE lugar (idlugar BIGINT AUTO_INCREMENT, titulolugar VARCHAR(100), infolugar VARCHAR(100), mapafk BIGINT NOT NULL, INDEX mapafk_idx (mapafk), PRIMARY KEY(idlugar)) ENGINE = INNODB;
+CREATE TABLE mapa (idmapa BIGINT AUTO_INCREMENT, nombremapa VARCHAR(100) NOT NULL, descmapa VARCHAR(200), proyectofk BIGINT, INDEX proyectofk_idx (proyectofk), PRIMARY KEY(idmapa)) ENGINE = INNODB;
 CREATE TABLE perfil (idperfil BIGINT AUTO_INCREMENT, perfilnombre VARCHAR(50) NOT NULL, PRIMARY KEY(idperfil)) ENGINE = INNODB;
 CREATE TABLE prioridad (idprioridad BIGINT AUTO_INCREMENT, nombreprioridad VARCHAR(50) NOT NULL, PRIMARY KEY(idprioridad)) ENGINE = INNODB;
 CREATE TABLE proyecto (idproyecto BIGINT AUTO_INCREMENT, nombre VARCHAR(50) NOT NULL, fechainicio DATETIME, descproyecto VARCHAR(200) NOT NULL, statusfk BIGINT NOT NULL, prioridadfk BIGINT NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX statusfk_idx (statusfk), INDEX prioridadfk_idx (prioridadfk), PRIMARY KEY(idproyecto)) ENGINE = INNODB;
@@ -16,6 +18,8 @@ ALTER TABLE avance ADD CONSTRAINT avance_tareafk_tarea_idtarea FOREIGN KEY (tare
 ALTER TABLE evento ADD CONSTRAINT evento_proyectofk_proyecto_idproyecto FOREIGN KEY (proyectofk) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE grupo__usuario ADD CONSTRAINT grupo__usuario_usuario_usuario_idusuario FOREIGN KEY (usuario) REFERENCES usuario(idusuario) ON DELETE CASCADE;
 ALTER TABLE grupo__usuario ADD CONSTRAINT grupo__usuario_grupo_grupo_idgrupo FOREIGN KEY (grupo) REFERENCES grupo(idgrupo) ON DELETE CASCADE;
+ALTER TABLE lugar ADD CONSTRAINT lugar_mapafk_mapa_idmapa FOREIGN KEY (mapafk) REFERENCES mapa(idmapa) ON DELETE CASCADE;
+ALTER TABLE mapa ADD CONSTRAINT mapa_proyectofk_proyecto_idproyecto FOREIGN KEY (proyectofk) REFERENCES proyecto(idproyecto) ON DELETE CASCADE;
 ALTER TABLE proyecto ADD CONSTRAINT proyecto_statusfk_status_idstatus FOREIGN KEY (statusfk) REFERENCES status(idstatus) ON DELETE CASCADE;
 ALTER TABLE proyecto ADD CONSTRAINT proyecto_prioridadfk_prioridad_idprioridad FOREIGN KEY (prioridadfk) REFERENCES prioridad(idprioridad) ON DELETE CASCADE;
 ALTER TABLE proyecto_usuario ADD CONSTRAINT proyecto_usuario_idusuario_usuario_idusuario FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE;

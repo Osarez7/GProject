@@ -5,10 +5,10 @@
         <?php echo link_to('Tareas', 'tarea/index', array('class' => 'button icon log')) ?> 
     </li>   
     <li>
-        <?php echo link_to('Mapas', 'evento/index', array('class' => 'button icon pin')) ?>
+        <?php echo link_to('Mapas', 'map/index', array('class' => 'button icon pin')) ?>
     </li>   
     <li>
-        <?php echo link_to('Eventos', 'proyecto/verEventos?id_proyecto='. $proyecto->getIdProyecto(), array('class' => 'button icon calendar')) ?>
+        <?php echo link_to('Eventos', 'evento/index', array('class' => 'button icon calendar')) ?>
     </li>
     <li>
         <?php

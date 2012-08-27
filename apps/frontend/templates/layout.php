@@ -62,9 +62,9 @@
                 <?php  if(has_slot("menu_lateral")):?>
                       <?php include_slot("menu_lateral"); ?>
                 
-                <?php  endif;?>
+                <?php   endif;?>
                 
-                <?php include_component('evento', 'calendarioUsuario') ?>
+                <?php // include_component('evento', 'calendarioUsuario') ?>
             </div>
 
             <div id="contenido">

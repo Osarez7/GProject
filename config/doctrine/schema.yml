@@ -202,6 +202,25 @@ Grupo_Usuario:
   relations:   
    Usuario: { onDelete: CASCADE, local: usuario, foreign: idUsuario}
    Grupo: { onDelete: CASCADE, local: grupo, foreign: idGrupo}
+
+Mapa:
+  columns: 
+   idMapa: { type: integer , primary: true, autoincrement: true} 
+   nombreMapa: { type: string(100), notnull: true}
+   descMapa: { type: string(200), notnull: false}
+   proyectoFK: { type: integer }
+  relations:
+    Proyecto:  { onDelete: CASCADE, local: proyectoFK, foreign: idProyecto , foreignAlias: Mapas}    
+   
+
+Lugar:
+ columns:
+   idLugar: { type: integer , primary: true, autoincrement: true} 
+   tituloLugar: {type: string(100)}
+   infoLugar: {type: string(100)}
+   mapaFK: { type: integer , notnull: true} 
+ relations: 
+    Mapa: {onDelete: CASCADE , local: mapaFK, foreign: idMapa, foreignAlias: Lugares}
   
   
 

@@ -17,6 +17,7 @@
  * @property Doctrine_Collection $Tareas
  * @property Doctrine_Collection $RegistroEstados
  * @property Doctrine_Collection $Eventos
+ * @property Doctrine_Collection $Mapas
  * 
  * @method integer             getIdProyecto()      Returns the current record's "idProyecto" value
  * @method string              getNombre()          Returns the current record's "nombre" value
@@ -30,6 +31,7 @@
  * @method Doctrine_Collection getTareas()          Returns the current record's "Tareas" collection
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
  * @method Doctrine_Collection getEventos()         Returns the current record's "Eventos" collection
+ * @method Doctrine_Collection getMapas()           Returns the current record's "Mapas" collection
  * @method Proyecto            setIdProyecto()      Sets the current record's "idProyecto" value
  * @method Proyecto            setNombre()          Sets the current record's "nombre" value
  * @method Proyecto            setFechaInicio()     Sets the current record's "fechaInicio" value
@@ -42,13 +44,14 @@
  * @method Proyecto            setTareas()          Sets the current record's "Tareas" collection
  * @method Proyecto            setRegistroEstados() Sets the current record's "RegistroEstados" collection
  * @method Proyecto            setEventos()         Sets the current record's "Eventos" collection
+ * @method Proyecto            setMapas()           Sets the current record's "Mapas" collection
  * 
  * @package    gproject
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-abstract class BaseProyecto extends sfDoctrineRecord
+abstract class BaseProyecto extends sfMapFishRecord
 {
     public function setTableDefinition()
     {
@@ -109,6 +112,10 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'foreign' => 'proyectoFK'));
 
         $this->hasMany('Evento as Eventos', array(
+             'local' => 'idProyecto',
+             'foreign' => 'proyectoFK'));
+
+        $this->hasMany('Mapa as Mapas', array(
              'local' => 'idProyecto',
              'foreign' => 'proyectoFK'));
 
