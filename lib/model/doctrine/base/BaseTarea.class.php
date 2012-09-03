@@ -7,7 +7,8 @@
  * 
  * @property integer $idTarea
  * @property string $nombreTarea
- * @property integer $duracion
+ * @property timestamp $fechaInicio
+ * @property timestamp $fechaFinal
  * @property integer $statusFK
  * @property integer $prioridadFK
  * @property integer $proyectoFK
@@ -20,7 +21,8 @@
  * 
  * @method integer             getIdTarea()         Returns the current record's "idTarea" value
  * @method string              getNombreTarea()     Returns the current record's "nombreTarea" value
- * @method integer             getDuracion()        Returns the current record's "duracion" value
+ * @method timestamp           getFechaInicio()     Returns the current record's "fechaInicio" value
+ * @method timestamp           getFechaFinal()      Returns the current record's "fechaFinal" value
  * @method integer             getStatusFK()        Returns the current record's "statusFK" value
  * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
  * @method integer             getProyectoFK()      Returns the current record's "proyectoFK" value
@@ -32,7 +34,8 @@
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
  * @method Tarea               setIdTarea()         Sets the current record's "idTarea" value
  * @method Tarea               setNombreTarea()     Sets the current record's "nombreTarea" value
- * @method Tarea               setDuracion()        Sets the current record's "duracion" value
+ * @method Tarea               setFechaInicio()     Sets the current record's "fechaInicio" value
+ * @method Tarea               setFechaFinal()      Sets the current record's "fechaFinal" value
  * @method Tarea               setStatusFK()        Sets the current record's "statusFK" value
  * @method Tarea               setPrioridadFK()     Sets the current record's "prioridadFK" value
  * @method Tarea               setProyectoFK()      Sets the current record's "proyectoFK" value
@@ -63,8 +66,12 @@ abstract class BaseTarea extends sfMapFishRecord
              'notnull' => true,
              'length' => 50,
              ));
-        $this->hasColumn('duracion', 'integer', null, array(
-             'type' => 'integer',
+        $this->hasColumn('fechaInicio', 'timestamp', null, array(
+             'type' => 'timestamp',
+             'notnull' => true,
+             ));
+        $this->hasColumn('fechaFinal', 'timestamp', null, array(
+             'type' => 'timestamp',
              'notnull' => true,
              ));
         $this->hasColumn('statusFK', 'integer', null, array(

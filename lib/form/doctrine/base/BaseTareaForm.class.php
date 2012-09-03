@@ -17,7 +17,8 @@ abstract class BaseTareaForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'idTarea'                => new sfWidgetFormInputHidden(),
       'nombreTarea'            => new sfWidgetFormInputText(),
-      'duracion'               => new sfWidgetFormInputText(),
+      'fechaInicio'            => new sfWidgetFormDateTime(),
+      'fechaFinal'             => new sfWidgetFormDateTime(),
       'statusFK'               => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Status'), 'add_empty' => false)),
       'prioridadFK'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'), 'add_empty' => false)),
       'proyectoFK'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
@@ -33,7 +34,8 @@ abstract class BaseTareaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'idTarea'                => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idTarea')), 'empty_value' => $this->getObject()->get('idTarea'), 'required' => false)),
       'nombreTarea'            => new sfValidatorString(array('max_length' => 50)),
-      'duracion'               => new sfValidatorInteger(),
+      'fechaInicio'            => new sfValidatorDateTime(),
+      'fechaFinal'             => new sfValidatorDateTime(),
       'statusFK'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),
       'prioridadFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Prioridad'))),
       'proyectoFK'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),

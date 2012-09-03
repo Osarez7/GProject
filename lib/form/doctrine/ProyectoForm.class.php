@@ -17,11 +17,14 @@ class ProyectoForm extends BaseProyectoForm
     );
     
    
-     
-      $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
-              array('image'=> '/images/toggle-expand-dark.png',
+ 
+
+ $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
 		'include_time'=> false));
 		;
+
+  
    $this->widgetSchema['descProyecto'] = new sfWidgetFormTextarea();
   }
 }

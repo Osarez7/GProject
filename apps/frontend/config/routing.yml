@@ -15,7 +15,19 @@ logout:
   param: { module: login, action: logout }
   
   
-  
+index_eventos:
+  url: /evento/index.:sf_format
+  param: { module: evento, action: index, sf_format: html }
+  requirements:
+   sf_format: (?:html|json)
+
+nuevo_avance:
+   url: /avance/new/:idTarea
+   param: { module: avance, action: new}
+
+nueva_tarea:
+   url: /tarea/new/:idProyecto
+   param: { module: tarea, action: new}   
   
 show_usuario:
   url:     /usuario/detalle/:idUsuario

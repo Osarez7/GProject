@@ -13,14 +13,25 @@ class TareaForm extends BaseTareaForm
   public function configure()
   {
         
-      
-      
+    
    $this->setWidget('parent', new sfWidgetFormDoctrineChoiceNestedSet(array(
 	      'model'     => 'Tarea',
-	      'add_empty' => 'No es sub-tarea'
+	      'add_empty' => 'No es sub-tarea',
+               'label' => 'Padre',
+'query' => Doctrine_Core::getTable('Tarea')->getQueryArbolTarea($this->getObject()->getProyectoFK())
 	    )));  
-   
-   
+
+         
+   $this->setWidget('fechaInicio',  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
+		'include_time'=> false))
+		);
+     
+        
+   $this->setWidget('fechaFinal',  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
+		'include_time'=> false))
+		);
    
    if ($this->getObject()->getNode()->hasParent())
 	    {
@@ -55,9 +66,15 @@ class TareaForm extends BaseTareaForm
     // save the record itself
     parent::doSave($con);
     // if a parent has been specified, add/move this node to be the child of that node
+
+    sfContext::getInstance()->getLogger()->info("Id del padre es " + $this->getValue('parent'));
+   
+
     if ($this->getValue('parent'))
+
     {
-      $parent = Doctrine::getTable('Tarea')->findOneById($this->getValue('parent'));
+        $parent = Doctrine_Core::getTable('Tarea')->find(array($this->getValue('parent')));
+      // $parent = Doctrine::getTable('Tarea')->findOneById($this->getValue('parent'));
       if ($this->isNew())
       {
         $this->getObject()->getNode()->insertAsLastChildOf($parent);
@@ -77,7 +94,7 @@ class TareaForm extends BaseTareaForm
       }
       else
       {
-        $this->getObject()->getNode()->makeRoot($this->getObject()->getId());
+        $this->getObject()->getNode()->makeRoot($this->getObject()->getIdTarea());
       }
     }
   }

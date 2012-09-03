@@ -2,7 +2,7 @@
 ---
 Usuario:
   admin:
-    idUsuario: 13
+    idUsuario: 1
     perfilFK: 4
     usr_nombre: Admin	
     usr_apellido1: Usuario

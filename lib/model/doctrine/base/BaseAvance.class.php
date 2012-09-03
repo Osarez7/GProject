@@ -8,7 +8,6 @@
  * @property integer $idAvance
  * @property string $tituloAvance
  * @property string $resumen
- * @property integer $duracion
  * @property timestamp $fechaInicio
  * @property timestamp $fechaFinal
  * @property integer $tareaFK
@@ -17,7 +16,6 @@
  * @method integer   getIdAvance()     Returns the current record's "idAvance" value
  * @method string    getTituloAvance() Returns the current record's "tituloAvance" value
  * @method string    getResumen()      Returns the current record's "resumen" value
- * @method integer   getDuracion()     Returns the current record's "duracion" value
  * @method timestamp getFechaInicio()  Returns the current record's "fechaInicio" value
  * @method timestamp getFechaFinal()   Returns the current record's "fechaFinal" value
  * @method integer   getTareaFK()      Returns the current record's "tareaFK" value
@@ -25,7 +23,6 @@
  * @method Avance    setIdAvance()     Sets the current record's "idAvance" value
  * @method Avance    setTituloAvance() Sets the current record's "tituloAvance" value
  * @method Avance    setResumen()      Sets the current record's "resumen" value
- * @method Avance    setDuracion()     Sets the current record's "duracion" value
  * @method Avance    setFechaInicio()  Sets the current record's "fechaInicio" value
  * @method Avance    setFechaFinal()   Sets the current record's "fechaFinal" value
  * @method Avance    setTareaFK()      Sets the current record's "tareaFK" value
@@ -55,10 +52,6 @@ abstract class BaseAvance extends sfMapFishRecord
              'type' => 'string',
              'notnull' => true,
              'length' => 200,
-             ));
-        $this->hasColumn('duracion', 'integer', null, array(
-             'type' => 'integer',
-             'notnull' => false,
              ));
         $this->hasColumn('fechaInicio', 'timestamp', null, array(
              'type' => 'timestamp',

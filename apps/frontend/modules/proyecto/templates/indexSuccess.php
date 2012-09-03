@@ -1,31 +1,29 @@
 <h1>Proyectos</h1>
 
-<table class="lista info">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Estado</th>
-                <th>Prioridad</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($proyectos as $proyecto): ?>
-            <td><?php echo $proyecto->getNombre() ?></td>
-            <td><?php echo $proyecto->getStatus() ?></td>
-            <td><?php echo $proyecto->getPrioridad() ?></td>
-            <td>
-                <a  href="<?php echo url_for('proyecto/show?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="ver icon custom-button"></a>
-                <a  href="<?php echo url_for('proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="editar icon custom-button"></a>
-            </td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody>
-    </table>
-
-  <a href="<?php echo url_for('proyecto/new') ?>" class="button  icon add">Nuevo Proyecto</a>
 
 
+<?php foreach ($proyectos as $proyecto): ?>
+    
+    <div class="info-proyecto">
+        <div class="titulo-proyecto"> <?php echo $proyecto->getNombre() ?></div>
+        
+        <div class="txt-descripcion">
+            <?php echo $proyecto->getDescProyecto() ?>
+        </div>
+        
+        
+        <div class="into_estado_proyecto">
+         <span> Estado:  </span> <?php echo $proyecto->getStatus() ?></br>
+         <span> Prioridad:  </span><?php echo $proyecto->getPrioridad() ?>
+        </div>
+        <div class="controles-proyecto">
+        <a  href="<?php echo url_for('proyecto/show?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button ver  icon custom-button">Ver Detalles</a>
+        <a  href="<?php echo url_for('proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button editar icon custom-button">Editar</a>
+        </div>
+    </div>
+
+<?php endforeach; ?>
 
 
+<a href="<?php echo url_for('proyecto/new') ?>" class="button  icon add">Nuevo Proyecto</a>
 

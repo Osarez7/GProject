@@ -15,7 +15,6 @@ abstract class BaseAvanceFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'tituloAvance'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'resumen'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'duracion'          => new sfWidgetFormFilterInput(),
       'fechaInicio'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'fechaFinal'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'tareaFK'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tarea'), 'add_empty' => true)),
@@ -26,7 +25,6 @@ abstract class BaseAvanceFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'tituloAvance'      => new sfValidatorPass(array('required' => false)),
       'resumen'           => new sfValidatorPass(array('required' => false)),
-      'duracion'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'fechaInicio'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'fechaFinal'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'tareaFK'           => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Tarea'), 'column' => 'idTarea')),
@@ -54,7 +52,6 @@ abstract class BaseAvanceFormFilter extends BaseFormFilterDoctrine
       'idAvance'          => 'Number',
       'tituloAvance'      => 'Text',
       'resumen'           => 'Text',
-      'duracion'          => 'Number',
       'fechaInicio'       => 'Date',
       'fechaFinal'        => 'Date',
       'tareaFK'           => 'ForeignKey',

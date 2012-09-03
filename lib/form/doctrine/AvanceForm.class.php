@@ -12,5 +12,22 @@ class AvanceForm extends BaseAvanceForm
 {
   public function configure()
   {
+         
+    
+       $this->setWidget('tareaFK', new sfWidgetFormInputHidden());
+       $this->widgetSchema['resumen'] = new sfWidgetFormTextarea();
+     
+     unset($this['fechaCreacion'], $this['fechaActulizacion']);
+      
+     $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
+		'include_time'=> true));
+		;
+
+  $this->widgetSchema['fechaFinal'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
+		'include_time'=> true));
+		; 
+        
   }
 }

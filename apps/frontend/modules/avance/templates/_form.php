@@ -35,13 +35,6 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['duracion']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['duracion']->renderError() ?>
-          <?php echo $form['duracion'] ?>
-        </td>
-      </tr>
-      <tr>
         <th><?php echo $form['fechaInicio']->renderLabel() ?></th>
         <td>
           <?php echo $form['fechaInicio']->renderError() ?>
@@ -56,26 +49,13 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['tareaFK']->renderLabel() ?></th>
+        <th></th>
         <td>
           <?php echo $form['tareaFK']->renderError() ?>
           <?php echo $form['tareaFK'] ?>
         </td>
       </tr>
-      <tr>
-        <th><?php echo $form['fechaCreacion']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fechaCreacion']->renderError() ?>
-          <?php echo $form['fechaCreacion'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['fechaActulizacion']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fechaActulizacion']->renderError() ?>
-          <?php echo $form['fechaActulizacion'] ?>
-        </td>
-      </tr>
+    
     </tbody>
   </table>
 </form>

@@ -20,6 +20,7 @@ class avanceActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new AvanceForm();
+    $this->form->setDefault('tareaFK',$request->getParameter('idTarea')) ;
   }
 
   public function executeCreate(sfWebRequest $request)

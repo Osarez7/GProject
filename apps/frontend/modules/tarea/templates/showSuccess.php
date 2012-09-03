@@ -9,8 +9,12 @@
       <td><?php echo $tarea->getNombreTarea() ?></td>
     </tr>
     <tr>
-      <th>Duracion:</th>
-      <td><?php echo $tarea->getDuracion() ?></td>
+      <th>Fecha de Inicio:</th>
+      <td><?php echo $tarea->getFechaInicio() ?></td>
+    </tr>
+    <tr>
+      <th>Fecha de Fin:</th>
+      <td><?php echo $tarea->getFechaFinal() ?></td>
     </tr>
     <tr>
       <th>Status</th>
@@ -20,27 +24,13 @@
       <th>Prioridad :</th>
       <td><?php echo $tarea->getPrioridad() ?></td>
     </tr>
-    <tr>
-      <th>Grupo :</th>
-      <td><?php echo $tarea->getGrupo() ?></td>
-    </tr>
-    <tr>
-      <th>Proyecto :</th>
-      <td><?php echo $tarea->getProyecto() ?></td>
-    </tr>
-    <tr>
-      <th>Tar fecha creacion:</th>
-      <td><?php echo $tarea->getTarFechaCreacion() ?></td>
-    </tr>
-    <tr>
-      <th>Tar fecha actulizacion:</th>
-      <td><?php echo $tarea->getTarFechaActulizacion() ?></td>
-    </tr>
+ 
   </tbody>
 </table>
 
 <hr />
 
-<a href="<?php echo url_for('tarea/edit?id_tarea='.$tarea->getIdTarea()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('tarea/index') ?>">List</a>
+
+<div class="content-info">
+    <?php include_partial('avance/list',array('avances' =>$avances,"tarea"=>$tarea)); ?>
+</div>

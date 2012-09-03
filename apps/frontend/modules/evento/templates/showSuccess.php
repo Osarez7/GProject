@@ -5,8 +5,12 @@
       <td><?php echo $evento->getIdEvento() ?></td>
     </tr>
     <tr>
-      <th>Fecha evento:</th>
-      <td><?php echo $evento->getFechaEvento() ?></td>
+      <th>Fecha inicio:</th>
+      <td><?php echo $evento->getFechaInicio() ?></td>
+    </tr>
+    <tr>
+      <th>Fecha final:</th>
+      <td><?php echo$evento->getFechaFinal() ?></td>
     </tr>
     <tr>
       <th>Nombre evento:</th>
@@ -18,14 +22,14 @@
     </tr>
     <tr>
       <th>Proyecto pk:</th>
-      <td><?php echo $evento->getProyectoPK() ?></td>
+      <td><?php echo $evento->getProyectoFK() ?></td>
     </tr>
     <tr>
-      <th>Fecha cambio estado:</th>
-      <td><?php echo $evento->getFechaCambioEstado() ?></td>
+        <th>Fecha creaci&oacute;n:</th>
+      <td><?php echo $evento->getFechaCreacion() ?></td>
     </tr>
     <tr>
-      <th>Fecha actualizacion:</th>
+      <th>Fecha actualizaci&oacute;n:</th>
       <td><?php echo $evento->getFechaActualizacion() ?></td>
     </tr>
   </tbody>

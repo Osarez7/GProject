@@ -32,6 +32,17 @@ class TareaTable extends Doctrine_Table {
         return $tree;
     }
 
+
+    public function getQueryArbolTarea($id){
+           $q = Doctrine_Query::create()
+                ->select('t.*')
+                ->from('Tarea t')
+                //->where('t.proyectoFK = ?',$id)
+                ->orderBy('t.level ASC');
+              
+
+               return $q;               
+        }
     
     
     public function getUsuarioTarea($idUsuario) {
@@ -73,5 +84,16 @@ class TareaTable extends Doctrine_Table {
         $tareaPadre = $this->find($idTarea);
         $tareaPadre->getNode();
     }
+
+
+public function  findOneById($idTarea){
+       
+        $tarea = Doctrine_Query::create()
+                ->from('Tarea t')
+                ->where('t.idTarea',$idTarea)              
+                ->execute()->getFirst();
+
+          return $tarea;
+   }
 
 }

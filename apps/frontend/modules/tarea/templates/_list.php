@@ -1,27 +1,28 @@
 
 
 
-<h1>Arb&oacute;l de Tareas (Nested)</h1>
+<h1>Arb&oacute;l de Tareas </h1>
 
 <?php if ($arbolTarea): ?>
     <table>
         <tr>
             <th>Titulo</th>
-            <th>Añadir</th>
+            <th>Acciones</th>
         </tr>
         <?php foreach ($arbolTarea as $node): ?>
             <tr>
-                <td> <?php echo str_repeat('&nbsp;&nbsp;', $node['level']) . $node['nombreTarea'] . " " . $node['idTarea'] . "\n"; ?> </td>
+                <td> <?php echo str_repeat('&nbsp;&nbsp;', $node['level']) . $node['nombreTarea']  . " ". $node['level']. "\n"; ?> </td>
 
                 <td>
 
-                <td><?php
-        echo link_to(' ', 'tarea/addChild?idTarea=' . $node['idTarea'], array("idTarea" => $node['idTarea'],
-            'class' => 'custom-button icon add-hija  ',
-            'id' => 'adicinar-hija',
-        ))
-            ?>
-
+                <td>
+                    
+                    <?php
+                    echo link_to(' ', 'tarea/show?id_tarea=' . $node['idTarea'], array(
+                        'class' => 'custom-button icon ver',
+                    ))
+                    ?>
+                    
 
                     <?php
                     echo link_to(' ', 'tarea/delete?id_tarea=' . $node['idTarea'], array(
@@ -58,12 +59,14 @@
 <?php endif; ?>
 
 
-<a href="<?php echo url_for('tarea/new') ?>">New</a>
+
 
 <input type="button" id="btn-nueva-tarea" class="button icon add" value="Nueva Tarea" >
 
-<div class="demo">
+<form id="nueva-tarea-form" action="<?php echo url_for('nueva_tarea',array('idProyecto'=>$proyecto->getIdProyecto())) ?>" >
+</form>
 
-    <div id="dialog-nueva-tarea" class="dialog" title="Nueva Tarea">
-        <p>Crear nueva tarea</p>
+
+    <div id="dialog-nueva-tarea" class="dialog">
+       
     </div>

@@ -252,10 +252,30 @@ span.customStyleSelectBox.changed {
 .customStyleSelectBoxInner { 
     background:url(../images/raster/gray_dark/check_12x10.png) no-repeat center right;
 }
+.info-proyecto{
+ background: #EDEDDD; 
+ padding: 1px 13px;
+    width: 380px;
+     border: solid 2px #888;
+     margin-bottom: 5px;
+}
 
+.into_estado_proyecto{
+   color: #000;
+   margin-top: 5px;
+}
 
+.titulo-proyecto{
+ 
+    color: #000;
+   font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 
-
+.into_estado_proyecto span{
+    font-weight: bold;
+}
 
 
 /* a.button{

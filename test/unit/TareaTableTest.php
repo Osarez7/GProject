@@ -5,12 +5,10 @@ include(dirname(__FILE__) . '/../bootstrap/Doctrine.php');
 
 // Stub objects and functions for test purposes
 // Initialize the test object
-$t = new lime_test(6);
+$t = new lime_test(5);
 
 
- $t->diag('Pruebas getArbolTareas');
- $respuesta =  Doctrine_Core::getTable('Tarea')->getArbolTareas(1);
- $t->isa_ok($respuesta,'array','Consulta proyecto 1, respuesta '. count($respuesta));
+
 
  $t->diag('Pruebas getArbolConjunto');
  $respuesta =  Doctrine_Core::getTable('Tarea')->getArbolCojuntoTareas(array(1,2));
@@ -22,10 +20,23 @@ $t = new lime_test(6);
  $respuesta =  Doctrine_Core::getTable('Tarea')->getArbolCojuntoTareas(array());
  $t->isa_ok($respuesta,'array','Probando array vacio');
 
+ $t->diag('Pruebas getArbolTareas');
+ $respuesta =  Doctrine_Core::getTable('Tarea')->getArbolTareas(1);
+ $t->isa_ok($respuesta,'array','Consulta proyecto 1, respuesta '. count($respuesta));
+  
+  $t->diag('Pruebas getQueryArbolTarea');
+ $respuesta =  Doctrine_Core::getTable('Tarea')->getQueryArbolTarea(1);
+ $t->isa_ok($respuesta,'Doctrine_Query',$respuesta); 
+
+/*
  $t->diag('Pruebas getTareasUsuario');
  $respuesta =  Doctrine_Core::getTable('UsuarioTarea')->getTareasByUsuario(1);
  $t->isa_ok($respuesta,'array','Consulta por usuario 1');
  $t->isa_ok(Doctrine_Core::getTable('UsuarioTarea')->getTareasByUsuario(2),'array','Consulta por usuario 1');
+*/
+
+ 
+
  
 
 function create_usuario_tarea($defaults = array()) {

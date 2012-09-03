@@ -85,7 +85,8 @@ Tarea:
   columns:
     idTarea: { type: integer , primary: true, autoincrement: true} 
     nombreTarea: { type: string(50), notnull: true}
-    duracion: { type: integer , notnull: true}
+    fechaInicio: { type: timestamp, notnull: true}
+    fechaFinal: { type: timestamp, notnull: true}
     statusFK: { type: integer , notnull: true}
     prioridadFK: { type: integer , notnull: true} 
 
@@ -109,7 +110,6 @@ Avance:
     idAvance:  { type: integer , primary: true, autoincrement: true} 
     tituloAvance: { type: string(100), notnull: true}
     resumen: { type: string(200), notnull: true}
-    duracion:  { type: integer , notnull: false} 
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: false}
     tareaFK: { type: integer , notnull: true}  
@@ -179,14 +179,16 @@ Evento:
   actAs: 
    Timestampable:
     created:
-      name: fecha_cambio_estado
+      name: fecha_creacion
       type: timestamp   
     updated:
       name: fecha_actualizacion
       type: timestamp
   columns:
     idEvento: { type: integer , primary: true, autoincrement: true} 
-    fechaEvento: { type: timestamp, notnull: true}
+    fechaInicio: { type: timestamp, notnull: true}
+    fechaFinal: { type: timestamp, notnull: true}
+    diaCompleto: { type: boolean, notnull: true, default: 1}
     nombreEvento: { type: string(50), notnull: true}
     descEvento: { type: string(200), notnull: false}
     proyectoFK:  { type: integer , notnull: true}

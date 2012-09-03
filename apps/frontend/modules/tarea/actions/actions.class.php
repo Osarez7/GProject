@@ -34,10 +34,13 @@ class tareaActions extends sfActions {
 
         $this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea')));
         $this->forward404Unless($this->tarea);
+        
+        $this->avances = Doctrine_Core::getTable('Avance')->getAvancesByTarea($request->getParameter('id_tarea'));
     }
 
     public function executeNew(sfWebRequest $request) {
         $this->form = new TareaForm();
+        $this->form->setDefault('proyectoFK',$request->getParameter('idProyecto'));
 
         return $this->renderPartial('tarea/form');
     }

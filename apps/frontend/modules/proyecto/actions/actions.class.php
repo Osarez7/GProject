@@ -21,6 +21,8 @@ class proyectoActions extends sfActions {
         $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getArbolTareas($this->proyecto->getIdProyecto());
          $this->logMessage('Id de proyecto es '. $request->getParameter('id_proyecto'). '
         y la respuesta es '. $this->arbolTarea[2], 'notice');
+         
+         
         
         $this->forward404Unless($this->proyecto);
     }

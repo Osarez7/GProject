@@ -16,4 +16,16 @@ class AvanceTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Avance');
     }
+    
+    public function getAvancesByTarea($idTarea){
+     $avances  = Doctrine_Query::create()
+                ->from('Avance a')
+                ->where('a.tareaFK',$idTarea)
+                ->execute() ;             
+      
+
+          return $avances;
+   }
+        
+    
 }
