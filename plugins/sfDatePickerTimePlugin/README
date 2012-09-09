@@ -1,0 +1,60 @@
+# sfDatePickerTimePlugin plugin #
+
+The `sfDatePickerTimePlugin` is a symfony plugin that provides a hybrid jQuery datepiker
+and a time selector widget based on the classic `sfWidgetFormDateTime` widget.
+
+This widget require **jQuery** and **jQueryUI**.
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+		$ symfony plugin:install sfDatePickerTimePlugin
+
+## Basic usage ##
+
+  * Default options
+
+		[php]
+		$this->widgetSchema['date'] = new sfWidgetFormDatePickerTime();
+
+  * Custom options
+
+		[php]
+		$this->widgetSchema['date'] = new sfWidgetFormDatePickerTime(array(
+			'date' => array('option' => 'value'), // Options for the sfWidgetFormDatePicker
+			'time' => array('option' => 'value')  // Options for the sfWidgetFormTime
+		));
+
+  * Custom options and additionnal jQuery datepicker options
+
+		[php]
+		$this->widgetSchema['date'] = new sfWidgetFormDatePickerTime(array(
+			'date' => array(
+			  'option' => 'value',               // Options for the sfWidgetFormDatePicker
+			  'jq_picker_options' => array(
+				'option' => 'value'              // Options for the jQuery datepicker - http://jqueryui.com/demos/datepicker/#options
+			  )
+			),
+			'time' => array('option' => 'value') // Options for the sfWidgetFormTime
+		));
+
+## Example ##
+
+  * Theses options are used in the example screenshot
+
+		[php]
+		$this->widgetSchema['date_naissance'] = new sfWidgetFormDatePickerTime(array(
+			'date' => array(
+			  'jq_picker_options' => array(
+				'buttonImage' => '/images/ul/icones/calendrier.gif',
+				'buttonImageOnly' => true,
+				'showOn' => 'button'
+			  )
+			),
+			'time' => array(
+			  'format_without_seconds' => '%hour% h %minute%'
+			)
+		));
+
+

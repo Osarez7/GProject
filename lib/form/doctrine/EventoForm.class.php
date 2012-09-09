@@ -23,10 +23,8 @@ unset(
 		'include_time'=> true));
 		;
 
-          $this->widgetSchema['fechaFinal'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
-              array('image'=> '/images/toggle-expand-dark.png',
-		'include_time'=> true));
-		;
+          $this->widgetSchema['fechaFinal'] =   new sfWidgetFormDatePickerTime();
+ 	
 
    $this->widgetSchema['descEvento'] = new sfWidgetFormTextarea();
   }
