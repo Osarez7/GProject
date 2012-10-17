@@ -29,6 +29,11 @@ class eventoActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new EventoForm();
+
+     if ($request->isXmlHttpRequest()) {
+            return $this->renderPartial('form', array  ('form' => $this->form));
+        }
+
   }
 
   public function executeCreate(sfWebRequest $request)

@@ -7,8 +7,10 @@
 <script type='text/javascript'>
  
     $(document).ready(function() {
+
+    jQuery("#btn-nuevo-evento").hide();
  
-         jQuery("#nuevo-evento").dialog({
+         jQuery("#dialog-nuevo-evento").dialog({
           autoOpen: false,
            show: "fade",
            hide: "fade"
@@ -24,6 +26,21 @@
             theme:true,
             events: "<?php echo url_for('index_eventos', array("sf_format" => "json")) ?>",
             dayClick: function(date, allDay, jsEvent, view) {
+
+                                
+        jQuery.ajax({
+            type:"GET",
+            contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
+            url:  jQuery('#btn-nuevo-evento').attr('href'),
+            dataType:"html",
+            success:function (msg) {
+      
+                jQuery("#dialog-nuevo-evento" ).html(msg);
+                jQuery( "#dialog-nuevo-evento" ).dialog( "open" );
+             }
+  });
+        
+
               console.log(allDay+" "+ jQuery.fullCalendar.formatDate( date, "dd/MM/yyyy/HH/mm")+ " view:"+view+ " jsEvent:" + jsEvent);
 
                 jQuery( "#nuevo-evento" ).dialog( "open" );
@@ -60,8 +77,7 @@ slotMinutes: 60
 
 <div id='calendar'></div>
 
-<a href="<?php echo url_for('evento/new'); ?>" class="button icon add">Nuevo</a>
+<a id="btn-nuevo-evento" href="<?php echo url_for('evento/new'); ?>" class="button icon add">Nuevo Evento</a>
 
-<div id="nuevo-evento">
-  <p>Ingresa los datos para crear un evento</p>
+<div id="dialog-nuevo-evento">
 </div>

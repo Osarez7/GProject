@@ -11,7 +11,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfFormExtraPlugin');
     $this->enablePlugins('sfDoctrineNestedSetPlugin');
     $this->enablePlugins('sfTextDateInputJQueryDatePickerPlugin');
-    $this->enablePlugins('sfMapFishPlugin');
     $this->enablePlugins('sfDatePickerTimePlugin'); 
 
   }

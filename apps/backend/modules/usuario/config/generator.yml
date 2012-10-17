@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Usuario
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          usuario
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        usr_nombre: {label: Nombre}
+      list:    
+         title: Usuarios
+         display: [=usr_nombre, email, usr_nick ]
+      filter:  ~
+      form:    ~
+      edit:    
+        title: Editar Usuario
+      new:      
+         title: Nuevo Usuario

@@ -12,7 +12,7 @@ foreach ($eventos as $evento) {
 
 //Create an event entry
     $rows[] = array('id' =>  $evento->getIdEvento() ,
-        'title' => $evento->getDescEvento(),
+        'title' => $evento->getNombreEvento(),
         'start' => date('Y-m-d H:i', strtotime($evento->getFechaInicio())),
         'end' => date('Y-m-d H:i', strtotime($evento->getFechaFinal())),
         'url' =>  url_for('evento/show?id_evento=' . $evento->getIdEvento()) ,

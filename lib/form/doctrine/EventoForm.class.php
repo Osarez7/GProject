@@ -18,12 +18,33 @@ unset(
     
    
      
-      $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
-              array('image'=> '/images/toggle-expand-dark.png',
-		'include_time'=> true));
-		;
+      $this->widgetSchema['fechaInicio'] = new sfWidgetFormDatePickerTime(array(
+    'date' => array(
+      'jq_picker_options' => array(
+        'buttonImage' => '/images/calendar_view_month.png',
+        'buttonImageOnly' => true,
+        'showOn' => 'button'
+      )
+    ),
+    'time' => array(
+      'format_without_seconds' => '%hour% hora %minute% minutos' 
+    )
+));
 
-          $this->widgetSchema['fechaFinal'] =   new sfWidgetFormDatePickerTime();
+                
+                
+          $this->widgetSchema['fechaFinal'] =   new sfWidgetFormDatePickerTime(array(
+    'date' => array(
+      'jq_picker_options' => array(
+        'buttonImage' => '/images/calendar_view_month.png',
+        'buttonImageOnly' => true,
+        'showOn' => 'button'
+      )
+    ),
+    'time' => array(
+      'format_without_seconds' => '%hour% hora %minute% minutos' 
+    )
+));
  	
 
    $this->widgetSchema['descEvento'] = new sfWidgetFormTextarea();

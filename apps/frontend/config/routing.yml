@@ -1,9 +1,4 @@
-lugar:
-  url:                    /lugar
-  class: sfMapFishRouteCollection
-  options:
-    model:                Lugar
-    module:               lugar
+
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
