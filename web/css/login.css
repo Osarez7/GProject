@@ -19,7 +19,7 @@ label{
 
 #login-box{
 
-  background: none repeat scroll 0 0 #FFFFFF;
+  /*background: none repeat scroll 0 0 #FFFFFF; */
     border-radius: 45px 45px 45px 45px;
     border: solid 1px;
     font-family: helvetica;
@@ -35,5 +35,9 @@ label{
     display: block;
 }
 
+input.button{
+  font-size: 13px;
+  margin-top: 10px;
+}
 
 

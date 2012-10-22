@@ -18,7 +18,7 @@
 
             
           <div id="login-contenido">
-            <div id="login-box">
+            <div id="login-box" class="shadow">
                  <?php echo $sf_content ?>
             </div>
       </div>

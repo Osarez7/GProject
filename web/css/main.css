@@ -74,9 +74,11 @@ ul.menu li{
 }
 */
 
- body{
-   /* background: -moz-linear-gradient(center top , #B9B9B9 0%, #FFF 100%) repeat scroll 0 0 transparent;*/
+body{
+  
+  
     border-radius: 5px 5px;
+    background: url("/images/patrones-fondo/cardboard_flat.png") repeat; 
     font-family: Arial,Helvetica,sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -84,11 +86,11 @@ ul.menu li{
     font-variant: normal;
     margin:0 auto;
     padding: 0px;
-    
+
 }  
 
 textarea{
-   font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;
@@ -96,56 +98,56 @@ textarea{
 }
 
 
- 
+
 h1{
-  /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
+    /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
     border-radius: 5px 5px;
-   color: #3791B5;
-   font-size: 21px;
+    color: #3791B5;
+    font-size: 21px;
     padding: 0 20px;
 }
 
 input , textarea{
-	border: 1px solid #888;
-	padding: 4px;
-	font-size: 1em;
-	background-color: #F8F8F8;
+    border: 1px solid #888;
+    padding: 4px;
+    font-size: 1em;
+    background-color: #F8F8F8;
 }
 
 input:focus {
-	border-color: #1C94C4;
-	background-color: #F7F6BE;
-        outline: none;
+    border-color: #1C94C4;
+    background-color: #F7F6BE;
+    outline: none;
 
 }
 
 
 textarea:focus{
-      
-         outline: none;
-        border-color: #1C94C4;
-	background-color: #F7F6BE;
-       
+
+    outline: none;
+    border-color: #1C94C4;
+    background-color: #F7F6BE;
+
 
 }
 
 
 a:link {
-font-weight: bold;
-text-decoration: none;
-color: #3792b3;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3792b3;
 }
 
 
 
 #btn-cerrar{
- float: right;
- color: #FFF;
+    float: right;
+    color: #FFF;
 }
 
 
 #contenedor {
-   border: medium solid #E3E4E3;
+ /*    border: medium solid #E3E4E3;*/
     margin: 0 auto;
     width: 83%;
 
@@ -164,41 +166,48 @@ div#menu-lateral{
 
 #menu-lateral li{
     list-style: none;
-    
+
 }
 
 
 #lateral {
-  float: left;
-  background: #4D7290;
-  min-height: 300px;
-   padding: 5px 10px;
+    float: left;
+    background: #4D7290;
+    min-height: 300px;
+    padding: 5px 10px;
     width: 27%;
 }
-    
+
 #contenido{
-  float: left;
-    padding: 0 15px 20px 15px;
+    float: left;
+    padding:20px 35px 20px;
     width: 65%;
-}
+    min-height:390px;
+    height: auto !important
+    height: 390px;
+   }
 
 #header{
     color: #FFF;
-     background-color: #3c8dde;
+    background-color: #3c8dde;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#2E373F));
     background-image: -moz-linear-gradient(#333333, #222222);
     background-image: -o-linear-gradient(#333333, #222222);
     background-image: linear-gradient(#333333, #222222);
-   padding: 8px 5px;
-   height: 15px;
+    padding: 8px 5px;
+    height: 36px;
 }
 
 #pie {
-  clear: both;
-  height: 50px;
-   background: -moz-linear-gradient(center top , #333333 0%, #222222 100%) repeat scroll 0 0 transparent;
+    clear: both;
+    height: 50px;
+    background: -moz-linear-gradient(center top , #333333 0%, #222222 100%) repeat scroll 0 0 transparent;
     border-radius: 5px 5px;
 
+}
+
+.nombre-bienvenida{
+  font-weight: bold;
 }
 
 div.flash_ok{
@@ -222,11 +231,11 @@ table.tbl-show th{
 
 table.info td , table.info th{
     text-align: center;
-    
+
 }
 
 .odd{
-    
+
 }
 
 #componente-calendario{
@@ -253,22 +262,22 @@ span.customStyleSelectBox.changed {
     background:url(../images/raster/gray_dark/check_12x10.png) no-repeat center right;
 }
 .info-proyecto{
- background: #EDEDDD; 
- padding: 1px 13px;
+    background: #EDEDDD; 
+    padding: 1px 13px;
     width: 380px;
-     border: solid 2px #888;
-     margin-bottom: 5px;
+
+    margin-bottom: 5px;
 }
 
 .into_estado_proyecto{
-   color: #000;
-   margin-top: 5px;
+    color: #000;
+    margin-top: 5px;
 }
 
 .titulo-proyecto{
- 
+
     color: #000;
-   font-size: 16px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -290,5 +299,20 @@ color:#0066CC;
 }
 
 */
+
+/* Admin Style */
+
+
+#menu-admin li{
+
+  style-list: none;
+  display: inline;
+  float:left;
+  margin: 10px;
+}
+
+#menu-admin img{
+  display: block;
+}
 
 

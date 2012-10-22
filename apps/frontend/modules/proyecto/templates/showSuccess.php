@@ -5,6 +5,14 @@
 
 
 
+  <div id="lateral">
+                <?php if (has_slot("menu_lateral")): ?>
+                    <?php include_slot("menu_lateral"); ?>
+
+                <?php endif; ?>
+
+                <?php // include_component('evento', 'calendarioUsuario') ?>
+            </div>
 
 <div class="content-info">
     <h1><?php echo $proyecto->getNombre() ?></h1>

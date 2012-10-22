@@ -10,7 +10,7 @@
     <body>
 
 
-        <div id="contenedor">
+        <div id="contenedor" class="shadow">
 
             <div id="header">
 
@@ -18,31 +18,31 @@
 
                 <?php if ($sf_user->isAuthenticated()): ?>
 
-                    <span><?php echo " Bienvenido(a) " . $sf_user->getAttribute('nombre') ?></span>
+                    <span class="nombre-bienvenida"><?php echo " Bienvenido(a) " . $sf_user->getAttribute('nombre') ?></span>
 
                     <a href="<?php echo url_for('login/logout') ?>" id="btn-cerrar">Cerrar Sesi&oacute;n</a>
                 <?php endif; ?>
 
-            </div>  
-            <div id="menu-principal">
+
+                    <div id="menu-principal">
 
                 <div class="button-group">
 
 
-                    <?php echo link_to('Home', 'proyecto/index', array('class' => 'button primary icon home'))
+                    <?php echo link_to('Home', 'home/index', array('class' => 'button primary icon home'))
                     ?>
 
                     <?php
                     echo link_to('Proyectos', 'proyecto/index', array('class' => 'button icon user'))
                     ?>
 
-                  
+
 
                     <?php
-                    echo link_to('Notificaciones', 'evento/index', array('class' => 'button icon mail'))
+                    echo link_to('Eventos', 'evento/index', array('class' => 'button icon calendar'))
                     ?>
 
-                    
+
 
                     <?php if ($sf_user->hasCredential('admin')): ?>
                         <?php
@@ -57,15 +57,11 @@
 
             </div>
 
+            </div>  
+          
 
-            <div id="lateral">
-                <?php  if(has_slot("menu_lateral")):?>
-                      <?php include_slot("menu_lateral"); ?>
-                
-                <?php   endif;?>
-                
-                <?php // include_component('evento', 'calendarioUsuario') ?>
-            </div>
+
+          
 
             <div id="contenido">
                 <?php if ($sf_user->hasFlash('error')): ?>
@@ -74,7 +70,7 @@
                 <?php if ($sf_user->hasFlash('OK')): ?>
                     <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>
                 <?php endif; ?>    
-                    
+
                 <?php echo $sf_content ?>
             </div>
 

@@ -109,7 +109,9 @@ jQuery(window).load(function(){
     jQuery('.dialog').dialog({
         autoOpen: false,
         show: "fade",
-        hide: "fade"
+        hide: "fade",
+        modal: true,
+        draggable: false
     });
           
           

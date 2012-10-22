@@ -12,7 +12,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css,menu_style.css,redmond/jquery-ui-1.8.23.custom.css,gh-buttons.css,double_list_widget_style.css, eventos.css,   fullcalendar.css]
+  stylesheets:    [main.css,menu_style.css,redmond/jquery-ui-1.8.23.custom.css,gh-buttons.css,double_list_widget_style.css, eventos.css,   fullcalendar.css ,customJqueryUI.css]
 
   javascripts:    [jquery-1.7.2.js,pruebaAjax.js,jquery-ui-1.8.21.min.js,date.js,double_list.js,inicializacionGeneral.js, customStyleSelect.js, mini-calendar.js, jquery.form.js, fullcalendar.js ,OpenLayers.js ]
 

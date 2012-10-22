@@ -40,8 +40,8 @@ class loginActions extends sfActions {
 //Si queremos acceder a estas variables no tenemos mas que poner: $this->getUser()->getAttribute('nombre', null, 'cliente');
 //Le damos las credenciales correspondientes, en este caso de cliente.
                 $this->getUser()->addCredential($usuario->getPerfil());
-                // $this->getUser()->addCredential('admin');
-                $this->redirect('proyecto/index');
+             //   $this->getUser()->a('admin');
+                $this->redirect('home/index');
             }
         
         }

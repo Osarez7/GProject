@@ -1,0 +1,26 @@
+
+.ui-widget-overlay { 
+    background: black !important;
+    opacity: 0.6 !important;
+}
+
+
+
+.shadow {
+	margin: 10px;
+/*	background-color: rgb(68,68,68); /* Needed for IEs */
+
+	-moz-box-shadow: 0px 1px 14px 7px  rgba(68,68,68,0.6);
+	-webkit-box-shadow: 0px 1px 14px 7px rgba(68,68,68,0.6);
+	box-shadow: 0px 1px 14px 7px  rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+.shadow .content {
+	position: relative; /* This protects the inner element from being blurred */
+	padding: 16.1px;
+/*	background-color: #DDD;
+*/
+}

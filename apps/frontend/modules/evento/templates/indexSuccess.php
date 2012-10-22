@@ -13,7 +13,9 @@
          jQuery("#dialog-nuevo-evento").dialog({
           autoOpen: false,
            show: "fade",
-           hide: "fade"
+           hide: "fade",
+           modal: true,
+           draggable: false
     });
  
         $('#calendar').fullCalendar({
@@ -35,7 +37,7 @@
             dataType:"html",
             success:function (msg) {
       
-                jQuery("#dialog-nuevo-evento" ).html(msg);
+                jQuery("#dialog-nuevo-evento" ).html(msg).css("width","460px");
                 jQuery( "#dialog-nuevo-evento" ).dialog( "open" );
              }
   });

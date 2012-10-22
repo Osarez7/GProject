@@ -14,7 +14,7 @@
                 <tr>
                     <th></th>
                     <td>
-                        <input type="submit" value="Ingresar" name="login">
+                        <input class="button" type="submit" value="Ingresar" name="login">
                     </td>
                 </tr>
             </tbody>
