@@ -1,4 +1,4 @@
-<table>
+<table  class="info">
   <tbody>
     <tr>
       <th>Id usuario:</th>
@@ -45,9 +45,8 @@
 
 <hr />
 
-<a href="<?php echo url_for('usuario/edit?id_usuario='.$usuario->getIdUsuario()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('usuario/index') ?>">List</a>
+<a href="<?php echo url_for('usuario/edit?id_usuario='.$usuario->getIdUsuario()) ?>">Editar</a>
+
 
 
 

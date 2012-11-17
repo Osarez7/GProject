@@ -2,7 +2,7 @@
 
 
 <h1>Proyectos</h1>
-<table>
+<table class="listado">
 
 <tr>
   <th>Nombre</th>
@@ -10,8 +10,12 @@
   <th>Prioridad</th>
   <th>Acciones</th>
 </tr>
-<?php foreach ($proyectos as $proyecto): ?>
-<tr>
+
+
+     
+<?php foreach ($proyectos as $i => $proyecto): ?>
+ 
+<tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
         <td>
              <?php echo $proyecto->getNombre() ?>
           </td>

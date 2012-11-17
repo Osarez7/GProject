@@ -9,7 +9,7 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('evento/index') ?>">Back to list</a>
+          &nbsp;<a style="display:none" href="<?php echo url_for('evento/index') ?>">Back to list</a>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Delete', 'evento/delete?id_evento='.$form->getObject()->getIdEvento(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
           <?php endif; ?>

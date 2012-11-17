@@ -226,4 +226,39 @@ Lugar:
   
   
 
+Tema:
+ actAs: 
+  Timestampable:
+   created:
+     name: fecha_creacion
+     type: timestamp   
+   updated:
+     name: fecha_actualizacion
+     type: timestamp
+ columns:
+   idTema: { type: integer , primary: true, autoincrement: true} 
+   tituloTema: {type: string(100)}
+   proyectoFK: { type: integer , notnull: true} 
+   usuarioFK: { type: integer , notnull: true} 
+ relations: 
+    Proyecto:  { onDelete: CASCADE, local: proyectoFK, foreign: idProyecto , foreignAlias: Temas}    
+    Usuario:   { onDelete: CASCADE, local: usuarioFK,  foreign: idUsuario , foreignAlias: Temas}    
 
+
+Comentario:
+ actAs: 
+  Timestampable:
+   created:
+     name: fecha_creacion
+     type: timestamp   
+   updated:
+     name: fecha_actualizacion
+     type: timestamp
+ columns:
+   idComentario: { type: integer , primary: true, autoincrement: true} 
+   contenidoComentario: {type: string(100)}
+   usuarioFK: { type: integer , notnull: true} 
+   temaFK: { type: integer , notnull: true} 
+ relations: 
+    Usuario:   { onDelete: CASCADE, local: usuarioFK,  foreign: idUsuario , foreignAlias: Temas} 
+    Tema:  { onDelete: CASCADE, local: temaFK, foreign: idTema , foreignAlias: Temas}    

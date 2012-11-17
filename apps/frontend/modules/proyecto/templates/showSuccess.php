@@ -5,7 +5,7 @@
 
 
 
-  <div id="lateral">
+  <div id="lateral" style="display:none;">
                 <?php if (has_slot("menu_lateral")): ?>
                     <?php include_slot("menu_lateral"); ?>
 

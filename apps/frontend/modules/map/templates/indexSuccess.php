@@ -2,7 +2,7 @@
 
 <h1>Mapas </h1>
 
-<table>
+<table style="display:none">
   <thead>
     <tr>
       <th>Id mapa</th>

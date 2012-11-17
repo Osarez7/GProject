@@ -1,4 +1,4 @@
-<h1>Usuarios List</h1>
+<h1>Lista de Usuarios</h1>
 
 <table>
   <thead>
@@ -19,4 +19,4 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('usuario/new') ?>">New</a>
+  <a  class="button" href="<?php echo url_for('usuario/new') ?>">Nuevo Usuario</a>

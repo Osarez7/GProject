@@ -24,46 +24,48 @@
                 <?php endif; ?>
 
 
-                    <div id="menu-principal">
+             
 
-                <div class="button-group">
+            </div>  
 
+                <div id="menu-principal">
 
-                    <?php echo link_to('Home', 'home/index', array('class' => 'button primary icon home'))
-                    ?>
-
-                    <?php
-                    echo link_to('Proyectos', 'proyecto/index', array('class' => 'button icon user'))
-                    ?>
+                    <div class="button-group">
 
 
-
-                    <?php
-                    echo link_to('Eventos', 'evento/index', array('class' => 'button icon calendar'))
-                    ?>
-
-
-
-                    <?php if ($sf_user->hasCredential('admin')): ?>
-                        <?php
-                        echo link_to('Usuarios', 'usuario/index', array('class' => 'button icon user'))
+                        <?php echo link_to('Home', 'home/index', array('class' => 'button primary icon home'))
                         ?>
-                    <?php endif; ?>
+
+                        <?php
+                        echo link_to('Proyectos', 'proyecto/index', array('class' => 'button icon user'))
+                        ?>
 
 
-                    <a href="<?php echo url_for('show_usuario', array('idUsuario' => $sf_user->getAttribute('idUsuario'))) ?>" class ='button icon settings'>Mis Datos</a>
+
+                        <?php
+                        echo link_to('Eventos', 'evento/index', array('class' => 'button icon calendar'))
+                        ?>
+
+
+
+                        <?php if ($sf_user->hasCredential('admin')): ?>
+                            <?php
+                            echo link_to('Usuarios', 'usuario/index', array('class' => 'button icon user'))
+                            ?>
+                        <?php endif; ?>
+
+
+                        <a href="<?php echo url_for('show_usuario', array('idUsuario' => $sf_user->getAttribute('idUsuario'))) ?>" class ='button icon settings'>Mis Datos</a>
+
+                    </div>
 
                 </div>
 
-            </div>
 
-            </div>  
-          
-
-
-          
 
             <div id="contenido">
+                 
+                
                 <?php if ($sf_user->hasFlash('error')): ?>
                     <div class="flash_error"><?php echo $sf_user->getFlash('error') ?></div>
                 <?php endif; ?>

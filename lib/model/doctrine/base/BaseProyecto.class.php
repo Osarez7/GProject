@@ -18,6 +18,7 @@
  * @property Doctrine_Collection $RegistroEstados
  * @property Doctrine_Collection $Eventos
  * @property Doctrine_Collection $Mapas
+ * @property Doctrine_Collection $Temas
  * 
  * @method integer             getIdProyecto()      Returns the current record's "idProyecto" value
  * @method string              getNombre()          Returns the current record's "nombre" value
@@ -32,6 +33,7 @@
  * @method Doctrine_Collection getRegistroEstados() Returns the current record's "RegistroEstados" collection
  * @method Doctrine_Collection getEventos()         Returns the current record's "Eventos" collection
  * @method Doctrine_Collection getMapas()           Returns the current record's "Mapas" collection
+ * @method Doctrine_Collection getTemas()           Returns the current record's "Temas" collection
  * @method Proyecto            setIdProyecto()      Sets the current record's "idProyecto" value
  * @method Proyecto            setNombre()          Sets the current record's "nombre" value
  * @method Proyecto            setFechaInicio()     Sets the current record's "fechaInicio" value
@@ -45,6 +47,7 @@
  * @method Proyecto            setRegistroEstados() Sets the current record's "RegistroEstados" collection
  * @method Proyecto            setEventos()         Sets the current record's "Eventos" collection
  * @method Proyecto            setMapas()           Sets the current record's "Mapas" collection
+ * @method Proyecto            setTemas()           Sets the current record's "Temas" collection
  * 
  * @package    gproject
  * @subpackage model
@@ -116,6 +119,10 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'foreign' => 'proyectoFK'));
 
         $this->hasMany('Mapa as Mapas', array(
+             'local' => 'idProyecto',
+             'foreign' => 'proyectoFK'));
+
+        $this->hasMany('Tema as Temas', array(
              'local' => 'idProyecto',
              'foreign' => 'proyectoFK'));
 

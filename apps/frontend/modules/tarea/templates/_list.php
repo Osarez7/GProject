@@ -1,7 +1,7 @@
 
 
 
-<h1>Arb&oacute;l de Tareas </h1>
+<h1> Tareas </h1>
 
 <?php if ($arbolTarea): ?>
     <table>

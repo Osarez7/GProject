@@ -17,6 +17,7 @@
  * @property Doctrine_Collection $Tarea
  * @property Doctrine_Collection $Proyecto
  * @property Doctrine_Collection $Grupo_Usuario
+ * @property Doctrine_Collection $Temas
  * 
  * @method integer             getIdUsuario()     Returns the current record's "idUsuario" value
  * @method integer             getPerfilFK()      Returns the current record's "perfilFK" value
@@ -30,6 +31,7 @@
  * @method Doctrine_Collection getTarea()         Returns the current record's "Tarea" collection
  * @method Doctrine_Collection getProyecto()      Returns the current record's "Proyecto" collection
  * @method Doctrine_Collection getGrupoUsuario()  Returns the current record's "Grupo_Usuario" collection
+ * @method Doctrine_Collection getTemas()         Returns the current record's "Temas" collection
  * @method Usuario             setIdUsuario()     Sets the current record's "idUsuario" value
  * @method Usuario             setPerfilFK()      Sets the current record's "perfilFK" value
  * @method Usuario             setUsrNombre()     Sets the current record's "usr_nombre" value
@@ -42,6 +44,7 @@
  * @method Usuario             setTarea()         Sets the current record's "Tarea" collection
  * @method Usuario             setProyecto()      Sets the current record's "Proyecto" collection
  * @method Usuario             setGrupoUsuario()  Sets the current record's "Grupo_Usuario" collection
+ * @method Usuario             setTemas()         Sets the current record's "Temas" collection
  * 
  * @package    gproject
  * @subpackage model
@@ -116,6 +119,10 @@ abstract class BaseUsuario extends sfDoctrineRecord
         $this->hasMany('Grupo_Usuario', array(
              'local' => 'idUsuario',
              'foreign' => 'usuario'));
+
+        $this->hasMany('Tema as Temas', array(
+             'local' => 'idUsuario',
+             'foreign' => 'usuarioFK'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              'created' => 

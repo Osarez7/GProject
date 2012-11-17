@@ -12,19 +12,19 @@
 
     <body>
         <div id="login-content">
-            <div id='cssmenu'>
+            <div id="header">
 
-</div>
-
-            
-          <div id="login-contenido">
-            <div id="login-box" class="shadow">
-                 <?php echo $sf_content ?>
             </div>
-      </div>
+
+
+            <div id="login-contenido">
+                <div id="login-box" class="shadow">
+                    <?php echo $sf_content ?>
+                </div>
+            </div>
             <div id="pie">
             </div>
         </div>
     </body>
-    
+
 </html>

@@ -12,8 +12,20 @@ class EventoForm extends BaseEventoForm
 {
   public function configure()
   {
+
+ $this->widgetSchema->setLabels(array(
+        'fechaInicio' => 'Fecha de Inicio',
+        'fechaFinal' => 'Fecha Final',
+        'diaCompleto' => 'Día Completo',
+        'descEvento' => 'Descripción',
+        'nombreEvento' => 'Nombre',
+           
+    ));
+
+
+
 unset(
-      $this['fecha_actualizacion'], $this['fecha_creacion']
+      $this['fecha_actualizacion'], $this['fecha_creacion'],$this['proyectoFK']
     );
     
    
