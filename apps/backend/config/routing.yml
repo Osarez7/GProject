@@ -1,3 +1,93 @@
+tema:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Tema
+    module:               tema
+    prefix_path:          /tema
+    column:               idTema
+    with_wildcard_routes: true
+
+tarea:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Tarea
+    module:               tarea
+    prefix_path:          /tarea
+    column:               idTarea
+    with_wildcard_routes: true
+
+proyecto_proyecto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Proyecto
+    module:               proyecto
+    prefix_path:          /proyecto
+    column:               idProyecto
+    with_wildcard_routes: true
+
+proyecto:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Proyecto
+    module:               perfil
+    prefix_path:          /perfil
+    column:               idProyecto
+    with_wildcard_routes: true
+
+perfil:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Perfil
+    module:               perfil
+    prefix_path:          /perfil
+    column:               idPerfil
+    with_wildcard_routes: true
+
+mapa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Mapa
+    module:               mapa
+    prefix_path:          /mapa
+    column:               idMapa
+    with_wildcard_routes: true
+
+lugar:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Lugar
+    module:               lugar
+    prefix_path:          /lugar
+    column:               idLugar
+    with_wildcard_routes: true
+
+evento:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Evento
+    module:               evento
+    prefix_path:          /evento
+    column:               idEvento
+    with_wildcard_routes: true
+
+comentario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Comentario
+    module:               comentario
+    prefix_path:          /comentario
+    column:               idComentario
+    with_wildcard_routes: true
+
+avance:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Avance
+    module:               avance
+    prefix_path:          /avance
+    column:               idAvance
+    with_wildcard_routes: true
+
 
 
 status:
@@ -27,13 +117,17 @@ usuario:
     column:               idUsuario
     with_wildcard_routes: true
 
+logout:
+  url:   login/logout
+  param: { module: login, action: logout }
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 # default rules
 homepage:
   url:   /
-  param: { module: usuario, action: index }
+  param: { module: homeBackEnd, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

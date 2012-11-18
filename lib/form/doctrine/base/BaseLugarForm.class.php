@@ -23,8 +23,8 @@ abstract class BaseLugarForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idLugar'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idLugar')), 'empty_value' => $this->getObject()->get('idLugar'), 'required' => false)),
-      'tituloLugar' => new sfValidatorString(array('max_length' => 100, 'required' => false)),
-      'infoLugar'   => new sfValidatorString(array('max_length' => 100, 'required' => false)),
+      'tituloLugar' => new sfValidatorString(array('max_length' => 150, 'required' => false)),
+      'infoLugar'   => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'mapaFK'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Mapa'))),
     ));
 

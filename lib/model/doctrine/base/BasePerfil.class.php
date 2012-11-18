@@ -31,10 +31,10 @@ abstract class BasePerfil extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('perfilNombre', 'string', 50, array(
+        $this->hasColumn('perfilNombre', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
     }
 

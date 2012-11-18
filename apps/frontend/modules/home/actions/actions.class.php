@@ -20,12 +20,17 @@ class homeActions extends sfActions
        
       if( $this->getUser()->hasCredential("admin")){
           
-          $this->listaProyectos = true;
+          $this->tareas = true;
           
           
-      }else if ( $this->getUser()->hasCredential("admin")){
+      }else if ( $this->getUser()->hasCredential("ejecutor")){
           
-          $this->listaTareas = true;
+          $this->tareas =  $this->tareas = Doctrine_Core::getTable('Tarea')->getTareasPendientesPorUsuario($this->getUser()->getAttribute('idUsuario'));
+      }
+       
+      else if ( $this->getUser()->hasCredential("gerente")){
+          
+          $this->proyectos = $this->proyectos = Doctrine_Core::getTable('Proyecto')->getProyectoByUsuario($this->getUser()->getAttribute('idUsuario'));
       }
        
     

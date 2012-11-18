@@ -34,10 +34,10 @@ abstract class BasePrioridad extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombrePrioridad', 'string', 50, array(
+        $this->hasColumn('nombrePrioridad', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
     }
 

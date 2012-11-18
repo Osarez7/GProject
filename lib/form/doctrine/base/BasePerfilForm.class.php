@@ -21,7 +21,7 @@ abstract class BasePerfilForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idPerfil'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPerfil')), 'empty_value' => $this->getObject()->get('idPerfil'), 'required' => false)),
-      'perfilNombre' => new sfValidatorString(array('max_length' => 50)),
+      'perfilNombre' => new sfValidatorString(array('max_length' => 100)),
     ));
 
     $this->widgetSchema->setNameFormat('perfil[%s]');

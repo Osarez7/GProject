@@ -65,10 +65,10 @@ abstract class BaseUsuario extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('usr_nombre', 'string', 50, array(
+        $this->hasColumn('usr_nombre', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
         $this->hasColumn('usr_apellido1', 'string', 20, array(
              'type' => 'string',
@@ -80,10 +80,10 @@ abstract class BaseUsuario extends sfDoctrineRecord
              'notnull' => true,
              'length' => 20,
              ));
-        $this->hasColumn('email', 'string', 100, array(
+        $this->hasColumn('email', 'string', 150, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 100,
+             'length' => 150,
              ));
         $this->hasColumn('usr_nick', 'string', 20, array(
              'type' => 'string',

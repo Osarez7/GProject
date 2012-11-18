@@ -30,6 +30,14 @@ class tareaActions extends sfActions {
         $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getArbolTareas();
     }
 
+
+    public function executeGantt(sfWebRequest $request) {
+
+  $this->arbolTarea = Doctrine_Core::getTable('Tarea')-   >getArbolTareas();
+    }
+
+
+
     public function executeShow(sfWebRequest $request) {
 
         $this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea')));

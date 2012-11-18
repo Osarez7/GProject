@@ -37,10 +37,10 @@ abstract class BaseStatus extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombreStatus', 'string', 50, array(
+        $this->hasColumn('nombreStatus', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
     }
 

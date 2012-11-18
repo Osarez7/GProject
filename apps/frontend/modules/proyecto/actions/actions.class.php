@@ -11,9 +11,10 @@
 class proyectoActions extends sfActions {
 
     public function executeIndex(sfWebRequest $request) {
-        $this->proyectos = Doctrine_Core::getTable('Proyecto')
-                ->createQuery('a')
-                ->execute();
+        $this->proyectos = Doctrine_Core::getTable('Proyecto')->getProyectoByUsuario($this->getUser()->getAttribute('idUsuario'));
+        
+        
+        
     }
 
     public function executeShow(sfWebRequest $request) {
@@ -22,8 +23,6 @@ class proyectoActions extends sfActions {
          $this->logMessage('Id de proyecto es '. $request->getParameter('id_proyecto'). '
         y la respuesta es '. $this->arbolTarea[2], 'notice');
          
-         
-        
         $this->forward404Unless($this->proyecto);
     }
 

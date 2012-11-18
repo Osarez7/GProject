@@ -25,7 +25,7 @@ abstract class BaseTemaForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idTema'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idTema')), 'empty_value' => $this->getObject()->get('idTema'), 'required' => false)),
-      'tituloTema'          => new sfValidatorString(array('max_length' => 100, 'required' => false)),
+      'tituloTema'          => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'proyectoFK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
       'usuarioFK'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'))),
       'fecha_creacion'      => new sfValidatorDateTime(),

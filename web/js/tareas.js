@@ -4,7 +4,9 @@
  */
 
 jQuery(document).ready(function(){
-    
+       
+             var ge = new GanttMaster();
+             ge.init($("#workSpace"));
 
 	});
 

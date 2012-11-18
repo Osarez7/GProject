@@ -8,6 +8,7 @@
  * @property integer $idProyecto
  * @property string $nombre
  * @property timestamp $fechaInicio
+ * @property integer $diasEstimados
  * @property string $descProyecto
  * @property integer $statusFK
  * @property integer $prioridadFK
@@ -23,6 +24,7 @@
  * @method integer             getIdProyecto()      Returns the current record's "idProyecto" value
  * @method string              getNombre()          Returns the current record's "nombre" value
  * @method timestamp           getFechaInicio()     Returns the current record's "fechaInicio" value
+ * @method integer             getDiasEstimados()   Returns the current record's "diasEstimados" value
  * @method string              getDescProyecto()    Returns the current record's "descProyecto" value
  * @method integer             getStatusFK()        Returns the current record's "statusFK" value
  * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
@@ -37,6 +39,7 @@
  * @method Proyecto            setIdProyecto()      Sets the current record's "idProyecto" value
  * @method Proyecto            setNombre()          Sets the current record's "nombre" value
  * @method Proyecto            setFechaInicio()     Sets the current record's "fechaInicio" value
+ * @method Proyecto            setDiasEstimados()   Sets the current record's "diasEstimados" value
  * @method Proyecto            setDescProyecto()    Sets the current record's "descProyecto" value
  * @method Proyecto            setStatusFK()        Sets the current record's "statusFK" value
  * @method Proyecto            setPrioridadFK()     Sets the current record's "prioridadFK" value
@@ -64,14 +67,18 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombre', 'string', 50, array(
+        $this->hasColumn('nombre', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
         $this->hasColumn('fechaInicio', 'timestamp', null, array(
              'type' => 'timestamp',
-             'notnull' => false,
+             'notnull' => true,
+             ));
+        $this->hasColumn('diasEstimados', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => true,
              ));
         $this->hasColumn('descProyecto', 'string', 200, array(
              'type' => 'string',

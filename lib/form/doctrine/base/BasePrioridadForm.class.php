@@ -21,7 +21,7 @@ abstract class BasePrioridadForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idPrioridad'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPrioridad')), 'empty_value' => $this->getObject()->get('idPrioridad'), 'required' => false)),
-      'nombrePrioridad' => new sfValidatorString(array('max_length' => 50)),
+      'nombrePrioridad' => new sfValidatorString(array('max_length' => 100)),
     ));
 
     $this->widgetSchema->setNameFormat('prioridad[%s]');

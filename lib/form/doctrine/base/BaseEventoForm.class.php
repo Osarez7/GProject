@@ -31,7 +31,7 @@ abstract class BaseEventoForm extends BaseFormDoctrine
       'fechaInicio'         => new sfValidatorDateTime(),
       'fechaFinal'          => new sfValidatorDateTime(),
       'diaCompleto'         => new sfValidatorBoolean(array('required' => false)),
-      'nombreEvento'        => new sfValidatorString(array('max_length' => 50)),
+      'nombreEvento'        => new sfValidatorString(array('max_length' => 100)),
       'descEvento'          => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'proyectoFK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),
       'fecha_creacion'      => new sfValidatorDateTime(),

@@ -99,7 +99,7 @@ textarea{
 
 
 
-h1{
+#contenido h1{
     /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
     border-radius: 5px 5px;
     color: #3791B5;
@@ -181,7 +181,7 @@ div#menu-lateral{
 #contenido{
     float: left;
     padding:20px 35px 20px;
-    width: 65%;
+    width: 93%;
     min-height:390px;
     height: auto !important;
     height: 390px;
@@ -313,17 +313,6 @@ color:#0066CC;
 /* Admin Style */
 
 
-#menu-admin li{
-
-  style-list: none;
-  display: inline;
-  float:left;
-  margin: 10px;
-}
-
-#menu-admin img{
-  display: block;
-}
 
 
 table.info th, table.info td{

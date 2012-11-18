@@ -33,7 +33,7 @@ abstract class BaseTareaForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idTarea'                => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idTarea')), 'empty_value' => $this->getObject()->get('idTarea'), 'required' => false)),
-      'nombreTarea'            => new sfValidatorString(array('max_length' => 50)),
+      'nombreTarea'            => new sfValidatorString(array('max_length' => 100)),
       'fechaInicio'            => new sfValidatorDateTime(),
       'fechaFinal'             => new sfValidatorDateTime(),
       'statusFK'               => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Status'))),

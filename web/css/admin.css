@@ -87,5 +87,27 @@ th
 
 #header h1
 {
-  width: auto;
+  margin:0;
+  color: #FFF;
+  display: inline;
 }
+
+
+#menu-admin img {
+    display: block;
+    margin: 0 22px;
+}
+
+#menu-admin li{
+
+  style-list: none;
+  display: inline;
+  float:left;
+  margin: 10px;
+  text-align: center;
+}
+
+#menu-admin img{
+  display: block;
+}
+

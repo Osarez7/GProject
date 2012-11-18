@@ -12,9 +12,22 @@ class usuarioActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->usuarios = Doctrine_Core::getTable('Usuario')
-      ->createQuery('a')
-      ->execute();
+   
+  
+
+$this->pager = new sfDoctrinePager(
+'Usuario',sfConfig::get('app_max_usuarios'));
+$this->pager->setQuery(Doctrine_Core::getTable('Usuario')->getUsuariosQuery());
+$this->pager->setPage($request->getParameter('page', 1));
+$this->pager->init();
+
+
+   $this->filtroUsuarios = new  UsuarioFormFilter();
+    
+     if ($request->isXmlHttpRequest()) {
+            return $this->renderPartial('list', array  ('usuarios' => $this->pager->getResults()));
+        }
+
   }
 
   public function executeShow(sfWebRequest $request)

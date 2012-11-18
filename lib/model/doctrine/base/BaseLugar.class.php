@@ -37,13 +37,13 @@ abstract class BaseLugar extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('tituloLugar', 'string', 100, array(
+        $this->hasColumn('tituloLugar', 'string', 150, array(
              'type' => 'string',
-             'length' => 100,
+             'length' => 150,
              ));
-        $this->hasColumn('infoLugar', 'string', 100, array(
+        $this->hasColumn('infoLugar', 'string', 150, array(
              'type' => 'string',
-             'length' => 100,
+             'length' => 150,
              ));
         $this->hasColumn('mapaFK', 'integer', null, array(
              'type' => 'integer',

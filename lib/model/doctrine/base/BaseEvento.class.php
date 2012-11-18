@@ -59,10 +59,10 @@ abstract class BaseEvento extends sfDoctrineRecord
              'notnull' => true,
              'default' => 1,
              ));
-        $this->hasColumn('nombreEvento', 'string', 50, array(
+        $this->hasColumn('nombreEvento', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
         $this->hasColumn('descEvento', 'string', 200, array(
              'type' => 'string',

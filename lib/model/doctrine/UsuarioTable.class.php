@@ -40,5 +40,15 @@ class UsuarioTable extends Doctrine_Table {
 
         return $query;
     }
+  
+   public function getUsuariosQuery(){
+   $query = Doctrine_Query::create()
+                ->select('u.*')
+                ->from('Usuario u');
+   return    $query;
 
 }
+      
+
+
+}			

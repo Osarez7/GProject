@@ -22,7 +22,7 @@ abstract class BaseGrupoForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idGrupo'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idGrupo')), 'empty_value' => $this->getObject()->get('idGrupo'), 'required' => false)),
-      'nombreGrupo' => new sfValidatorString(array('max_length' => 50)),
+      'nombreGrupo' => new sfValidatorString(array('max_length' => 100)),
       'descGrupo'   => new sfValidatorString(array('max_length' => 200)),
     ));
 

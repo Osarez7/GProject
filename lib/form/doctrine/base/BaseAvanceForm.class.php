@@ -27,7 +27,7 @@ abstract class BaseAvanceForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idAvance'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idAvance')), 'empty_value' => $this->getObject()->get('idAvance'), 'required' => false)),
-      'tituloAvance'      => new sfValidatorString(array('max_length' => 100)),
+      'tituloAvance'      => new sfValidatorString(array('max_length' => 150)),
       'resumen'           => new sfValidatorString(array('max_length' => 200)),
       'fechaInicio'       => new sfValidatorDateTime(),
       'fechaFinal'        => new sfValidatorDateTime(array('required' => false)),

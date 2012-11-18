@@ -43,10 +43,10 @@ abstract class BaseAvance extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('tituloAvance', 'string', 100, array(
+        $this->hasColumn('tituloAvance', 'string', 150, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 100,
+             'length' => 150,
              ));
         $this->hasColumn('resumen', 'string', 200, array(
              'type' => 'string',

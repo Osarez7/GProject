@@ -21,7 +21,7 @@ abstract class BaseStatusForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idStatus'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idStatus')), 'empty_value' => $this->getObject()->get('idStatus'), 'required' => false)),
-      'nombreStatus' => new sfValidatorString(array('max_length' => 50)),
+      'nombreStatus' => new sfValidatorString(array('max_length' => 100)),
     ));
 
     $this->widgetSchema->setNameFormat('status[%s]');

@@ -32,10 +32,10 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
     $this->setValidators(array(
       'idUsuario'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idUsuario')), 'empty_value' => $this->getObject()->get('idUsuario'), 'required' => false)),
       'perfilFK'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'))),
-      'usr_nombre'          => new sfValidatorString(array('max_length' => 50)),
+      'usr_nombre'          => new sfValidatorString(array('max_length' => 100)),
       'usr_apellido1'       => new sfValidatorString(array('max_length' => 20)),
       'usr_apellido2'       => new sfValidatorString(array('max_length' => 20)),
-      'email'               => new sfValidatorString(array('max_length' => 100)),
+      'email'               => new sfValidatorString(array('max_length' => 150)),
       'usr_nick'            => new sfValidatorString(array('max_length' => 20)),
       'password'            => new sfValidatorString(array('max_length' => 32)),
       'fecha_creacion'      => new sfValidatorDateTime(),

@@ -34,10 +34,10 @@ abstract class BaseGrupo extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombreGrupo', 'string', 50, array(
+        $this->hasColumn('nombreGrupo', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
         $this->hasColumn('descGrupo', 'string', 200, array(
              'type' => 'string',

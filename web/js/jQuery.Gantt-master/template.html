@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>        
+    <title>jQuery Templating Demo</title>
+	<style type="text/css">
+	html {
+		background:#f3f3f3;
+		font: 13px/1.5 helvetica, arial, san-serif;
+	}
+	ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	li {
+		float:left;
+		overflow:hidden;
+		width:100px;
+		height:100px;
+		border:1px solid #494949;
+		padding:10px;
+		margin:10px;
+		position:relative;
+	}
+	li p {
+		position:relative;
+		margin:0;
+		z-index:1;
+	}
+	li span {
+		position: absolute;
+		font-size:700%;
+		color:#ececec;
+		right:0;
+	}
+
+	</style>
+</head>
+<body>
+	<ul></ul>
+
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="jquery.tmpl.js"></script>
+
+
+<script id="listTemplate" type="text/html">
+<li>
+	<span>{%= $i + 1 %}</span>
+	<p><strong>Name: </strong> {%= name %}</p>
+	{% if ($context.options.showAge) {  %}
+		<p><strong>Age: </strong> {%= age %}</p>
+	{% } %}
+</li>
+</script>
+
+<script type="text/javascript">
+	var data = [
+		{ name : "John",  age : 25 },
+		{ name : "Jane",  age : 49 },
+		{ name : "Jim",   age : 31 },
+		{ name : "Julie", age : 39 },
+		{ name : "Joe",   age : 19 },
+		{ name : "Jack",  age : 48 }
+	];
+
+$("#listTemplate").render(data, { showAge : true }).appendTo("ul");	
+</script>
+
+</body>
+</html>

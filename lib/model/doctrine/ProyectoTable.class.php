@@ -28,21 +28,36 @@ class ProyectoTable extends Doctrine_Table
     
     public function getProyectoByUsuario($idUsuario){
         
-        $query =  $this->getQueryProyectoByUsuario($idUsuario);
+        $query =  $this->getQueryProyectoPorUsuario($idUsuario);
         return  $query->execute();     
                
         
     }
     
+
+     public function getQueryProyectoPorUsuario($idUsuario) {
+             $query =    Doctrine_Query::create()
+                ->from('Proyecto p')
+                ->leftJoin('p.Usuario us')
+               // ->innerJoin('us.usuario u')
+                ->where('us.idUsuario=?',$idUsuario);
+                
+             
+             return $query;
+    }
+
+    
     private function getQueryProyectoByUsuario($idUsuario){
         
           $query = Doctrine_Query::create()
                 ->from('Proyecto p')
-                ->leftJoin('ProyectoUsuario u')
+                ->leftJoin('ProyectoUsuario usuario')
                 ->where('u.idUsuario=?',$idUsuario)
                 ->andWhere('p.idProyecto =  u.idProyecto');
           
           return $query;
     }
+    
+     
     
 }

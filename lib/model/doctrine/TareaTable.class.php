@@ -56,6 +56,20 @@ class TareaTable extends Doctrine_Table {
         return $tareas;
     }
 
+    
+    public function  getTareasPendientesPorUsuario($idUsuario){
+       
+           $tareas = Doctrine_Query::create()
+                ->from('Tarea t')
+                ->leftJoin('t.Usuario us')
+                ->leftJoin('t.Status st')
+                ->where('us.idUsuario=?',$idUsuario)
+               // ->andWhere('st.nombreStatus','Pendiente')
+                ->execute();
+           
+          return $tareas;
+   }
+    
     public function getArbolCojuntoTareas($lstIdTareas) {
 
         $tree = array();

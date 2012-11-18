@@ -61,10 +61,10 @@ abstract class BaseTarea extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombreTarea', 'string', 50, array(
+        $this->hasColumn('nombreTarea', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 50,
+             'length' => 100,
              ));
         $this->hasColumn('fechaInicio', 'timestamp', null, array(
              'type' => 'timestamp',

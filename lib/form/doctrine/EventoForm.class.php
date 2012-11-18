@@ -60,6 +60,11 @@ unset(
  	
 
    $this->widgetSchema['descEvento'] = new sfWidgetFormTextarea();
+   
+   
+    
+   
   }
   
+ 
 }

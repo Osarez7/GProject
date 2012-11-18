@@ -9,7 +9,12 @@ logout:
   url: /login/logout
   param: { module: login, action: logout }
   
+ 
+login:
+  url: /login/index
+  param: { module: login, action: index }
   
+ 
 index_eventos:
   url: /evento/index.:sf_format
   param: { module: evento, action: index, sf_format: html }

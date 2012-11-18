@@ -2,17 +2,17 @@
 Status:
   columns:
    idStatus: { type: integer , primary: true, autoincrement: true} 
-   nombreStatus: { type: string(50), notnull: true}
+   nombreStatus: { type: string(100), notnull: true}
    
 Prioridad:
   columns:
    idPrioridad : { type: integer , primary: true, autoincrement: true} 
-   nombrePrioridad: { type: string(50), notnull: true} 
+   nombrePrioridad: { type: string(100), notnull: true} 
 
 Perfil:
  columns:
   idPerfil: { type: integer , primary: true, autoincrement: true} 
-  perfilNombre: { type: string(50), notnull: true}
+  perfilNombre: { type: string(100), notnull: true}
 
 
 
@@ -29,8 +29,9 @@ Proyecto:
        
   columns:
    idProyecto: { type: integer , primary: true, autoincrement: true} 
-   nombre: { type: string(50) , notnull: true }
-   fechaInicio:  { type: timestamp, notnull: false}
+   nombre: { type: string(100) , notnull: true }
+   fechaInicio:  { type: timestamp, notnull: true}
+   diasEstimados: { type: integer , notnull: true}
    descProyecto: { type: string(200) , notnull: true}
    statusFK: { type: integer , notnull: true}
    prioridadFK: { type: integer , notnull: true} 
@@ -42,7 +43,7 @@ Proyecto:
 Grupo:
   columns:
     idGrupo: { type: integer , primary: true, autoincrement: true} 
-    nombreGrupo: { type: string(50), notnull: true}
+    nombreGrupo: { type: string(100), notnull: true}
     descGrupo:   { type: string(200), notnull: true}
     
 Usuario:  
@@ -57,10 +58,10 @@ Usuario:
   columns:
     idUsuario: { type: integer , primary: true, autoincrement: true} 
     perfilFK: { type: integer, notnull: true}
-    usr_nombre: { type: string(50), notnull: true }
+    usr_nombre: { type: string(100), notnull: true }
     usr_apellido1: { type: string(20), notnull: true }
     usr_apellido2: { type: string(20), notnull: true }
-    email: { type: string(100), notnull: true}
+    email: { type: string(150), notnull: true}
     usr_nick: { type: string(20), notnull: true, unique: true }
     password: { type: string(32), notnull: true }
   relations:
@@ -84,7 +85,7 @@ Tarea:
       rootColumnName: root_id  
   columns:
     idTarea: { type: integer , primary: true, autoincrement: true} 
-    nombreTarea: { type: string(50), notnull: true}
+    nombreTarea: { type: string(100), notnull: true}
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: true}
     statusFK: { type: integer , notnull: true}
@@ -108,7 +109,7 @@ Avance:
        type: timestamp
   columns:
     idAvance:  { type: integer , primary: true, autoincrement: true} 
-    tituloAvance: { type: string(100), notnull: true}
+    tituloAvance: { type: string(150), notnull: true}
     resumen: { type: string(200), notnull: true}
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: false}
@@ -189,7 +190,7 @@ Evento:
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: true}
     diaCompleto: { type: boolean, notnull: true, default: 1}
-    nombreEvento: { type: string(50), notnull: true}
+    nombreEvento: { type: string(100), notnull: true}
     descEvento: { type: string(200), notnull: false}
     proyectoFK:  { type: integer , notnull: true}
   relations:
@@ -208,7 +209,7 @@ Grupo_Usuario:
 Mapa:
   columns: 
    idMapa: { type: integer , primary: true, autoincrement: true} 
-   nombreMapa: { type: string(100), notnull: true}
+   nombreMapa: { type: string(150), notnull: true}
    descMapa: { type: string(200), notnull: false}
    proyectoFK: { type: integer }
   relations:
@@ -218,8 +219,8 @@ Mapa:
 Lugar:
  columns:
    idLugar: { type: integer , primary: true, autoincrement: true} 
-   tituloLugar: {type: string(100)}
-   infoLugar: {type: string(100)}
+   tituloLugar: {type: string(150)}
+   infoLugar: {type: string(150)}
    mapaFK: { type: integer , notnull: true} 
  relations: 
     Mapa: {onDelete: CASCADE , local: mapaFK, foreign: idMapa, foreignAlias: Lugares}
@@ -237,7 +238,7 @@ Tema:
      type: timestamp
  columns:
    idTema: { type: integer , primary: true, autoincrement: true} 
-   tituloTema: {type: string(100)}
+   tituloTema: {type: string(150)}
    proyectoFK: { type: integer , notnull: true} 
    usuarioFK: { type: integer , notnull: true} 
  relations: 
@@ -256,7 +257,7 @@ Comentario:
      type: timestamp
  columns:
    idComentario: { type: integer , primary: true, autoincrement: true} 
-   contenidoComentario: {type: string(100)}
+   contenidoComentario: {type: string(150)}
    usuarioFK: { type: integer , notnull: true} 
    temaFK: { type: integer , notnull: true} 
  relations: 
