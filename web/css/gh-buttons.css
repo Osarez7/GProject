@@ -258,10 +258,22 @@
 .icon.ver:active:before { background: url("../images/raster/green/eye_12x9.png") no-repeat; }
 
 
+.icon.show:before { background: url("../images/raster/black/eye_12x9.png") no-repeat; }
+.icon.show:hover:before,
+.icon.show:focus:before,
+.icon.show:active:before { background: url("../images/raster/white/eye_12x9.png") no-repeat; }
+
+
 .icon.editar:before { background: url("../images/raster/gray_light/pen_12x12.png") no-repeat; }
 .icon.editar:hover:before,
 .icon.editar:focus:before,
 .icon.editar:active:before { background: url("../images/raster/orange/pen_12x12.png") no-repeat; }
+
+
+.icon.extender:before { background: url("../images/raster/gray_light/fork_11x12.png") no-repeat; }
+.icon.extender:hover:before,
+.icon.extender:focus:before,
+.icon.extender:active:before { background: url("../images/raster/magenta/fork_11x12.png") no-repeat; }
 
 
 .icon.asignar:before { background: url("../images/raster/gray_light/target_12x12.png") no-repeat; }

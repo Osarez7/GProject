@@ -1,3 +1,3 @@
-<h1>New Tarea</h1>
+<h1>Nueva Tarea</h1>
 
 <?php include_partial('form', array('form' => $form)) ?>

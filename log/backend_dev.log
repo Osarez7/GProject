@@ -12405,3 +12405,50 @@ Nov 24 17:06:54 symfony [info] {sfWebDebugLogger} Configuration 34.92 ms (9)
 Nov 24 17:06:54 symfony [info] {sfWebDebugLogger} Factories 94.42 ms (1)
 Nov 24 17:06:54 symfony [info] {sfWebDebugLogger} Action "login/logout" 37.21 ms (1)
 Nov 24 17:06:54 symfony [info] {sfWebResponse} Send content (100 o)
+Nov 25 08:11:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homeBackEnd',  'action' => 'index',)
+Nov 25 08:11:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 25 08:11:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 25 08:11:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 25 08:11:29 symfony [info] {homeBackEndActions} Call "homeBackEndActions->executeIndex()"
+Nov 25 08:11:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/modules/homeBackEnd/templates/indexSuccess.php"
+Nov 25 08:11:29 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 25 08:11:29 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 25 08:11:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 25 08:11:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 25 08:11:29 symfony [info] {sfWebDebugLogger} Configuration 498.90 ms (9)
+Nov 25 08:11:29 symfony [info] {sfWebDebugLogger} Factories 373.91 ms (1)
+Nov 25 08:11:29 symfony [info] {sfWebDebugLogger} Action "homeBackEnd/index" 0.23 ms (1)
+Nov 25 08:11:29 symfony [info] {sfWebDebugLogger} View "Success" for "homeBackEnd/index" 28.41 ms (1)
+Nov 25 08:11:29 symfony [info] {sfWebResponse} Send content (28714 o)
+Nov 25 08:21:36 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Nov 25 08:21:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 25 08:21:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 25 08:21:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 25 08:21:36 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Nov 25 08:21:36 symfony [info] {myUser} User is not authenticated
+Nov 25 08:21:36 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/login/index"
+Nov 25 08:21:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 25 08:21:36 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/login/index"
+Nov 25 08:21:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 25 08:21:36 symfony [info] {sfWebDebugLogger} Configuration 32.29 ms (9)
+Nov 25 08:21:36 symfony [info] {sfWebDebugLogger} Factories 110.42 ms (1)
+Nov 25 08:21:36 symfony [info] {sfWebDebugLogger} Action "login/logout" 26.07 ms (1)
+Nov 25 08:21:36 symfony [info] {sfWebResponse} Send content (100 o)
+Nov 25 09:45:11 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Nov 25 09:45:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 25 09:45:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 25 09:45:12 symfony [info] {sfBasicSecurityFilter} Action "usuario/index" requires authentication, forwarding to "default/login"
+Nov 25 09:45:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 25 09:45:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 25 09:45:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 25 09:45:12 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Nov 25 09:45:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Nov 25 09:45:12 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Nov 25 09:45:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Nov 25 09:45:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 25 09:45:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} Configuration 917.26 ms (15)
+Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} Factories 100.95 ms (1)
+Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} Action "default/login" 0.22 ms (1)
+Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 89.56 ms (1)
+Nov 25 09:45:13 symfony [info] {sfWebResponse} Send content (29926 o)

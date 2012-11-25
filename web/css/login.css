@@ -18,17 +18,27 @@ label{
 }
 
 #login-box{
+  margin: 60px auto;
+  text-align: center;
+  width: 400px;
+  background:transparent;
+  padding: 0 24px;
+}
+
+#login-box-content{
 
   /*background: none repeat scroll 0 0 #FFFFFF; */
-    border-radius: 45px 45px 45px 45px;
-    border: solid 1px;
+    border-radius: 0px 0px 45px 45px;
+    border: solid 1px grey; 
+    border-top: none;
     font-family: helvetica;
     font-size: 14px;
-    height: 192.2px;
-    margin: 60px auto;
-    padding: 20px;
+    height: 116.2px;
+    padding: 24px 6px;
     text-align: center;
-    width: 400px;
+    margin:0;
+    
+    
 }
 
 label{
@@ -38,6 +48,20 @@ label{
 input.button{
   font-size: 13px;
   margin-top: 10px;
+}
+
+#login-box-header {
+    background-color: #3C8DDE;
+    background-image: -moz-linear-gradient(#0E5187, #003B68);
+    border-radius: 27px 27px 0 0;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: bold;
+    height: 30px;
+    width: 362px;
+    margin: 0 2px 0px -1px;
+    padding: 2px 0 2px 39px;
+    border-bottom: none;
 }
 
 

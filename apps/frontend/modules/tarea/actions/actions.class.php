@@ -11,17 +11,21 @@
 class tareaActions extends sfActions {
 
     public function executeIndex(sfWebRequest $request) {
-        /*
-          $this->arbolTarea = Doctrine_Core::getTable('UsuarioTarea')->getArbolTareasByUsuario($this->getUser()->getAttribute('idUsuario'));
-          $this->logMessage('El id Usuario es'. $this->getUser()->getAttribute('idUsuario'). '
-          y la respuesta es '. $this->arbolTarea, 'notice'); */
-
+     
         $this->tareas = Doctrine_Core::getTable('Tarea')->getUsuarioTarea($this->getUser()->getAttribute('idUsuario'));
     }
 
     public function executeAddChild(sfWebRequest $request) {
-        Doctrine_Core:: getTable('Tarea')->addChild($request->getParameter('idTarea'));
-        $this->redirect('proyecto/index');
+        
+        $this->form = new TareaForm();
+        $this->form->setDefault('proyectoFK', $request->getParameter('idProyecto'));
+        $this->form->setDefault('parent', $request->getParameter('idTarea'));
+
+            if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('tarea/form', array('form' => $this->form));
+            }
+            
+          $this->setTemplate('new');
     }
 
     public function executeArbol(sfWebRequest $request) {
@@ -31,7 +35,12 @@ class tareaActions extends sfActions {
 
     public function executeGantt(sfWebRequest $request) {
 
-        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getTreeTaskAsArray($request->getParameter('idProyecto'));
+      $this->proyecto = Doctrine_Core::getTable('Proyecto')
+             ->find(array($request->getParameter('idProyecto')));
+
+        $this->forward404Unless($this->proyecto);
+ 
+        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getTreeTaskAsArray        ($request->getParameter('idProyecto'));
     }
 
     public function executeShow(sfWebRequest $request) {
@@ -55,6 +64,9 @@ class tareaActions extends sfActions {
         public function executeCreate(sfWebRequest $request) {
             $this->forward404Unless($request->isMethod(sfRequest::POST));
 
+             
+             $this->logMessage('Esta intentando crear una tarea', 'notice');
+
             $this->form = new TareaForm();
 
             $tarea = $this->processForm($request, $this->form);
@@ -71,16 +83,18 @@ class tareaActions extends sfActions {
 
         public function executeEdit(sfWebRequest $request) {
             $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+           
             $this->form = new TareaForm($tarea);
 
 
             if ($request->isXmlHttpRequest()) {
 
                 $this->logMessage('Estas haciendo una llamada Ajax', 'notice');
+                 return $this->renderPartial('tarea/form', array('form' => $this->form));
             }
 
 
-            return $this->renderPartial('tarea/form', array('form' => $this->form));
+            
         }
 
         public function executeUpdate(sfWebRequest $request) {
@@ -99,14 +113,23 @@ class tareaActions extends sfActions {
         }
 
         public function executeDelete(sfWebRequest $request) {
-            $request->checkCSRFProtection();
+           // $request->checkCSRFProtection();
 
-            $this->
-                    forward404Unless($tarea =
-                            Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+            $this
+              ->forward404Unless($tarea =
+                               Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
+            
+            $this->getUser()->setFlash('OK', 'La tarea fue creada borrada');
             $tarea->getNode()->delete();
 
-            $this->redirect('tarea/index');
+             if (!$request->isXmlHttpRequest()) {
+
+               $this->redirect('tarea/index');
+            }else{
+                
+                return $this->renderPartial('tarea/form', array('form' =>new TareaForm()));
+            }
+            
         }
 
         public function executeAsignarUsuario(sfWebRequest $request) {

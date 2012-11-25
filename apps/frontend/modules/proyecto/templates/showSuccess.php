@@ -76,6 +76,12 @@
 
 </div>
 
+
+ <?php echo link_to('Calendario', 'evento/index?idProyecto=.'.$proyecto->getIdProyecto(), array('class' => 'button  icon  calendar'))
+                        ?>
+
+
+
 <div class="content-info">
     <?php include_partial('tarea/list',array('arbolTarea' =>$arbolTarea, 'proyecto' => $proyecto)); ?>
 </div>
@@ -89,6 +95,9 @@
 
 
  <a  class="button" href="<?php echo url_for('tarea/gantt') ?>?idProyecto=<?php echo $proyecto->getIdProyecto(); ?>">Gantt</a>
+
+
+  
 
 
 <?php    slot('menu_lateral') ?>

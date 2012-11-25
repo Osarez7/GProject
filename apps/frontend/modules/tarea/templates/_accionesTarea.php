@@ -1,33 +1,33 @@
 
 <div class="menu-acciones-tarea">
         
-                    <?php
+                  <?php
                     echo link_to(' ', 'tarea/show?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon ver btn-ver',
+                        'class' => 'custom-button icon ver',
                     ))
                     ?>
                     
 
                     <?php
-                    echo link_to(' ', 'tarea/delete?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon eliminar btn-eliminar'
+                    echo link_to(' ', 'tarea/edit?id_tarea=' . $node['idTarea'], array(
+                        'class' => 'custom-button icon editar '
                     ))
                     ?>
 
 
                     <?php
                     echo link_to(' ', 'tarea/asignarUsuario?idTarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon asignar btn-asignar-usuario',
+                        'class' => ' dialogLink custom-button icon asignar btn-asignar-usuario',
                     ))
                     ?>
                     
-                    
-                    <?php
-                    echo link_to(' ', 'tarea/edit?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon editar btn-editar',
+                
+ <?php
+                    echo link_to(' ', 'tarea/addChild?idTarea=' . $node['idTarea'].'&idProyecto='.$proyecto->getIdProyecto(), array(
+                        'class' => ' dialogLink custom-button icon extender btn-asignar-usuario',
                     ))
                     ?>
-
+    
 
 </div>
 

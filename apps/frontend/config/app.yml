@@ -3,5 +3,5 @@
 
 # default values
 all:
- max_usuarios: 3
+ max_usuarios: 10
 

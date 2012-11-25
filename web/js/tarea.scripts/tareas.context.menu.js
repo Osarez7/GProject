@@ -6,7 +6,7 @@ jQuery(document).ready(function(){
           { label:'Ver', 
             icon:'/images/raster/gray_light/eye_12x9.png',         
             action:function() { 
-                   jQuery(".btn-ver",jQuery(this).parents("li")).click();
+                   alert(jQuery(this).attr("id"));
                  } 
           },
           { label:'Eliminar',

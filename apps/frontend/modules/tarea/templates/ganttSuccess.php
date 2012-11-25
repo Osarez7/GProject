@@ -1,60 +1,97 @@
 
-<?php /* Librerias gantt.jquery */ ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/dataDays.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/dataHours.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/dataDaysEnh.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/jquery.cookie.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/jquery.fn.gantt.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/jquery.cookie.js") ?>
-<?php use_javascript("/js/jQuery.Gantt-master/js/jquery.fn.gantt.js") ?>
-<?php use_javascript("http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js") ?>
-<?php use_javascript("http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js") ?>
-<?php use_javascript("http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js") ?>
-<?php use_javascript("http://taitems.github.com/UX-Lab/core/js/prettify.js") ?>
-<?php use_stylesheet("jQuery.Gantt-master/style.css") ?>
-<?php use_stylesheet("http://twitter.github.com/bootstrap/assets/css/bootstrap.css") ?>
-<?php use_stylesheet("http://taitems.github.com/UX-Lab/core/css/prettify.css") ?>
-<?php /* Fin Librerias gantt.jquery */ ?>
-
-
-<?php use_javascript("jquery.treeview/jquery.treeview.js") ?>
-<?php use_javascript("jquery.treeview/jquery.treeview.edit.js") ?>
-<?php use_javascript("jquery.treeview/jquery.treeview.async.js") ?>
-<?php use_javascript("jquery.treeview/jquery.treeview.sortable.js") ?>
-<?php use_stylesheet("jquery.treeview/jquery.treeview.css") ?>
-
 <?php use_javascript("lib/jquery-context-menu/jquery.context.menu.js") ?>
-
-
 <?php use_stylesheet("lib/jquery.context.menu/jquery.context.menu.css") ?>
 
 
-
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_stylesheet("treeTable.css") ?>
+<?php use_javascript("lib/jquery.fixedtable/jquery.fixedtable.js") ?>
 <?php use_javascript("tarea.scripts/ganttTareas.js") ?>
 <?php use_javascript("tarea.scripts/tareas.context.menu.js") ?>
+<?php use_javascript("tarea.scripts/tareas.fixed.table.js") ?>
+<?php use_javascript("prueba.js") ?>
 
-<?php use_helper('Debug') ?>
-
+<?php use_helper('Date') ?>
 
 
 <div class="content-info">
 
+
     <h1>Tareas</h1>
-    <div class="content-gantt-left"> 
 
-        <ul id="listaArbol" class="filetree">
+    <div class="panel-gantt"> 
 
-            <?php include_partial('tarea/tree', array('arbolTarea' => $arbolTarea)); ?>
-        </ul>
+        <div class="content-gantt-left "> 
+
+            <table id="table-tareas" class="listado fixed gantt-table">
+                <col class="grupo-uno" />
+                <col  span="3"/>
+                <thead> 
+                    <tr>
+
+                        <th>Tarea</th>
+                        <th>Acciones</th>
+                        <th>Fecha Inicial</th>   
+                        <th>Fecha Final</th> 
+                    </tr>
+                </thead>
+                <?php include_partial('tarea/tableGantt', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
+            </table>
+        </div>
+
+        <div class="content-gantt-right">
+            <table class="listado fixed gantt-table">
+
+                <thead> 
+                    <tr>
+
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>   
+                        <th>Abril</th> 
+                    </tr>
+                </thead>
+                <?php include_partial('tarea/tableGanttDays', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
+            </table>
+
+
+        </div>
+
+
     </div>
 
-    <div class="content-gantt-right">
+</div>
 
-        <table>
-            <?php include_partial('tarea/tableGantt', array('arbolTarea' => $arbolTarea)); ?>
-        </table>
 
+
+
+
+<div id="main">
+<div id="content-slider"></div>
+<div id="content-scroll">
+  <div id="content-holder">
+    <div class="content-item">
     </div>
+    <div class="content-item">
+    </div>
+    <div class="content-item">
+    </div>
+    <div class="content-item">
+    </div>
+    <div class="content-item">
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
 
 
     <div class="gantt"> </div>

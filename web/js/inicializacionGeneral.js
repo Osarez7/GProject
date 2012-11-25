@@ -23,7 +23,9 @@ jQuery(window).load(function(){
         event.preventDefault();
         crearContentDialog();
      
-        jQuery.ajax({
+       if(!jQuery(this).hasClass("action-confirm")){
+
+jQuery.ajax({
             type:"GET",
             contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
             url: jQuery(this).attr('href'),
@@ -37,6 +39,7 @@ jQuery(window).load(function(){
 
             }
         });
+          }
        
 
     } );    
@@ -45,7 +48,9 @@ jQuery(window).load(function(){
     jQuery(".dialogSubmit").live("click",function(event){
 
         event.preventDefault();
-  
+        
+      if(!jQuery(this).hasClass("action-confirm")){
+
         crearContentDialog();
     
         jQuery(this).parents('form').ajaxSubmit({
@@ -54,7 +59,7 @@ jQuery(window).load(function(){
                 jQuery("#customDialogConent").html(msg);
             }
         });        
-   
+       }
     });
 
 
@@ -62,50 +67,20 @@ jQuery(window).load(function(){
     jQuery(".action-confirm").live("click",function(event){
 
         event.preventDefault();
-  
         createConfirmBox(jQuery(this));
-       
+        jQuery("#simpleConfirmBox").dialog( "open" );
    
     });
 });
 
 
-function createCorfirmBox($elementConfirm) {
-    
-    if(jQuery("#simpleConfirmBox").length == 0){
-        jQuery("body").append('<div id="simpleConfirmBox"></div>'); 
-              
-        jQuery("#simpleConfirmBox").dialog({
-            resizable: false,
-            height:140,
-            modal: true,
-            buttons: {
-                "Si": function() {
-                   
-                $elementConfirm.removeClass("action-confirm");
-                jQuery( this ).dialog( "close" );
-                $elementConfirm.click();
-                         
-                },
-                "Cancelar": function() {
-                    
-                    
-                    jQuery( this ).dialog( "close" );
-                }
-            }
-        });
-              
-              
-    }
-}
 
      
 
 function crearContentDialog(){
     
-    if(jQuery("#customDiagloConent").length == 0){
-             
-
+    if(jQuery("#customDialogConent").length == 0){
+            
         jQuery("body").append('<div id="customDialogConent"></div>');
         jQuery('#customDialogConent').dialog({
             autoOpen: false,
@@ -117,6 +92,35 @@ function crearContentDialog(){
     }
     
 }
+
+
+function createConfirmBox($elementConfirm) {
+    
+    if(jQuery("#simpleConfirmBox").length == 0){
+        jQuery("body").append('<div id="simpleConfirmBox"> Esta seguro ? </div>'); 
+              
+        jQuery("#simpleConfirmBox").dialog({
+            autoOpen: false,
+            resizable: false,
+            height:140,
+            modal: true,
+            buttons: {
+                "Si": function() {
+                jQuery(this).dialog( "close" );  
+                $elementConfirm.removeClass("action-confirm");
+                $elementConfirm.click();
+                         
+                },
+                "Cancelar": function() {        
+                 jQuery( this ).dialog( "close" );
+                }
+            }
+        });
+              
+              
+    }
+}
+
 
 function pruebaAjax(){
 

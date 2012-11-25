@@ -16,9 +16,13 @@
 
 
             <div id="login-contenido">
-                <div id="login-box" class="shadow">
+                <div id="login-box">
+                <div id="login-box-header" class="shadow">Ingreso a usuarios</div>
+                <div id="login-box-content" class="shadow">
                     <?php echo $sf_content ?>
                 </div>
+
+             </div>
             </div>
             <div id="pie">
             </div>

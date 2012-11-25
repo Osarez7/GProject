@@ -360,6 +360,8 @@ table.listado thead .celda-final{
 
 
 
+
+
 .odd{
   background:  #D4E8F7; 
 }
@@ -393,11 +395,103 @@ div.ui-dialog{
     float: left;
 }
 
+
+.panel-gantt{
+  height: 252px;
+    overflow: auto
+}
 .content-gantt-left , .content-gantt-right{
   float: left;
 }
 
+
+.content-gantt-left {
+  width: 290px;
+  border-right: solid 1px;
+  overflow: auto;
+} 
+
+.content-gantt-right{
+  width: 300px;
+  overflow: auto;
+}
+
+
 #content-asignar-usuario{
  min-width: 450px;
 }
+
+
+table.treeTable.fixed{ table-layout:fixed;
+  width:600px;
+
+ }
+table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-word; }
+
+
+
+.grupo-uno{
+background: #A1D0ED; 
+color: white; 
+text-align: left !important;
+
+}
+
+.gantt-table tr, .gantt-table td{
+ 
+ height: 33px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#main {
+  width: 510px;
+  margin: 0 auto;
+}
+
+#content-slider {
+  width: 490px;
+  height: 6px;
+  margin: 5px;
+  background: #BBBBBB;
+  position: relative;
+}
+
+.ui-slider-handle {
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  top: -4px;
+  background: #478AFF;
+  border: solid 1px black;
+}
+
+#content-scroll {
+  width: 500px;
+  height: 300px;
+  margin-top: 10px;
+  overflow: hidden;
+  border: solid 1px black;
+}
+
+#content-holder {
+  width: 1500px;
+  height: 270px;
+}
+
+.content-item {
+  width: 290px;
+  height: 270px;
+  padding: 5px;
+  float: left;
+}
+
 

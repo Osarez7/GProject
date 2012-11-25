@@ -50,7 +50,7 @@ arbol_tareas:
   param: {module: tarea, action: arbol}
   
 addChild:
-  url:  /tarea/hija/:idTarea
+  url:  /tarea/hija/:idProyecto/:idTarea
   class: sfDoctrineRoute
   options:
      model: Tarea

@@ -43,7 +43,6 @@ class TareaTable extends Doctrine_Table {
         return $tree;
     }
 
- 
     public function getTreeTaskAsArray($idProyecto) {
 
         $q = Doctrine_Query::create()
@@ -51,75 +50,78 @@ class TareaTable extends Doctrine_Table {
                 ->from('Tarea t')
                 ->orderBy('t.level ASC')
                 ->where('proyectoFK=?', $idProyecto);
-  
+
         $treeObject = Doctrine_Core::getTable('Tarea')->getTree();
         $treeObject->setBaseQuery($q);
-       // $treeObject->fetchTree();
-        
-        $tree = array('children' =>$this->getArbolArray($treeObject));
-        $tree = $this->evalHasChildren($tree ['children'],$tree );
-                   
-       $treeObject->resetBaseQuery();
-       
-       return $tree;
+        // $treeObject->fetchTree();
+
+        $tree = array('children' => $this->getArbolArray($treeObject));
+        $tree = $this->evalHasChildren($tree ['children'], $tree);
+
+        $treeObject->resetBaseQuery();
+
+        return $tree;
     }
 
     public function getArbolArray($treeObject) {
-        
-        $lstArrayTareas = array();    
-        
+
+        $lstArrayTareas = array();
+
         foreach ($treeObject->fetchRoots() as $root) {
-           
-           $tareaRoot = $root->toArray();        
-           $tareaRoot['children'] = $this->getArrayDesendientes($root);
-           $tareaRoot = $this
-             ->evalHasChildren($tareaRoot['children'],$tareaRoot);
-                    
-           array_push($lstArrayTareas, $tareaRoot);
+
+            $tareaRoot = $root->toArray();
+            $tareaRoot['children'] = $this->getArrayDesendientes($root);
+            $tareaRoot = $this
+                    ->evalHasChildren($tareaRoot['children'], $tareaRoot);
+
+            array_push($lstArrayTareas, $tareaRoot);
         }
-             
+
         return $lstArrayTareas;
     }
 
+    private function evalHasChildren($lstChildren, $arrayTarea) {
 
-   private function evalHasChildren($lstChildren,$arrayTarea){
-   	
-     if(count($lstChildren)>0){
- 	$arrayTarea['hasChildren'] = true;
- 	}else{
-           $arrayTarea['hasChildren'] = false;
-       }
+        if (count($lstChildren) > 0) {
+            $arrayTarea['hasChildren'] = true;
+        } else {
+            $arrayTarea['hasChildren'] = false;
+        }
 
         return $arrayTarea;
     }
 
-   public function getArrayDesendientes($tareaNode){
-              
-           $lstTareas = array();
-           foreach ($tareaNode->getNode()->getChildren() as $tarea) {
-           
-          //$this->ancestors = $node->getNode()->getAncestors()->toArray();
-                $arrayHijo =  $tarea->toArray();                 
- 
-                if($tarea->getNode()->hasChildren()){
-                 
-                 $arrayHijo['children'] =  $this->getArrayDesendientes($tarea);
-                 $arrayHijo['hasChildren'] = true; 
-               }else{
+    public function getArrayDesendientes($tareaNode) {
 
-                $arrayHijo['hasChildren'] = false;
-                 }
-              
-                array_push($lstTareas,$arrayHijo);
+        $lstTareas = array();
+
+        if ($tareaNode->getNode()->getChildren()) {
+
+            foreach ($tareaNode->getNode()->getChildren() as $tarea) {
+
+                //$this->ancestors = $node->getNode()->getAncestors()->toArray();
+                $arrayHijo = $tarea->toArray();
+
+                if ($tarea->getNode()->hasChildren()) {
+
+                    $arrayHijo['children'] = $this->getArrayDesendientes($tarea);
+                    $arrayHijo['hasChildren'] = true;
+                } else {
+
+                    $arrayHijo['hasChildren'] = false;
+                }
+
+                array_push($lstTareas, $arrayHijo);
 
                 //echo strj_repeat(' ', $node['level']) . $node['name'] . "\n";
-                
-              
             }
-      
-             return $lstTareas;
-         }
+        }
 
+
+        return $lstTareas;
+    }
+
+    
     public function getQueryArbolTarea($id) {
         $q = Doctrine_Query::create()
                 ->select('t.*')
@@ -185,24 +187,29 @@ class TareaTable extends Doctrine_Table {
 
     public function findOneById($idTarea) {
 
-        $tarea = Doctrine_Query::create()
-                        ->from('Tarea t')
-                        ->where('t.idTarea', $idTarea)
-                        ->execute()->getFirst();
+        $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));
+        $custom_logger->notice("/@ findOneById ". $idTarea ."@/ "   );
+        
+        
+        $tarea = $this->find($idTarea);
+//        $tarea = Doctrine_Query::create()
+//                        ->from('Tarea t')
+//                        ->where('t.idTarea', $idTarea)
+//                        ->execute()->getFirst();
 
         return $tarea;
     }
 
-    
-      public function findOneArrayById($idTarea) {
+    public function findOneArrayById($idTarea) {
 
         $tarea = Doctrine_Query::create()
                         ->from('Tarea t')
                         ->where('t.idTarea', $idTarea)
-                         //->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)
+                        //->setHydrationMode(Doctrine_Core::HYDRATE_ARRAY)
                         ->execute()->getFirst();
         //$tarea =   array_shift( $tareas );
-         $tareaArray = $tarea->toArray();
-        return  $tareaArray;
+        $tareaArray = $tarea->toArray();
+        return $tareaArray;
     }
+
 }

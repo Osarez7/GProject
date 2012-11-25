@@ -25,8 +25,8 @@
                     
 
                     <?php
-                    echo link_to(' ', 'tarea/delete?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon eliminar'
+                    echo link_to(' ', 'tarea/edit?id_tarea=' . $node['idTarea'], array(
+                        'class' => 'custom-button icon editar'
                     ))
                     ?>
 
@@ -37,14 +37,14 @@
                     ))
                     ?>
                     
-                    
-                    <?php
-                    echo link_to(' ', 'tarea/edit?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon editar dialogLink',
+                
+ <?php
+                    echo link_to(' ', 'tarea/addChild?idTarea=' . $node['idTarea'].'&idProyecto='.$proyecto->getIdProyecto(), array(
+                        'class' => ' dialogLink custom-button icon extender btn-asignar-usuario',
                     ))
                     ?>
-
-
+    
+                
 
                 </td>
 

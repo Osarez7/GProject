@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-    <h1>Ingreso a usuarios</h1>
+    
     <form action="<?php echo url_for('login/index')?>" method="post">
         <table>
             <tbody>

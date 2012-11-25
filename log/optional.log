@@ -1,0 +1,39 @@
+Nov 25 11:30:02 symfony [info] My log message!
+Nov 25 11:30:02 symfony [notice] My puto log message!
+Nov 25 11:44:37 symfony [notice] 19
+Nov 25 11:44:37 symfony [notice] Ya tiene un padre y es 1
+Nov 25 11:44:38 symfony [notice] Ya tiene un padre y es 1
+Nov 25 11:53:21 symfony [notice] 2
+Nov 25 11:53:21 symfony [notice] prueba primer if parent
+Nov 25 11:53:21 symfony [notice] Ya tiene un padre y es 1
+Nov 25 11:53:22 symfony [notice] Ya tiene un padre y es 1
+Nov 25 11:57:30 symfony [notice] ---- El padre sera 22
+Nov 25 11:57:30 symfony [notice] prueba primer if parent
+Nov 25 11:57:30 symfony [notice] Ya tiene un padre y es 1
+Nov 25 11:57:31 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:01:06 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:01:26 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:01:26 symfony [notice] ---- El padre sera 22
+Nov 25 12:01:26 symfony [notice] 22
+Nov 25 12:01:26 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:03:40 symfony [notice] ---- El padre sera 21
+Nov 25 12:03:40 symfony [notice] 21
+Nov 25 12:03:40 symfony [notice] ahora el padre es1
+Nov 25 12:03:40 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:03:40 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:08:40 symfony [notice] ---- El padre sera 41
+Nov 25 12:08:40 symfony [notice] prueba primer if parent41
+Nov 25 12:08:40 symfony [notice] /@ findOneById 41@/ 
+Nov 25 12:08:40 symfony [notice] /+ Despues de busqueda padre es1
+Nov 25 12:08:40 symfony [notice] ahora el padre es1
+Nov 25 12:08:41 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:08:41 symfony [notice] Ya tiene un padre y es 1
+Nov 25 12:13:14 symfony [notice] ---- El padre sera 21
+Nov 25 12:13:14 symfony [notice] prueba primer if parent21
+Nov 25 12:13:14 symfony [notice] /@ findOneById 21@/ 
+Nov 25 12:13:14 symfony [notice] /+ Despues de busqueda padre es21
+Nov 25 12:13:14 symfony [notice] ahora el padre es21
+Nov 25 12:13:14 symfony [notice] Ya tiene un padre y es 21
+Nov 25 12:13:15 symfony [notice] Ya tiene un padre y es 21
+Nov 25 12:13:15 symfony [info] Ya tiene un padre y es 21
+Nov 25 12:13:15 symfony [err] Ya tiene un padre y es 21

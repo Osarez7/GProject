@@ -12,9 +12,17 @@ class TareaForm extends BaseTareaForm {
 
     public function configure() {
 
+        
+        
+           
+$custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));
 
-        $this->setWidget('parent', new sfWidgetFormInputHidden());
+
+ 
+      //  $this->setWidget('parent', new sfWidgetFormInputHidden());
        
+        $this->setWidget('parent',  new sfWidgetFormInputText());
+
         $this->setWidget('fechaInicio', new sfWidgetFormTextDateInputJQueryDatePicker(
         array('image' => '/images/calendar_view_month.png',
         'include_time' => false))
@@ -26,9 +34,16 @@ class TareaForm extends BaseTareaForm {
                             'include_time' => false))
         );
 
+         $this->setWidget('proyectoFK',new  sfWidgetFormInputHidden());
+        
+                  
+            
         if ($this->getObject()->getNode()->hasParent()) {
             $this->setDefault('parent', $this->getObject()->getNode()->getParent()->get('idTarea'));
-        }
+       
+            $custom_logger->notice("(".$this .")Ya tiene un padre y es ". $this->getObject()->getNode()->getParent()->get('idTarea') );
+            
+            }
 
 
         // set a validator for parent which prevents a category being moved to one of its own descendants
@@ -47,25 +62,41 @@ class TareaForm extends BaseTareaForm {
         );
     }
 
+    
+    
+    
+    
     public function doSave($con = null) {
         // save the record itself
         parent::doSave($con);
         // if a parent has been specified, add/move this node to be the child of that node
+   
+$custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));
+       
+          $custom_logger->notice("---- El padre sera " . $this->getValue('parent') );
 
-        sfContext::getInstance()->getLogger()->notice("Id del padre en formulario  es " + $this->getValue('parent'));
-
-
+        
         if ($this->getValue('parent')) {
+            
+            
+            $custom_logger->notice("prueba primer if parent" . $this->getValue('parent'));
             //  $parent = Doctrine_Core::getTable('Tarea')->find(array($this->getValue('parent')));
             $parent = Doctrine::getTable('Tarea')->findOneById($this->getValue('parent'));
             if ($this->isNew()) {
+               
+                  $custom_logger->notice("/+ Despues de busqueda padre es".  $parent->getIdTarea()) ;
+        
                 $this->getObject()->getNode()->insertAsLastChildOf($parent);
+                $custom_logger->notice(
+                        "ahora el padre es" . $this->getObject()->getNode()->getParent()->getIdTarea());
             } else {
                 $this->getObject()->getNode()->moveAsLastChildOf($parent);
             }
         }
         // if no parent was selected, add/move this node to be a new root in the tree
         else {
+            $custom_logger->notice("prueba primer else parent");
+            
             $tareaTree = Doctrine::getTable('Tarea')->getTree();
             if ($this->isNew()) {
                 $tareaTree->createRoot($this->getObject());
