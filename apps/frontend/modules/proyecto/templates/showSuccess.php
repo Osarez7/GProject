@@ -15,6 +15,9 @@
 <?php use_javascript("http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js") ?>
 <?php use_javascript("http://taitems.github.com/UX-Lab/core/js/prettify.js")  ?>
 
+
+<?php use_javascript("tarea.scripts/inicializarTareas.js")  ?>
+
 <?/*php  use_javascript("/js/jQueryGantt/libs/jquery.livequery.min.js") ?>
 <?php  use_javascript("/js/jQueryGantt/libs/jquery.timers.js") ?>
 <?php  use_javascript("/js/jQueryGantt/libs/platform.js") ?>
@@ -83,6 +86,9 @@
 
 
   <a href="<?php echo url_for('tarea/new') ?>">New</a>
+
+
+ <a  class="button" href="<?php echo url_for('tarea/gantt') ?>?idProyecto=<?php echo $proyecto->getIdProyecto(); ?>">Gantt</a>
 
 
 <?php    slot('menu_lateral') ?>

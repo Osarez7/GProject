@@ -14,9 +14,9 @@
             <tr>
                 <td colspan="2">
 
-                    <input  id="guardar-tarea" type="button" value="Guardar"  class="button icon check"/>
+                    <input  id="guardar-tarea" class="dialogSubmit button" type="button" value="Guardar"  class="button"/>
                     <?php if (!$form->getObject()->isNew()): ?>
-                        &nbsp;<?php echo link_to('Delete', 'tarea/delete?id_tarea=' . $form->getObject()->getIdTarea(), array('method' => 'delete', 'confirm' => 'Are you sure?', 'class' => 'button danger trash')) ?>
+                        &nbsp;<?php echo link_to('Borrar', 'tarea/delete?id_tarea=' . $form->getObject()->getIdTarea(), array('class' => 'button danger icon trash action-confirm  dialogLink')) ?>
                     <?php endif; ?>
                 </td>
             </tr>

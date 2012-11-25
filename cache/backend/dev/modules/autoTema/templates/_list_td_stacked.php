@@ -1,3 +1,0 @@
-<td colspan="6">
-  <?php echo __('%%idTema%% - %%tituloTema%% - %%proyectoFK%% - %%usuarioFK%% - %%fecha_creacion%% - %%fecha_actualizacion%%', array('%%idTema%%' => link_to($tema->getIdTema(), 'tema_edit', $tema), '%%tituloTema%%' => $tema->getTituloTema(), '%%proyectoFK%%' => $tema->getProyectoFK(), '%%usuarioFK%%' => $tema->getUsuarioFK(), '%%fecha_creacion%%' => false !== strtotime($tema->getFechaCreacion()) ? format_date($tema->getFechaCreacion(), "f") : '&nbsp;', '%%fecha_actualizacion%%' => false !== strtotime($tema->getFechaActualizacion()) ? format_date($tema->getFechaActualizacion(), "f") : '&nbsp;'), 'messages') ?>
-</td>

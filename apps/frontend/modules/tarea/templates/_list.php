@@ -33,14 +33,14 @@
 
                     <?php
                     echo link_to(' ', 'tarea/asignarUsuario?idTarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon asignar btn-asignar-usuario',
+                        'class' => ' dialogLink custom-button icon asignar btn-asignar-usuario',
                     ))
                     ?>
                     
                     
                     <?php
                     echo link_to(' ', 'tarea/edit?id_tarea=' . $node['idTarea'], array(
-                        'class' => 'custom-button icon editar',
+                        'class' => 'custom-button icon editar dialogLink',
                     ))
                     ?>
 
@@ -59,14 +59,6 @@
 <?php endif; ?>
 
 
+<a class="button icon add dialogLink" href="<?php echo url_for('nueva_tarea',array('idProyecto'=>$proyecto->getIdProyecto())) ?>">Nueva Tarea</a>
 
 
-<input type="button" id="btn-nueva-tarea" class="button icon add" value="Nueva Tarea" >
-
-<form id="nueva-tarea-form" action="<?php echo url_for('nueva_tarea',array('idProyecto'=>$proyecto->getIdProyecto())) ?>" >
-</form>
-
-
-    <div id="dialog-nueva-tarea" class="dialog">
-       
-    </div>

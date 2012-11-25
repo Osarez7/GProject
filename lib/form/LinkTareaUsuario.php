@@ -17,9 +17,10 @@ class  LinkTareaUsuario extends BaseTareaForm
     
     
     $this->widgetSchema->setLabels(array(
-        'usuario_list' => 'Usuarios Asignados',
+        'usuario_list' => '',
        
     ));
+
 
     $queryUsuario = Doctrine_Core::getTable('Usuario')->getQueryUsuarioByProyecto( $this->getObject()->getProyectoFK());
     

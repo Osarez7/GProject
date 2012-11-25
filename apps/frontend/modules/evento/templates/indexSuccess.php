@@ -3,6 +3,11 @@
 <?php use_javascript('jquery.ui.core.js') ?>
 <?php use_javascript('jquery.ui.draggable.js') ?>
 <?php use_javascript('jquery.ui.droppable.js') ?>
+<?php use_javascript('lib/date/date.js ') ?>
+<?php use_javascript('lib/fullcalendar/fullcalendar.js ') ?>
+
+
+<?php use_stylesheet("fullcalendar.css")  ?>
 
 <script type='text/javascript'>
  

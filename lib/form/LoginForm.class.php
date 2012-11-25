@@ -3,12 +3,8 @@
 
 class LoginForm extends BaseForm
 {
-public function configure()
-
-{
+public function configure(){
     
-
-
     $this->setWidgets(array(
         'user' => new sfWidgetFormInputText(),
         'password' => new sfWidgetFormInputPassword(),
@@ -19,12 +15,6 @@ public function configure()
 'user'
 => new sfValidatorEmail(),
 'password' => new sfValidatorString(array('max_length' => 5))));
-
- /*   $this->setValidators(array(
-        'user' => new sfValidatorEmail(array('required' => true), array('required' => 'Escribe tu usuario')),
-        'password' => new sfValidatorString(array('required' => true), array('required' => 'Escribe tu password')),
-    ));  */
-
 
 
     

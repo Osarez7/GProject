@@ -14,8 +14,10 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:    
+          title: Administración de proyectos 
       filter:  ~
       form:    ~
-      edit:    ~
+      edit:    
+         title: Edición Proyecto "%%nombre_proyecto%%%"
       new:     ~

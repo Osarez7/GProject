@@ -99,13 +99,15 @@ textarea{
 
 
 
-#contenido h1{
+#contenido h1, div.ui-dialog h1{
     /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
     border-radius: 5px 5px;
     color: #3791B5;
     font-size: 21px;
     padding: 0 20px;
 }
+
+
 
 input , textarea{
     border: 1px solid #888;
@@ -320,18 +322,82 @@ table.info th, table.info td{
 }
 table.listado{
     border-collapse: collapse;
+    margin-bottom: 12px;
+
 }
 
 table.listado th,table.listado td{
+ 
     
  
-    border: 1px solid #98BF21;
+    border-bottom: 1px solid #6F767E;
     font-size: 1.2em;
     padding: 3px 7px 2px;
     text-align: center;
 }
 
 
+table.listado thead th{
+  background-color: #3c8dde;
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
+    background-image: -moz-linear-gradient(#0E5187, #003B68);
+    background-image: -o-linear-gradient (#0E5187, #003B68);
+    background-image: linear-gradient(#0E5187, #003B68);
+    color: #FFF;
+
+
+}
+
+table.listado thead .celda-inicial{ 
+  border-radius:14px  0px 0px 0px;
+
+}
+
+table.listado thead .celda-final{ 
+  border-radius:0px  14px 0px 0px;
+
+}
+
+
+
 .odd{
   background:  #D4E8F7; 
 }
+
+
+div.ui-dialog{
+  padding: 0;
+}
+
+.ui-helper-clearfix:after{
+ height:0;
+ padding: 0;
+}
+
+
+/* Tree tareas*/
+
+.treeview ul{
+  background-color: transparent;
+}
+
+
+.menu-acciones-tarea {
+    display: block;
+   /* position: absolute;
+    z-index: 36;*/
+    background: blue;
+}
+.menu-acciones-tarea a {
+    display: inline;
+    float: left;
+}
+
+.content-gantt-left , .content-gantt-right{
+  float: left;
+}
+
+#content-asignar-usuario{
+ min-width: 450px;
+}
+

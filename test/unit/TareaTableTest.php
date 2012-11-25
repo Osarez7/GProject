@@ -26,7 +26,14 @@ $t = new lime_test(5);
   
   $t->diag('Pruebas getQueryArbolTarea');
  $respuesta =  Doctrine_Core::getTable('Tarea')->getQueryArbolTarea(1);
- $t->isa_ok($respuesta,'Doctrine_Query',$respuesta); 
+ $t->isa_ok($respuesta,'Doctrine_Query',$respuesta);
+
+$t->diag('Pruebas getChildren');
+
+$respuesta =  Doctrine_Core::getTable('Tarea')->findOneById(1)->getChildren();
+ $t->isa_ok($respuesta,'array',$respuesta);
+
+
 
 /*
  $t->diag('Pruebas getTareasUsuario');
