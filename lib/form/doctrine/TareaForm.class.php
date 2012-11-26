@@ -19,9 +19,9 @@ $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfCon
 
 
  
-      //  $this->setWidget('parent', new sfWidgetFormInputHidden());
+              $this->setWidget('parent', new sfWidgetFormInputHidden());
        
-        $this->setWidget('parent',  new sfWidgetFormInputText());
+            //   $this->setWidget('parent',  new sfWidgetFormInputText());
 
         $this->setWidget('fechaInicio', new sfWidgetFormTextDateInputJQueryDatePicker(
         array('image' => '/images/calendar_view_month.png',

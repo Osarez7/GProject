@@ -10,14 +10,36 @@
  */
 class eventoActions extends sfActions
 {
+
+   
+  
+
   public function executeIndex(sfWebRequest $request)
   {
-    $this->eventos = Doctrine_Core::getTable('Evento')
-      ->createQuery('a')
-      ->execute();
     
-    $this->calendario = new Calendario();
-    $this->listaEventos = array(1,2,5);
+    $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') . '/optional.log'));
+
+        $custom_logger->notice("inicio es  " . $request->getParameter('start'));
+
+      
+  $this->proyecto = Doctrine_Core::getTable('Proyecto')
+             ->find(array($request->getParameter('idProyecto')));
+  $this->forward404Unless($this->proyecto);
+ 
+  
+      
+    $this->eventos = Doctrine_Core::getTable('Evento')->getEventosByProyectoAndRango($request->getParameter('idProyecto'),$this->milisecondsToDate($request->getParameter('start')),$this->milisecondsToDate($request->getParameter('end')));
+  
+ 
+   
+    //  $this->eventos = Doctrine_Core::getTable('Evento')->getEventosByProyecto($request->getParameter('idProyecto'));  
+      
+
+
+  
+  $this->tareas = Doctrine_Core::getTable('Tarea')->getArbolTareas($request->getParameter('idProyecto')); 
+       
+    
   }
 
   public function executeShow(sfWebRequest $request)
@@ -28,16 +50,22 @@ class eventoActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new EventoForm();
+  
 
-     if ($request->isXmlHttpRequest()) {
-            return $this->renderPartial('form', array  ('form' => $this->form));
-        }
+ $this->form = new EventoForm();
+
+    $this->form->setDefault('proyectoFK', $request->getParameter('idProyecto'));
+ 
+            if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('evento/form', array('form' => $this->form));
+            }
+       
 
   }
 
   public function executeCreate(sfWebRequest $request)
   {
+     
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new EventoForm();
@@ -94,4 +122,10 @@ class eventoActions extends sfActions
       $this->redirect('evento/edit?id_evento='.$evento->getIdEvento());
     }
   }
+  
+  
+    private function  milisecondsToDate($timeMiliseconds){
+
+        return  date('Y-m-d H:i:s',$timeMiliseconds);
+    }
 }

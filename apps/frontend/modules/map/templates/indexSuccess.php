@@ -1,4 +1,6 @@
 <?php use_stylesheet('openlayers-themes/default/style.css') ?>
+<?php use_javascript('mapa.scripts/inicializarMapa.js') ?>
+
 
 <h1>Mapas </h1>
 

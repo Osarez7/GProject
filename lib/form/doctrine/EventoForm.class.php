@@ -18,17 +18,16 @@ class EventoForm extends BaseEventoForm
         'fechaFinal' => 'Fecha Final',
         'diaCompleto' => 'Día Completo',
         'descEvento' => 'Descripción',
-        'nombreEvento' => 'Nombre',
-           
+        'nombreEvento' => 'Nombre',      
     ));
 
 
 
 unset(
-      $this['fecha_actualizacion'], $this['fecha_creacion'],$this['proyectoFK']
+      $this['fecha_actualizacion'], $this['fecha_creacion']
     );
     
-   
+   $this->widgetSchema['proyectoFK'] =   new sfWidgetFormInputText();
      
       $this->widgetSchema['fechaInicio'] = new sfWidgetFormDatePickerTime(array(
     'date' => array(

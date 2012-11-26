@@ -3,12 +3,11 @@ var map2;
 
 
 
-jQuery.(document).ready(
-  function()[
+jQuery(document).ready(function(){
       renderMapaLugares();
             //renderExampleMap();
  
-  }]);
+  });
 
 
 

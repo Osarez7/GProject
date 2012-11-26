@@ -418,7 +418,7 @@ div.ui-dialog{
 
 
 #content-asignar-usuario{
- min-width: 450px;
+ min-width: 478px;
 }
 
 
@@ -442,11 +442,15 @@ text-align: left !important;
  height: 33px;
 }
 
+#evento-form-content{
+  width: 428px;
+}
 
 
 
-
-
+.aimLink{
+ display: none;
+}
 
 
 
@@ -494,4 +498,8 @@ text-align: left !important;
   float: left;
 }
 
+
+#form-cotent{
+ width: 400px;
+}
 

@@ -77,7 +77,7 @@
 </div>
 
 
- <?php echo link_to('Calendario', 'evento/index?idProyecto=.'.$proyecto->getIdProyecto(), array('class' => 'button  icon  calendar'))
+ <?php echo link_to('Calendario', 'evento/index?idProyecto='.$proyecto->getIdProyecto(), array('class' => 'button  icon  calendar'))
                         ?>
 
 

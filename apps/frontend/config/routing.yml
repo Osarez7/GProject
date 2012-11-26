@@ -13,13 +13,19 @@ logout:
 login:
   url: /login/index
   param: { module: login, action: index }
-  
+ 
+
+ 
  
 index_eventos:
-  url: /evento/index.:sf_format
+  url: /evento/:idProyecto/index.:sf_format
   param: { module: evento, action: index, sf_format: html }
   requirements:
    sf_format: (?:html|json)
+
+nuevo_evento:
+   url: /evento/nuevo/:idProyecto
+   param: { module: evento, action: new }
 
 nuevo_avance:
    url: /avance/new/:idTarea

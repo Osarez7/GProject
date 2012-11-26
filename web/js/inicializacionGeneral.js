@@ -22,19 +22,22 @@ jQuery(window).load(function(){
         
         event.preventDefault();
         crearContentDialog();
+
+         $dialogLink = jQuery(this);
      
-       if(!jQuery(this).hasClass("action-confirm")){
+       if(!$dialogLink .hasClass("action-confirm")){
 
 jQuery.ajax({
             type:"GET",
             contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
-            url: jQuery(this).attr('href'),
+            url: $dialogLink .attr('href'),
             dataType:"html",
             success:function (msg) {
       
                 jQuery("#customDialogConent").html(msg);
-                jQuery( "#customDialogConent" ).dialog( "open" ).css("display","inline-block");
-                jQuery(".ui-dialog.ui-widget").css("display","inline-block");   
+                 jQuery("#ui-dialog-title-customDialogConent").html($dialogLink.text());
+                jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width());
+                   
 
 
             }

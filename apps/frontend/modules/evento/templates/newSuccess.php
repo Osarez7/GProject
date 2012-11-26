@@ -1,3 +1,3 @@
-<h1>New Evento</h1>
+<h1>Nuevo Evento</h1>
 
 <?php include_partial('form', array('form' => $form)) ?>
