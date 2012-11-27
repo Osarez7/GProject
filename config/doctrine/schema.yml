@@ -25,8 +25,7 @@ Proyecto:
       type: timestamp 
      updated:
        name: fecha_actualizacion
-       type: timestamp
-       
+       type: timestamp       
   columns:
    idProyecto: { type: integer , primary: true, autoincrement: true} 
    nombre: { type: string(100) , notnull: true }
@@ -221,6 +220,8 @@ Lugar:
    idLugar: { type: integer , primary: true, autoincrement: true} 
    tituloLugar: {type: string(150)}
    infoLugar: {type: string(150)}
+   latitud:  { type: decimal , notnull: true}
+   longitud: { type: decimal , notnull: true}
    mapaFK: { type: integer , notnull: true} 
  relations: 
     Mapa: {onDelete: CASCADE , local: mapaFK, foreign: idMapa, foreignAlias: Lugares}

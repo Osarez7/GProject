@@ -8,17 +8,23 @@
  * @property integer $idLugar
  * @property string $tituloLugar
  * @property string $infoLugar
+ * @property decimal $latitud
+ * @property decimal $longitud
  * @property integer $mapaFK
  * @property Mapa $Mapa
  * 
  * @method integer getIdLugar()     Returns the current record's "idLugar" value
  * @method string  getTituloLugar() Returns the current record's "tituloLugar" value
  * @method string  getInfoLugar()   Returns the current record's "infoLugar" value
+ * @method decimal getLatitud()     Returns the current record's "latitud" value
+ * @method decimal getLongitud()    Returns the current record's "longitud" value
  * @method integer getMapaFK()      Returns the current record's "mapaFK" value
  * @method Mapa    getMapa()        Returns the current record's "Mapa" value
  * @method Lugar   setIdLugar()     Sets the current record's "idLugar" value
  * @method Lugar   setTituloLugar() Sets the current record's "tituloLugar" value
  * @method Lugar   setInfoLugar()   Sets the current record's "infoLugar" value
+ * @method Lugar   setLatitud()     Sets the current record's "latitud" value
+ * @method Lugar   setLongitud()    Sets the current record's "longitud" value
  * @method Lugar   setMapaFK()      Sets the current record's "mapaFK" value
  * @method Lugar   setMapa()        Sets the current record's "Mapa" value
  * 
@@ -44,6 +50,14 @@ abstract class BaseLugar extends sfDoctrineRecord
         $this->hasColumn('infoLugar', 'string', 150, array(
              'type' => 'string',
              'length' => 150,
+             ));
+        $this->hasColumn('latitud', 'decimal', null, array(
+             'type' => 'decimal',
+             'notnull' => true,
+             ));
+        $this->hasColumn('longitud', 'decimal', null, array(
+             'type' => 'decimal',
+             'notnull' => true,
              ));
         $this->hasColumn('mapaFK', 'integer', null, array(
              'type' => 'integer',

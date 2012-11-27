@@ -15,12 +15,16 @@ abstract class BaseLugarFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'tituloLugar' => new sfWidgetFormFilterInput(),
       'infoLugar'   => new sfWidgetFormFilterInput(),
+      'latitud'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'longitud'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'mapaFK'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Mapa'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'tituloLugar' => new sfValidatorPass(array('required' => false)),
       'infoLugar'   => new sfValidatorPass(array('required' => false)),
+      'latitud'     => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'longitud'    => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'mapaFK'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Mapa'), 'column' => 'idMapa')),
     ));
 
@@ -44,6 +48,8 @@ abstract class BaseLugarFormFilter extends BaseFormFilterDoctrine
       'idLugar'     => 'Number',
       'tituloLugar' => 'Text',
       'infoLugar'   => 'Text',
+      'latitud'     => 'Number',
+      'longitud'    => 'Number',
       'mapaFK'      => 'ForeignKey',
     );
   }

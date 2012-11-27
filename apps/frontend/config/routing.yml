@@ -15,8 +15,12 @@ login:
   param: { module: login, action: index }
  
 
- 
- 
+index_mapa:
+  url: /mapas/:idProyecto/index.:sf_format
+  param: {module: map , action: index , sf_format: html}
+  requirements:
+   sf_format: (?:html|json)
+
 index_eventos:
   url: /evento/:idProyecto/index.:sf_format
   param: { module: evento, action: index, sf_format: html }

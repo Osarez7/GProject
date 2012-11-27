@@ -1,11 +1,9 @@
 var map;
-var map2;
-
 
 
 jQuery(document).ready(function(){
-      renderMapaLugares();
-            //renderExampleMap();
+     // renderMapaLugares();
+          renderExampleMap();
  
   });
 
@@ -22,7 +20,7 @@ function renderMapaLugares(){
 
     map = new OpenLayers.Map("mapa");
     var mapnik         = new OpenLayers.Layer.OSM();
-    var vector_layer   = new OpenLayers.Layer.Vector('Capa Vector',{style:CentralBranchStyle});
+    var vector_layer   = new OpenLayers.Layer.Vector('Lugares',{style:CentralBranchStyle});
 
     var fromProjection = new OpenLayers.Projection("EPSG:4326");  
     var toProjection   = new OpenLayers.Projection("EPSG:900913");
@@ -41,6 +39,8 @@ function renderMapaLugares(){
     map.addLayer(mapnik);
     map.addLayer(vector_layer);
     map.addControl(new OpenLayers.Control.EditingToolbar(vector_layer));
+    map.addControl(new OpenLayers.Control.LayerSwitcher({}));
+
 
     drag = new OpenLayers.Control.DragFeature(vector_layer, {
         autoActivate: true,
@@ -76,17 +76,28 @@ function  renderExampleMap(){
         
     //Create a Protocol object using the format object just created
     var vector_protocol = new OpenLayers.Protocol.HTTP({
-        url: '/ex5_data.json',
+        url:  url_index_map ,
         format: vector_format
     });
 		
+                
+                
     //Create an array of strategy objects
     var vector_strategies = [new OpenLayers.Strategy.Fixed()];
+          
+    var     customStrategies = [new OpenLayers.Strategy.BBOX(), 
+                                 new OpenLayers.Strategy.Refresh({ interval: 5000,
+                                     refresh: function() {
+                                      //   wms_layer.refresh({force:true})
+                                     }
+
+                                  })
+            ]  
           
     //Create a vector layer that contains a Format, Protocol, and Strategy class
     var vector_layer = new OpenLayers.Layer.Vector('More Advanced Vector Layer',{
         protocol: vector_protocol,
-        strategies: vector_strategies 
+        strategies: customStrategies
     });
             
     map2.addLayer(vector_layer);

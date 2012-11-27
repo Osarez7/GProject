@@ -58,6 +58,27 @@ class ProyectoTable extends Doctrine_Table
           return $query;
     }
     
+    
+    public function getProyectoById($idProyecto){
+        
+         $query = Doctrine_Query::create('p')
+                  ->where('p.idproyecto = ?' , $idProyecto)
+                  ->execute();
+                
+          return $query;
+        
+    }
+    
+    
+    
+     public function getProyectoPorPrioridad($prioridadId ) {
+        $query = Doctrine_Query::create()
+                ->from('Proyecto p')
+                ->where("p.statusPK = ?", $prioridadId);
+        
+        return $query->execute();
+    }
+    
      
     
 }

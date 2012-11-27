@@ -3,7 +3,7 @@ CREATE TABLE comentario (idcomentario BIGINT AUTO_INCREMENT, contenidocomentario
 CREATE TABLE evento (idevento BIGINT AUTO_INCREMENT, fechainicio DATETIME NOT NULL, fechafinal DATETIME NOT NULL, diacompleto TINYINT(1) DEFAULT '1' NOT NULL, nombreevento VARCHAR(100) NOT NULL, descevento VARCHAR(200), proyectofk BIGINT NOT NULL, fecha_creacion DATETIME NOT NULL, fecha_actualizacion DATETIME NOT NULL, INDEX proyectofk_idx (proyectofk), PRIMARY KEY(idevento)) ENGINE = INNODB;
 CREATE TABLE grupo (idgrupo BIGINT AUTO_INCREMENT, nombregrupo VARCHAR(100) NOT NULL, descgrupo VARCHAR(200) NOT NULL, PRIMARY KEY(idgrupo)) ENGINE = INNODB;
 CREATE TABLE grupo__usuario (usuario BIGINT, grupo BIGINT, PRIMARY KEY(usuario, grupo)) ENGINE = INNODB;
-CREATE TABLE lugar (idlugar BIGINT AUTO_INCREMENT, titulolugar VARCHAR(150), infolugar VARCHAR(150), mapafk BIGINT NOT NULL, INDEX mapafk_idx (mapafk), PRIMARY KEY(idlugar)) ENGINE = INNODB;
+CREATE TABLE lugar (idlugar BIGINT AUTO_INCREMENT, titulolugar VARCHAR(150), infolugar VARCHAR(150), latitud DECIMAL(18, 2) NOT NULL, longitud DECIMAL(18, 2) NOT NULL, mapafk BIGINT NOT NULL, INDEX mapafk_idx (mapafk), PRIMARY KEY(idlugar)) ENGINE = INNODB;
 CREATE TABLE mapa (idmapa BIGINT AUTO_INCREMENT, nombremapa VARCHAR(150) NOT NULL, descmapa VARCHAR(200), proyectofk BIGINT, INDEX proyectofk_idx (proyectofk), PRIMARY KEY(idmapa)) ENGINE = INNODB;
 CREATE TABLE perfil (idperfil BIGINT AUTO_INCREMENT, perfilnombre VARCHAR(100) NOT NULL, PRIMARY KEY(idperfil)) ENGINE = INNODB;
 CREATE TABLE prioridad (idprioridad BIGINT AUTO_INCREMENT, nombreprioridad VARCHAR(100) NOT NULL, PRIMARY KEY(idprioridad)) ENGINE = INNODB;

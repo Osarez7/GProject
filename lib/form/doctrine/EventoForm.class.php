@@ -18,7 +18,7 @@ class EventoForm extends BaseEventoForm
         'fechaFinal' => 'Fecha Final',
         'diaCompleto' => 'Día Completo',
         'descEvento' => 'Descripción',
-        'nombreEvento' => 'Nombre',      
+        'nombreEvento' => 'Nombre'      
     ));
 
 

@@ -305,7 +305,7 @@
 .custom-button{
     cursor: pointer;
     display: inline-block;
-       padding: 0.5em 0.4em;
+ 
 }
 
 .custom-button.icon:before{

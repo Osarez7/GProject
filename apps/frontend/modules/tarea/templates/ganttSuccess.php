@@ -21,47 +21,66 @@
 
     <h1>Tareas</h1>
 
-    <div class="panel-gantt"> 
+    <div class="panel-total-gantt"> 
 
-        <div class="content-gantt-left "> 
+        <div class="panel-gantt"> 
 
-            <table id="table-tareas" class="listado fixed gantt-table">
-                <col class="grupo-uno" />
-                <col  span="3"/>
-                <thead> 
-                    <tr>
+            <div class="content-gantt-left fixedColumn"> 
 
-                        <th>Tarea</th>
-                        <th>Acciones</th>
-                        <th>Fecha Inicial</th>   
-                        <th>Fecha Final</th> 
-                    </tr>
-                </thead>
-                <?php include_partial('tarea/tableGantt', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
-            </table>
+                <div class="header-left fixedHead">
+                    <table id="table-tareas" class="listado fixed gantt-table">
+                        <col class="grupo-uno" />
+                        <col  span="3"/>
+                        <thead> 
+                            <tr>
+                                <th>Tarea</th>
+                                <th>Acciones</th>
+                                <th>Fecha Inicial</th>   
+                                <th>Fecha Final</th> 
+                            </tr>
+                        </thead>
+                        <tdody></tbody>
+                    </table>
+
+                </div>
+
+                <div id="body-left">
+                    <table   class="gantt-table">
+                        <?php include_partial('tarea/tableGantt', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
+                    </table>               
+                </div>
+            </div>
+
+
+
+            <div class="content-gantt-right fixedContainer">
+
+                <div class="header-right fixedHead" >
+                    <table class="listado fixed gantt-table">
+
+                        <thead> 
+                            <tr>
+                                <th>Enero</th>
+                                <th>Febrero</th>
+                                <th>Marzo</th>   
+                                <th>Abril</th> 
+                            </tr>
+                        </thead>
+                        <tdody></tbody>
+                    </table>
+                </div>
+
+                <div id="body-right">
+                   <table   class="gantt-table">
+                        <?php include_partial('tarea/tableGanttDays', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
+                    </table>
+                </div>
+
+            </div>
+
+
         </div>
-
-        <div class="content-gantt-right">
-            <table class="listado fixed gantt-table">
-
-                <thead> 
-                    <tr>
-
-                        <th>Enero</th>
-                        <th>Febrero</th>
-                        <th>Marzo</th>   
-                        <th>Abril</th> 
-                    </tr>
-                </thead>
-                <?php include_partial('tarea/tableGanttDays', array('arbolTarea' => $arbolTarea, 'proyecto' => $proyecto, 'parent' => "0")); ?>
-            </table>
-
-
-        </div>
-
-
     </div>
-
 </div>
 
 
@@ -69,29 +88,21 @@
 
 
 <div id="main">
-<div id="content-slider"></div>
-<div id="content-scroll">
-  <div id="content-holder">
-    <div class="content-item">
+    <div id="content-slider"></div>
+    <div id="content-scroll">
+        <div id="content-holder">
+            <div class="content-item">
+            </div>
+            <div class="content-item">
+            </div>
+            <div class="content-item">
+            </div>
+            <div class="content-item">
+            </div>
+            <div class="content-item">
+            </div>
+        </div>
     </div>
-    <div class="content-item">
-    </div>
-    <div class="content-item">
-    </div>
-    <div class="content-item">
-    </div>
-    <div class="content-item">
-    </div>
-  </div>
 </div>
-</div>
 
 
-
-
-
-
-
-
-
-    <div class="gantt"> </div>

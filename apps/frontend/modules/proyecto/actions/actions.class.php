@@ -1,13 +1,6 @@
 <?php
 
-/**
- * proyecto actions.
- *
- * @package    gproject
- * @subpackage proyecto
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
- */
+
 class proyectoActions extends sfActions {
 
     public function executeIndex(sfWebRequest $request) {
@@ -21,9 +14,7 @@ class proyectoActions extends sfActions {
        $this->proyecto = Doctrine_Core::getTable('Proyecto')
              ->find(array($request->getParameter('id_proyecto')));
         
-      $this->arbolTarea = Doctrine_Core::getTable('Tarea')
-          ->getArbolTareas($this->proyecto->getIdProyecto());
-         
+        
         $this->forward404Unless($this->proyecto);
     }
 

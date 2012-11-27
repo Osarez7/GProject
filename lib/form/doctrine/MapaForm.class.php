@@ -12,5 +12,18 @@ class MapaForm extends BaseMapaForm
 {
   public function configure()
   {
+  
+ 
+ $this->widgetSchema->setLabels(array(
+      'nombreMapa' => 'Nombre'          
+    ));
+
+
+
+   $this->widgetSchema['descMapa'] = new sfWidgetFormTextarea();
+   $this->widgetSchema->setLabel('descMapa','Descripcion');
+
+   //  $this->setWidget('proyectoFK',new  sfWidgetFormInputHidden());
+     $this->setWidget('proyectoFK',  new sfWidgetFormInputText());
   }
 }

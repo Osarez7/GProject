@@ -12,9 +12,13 @@ class mapActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+  
+ $this->logMessage("Id de proyecto es ".$request->getParameter('idProyecto'), "notice");
+
+    $this->idProyecto = $request->getParameter('idProyecto');
     $this->mapas = Doctrine_Core::getTable('Mapa')
-      ->createQuery('a')
-      ->execute();
+      ->getMapasPorProyecto($request->getParameter('idProyecto'));
+    
   }
 
   public function executeShow(sfWebRequest $request)
@@ -25,7 +29,16 @@ class mapActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+    
+     $this->forward404Unless($request->getParameter('idProyecto'),"El proyecto qscando no exite");
+    
     $this->form = new MapaForm();
+    
+    $this->form->setDefault('proyectoFK', $request->getParameter('idProyecto'));    
+      if ($request->isXmlHttpRequest()) {
+               return $this->renderPartial('map/form', array('form' => $this->form));
+       }
+
   }
 
   public function executeCreate(sfWebRequest $request)

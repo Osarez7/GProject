@@ -8,11 +8,14 @@ $configuration = ProjectConfiguration::getApplicationConfiguration(
 new sfDatabaseManager($configuration);
 
 
+//$this->runTask('generate:app', 'frontend');
 
-symfony doctrine:drop-db
+
+$this->runTask('doctrine:drop-db');
+$this->runTask('doctrine:build-db');
+$this->runTask('doctrine:build','--all  --env="test" --no-confirmation' ) ; 
 
 
-$this->runTask('generate:app', 'frontend');
 Doctrine_Core::loadData(sfConfig::get('sf_test_dir').'/fixtures');
 Doctrine_Core::loadData(sfConfig::get('sf_test_dir').'/non-fixture',true);
 

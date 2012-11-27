@@ -369,6 +369,11 @@ table.listado thead .celda-final{
 
 div.ui-dialog{
   padding: 0;
+  z-index: 2005 !important;
+}
+
+div.ui-widget-overlay{
+ z-index: 2000 !important;
 }
 
 .ui-helper-clearfix:after{
@@ -503,3 +508,44 @@ text-align: left !important;
  width: 400px;
 }
 
+
+#body-left, #body-right{
+overflow: hidden;
+}
+
+
+.fixedColumn{
+ float: left;
+    height: 555px;
+    width: 150px;
+}
+
+.fixedTable{
+ border-collapse: separate;
+    height: 477px;
+    overflow: hidden;
+    padding: 0;
+    width: 150px;
+}
+
+.fixedContainer{
+
+ float: left;
+    width: 609px;
+}
+
+#form-mapa-content{
+
+  width: 500px;
+}
+
+
+.ui-dialog  form table th, 
+.ui-dialog  form table td{
+  padding: 5px;
+  vertical-align: top;
+}
+
+.acciones-form{
+  margin: 2px auto; 
+}

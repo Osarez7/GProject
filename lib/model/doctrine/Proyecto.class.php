@@ -17,14 +17,35 @@ class Proyecto extends BaseProyecto {
     }
     
 
-    public function getProyectoPorPrioridad($prioridadId = 1) {
-        $query = Doctrine_Query::create()
-                ->from('Proyecto p')
-                ->where("p.statusPK = ?", $prioridadId);
+    
+    
+    public function getArbolTareas(){
         
-        return $query->execute();
+      $arbolTarea = Doctrine_Core::getTable('Tarea')
+          ->getArbolTareas($this->getIdProyecto());    
+        
+     return $arbolTarea;
     }
     
+    
+    public function getMapas(){
+        $mapas = Doctrine_Core::getTable('Mapa')
+          ->getMapasPorProyecto($this->getIdProyecto());    
+        
+     return $mapas; 
+    
+        
+    }
+    
+    
+    public function getEventos(){
+        
+        $eventos = Doctrine_Core::getTable('Evento')
+          -> getEventosByProyecto($this->getIdProyecto());    
+        
+     return $eventos; 
+     
+    }
     
 
 }

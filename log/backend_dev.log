@@ -12452,3 +12452,127 @@ Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} Factories 100.95 ms (1)
 Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} Action "default/login" 0.22 ms (1)
 Nov 25 09:45:12 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 89.56 ms (1)
 Nov 25 09:45:13 symfony [info] {sfWebResponse} Send content (29926 o)
+Nov 26 19:44:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homeBackEnd',  'action' => 'index',)
+Nov 26 19:44:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 26 19:44:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 26 19:44:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 26 19:44:32 symfony [info] {homeBackEndActions} Call "homeBackEndActions->executeIndex()"
+Nov 26 19:44:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/modules/homeBackEnd/templates/indexSuccess.php"
+Nov 26 19:44:32 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 26 19:44:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 26 19:44:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 26 19:44:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 26 19:44:32 symfony [info] {sfWebDebugLogger} Configuration 1309.72 ms (9)
+Nov 26 19:44:32 symfony [info] {sfWebDebugLogger} Factories 410.33 ms (1)
+Nov 26 19:44:32 symfony [info] {sfWebDebugLogger} Action "homeBackEnd/index" 0.41 ms (1)
+Nov 26 19:44:32 symfony [info] {sfWebDebugLogger} View "Success" for "homeBackEnd/index" 102.67 ms (1)
+Nov 26 19:44:32 symfony [info] {sfWebResponse} Send content (28717 o)
+Nov 26 19:44:37 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Nov 26 19:44:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 26 19:44:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 26 19:44:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 26 19:44:38 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Nov 26 19:44:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 26 19:44:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM usuario u - ()
+Nov 26 19:44:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Nov 26 19:44:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Nov 26 19:44:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u LIMIT 20 - ()
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Nov 26 19:44:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Nov 26 19:44:38 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 26 19:44:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Nov 26 19:44:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 26 19:44:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Configuration 246.74 ms (12)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Factories 108.33 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Action "usuario/index" 138.38 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 408.12 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 2.03 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 2.83 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.88 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 87.70 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 43.67 ms (8)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 187.95 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 5.24 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 19.34 ms (13)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 34.59 ms (13)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 55.08 ms (13)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.53 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.57 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.15 ms (1)
+Nov 26 19:44:38 symfony [info] {sfWebResponse} Send content (153761 o)
+Nov 26 19:44:43 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Nov 26 19:44:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 26 19:44:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 26 19:44:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 26 19:44:43 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Nov 26 19:44:43 symfony [info] {myUser} User is not authenticated
+Nov 26 19:44:43 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/login/index"
+Nov 26 19:44:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 26 19:44:43 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/login/index"
+Nov 26 19:44:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Configuration 30.03 ms (9)
+Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Factories 92.77 ms (1)
+Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Action "login/logout" 41.40 ms (1)
+Nov 26 19:44:43 symfony [info] {sfWebResponse} Send content (100 o)

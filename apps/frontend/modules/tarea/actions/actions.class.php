@@ -30,7 +30,7 @@ class tareaActions extends sfActions {
 
     public function executeArbol(sfWebRequest $request) {
 
-        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getArbolTareas($request->getParameter('idProyecto'));
+        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getTreeTaskAsArray($request->getParameter('idProyecto'));
     }
 
     public function executeGantt(sfWebRequest $request) {
@@ -40,7 +40,7 @@ class tareaActions extends sfActions {
 
         $this->forward404Unless($this->proyecto);
  
-        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getTreeTaskAsArray        ($request->getParameter('idProyecto'));
+        $this->arbolTarea = Doctrine_Core::getTable('Tarea')->getTreeTaskAsArray($request->getParameter('idProyecto'));
     }
 
     public function executeShow(sfWebRequest $request) {

@@ -18,6 +18,8 @@ abstract class BaseLugarForm extends BaseFormDoctrine
       'idLugar'     => new sfWidgetFormInputHidden(),
       'tituloLugar' => new sfWidgetFormInputText(),
       'infoLugar'   => new sfWidgetFormInputText(),
+      'latitud'     => new sfWidgetFormInputText(),
+      'longitud'    => new sfWidgetFormInputText(),
       'mapaFK'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Mapa'), 'add_empty' => false)),
     ));
 
@@ -25,6 +27,8 @@ abstract class BaseLugarForm extends BaseFormDoctrine
       'idLugar'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idLugar')), 'empty_value' => $this->getObject()->get('idLugar'), 'required' => false)),
       'tituloLugar' => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'infoLugar'   => new sfValidatorString(array('max_length' => 150, 'required' => false)),
+      'latitud'     => new sfValidatorNumber(),
+      'longitud'    => new sfValidatorNumber(),
       'mapaFK'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Mapa'))),
     ));
 

@@ -43,7 +43,11 @@
 <?php use_stylesheet("jQuery.Gantt-master/style.css")?>
 <?php use_stylesheet("http://twitter.github.com/bootstrap/assets/css/bootstrap.css")?>
 <?php use_stylesheet("http://taitems.github.com/UX-Lab/core/css/prettify.css") ?>
-       
+   
+<?php use_javascript("lib/jquery.fixedtable/jquery.fixedtable.js") ?>
+<?php use_javascript("pruebas/prueba.fixedtable.js") ?>
+
+    
   <div id="lateral" style="display:none;">
                 <?php if (has_slot("menu_lateral")): ?>
                     <?php include_slot("menu_lateral"); ?>
@@ -81,14 +85,16 @@
                         ?>
 
 
+ <?php echo link_to('Mapas', 'map/index?idProyecto='.$proyecto->getIdProyecto(), array('class' => 'button  icon  pin'))
+                        ?>
+
+
 
 <div class="content-info">
-    <?php include_partial('tarea/list',array('arbolTarea' =>$arbolTarea, 'proyecto' => $proyecto)); ?>
+    <?php include_partial('tarea/tree',array('arbolTarea' =>$proyecto->getArbolTareas(), 'proyecto' => $proyecto , 'parent' => '0')); ?>
 </div>
 
 
-<div class="gantt">
-</div>
 
 
   <a href="<?php echo url_for('tarea/new') ?>">New</a>
