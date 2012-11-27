@@ -16,31 +16,22 @@
 
 
 <div id="content-mapa-list">
-<h1>Mapas </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id mapa</th>
-      <th>Nombre mapa</th>
-      <th>Desc mapa</th>
-      <th>Proyecto fk</th>
-    </tr>
-  </thead>
-  <tbody>
+<h1>Mapas </h1>
+<select id="slct-mapas">
+    <option value ="0"> -- Seleccione un mapa -</option>
     <?php foreach ($mapas as $mapa): ?>
-    <tr>
-      <td><a href="<?php echo url_for('map/show?id_mapa='.$mapa->getIdMapa()) ?>"><?php echo $mapa->getIdMapa() ?></a></td>
-      <td><?php echo $mapa->getNombreMapa() ?></td>
-      <td><?php echo $mapa->getDescMapa() ?></td>
-      <td><?php echo $mapa->getProyectoFK() ?></td>
+    <option value = "<?php $mapa->getIdMapa()?>"> <?php echo $mapa->getNombreMapa() ?></option> 
     </tr>
     <?php endforeach; ?>
-  </tbody>
-</table>
+</select>
 
 </div>  
  
-    <div class="content-map" id='mapa'></div>
+
+<div class="content-map" id='mapa'></div>
 
 <a id="btn-nuevo-mapa" class="button icon add dialogLink" href="<?php echo url_for('map/new').'?idProyecto='.$idProyecto ?>">Nuevo Mapa</a>
+
+
+<a  class= "button icon ver dialogLink" href="<?php echo url_for('map/show?id_mapa=data') ?>">Ver Detalles</a>

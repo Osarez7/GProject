@@ -1,8 +1,15 @@
 
 
-#content-mapa-list, #mapa{
+ #mapa{
 
   float: left;
+}
+
+
+#content-mapa-list{
+    
+    clear:both;
+    display: block;
 }
 
 .content-map + a {
