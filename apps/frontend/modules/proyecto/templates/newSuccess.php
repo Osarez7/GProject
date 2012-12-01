@@ -1,3 +1,3 @@
-<h1>New Proyecto</h1>
+<h1>Nuevo Proyecto</h1>
 
 <?php include_partial('form', array('form' => $form)) ?>

@@ -10,23 +10,26 @@
  * @property string $resumen
  * @property timestamp $fechaInicio
  * @property timestamp $fechaFinal
+ * @property decimal $horasRequeridas
  * @property integer $tareaFK
  * @property Tarea $Tarea
  * 
- * @method integer   getIdAvance()     Returns the current record's "idAvance" value
- * @method string    getTituloAvance() Returns the current record's "tituloAvance" value
- * @method string    getResumen()      Returns the current record's "resumen" value
- * @method timestamp getFechaInicio()  Returns the current record's "fechaInicio" value
- * @method timestamp getFechaFinal()   Returns the current record's "fechaFinal" value
- * @method integer   getTareaFK()      Returns the current record's "tareaFK" value
- * @method Tarea     getTarea()        Returns the current record's "Tarea" value
- * @method Avance    setIdAvance()     Sets the current record's "idAvance" value
- * @method Avance    setTituloAvance() Sets the current record's "tituloAvance" value
- * @method Avance    setResumen()      Sets the current record's "resumen" value
- * @method Avance    setFechaInicio()  Sets the current record's "fechaInicio" value
- * @method Avance    setFechaFinal()   Sets the current record's "fechaFinal" value
- * @method Avance    setTareaFK()      Sets the current record's "tareaFK" value
- * @method Avance    setTarea()        Sets the current record's "Tarea" value
+ * @method integer   getIdAvance()        Returns the current record's "idAvance" value
+ * @method string    getTituloAvance()    Returns the current record's "tituloAvance" value
+ * @method string    getResumen()         Returns the current record's "resumen" value
+ * @method timestamp getFechaInicio()     Returns the current record's "fechaInicio" value
+ * @method timestamp getFechaFinal()      Returns the current record's "fechaFinal" value
+ * @method decimal   getHorasRequeridas() Returns the current record's "horasRequeridas" value
+ * @method integer   getTareaFK()         Returns the current record's "tareaFK" value
+ * @method Tarea     getTarea()           Returns the current record's "Tarea" value
+ * @method Avance    setIdAvance()        Sets the current record's "idAvance" value
+ * @method Avance    setTituloAvance()    Sets the current record's "tituloAvance" value
+ * @method Avance    setResumen()         Sets the current record's "resumen" value
+ * @method Avance    setFechaInicio()     Sets the current record's "fechaInicio" value
+ * @method Avance    setFechaFinal()      Sets the current record's "fechaFinal" value
+ * @method Avance    setHorasRequeridas() Sets the current record's "horasRequeridas" value
+ * @method Avance    setTareaFK()         Sets the current record's "tareaFK" value
+ * @method Avance    setTarea()           Sets the current record's "Tarea" value
  * 
  * @package    gproject
  * @subpackage model
@@ -60,6 +63,10 @@ abstract class BaseAvance extends sfDoctrineRecord
         $this->hasColumn('fechaFinal', 'timestamp', null, array(
              'type' => 'timestamp',
              'notnull' => false,
+             ));
+        $this->hasColumn('horasRequeridas', 'decimal', null, array(
+             'type' => 'decimal',
+             'notnull' => true,
              ));
         $this->hasColumn('tareaFK', 'integer', null, array(
              'type' => 'integer',

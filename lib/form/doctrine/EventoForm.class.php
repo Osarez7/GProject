@@ -14,11 +14,10 @@ class EventoForm extends BaseEventoForm
   {
 
  $this->widgetSchema->setLabels(array(
-        'fechaInicio' => 'Fecha de Inicio',
-        'fechaFinal' => 'Fecha Final',
-        'diaCompleto' => 'Día Completo',
-        'descEvento' => 'Descripción',
-        'nombreEvento' => 'Nombre'      
+      'tituloAvance'      => 'Título',
+      'resumen'           => 'Resumen',
+      'fechaInicio'       => 'Fecha de Inicio',
+      'fechaFinal'        => 'Fecha de Finalización',
     ));
 
 
@@ -27,8 +26,10 @@ unset(
       $this['fecha_actualizacion'], $this['fecha_creacion']
     );
     
-   $this->widgetSchema['proyectoFK'] =   new sfWidgetFormInputText();
+  // $this->widgetSchema['proyectoFK'] =   new sfWidgetFormInputText();
      
+  $this->widgetSchema['proyectoFK'] = new sfWidgetFormInputHidden();
+
       $this->widgetSchema['fechaInicio'] = new sfWidgetFormDatePickerTime(array(
     'date' => array(
       'jq_picker_options' => array(

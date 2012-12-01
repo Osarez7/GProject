@@ -10,6 +10,7 @@
     
     clear:both;
     display: block;
+    margin-bottom: 4px;
 }
 
 .content-map + a {
@@ -21,7 +22,28 @@
   clear:bouth;
 }
 
-#mapa{
+.content-map{
+    
+    float: left;
+}
+
+#mapa, #mapa-index, .content-map{
  width:593px;
  height: 500px;
+}
+
+#lista-lugares{
+    float: left;
+}
+
+#content-mapas-info{
+    
+     border: 1px solid #0099FF;
+    height: 502px;
+    width: 950px;
+}
+
+.olPopupCloseBox{
+    
+    background: url("/images/fugue-icons-3.5/icons/cross-script.png") !important;
 }

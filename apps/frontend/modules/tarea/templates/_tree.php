@@ -21,10 +21,6 @@
                      <span class="file "> <?php echo  $node['nombreTarea'] ?></span> 
                    
                  <?php endif; ?>
-
-
-
-
                
            </li>
           <?php endforeach; ?>   

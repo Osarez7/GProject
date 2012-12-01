@@ -39,15 +39,15 @@
 
         <div id="proyectos-home">
        
-            <h1>Tareas Pendientes</h1>
+            <h1>Proyectos Pendientes</h1>
             <table class="listado">
-
+           <thead>
                 <tr>
-                    <th>Nombre</th>
+                    <th class="celda-inicial">Nombre</th>
                     <th>Prioridad</th>
-                    <th>Fecha L&imite</th>
+                    <th class="celda-final">Fecha L&iacute;mite</th>
                 </tr>
-
+                         <thead>     
                 <?php foreach ($proyectos as $i => $proyecto): ?>
 
                     <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">

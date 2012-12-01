@@ -42,14 +42,8 @@
 
 
 
-                        <?php
-                        echo link_to('Eventos', 'evento/index', array('class' => 'button icon calendar'))
-                        ?>
-
                         <?php if ($sf_user->hasCredential('gerente')): ?>
-                            <?php
-                            echo link_to('Usuarios', 'reporte/index', array('class' => 'button icon user'))
-                            ?>
+                            <?php // echo link_to('Reportes', 'reporte/index', array('class' => 'button'))?>
                         <?php endif; ?>
 
                         <?php if ($sf_user->hasCredential('admin')): ?>

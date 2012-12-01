@@ -1,0 +1,18 @@
+## YAML Template.
+---
+Mapa:
+  mapa1:
+    idMapa: 1
+    nombreMapa: Sedes U.Distrital
+    descMapa: Mapa de todas las sedes de la u distrital
+    proyectoFK: 1
+  mapa2:
+    idMapa: 2
+    nombreMapa: Bibliotecas distritales
+    descMapa: Maa de las blibiotecas distritales
+    proyectoFK: 1
+  mapa3:
+    idMapa: 3
+    nombreMapa: Portales Transmilenio
+    descMapa: Mapa portales transmilenio
+    proyectoFK: 1  

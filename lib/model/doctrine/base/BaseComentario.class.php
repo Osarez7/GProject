@@ -40,9 +40,9 @@ abstract class BaseComentario extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('contenidoComentario', 'string', 150, array(
+        $this->hasColumn('contenidoComentario', 'string', 200, array(
              'type' => 'string',
-             'length' => 150,
+             'length' => 200,
              ));
         $this->hasColumn('usuarioFK', 'integer', null, array(
              'type' => 'integer',
@@ -77,6 +77,11 @@ abstract class BaseComentario extends sfDoctrineRecord
              array(
               'name' => 'fecha_actualizacion',
               'type' => 'timestamp',
+             ),
+             'NestedSet' => 
+             array(
+              'hasManyRoots' => true,
+              'rootColumnName' => 'root_id',
              ),
              ));
         $this->actAs($timestampable0);

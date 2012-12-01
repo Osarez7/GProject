@@ -40,7 +40,7 @@
 
                    
                             <a  href="<?php echo url_for('proyecto/show?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button show  icon custom-button">Ver Detalles</a>
-                <a  href="<?php echo url_for('proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button editar icon custom-button">Editar</a>
+                <a  href="<?php echo url_for('proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button edit icon custom-button">Editar</a>
             </td>
 
 </tr>

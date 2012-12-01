@@ -36,17 +36,21 @@
 
 <?php use_stylesheet("/js/jQueryGantt/platform.css")?>
 <?php use_stylesheet("/js/jQueryGantt/libs/dateField/jquery.dateField.css")?>
-<?php use_stylesheet("/js/jQueryGantt/gantt.css")*/?>
-  
-
-
+<?php use_stylesheet("/js/jQueryGantt/gantt.css")/?>
 <?php use_stylesheet("jQuery.Gantt-master/style.css")?>
 <?php use_stylesheet("http://twitter.github.com/bootstrap/assets/css/bootstrap.css")?>
-<?php use_stylesheet("http://taitems.github.com/UX-Lab/core/css/prettify.css") ?>
-   
-<?php use_javascript("lib/jquery.fixedtable/jquery.fixedtable.js") ?>
-<?php use_javascript("pruebas/prueba.fixedtable.js") ?>
+<?php use_stylesheet("http://taitems.github.com/UX-Lab/core/css/prettify.css") */?>
+     
 
+
+
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_javascript("lib/tree.table/treeTable.js") ?>
+<?php use_stylesheet("treeTable.css") ?>
+<?php use_javascript("tarea.scripts/ganttTareas.js") ?>
+
+<?php use_helper('Date') ?>
     
   <div id="lateral" style="display:none;">
                 <?php if (has_slot("menu_lateral")): ?>
@@ -90,20 +94,44 @@
 
 
 
+
+
+<br/><br/>
+
+ <table id="table-tareas" class="gantt-table listado">
+                
+                        <thead> 
+                            <tr>
+                                <th class="celda-inicial">Tarea</th>
+                                <th>Acciones</th>
+                                <th>Fecha Inicial</th>   
+                                <th class="celda-final">Fecha Final</th> 
+                            </tr>
+                        </thead>
+
 <div class="content-info">
-    <?php include_partial('tarea/tree',array('arbolTarea' =>$proyecto->getArbolTareas(), 'proyecto' => $proyecto , 'parent' => '0')); ?>
+    <?php include_partial('tarea/tableGantt',array('arbolTarea' =>$proyecto->getArbolTareas(), 'proyecto' => $proyecto , 'parent' => '0')); ?>
 </div>
 
+ </table>
+
+
+<br/>
+
+<p>Convensiones<p>
+
+<table class="convensiones-table">
+    <tr>
+        <td><img src="/images/raster/green/eye_12x9.png" alt="Ver detalles " /> Ver detalles</td>
+        <td><img src="/images/raster/orange/pen_12x12.png" alt="Editar" /> Editar</td>
+        <td><img src="/images/raster/blue/target_12x12.png" alt="Asignar" /> Asignar </td>
+        <td><img src="/images/raster/magenta/fork_11x12.png" alt="Nueva Sub Tarea" /> Nueva Sub Tarea</td>
+    </tr>
+</table>
 
 
 
-  <a href="<?php echo url_for('tarea/new') ?>">New</a>
-
-
- <a  class="button" href="<?php echo url_for('tarea/gantt') ?>?idProyecto=<?php echo $proyecto->getIdProyecto(); ?>">Gantt</a>
-
-
-  
+  <a  class="button icon add dialogLink" href="<?php echo url_for('tarea/new') ?>">Nueva Tarea</a>
 
 
 <?php    slot('menu_lateral') ?>

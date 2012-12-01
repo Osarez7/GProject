@@ -75,8 +75,8 @@ ul.menu li{
 */
 
 body{
-  
-  
+
+
     border-radius: 5px 5px;
     background: url("/images/patrones-fondo/cardboard_flat.png") repeat; 
     font-family: Arial,Helvetica,sans-serif;
@@ -149,7 +149,7 @@ a:link {
 
 
 #contenedor {
- /*    border: medium solid #E3E4E3;*/
+    /*    border: medium solid #E3E4E3;*/
     margin: 0 auto;
     width: 83%;
 
@@ -187,12 +187,12 @@ div#menu-lateral{
     min-height:390px;
     height: auto !important;
     height: 390px;
-   }
+}
 
 #header{
     color: #FFF;
     background-color: #0E5187;
-  /*  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#2E373F));  */
+    /*  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#2E373F));  */
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
     background-image: -moz-linear-gradient(#0E5187, #003B68);
     background-image: -o-linear-gradient (#0E5187, #003B68);
@@ -205,7 +205,7 @@ div#menu-lateral{
     clear: both;
     height: 50px;
     background-color: #3c8dde;
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
     background-image: -moz-linear-gradient(#0E5187, #003B68);
     background-image: -o-linear-gradient (#0E5187, #003B68);
     background-image: linear-gradient(#0E5187, #003B68);
@@ -214,7 +214,7 @@ div#menu-lateral{
 }
 
 .nombre-bienvenida{
-  font-weight: bold;
+    font-weight: bold;
 }
 
 div.flash_ok{
@@ -235,14 +235,14 @@ table.tbl-show th{
 }
 
 table.info{
- border-collapse: collapse;   
+    border-collapse: collapse;   
 }
 
 
 table.info td , table.info th{
     text-align: center;
-    
-    
+
+
 
 }
 
@@ -327,9 +327,9 @@ table.listado{
 }
 
 table.listado th,table.listado td{
- 
-    
- 
+
+
+
     border-bottom: 1px solid #6F767E;
     font-size: 1.2em;
     padding: 3px 7px 2px;
@@ -338,8 +338,8 @@ table.listado th,table.listado td{
 
 
 table.listado thead th{
-  background-color: #3c8dde;
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
+    background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0E5187), to(#2E373F));
     background-image: -moz-linear-gradient(#0E5187, #003B68);
     background-image: -o-linear-gradient (#0E5187, #003B68);
     background-image: linear-gradient(#0E5187, #003B68);
@@ -349,12 +349,12 @@ table.listado thead th{
 }
 
 table.listado thead .celda-inicial{ 
-  border-radius:14px  0px 0px 0px;
+    border-radius:14px  0px 0px 0px;
 
 }
 
 table.listado thead .celda-final{ 
-  border-radius:0px  14px 0px 0px;
+    border-radius:0px  14px 0px 0px;
 
 }
 
@@ -363,36 +363,36 @@ table.listado thead .celda-final{
 
 
 .odd{
-  background:  #D4E8F7; 
+    background:  #D4E8F7; 
 }
 
 
 div.ui-dialog{
-  padding: 0;
-  z-index: 2005 !important;
+    padding: 0;
+    z-index: 2005 !important;
 }
 
 div.ui-widget-overlay{
- z-index: 2000 !important;
+    z-index: 2000 !important;
 }
 
 .ui-helper-clearfix:after{
- height:0;
- padding: 0;
+    height:0;
+    padding: 0;
 }
 
 
 /* Tree tareas*/
 
 .treeview ul{
-  background-color: transparent;
+    background-color: transparent;
 }
 
 
 .menu-acciones-tarea {
     display: block;
-   /* position: absolute;
-    z-index: 36;*/
+    /* position: absolute;
+     z-index: 36;*/
     background: blue;
 }
 .menu-acciones-tarea a {
@@ -402,59 +402,59 @@ div.ui-widget-overlay{
 
 
 .panel-gantt{
-  height: 252px;
+    height: 252px;
     overflow: auto
 }
 .content-gantt-left , .content-gantt-right{
-  float: left;
+    float: left;
 }
 
 
 .content-gantt-left {
-  width: 290px;
-  border-right: solid 1px;
-  overflow: auto;
+    width: 290px;
+    border-right: solid 1px;
+    overflow: auto;
 } 
 
 .content-gantt-right{
-  width: 300px;
-  overflow: auto;
+    width: 300px;
+    overflow: auto;
 }
 
 
 #content-asignar-usuario{
- min-width: 478px;
+    min-width: 478px;
 }
 
 
 table.treeTable.fixed{ table-layout:fixed;
-  width:600px;
+                       width:600px;
 
- }
+}
 table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-word; }
 
 
 
 .grupo-uno{
-background: #A1D0ED; 
-color: white; 
-text-align: left !important;
+    background: #A1D0ED; 
+    color: white; 
+    text-align: left !important;
 
 }
 
 .gantt-table tr, .gantt-table td{
- 
- height: 33px;
+
+    height: 33px;
 }
 
 #evento-form-content{
-  width: 428px;
+    width: 430px;
 }
 
 
 
 .aimLink{
- display: none;
+    display: none;
 }
 
 
@@ -462,66 +462,66 @@ text-align: left !important;
 
 
 #main {
-  width: 510px;
-  margin: 0 auto;
+    width: 510px;
+    margin: 0 auto;
 }
 
 #content-slider {
-  width: 490px;
-  height: 6px;
-  margin: 5px;
-  background: #BBBBBB;
-  position: relative;
+    width: 490px;
+    height: 6px;
+    margin: 5px;
+    background: #BBBBBB;
+    position: relative;
 }
 
 .ui-slider-handle {
-  width: 8px;
-  height: 14px;
-  position: absolute;
-  top: -4px;
-  background: #478AFF;
-  border: solid 1px black;
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: -4px;
+    background: #478AFF;
+    border: solid 1px black;
 }
 
 #content-scroll {
-  width: 500px;
-  height: 300px;
-  margin-top: 10px;
-  overflow: hidden;
-  border: solid 1px black;
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+    overflow: hidden;
+    border: solid 1px black;
 }
 
 #content-holder {
-  width: 1500px;
-  height: 270px;
+    width: 1500px;
+    height: 270px;
 }
 
 .content-item {
-  width: 290px;
-  height: 270px;
-  padding: 5px;
-  float: left;
+    width: 290px;
+    height: 270px;
+    padding: 5px;
+    float: left;
 }
 
 
 #form-cotent{
- width: 400px;
+    width: 400px;
 }
 
 
 #body-left, #body-right{
-overflow: hidden;
+    overflow: hidden;
 }
 
 
 .fixedColumn{
- float: left;
+    float: left;
     height: 555px;
     width: 150px;
 }
 
 .fixedTable{
- border-collapse: separate;
+    border-collapse: separate;
     height: 477px;
     overflow: hidden;
     padding: 0;
@@ -530,22 +530,190 @@ overflow: hidden;
 
 .fixedContainer{
 
- float: left;
+    float: left;
     width: 609px;
 }
 
 #form-mapa-content{
 
-  width: 500px;
+    width: 500px;
 }
 
 
 .ui-dialog  form table th, 
 .ui-dialog  form table td{
-  padding: 5px;
-  vertical-align: top;
+    padding: 5px;
+    vertical-align: top;
 }
 
 .acciones-form{
-  margin: 2px auto; 
+    margin: 2px auto; 
+}
+
+#dialog-warning{
+    display:none;
+}
+
+
+#lista-lugares {
+    border: 1px solid;
+    float: left;
+    height: 294px;
+    overflow: auto;
+    width: 354px;
+}
+
+#info-mapa{
+    border: 1px solid;
+    float: left;
+    height: 294px;
+    overflow: auto;
+    width: 354px;
+}
+
+
+/*  Mapa Open layers */
+
+.olControlNavigationItemActive { 
+    background: #226699 url('http://dev.openlayers.org/releases/OpenLayers-2.9.1/theme/default/img/pan_on.png'); 
+    width:  22px;  
+    height: 22px; 
+} 
+.olControlNavigationItemInactive { 
+    background: #996622 url('http://dev.openlayers.org/releases/OpenLayers-2.9.1/theme/default/img/pan_off.png'); 
+    width:  22px;  
+    height: 22px; 
+} 
+
+/*Zoom Box Control*/ 
+.olControlZoomBoxItemInactive { 
+    width:  22px;  
+    height: 22px; 
+    background:#999933 url('http://dev.openlayers.org/releases/OpenLayers-2.9.1/img/drag-rectangle-off.png'); 
+} 
+.olControlZoomBoxItemActive { 
+    width:  22px;  
+    height: 22px; 
+    background:#999966 url('http://dev.openlayers.org/releases/OpenLayers-2.9.1/img/drag-rectangle-on.png'); 
+} 
+
+/*Zoom to Max Extent Control*/ 
+.olControlZoomToMaxExtentItemInactive { 
+    width:  18px;  
+    height: 18px; 
+    background:#333399 url('http://dev.openlayers.org/releases/OpenLayers-2.9.1/img/zoom-world-mini.png'); 
+} 
+
+/*Custom Toggle Button*/ 
+
+
+
+.olControlToggleDrawItemActive{
+    background: url('/images/fugue-icons-3.5/icons/plus.png') no-repeat #22dd22;
+    border:5px solid #202020; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;  
+    float: left;
+} 
+
+
+.olControlToggleDrawItemInactive{ 
+    background:  url('/images/fugue-icons-3.5/icons/plus.png') no-repeat #C3D1D3 ;
+    border:5px solid #202020; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;  
+    float: left;
+} 
+
+/*Custom Toggle Button*/ 
+.olControlToggleDragItemInactive{ 
+    background: url('/images/fugue-icons-3.5/icons/pin--pencil.png')   no-repeat #C3D1D3;
+    border:5px solid #202040; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+.olControlToggleDragItemActive { 
+    background: url('/images/fugue-icons-3.5/icons/pin--pencil.png') no-repeat  #003366;
+    border:5px solid #202020; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+
+
+/*Custom Toggle Button*/ 
+.olControlDestroyItemInactive { 
+    background:url('/images/fugue-icons-3.5/icons/pin--minus.png') no-repeat  #C3D1D3;
+    border:5px solid #FF0000; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+.olControlDestroyItemActive { 
+    background: url('/images/fugue-icons-3.5/icons/hand-point-090.png') no-repeat #003366;
+    border:5px solid #FF0022; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+
+
+
+/*Custom Toggle Button*/ 
+.olControlPointerItemActive{ 
+    background:url('/images/fugue-icons-3.5/icons/hand-point-090.png') no-repeat  #003366;
+    border:5px solid #FF0000; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+.olControlPointerItemInactive { 
+    background:url('/images/fugue-icons-3.5/icons/hand-point-090.png') no-repeat  #C3D1D3;
+    border:5px solid #202020; 
+    cursor: pointer;
+    height: 28px; 
+    width:  28px;
+    float: left;
+} 
+
+
+#panel_div{
+    height: 28px;
+    left: 583px;
+    position: absolute;
+    width: 200px;
+    z-index: 1003;
+}
+
+#panel_div input{
+    
+    float: left;
+}
+
+
+td.primera-celda-arbol{
+
+    text-align: left !important;
+    padding-left: 18px !important;
+}
+
+.convensiones-table td{
+
+    border-right: 1px solid;
+    padding-left: 6px;
+    padding-right: 9px; 
+}
+
+.table-form th{
+    
+   text-align: left;
+   padding-left: 3px;
 }

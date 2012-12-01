@@ -25,7 +25,7 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idComentario'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idComentario')), 'empty_value' => $this->getObject()->get('idComentario'), 'required' => false)),
-      'contenidoComentario' => new sfValidatorString(array('max_length' => 150, 'required' => false)),
+      'contenidoComentario' => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'usuarioFK'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'))),
       'temaFK'              => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tema'))),
       'fecha_creacion'      => new sfValidatorDateTime(),

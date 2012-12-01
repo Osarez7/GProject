@@ -10,11 +10,10 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('avance/index') ?>">Back to list</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'avance/delete?id_avance='.$form->getObject()->getIdAvance(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to('Delete', 'avance/delete?id_avance='.$form->getObject()->getIdAvance(), array('method' => 'delete', 'class' => 'button icon trash  danger action-confirm')) ?>
           <?php endif; ?>
-          <input type="submit" value="Save" />
+          <input type="submit" value="Guardar" class="button icon add dialogSubmit" />
         </td>
       </tr>
     </tfoot>

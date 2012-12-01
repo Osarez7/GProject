@@ -1,9 +1,5 @@
-<table>
+<table class="table-form">
   <tbody>
-    <tr>
-      <th>Id tarea:</th>
-      <td><?php echo $tarea->getIdTarea() ?></td>
-    </tr>
     <tr>
       <th>Nombre tarea:</th>
       <td><?php echo $tarea->getNombreTarea() ?></td>
@@ -17,7 +13,7 @@
       <td><?php echo $tarea->getFechaFinal() ?></td>
     </tr>
     <tr>
-      <th>Status</th>
+      <th>Estado</th>
       <td><?php echo $tarea->getStatus() ?></td>
     </tr>
     <tr>

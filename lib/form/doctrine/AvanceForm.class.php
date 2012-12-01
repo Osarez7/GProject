@@ -29,5 +29,14 @@ class AvanceForm extends BaseAvanceForm
 		'include_time'=> true));
 		; 
         
+                
+                
+        $this->widgetSchema->setLabels(array(
+        'fechaInicio' => 'Fecha de Inicio',
+        'fechaFinal' => 'Fecha Final',
+        'diaCompleto' => 'Día Completo',
+        'descEvento' => 'Descripción',
+        'nombreEvento' => 'Nombre'      
+    ));         
   }
 }

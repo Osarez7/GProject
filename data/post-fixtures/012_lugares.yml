@@ -1,0 +1,24 @@
+## YAML Template.
+---
+Lugar:
+  lugar1:
+    idLugar: 1
+    tituloLugar: Sede Tecnologica
+    infoLugar: Sede de candelaria facultad tecnologica
+    latitud: 20 
+    longitud: 50
+    mapaFK: 1
+  lugar2:
+    idLugar: 2
+    tituloLugar: Sede Ingenieria
+    infoLugar: Sede de la 40 facultad de ingenieria
+    latitud:  40 
+    longitud: 150
+    mapaFK: 1
+  lugar3:
+    idLugar: 3
+    tituloLugar: Sede Ingenieria
+    infoLugar: Sede de la 40 facultad de ingenieria
+    latitud:  30 
+    longitud: 40
+    mapaFK: 1   

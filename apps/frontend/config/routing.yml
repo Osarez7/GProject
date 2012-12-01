@@ -15,6 +15,13 @@ login:
   param: { module: login, action: index }
  
 
+index_lugar:
+  url: /lugares/:idMapa/index.:sf_format
+  param: {module: lugar , action: index , sf_format: html}
+  requirements:
+   sf_format: (?:html|json)
+
+
 index_mapa:
   url: /mapas/:idProyecto/index.:sf_format
   param: {module: map , action: index , sf_format: html}
@@ -85,7 +92,7 @@ asignar:
     
     
 update_asignar:
-   url: /update/asignar
+   url: /update/asignar/:idTarea
    param: {module: tarea, action: updateAsignar}
    
 

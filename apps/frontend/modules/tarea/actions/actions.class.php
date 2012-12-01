@@ -138,7 +138,7 @@ class tareaActions extends sfActions {
             $this->logMessage('Tarea es ' . $request->getParameter('idTarea'), 'notice');
 
 
-            $this->forward404Unless($this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('idTarea')));
+            $this->forward404Unless($this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('La tarea no existe (%s).', $request->getParameter('idTarea')));
 
             $this->form = new LinkTareaUsuario($this->tarea);
 
@@ -155,6 +155,11 @@ class tareaActions extends sfActions {
 
             $this->tarea = $this->processForm($request, $this->form);
             $this->getUser()->setFlash('OK', 'Asignación correcta');
+           
+            if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('tarea/asignarUsuario', array('form' => $this->form, 'tarea' => $this->tarea));
+            }
+            
             $this->setTemplate('asignarUsuario');
         }
 

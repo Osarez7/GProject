@@ -12576,3 +12576,892 @@ Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Configuration 30.03 ms (9)
 Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Factories 92.77 ms (1)
 Nov 26 19:44:43 symfony [info] {sfWebDebugLogger} Action "login/logout" 41.40 ms (1)
 Nov 26 19:44:43 symfony [info] {sfWebResponse} Send content (100 o)
+Dec 01 11:01:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'homeBackEnd',  'action' => 'index',)
+Dec 01 11:01:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:01:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:01:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:01:18 symfony [info] {homeBackEndActions} Call "homeBackEndActions->executeIndex()"
+Dec 01 11:01:18 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/modules/homeBackEnd/templates/indexSuccess.php"
+Dec 01 11:01:18 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:18 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:01:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:01:18 symfony [info] {sfWebDebugLogger} Configuration 452.51 ms (9)
+Dec 01 11:01:18 symfony [info] {sfWebDebugLogger} Factories 389.82 ms (1)
+Dec 01 11:01:18 symfony [info] {sfWebDebugLogger} Action "homeBackEnd/index" 0.23 ms (1)
+Dec 01 11:01:18 symfony [info] {sfWebDebugLogger} View "Success" for "homeBackEnd/index" 28.41 ms (1)
+Dec 01 11:01:18 symfony [info] {sfWebResponse} Send content (28859 o)
+Dec 01 11:01:20 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:01:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:01:21 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:01:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:01:21 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:01:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:01:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM usuario u - ()
+Dec 01 11:01:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:01:21 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:21 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u LIMIT 20 - ()
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:01:21 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:01:21 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:21 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:01:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Configuration 118.48 ms (12)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Factories 92.78 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Action "usuario/index" 57.94 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 228.66 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 2.29 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.49 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.05 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.44 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.58 ms (8)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 126.93 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 4.07 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 17.29 ms (13)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 29.25 ms (13)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 46.20 ms (13)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.30 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.57 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.14 ms (1)
+Dec 01 11:01:21 symfony [info] {sfWebResponse} Send content (153905 o)
+Dec 01 11:01:28 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:01:28 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM perfil p WHERE p.idperfil = ? - (2)
+Dec 01 11:01:28 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Configuration 3.16 ms (10)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Factories 133.29 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 100.12 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:01:28 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:01:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:01:28 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.perfilfk = ? - (2)
+Dec 01 11:01:28 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:01:28 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:01:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.perfilfk = ?) LIMIT 20 - (2)
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:01:28 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:01:28 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:28 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Configuration 3.78 ms (11)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Factories 92.61 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Action "usuario/index" 78.01 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (4)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 147.42 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.48 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.49 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.31 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 52.64 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 35.91 ms (8)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 54.46 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 3.96 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 6.23 ms (4)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 9.93 ms (4)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 16.14 ms (4)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.19 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.86 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.11 ms (1)
+Dec 01 11:01:28 symfony [info] {sfWebResponse} Send content (112083 o)
+Dec 01 11:02:12 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/batch/action with parameters array (  'module' => 'usuario',  'action' => 'batch',  'sf_format' => 'html',)
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:12 symfony [info] {usuarioActions} Call "usuarioActions->executeBatch()"
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.idusuario IN (?) - (9)
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.idusuario IN (?)) - (9)
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM usuario WHERE idusuario = ? - (9)
+Dec 01 11:02:12 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:02:12 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:12 symfony [info] {sfWebDebugLogger} Configuration 3.14 ms (10)
+Dec 01 11:02:12 symfony [info] {sfWebDebugLogger} Factories 93.17 ms (1)
+Dec 01 11:02:12 symfony [info] {sfWebDebugLogger} Action "usuario/batch" 136.07 ms (1)
+Dec 01 11:02:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (4)
+Dec 01 11:02:12 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:02:12 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:12 symfony [info] {myUser} Flag old flash messages ("notice")
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:12 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.perfilfk = ? - (2)
+Dec 01 11:02:12 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:02:12 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:12 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:12 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:02:12 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:02:12 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:02:13 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.perfilfk = ?) LIMIT 20 - (2)
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:02:13 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:02:13 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:13 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Configuration 3.50 ms (11)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Factories 90.86 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Action "usuario/index" 77.16 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (4)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 130.19 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.24 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.25 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.04 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.14 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.20 ms (8)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 41.16 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 4.00 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 4.12 ms (3)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 7.16 ms (3)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 10.45 ms (3)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.10 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.51 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.06 ms (1)
+Dec 01 11:02:13 symfony [info] {sfWebResponse} Send content (107985 o)
+Dec 01 11:02:13 symfony [info] {myUser} Remove old flash messages ("notice")
+Dec 01 11:02:16 symfony [info] {sfPatternRouting} Match route "usuario_new" (/usuario/new.:sf_format) for /usuario/new with parameters array (  'module' => 'usuario',  'action' => 'new',  'sf_format' => 'html',)
+Dec 01 11:02:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:16 symfony [info] {usuarioActions} Call "usuarioActions->executeNew()"
+Dec 01 11:02:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/newSuccess.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_header.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_fieldset.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_field.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_actions.php"
+Dec 01 11:02:16 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_form_footer.php"
+Dec 01 11:02:16 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:16 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Configuration 3.52 ms (11)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Factories 90.83 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Action "usuario/new" 36.51 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/new" 98.58 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.21 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.12 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form_header" 1.15 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form" 66.10 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form_fieldset" 55.37 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form_field" 48.03 ms (6)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form_actions" 2.23 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebDebugLogger} Partial "usuario/_form_footer" 1.55 ms (1)
+Dec 01 11:02:16 symfony [info] {sfWebResponse} Send content (78594 o)
+Dec 01 11:02:19 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:19 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.perfilfk = ? - (2)
+Dec 01 11:02:20 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:02:20 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:02:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.perfilfk = ?) LIMIT 20 - (2)
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:02:20 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:02:20 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:20 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Configuration 3.88 ms (11)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Factories 89.79 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Action "usuario/index" 85.58 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 130.94 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.12 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.17 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 0.99 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.22 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.29 ms (8)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 39.98 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 3.99 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 4.03 ms (3)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 6.67 ms (3)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 10.50 ms (3)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.13 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.55 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.35 ms (1)
+Dec 01 11:02:20 symfony [info] {sfWebResponse} Send content (107316 o)
+Dec 01 11:02:37 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:02:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:37 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:02:37 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:02:37 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:37 symfony [info] {sfWebDebugLogger} Configuration 3.23 ms (10)
+Dec 01 11:02:37 symfony [info] {sfWebDebugLogger} Factories 90.98 ms (1)
+Dec 01 11:02:37 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 42.00 ms (1)
+Dec 01 11:02:37 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:02:38 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:38 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.usr_nombre LIKE ? - (%ej%)
+Dec 01 11:02:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:02:38 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:38 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Configuration 3.49 ms (11)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Factories 89.83 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Action "usuario/index" 78.84 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 89.10 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.19 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.15 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.00 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.54 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.51 ms (8)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 1.50 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.14 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.49 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.04 ms (1)
+Dec 01 11:02:38 symfony [info] {sfWebResponse} Send content (86131 o)
+Dec 01 11:02:47 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:47 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:02:47 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Configuration 3.13 ms (10)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Factories 91.13 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 40.08 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:02:47 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:47 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.usr_nombre LIKE ? - (%ejecut%)
+Dec 01 11:02:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:02:47 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:02:47 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:47 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Configuration 3.54 ms (11)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Factories 90.59 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Action "usuario/index" 77.42 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 89.53 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.14 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.25 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.02 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.90 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.83 ms (8)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 1.50 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.12 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.52 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.17 ms (1)
+Dec 01 11:02:47 symfony [info] {sfWebResponse} Send content (86151 o)
+Dec 01 11:02:55 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:55 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:02:55 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Configuration 3.20 ms (10)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Factories 91.48 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 40.80 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:02:55 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:55 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.usr_nombre LIKE ? - (%ejecutor%)
+Dec 01 11:02:55 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:02:55 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:02:55 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:55 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Configuration 3.64 ms (11)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Factories 90.44 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Action "usuario/index" 75.74 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 87.56 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.18 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.14 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 0.98 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.08 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.27 ms (8)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 1.50 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.20 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.45 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.10 ms (1)
+Dec 01 11:02:55 symfony [info] {sfWebResponse} Send content (86161 o)
+Dec 01 11:02:59 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:59 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:02:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM perfil p WHERE p.idperfil = ? - (2)
+Dec 01 11:02:59 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:02:59 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:02:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:02:59 symfony [info] {sfWebDebugLogger} Configuration 3.26 ms (10)
+Dec 01 11:02:59 symfony [info] {sfWebDebugLogger} Factories 90.41 ms (1)
+Dec 01 11:02:59 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 76.59 ms (1)
+Dec 01 11:02:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Dec 01 11:02:59 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:02:59 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:02:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:02:59 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:02:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:02:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.perfilfk = ? AND u.usr_nombre LIKE ? - (2, %ejecutor%)
+Dec 01 11:03:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:03:00 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:03:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:00 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:03:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Configuration 3.50 ms (11)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Factories 90.01 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Action "usuario/index" 77.17 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (3)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 87.54 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.16 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.13 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 0.96 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.28 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.80 ms (8)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 1.46 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.05 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.47 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.02 ms (1)
+Dec 01 11:03:00 symfony [info] {sfWebResponse} Send content (86222 o)
+Dec 01 11:03:04 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:04 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:03:04 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Configuration 3.31 ms (10)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Factories 92.70 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 39.31 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:03:04 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:04 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:03:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:03:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM usuario u - ()
+Dec 01 11:03:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:03:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u LIMIT 20 - ()
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:03:04 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:03:04 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:04 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:03:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Configuration 3.47 ms (11)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Factories 89.66 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Action "usuario/index" 65.60 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (4)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 204.39 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.20 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.12 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.18 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 48.33 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 32.74 ms (8)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 118.86 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 4.13 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 16.51 ms (12)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 27.53 ms (12)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 42.24 ms (12)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.16 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.53 ms (1)
+Dec 01 11:03:04 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.05 ms (1)
+Dec 01 11:03:05 symfony [info] {sfWebResponse} Send content (149795 o)
+Dec 01 11:03:21 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:03:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:21 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:21 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:03:21 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:03:21 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:21 symfony [info] {sfWebDebugLogger} Configuration 3.21 ms (10)
+Dec 01 11:03:21 symfony [info] {sfWebDebugLogger} Factories 91.38 ms (1)
+Dec 01 11:03:21 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 41.84 ms (1)
+Dec 01 11:03:21 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:03:22 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:03:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:22 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:03:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:03:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.usr_nick LIKE ? - (%ejec%)
+Dec 01 11:03:22 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:03:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.usr_nick LIKE ?) LIMIT 20 - (%ejec%)
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:03:22 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:03:22 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:22 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:03:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Configuration 3.50 ms (11)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Factories 90.70 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Action "usuario/index" 79.72 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (4)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 129.60 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.14 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.17 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.32 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.51 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 32.97 ms (8)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 41.49 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 5.26 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 3.80 ms (3)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 6.75 ms (3)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 10.38 ms (3)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.17 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.47 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.15 ms (1)
+Dec 01 11:03:22 symfony [info] {sfWebResponse} Send content (107470 o)
+Dec 01 11:03:32 symfony [info] {sfPatternRouting} Match route "usuario_collection" (/usuario/:action/action.:sf_format) for /usuario/filter/action with parameters array (  'module' => 'usuario',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:32 symfony [info] {usuarioActions} Call "usuarioActions->executeFilter()"
+Dec 01 11:03:32 symfony [info] {sfFrontWebController} Redirect to "http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send header "Location: http://gproject.localhost/backend_dev.php/usuario"
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Configuration 3.20 ms (10)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Factories 93.98 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Action "usuario/filter" 42.11 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send content (120 o)
+Dec 01 11:03:32 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:03:32 symfony [info] {usuarioActions} Call "usuarioActions->executeIndex()"
+Dec 01 11:03:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 01 11:03:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM usuario u WHERE u.usr_nick LIKE ? - (%1%)
+Dec 01 11:03:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/indexSuccess.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_assets.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_flashes.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_header.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.idperfil AS p__idperfil, p.perfilnombre AS p__perfilnombre FROM perfil p - ()
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_filters_field.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_th_tabular.php"
+Dec 01 11:03:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 01 11:03:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.idusuario AS u__idusuario, u.perfilfk AS u__perfilfk, u.usr_nombre AS u__usr_nombre, u.usr_apellido1 AS u__usr_apellido1, u.usr_apellido2 AS u__usr_apellido2, u.email AS u__email, u.usr_nick AS u__usr_nick, u.password AS u__password, u.fecha_creacion AS u__fecha_creacion, u.fecha_actualizacion AS u__fecha_actualizacion FROM usuario u WHERE (u.usr_nick LIKE ?) LIMIT 20 - (%1%)
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_batch_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_tabular.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_td_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_batch_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_actions.php"
+Dec 01 11:03:32 symfony [info] {sfPartialView} Render "/home/sfprojects/gProject/cache/backend/dev/modules/autoUsuario/templates/_list_footer.php"
+Dec 01 11:03:32 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:32 symfony [info] {sfPHPView} Render "/home/sfprojects/gProject/apps/backend/templates/layout.php"
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Configuration 3.70 ms (11)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Factories 92.64 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Action "usuario/index" 91.83 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} View "Success" for "usuario/index" 130.07 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_assets" 1.45 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_flashes" 1.56 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_header" 1.33 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters" 49.24 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_filters_field" 33.28 ms (8)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list" 41.24 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_th_tabular" 3.96 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_batch_actions" 4.44 ms (3)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_tabular" 6.65 ms (3)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_td_actions" 10.44 ms (3)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_actions" 2.17 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.48 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.15 ms (1)
+Dec 01 11:03:32 symfony [info] {sfWebResponse} Send content (107471 o)
+Dec 01 11:04:33 symfony [info] {sfPatternRouting} Match route "logout" (/login/logout) for /login/logout with parameters array (  'module' => 'login',  'action' => 'logout',)
+Dec 01 11:04:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 01 11:04:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 01 11:04:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 01 11:04:33 symfony [info] {loginActions} Call "loginActions->executeLogout()"
+Dec 01 11:04:33 symfony [info] {myUser} User is not authenticated
+Dec 01 11:04:33 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/login/index"
+Dec 01 11:04:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 01 11:04:33 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/login/index"
+Dec 01 11:04:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 01 11:04:33 symfony [info] {sfWebDebugLogger} Configuration 26.86 ms (9)
+Dec 01 11:04:33 symfony [info] {sfWebDebugLogger} Factories 91.55 ms (1)
+Dec 01 11:04:33 symfony [info] {sfWebDebugLogger} Action "login/logout" 25.99 ms (1)
+Dec 01 11:04:33 symfony [info] {sfWebResponse} Send content (100 o)

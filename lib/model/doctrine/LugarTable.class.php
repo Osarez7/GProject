@@ -16,4 +16,16 @@ class LugarTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Lugar');
     }
+    
+    
+    public function getLugaresPorMapa($idMapa){
+        
+      $lugares = $this->createQuery('l')
+       ->where('l.mapafk = ?', $idMapa)       
+      ->execute();  
+        
+      return  $lugares ;
+    }
+    
+      
 }

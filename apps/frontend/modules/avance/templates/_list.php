@@ -1,6 +1,6 @@
-
-
 <h1>Avances </h1>
+
+<?php if($avances): ?>
 
 <table>
   <thead>
@@ -23,5 +23,12 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('nuevo_avance',array('idTarea' => $tarea->getIdTarea())) ?>">New</a>
+<?php else: ?>
+
+<p>No se han registrado avances</p>
+
+<?php endif; ?>
+
+
+  <a class="button icion add dialogLink" href="<?php echo url_for('nuevo_avance',array('idTarea' => $tarea->getIdTarea())) ?>">Nuevo Avance</a>
 

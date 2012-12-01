@@ -1,16 +1,16 @@
 <?php if ($arbolTarea['children']): ?>
-    <?php foreach ($arbolTarea['children'] as $node): ?>
+    <?php foreach ($arbolTarea['children'] as $i => $node): ?>
 
         <?php if ($node['hasChildren'] == true): ?>
             <tr 
                 id="node-<?php echo $node['idTarea'] ?>" 
                 <?php if ($parent != '0'): ?> 
-                     class="child-of-node-<?php echo $parent ?>"
+                     class="child-of-node-<?php echo $parent ?> "
                 <?php endif; ?>
               >
 
 
-                <td> <?php echo $node['nombreTarea'] ?> </td>
+                <td class="primera-celda-arbol"> <?php echo $node['nombreTarea'] ?> </td>
                 <td>
                    <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
 	        </td>
@@ -25,21 +25,21 @@
             <?php include_partial('tarea/tableGantt', array('arbolTarea' => $node, 'proyecto' => $proyecto, 'parent' => $node['idTarea'])); ?>  
 
         <?php else: ?>
-          <tr  id="node-<?php echo $node['idTarea'] ?>" 
+          <tr  id="node-<?php echo $node['idTarea'] ?> " 
                 <?php if ($parent != '0'): ?> 
                      class="child-of-node-<?php echo $parent ?>"
                 <?php endif; ?>
               >
-                <td><?php echo $node['nombreTarea'] ?></td>
+                <td class="primera-celda-arbol"><?php echo $node['nombreTarea'] ?></td>
 
                <td>
                    <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
 	        </td>
               <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'g', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaInicio'], 'u', 'es_CL') ?> 
  </td>
                         <td> 
-         <?php echo format_datetime($node['fechaFinal'], 'g', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaFinal'], 'u', 'es_CL') ?> 
  </td>
         
             </tr>

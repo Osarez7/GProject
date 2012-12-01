@@ -9,6 +9,7 @@
  * @property string $nombreTarea
  * @property timestamp $fechaInicio
  * @property timestamp $fechaFinal
+ * @property decimal $horasEstimadas
  * @property integer $statusFK
  * @property integer $prioridadFK
  * @property integer $proyectoFK
@@ -23,6 +24,7 @@
  * @method string              getNombreTarea()     Returns the current record's "nombreTarea" value
  * @method timestamp           getFechaInicio()     Returns the current record's "fechaInicio" value
  * @method timestamp           getFechaFinal()      Returns the current record's "fechaFinal" value
+ * @method decimal             getHorasEstimadas()  Returns the current record's "horasEstimadas" value
  * @method integer             getStatusFK()        Returns the current record's "statusFK" value
  * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
  * @method integer             getProyectoFK()      Returns the current record's "proyectoFK" value
@@ -36,6 +38,7 @@
  * @method Tarea               setNombreTarea()     Sets the current record's "nombreTarea" value
  * @method Tarea               setFechaInicio()     Sets the current record's "fechaInicio" value
  * @method Tarea               setFechaFinal()      Sets the current record's "fechaFinal" value
+ * @method Tarea               setHorasEstimadas()  Sets the current record's "horasEstimadas" value
  * @method Tarea               setStatusFK()        Sets the current record's "statusFK" value
  * @method Tarea               setPrioridadFK()     Sets the current record's "prioridadFK" value
  * @method Tarea               setProyectoFK()      Sets the current record's "proyectoFK" value
@@ -72,6 +75,10 @@ abstract class BaseTarea extends sfDoctrineRecord
              ));
         $this->hasColumn('fechaFinal', 'timestamp', null, array(
              'type' => 'timestamp',
+             'notnull' => true,
+             ));
+        $this->hasColumn('horasEstimadas', 'decimal', null, array(
+             'type' => 'decimal',
              'notnull' => true,
              ));
         $this->hasColumn('statusFK', 'integer', null, array(

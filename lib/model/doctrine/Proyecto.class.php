@@ -22,7 +22,7 @@ class Proyecto extends BaseProyecto {
     public function getArbolTareas(){
         
       $arbolTarea = Doctrine_Core::getTable('Tarea')
-          ->getArbolTareas($this->getIdProyecto());    
+          ->getTreeTaskAsArray($this->getIdProyecto());    
         
      return $arbolTarea;
     }

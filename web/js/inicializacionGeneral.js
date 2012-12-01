@@ -125,6 +125,30 @@ function createConfirmBox($elementConfirm) {
 }
 
 
+
+function createWarningBox(){
+  
+
+ if(jQuery("#dialog-warning").length == 0){
+     jQuery('body').append('<div id="dialog-warning" > Debe seleccionar un map <div>');
+        
+             jQuery("#dialog-warning").dialog({
+            autoOpen: false,
+            resizable: false,
+            height:140,
+            modal: true,
+            buttons: {
+         
+                "Cancelar": function() {        
+                 jQuery( this ).dialog( "close" );
+                }
+            }
+        });
+   }
+
+  return jQuery("#dialog-warning");
+}
+
 function pruebaAjax(){
 
 
