@@ -20,3 +20,5 @@
     <?php endforeach; ?>
   </tbody>
 </table>
+
+<input id="field_id_mapa" type="hidden" value="<?php echo $idMapa ?>">

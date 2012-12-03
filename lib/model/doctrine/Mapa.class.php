@@ -12,4 +12,13 @@
  */
 class Mapa extends BaseMapa
 {
+
+    
+      public function __toString() {
+
+
+        return $this->getNombreMapa();
+    }
+
+    
 }

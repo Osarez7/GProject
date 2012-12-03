@@ -14,7 +14,7 @@ class lugarActions extends sfActions
   {
     $this->lugares = Doctrine_Core::getTable('Lugar')->getLugaresPorMapa($request->getParameter('idMapa'));
   
-    
+    $idMapa =$request->getParameter('idMapa');
     
   }
 
@@ -27,6 +27,22 @@ class lugarActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new LugarForm();
+    
+      $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));   
+    $custom_logger->notice(" {controllerLugar}  longitud ". $request->getParameter('lon') );  
+     
+    
+    $this->form->setDefaults(array(
+                             'longitud' => $request->getParameter('lon'),
+                             'latitud' => $request->getParameter('lat'),
+                             'mapafk' => $request->getParameter('idMapa')
+            
+            ));
+    
+  if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('lugar/form', array('form' => $this->form,'titulo' =>'Nuevo Lugar'));
+            }
+            
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -36,14 +52,35 @@ class lugarActions extends sfActions
     $this->form = new LugarForm();
 
     $this->processForm($request, $this->form);
+    
+    if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('lugar/form', array('form' => $this->form , 'titulo' => 'Editar Lugar'));
+            }
 
     $this->setTemplate('new');
   }
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($lugar = Doctrine_Core::getTable('Lugar')->find(array($request->getParameter('id_lugar'))), sprintf('Object lugar does not exist (%s).', $request->getParameter('id_lugar')));
+    
+    $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));   
+    $custom_logger->notice(" {controllerLugar}  id_lugar ". $request->getParameter('id_lugar') );  
+      
+    $this->forward404Unless($lugar = Doctrine_Core::getTable('Lugar')->find(array($request->getParameter('id_lugar'))), sprintf('El lugar no existe  (%s).', $request->getParameter('id_lugar')));
     $this->form = new LugarForm($lugar);
+    
+    if( $request->getParameter('lon')){
+        
+        $this->form->setDefaults(array(
+                            'longitud' => $request->getParameter('lon'),
+                            'latitud' => $request->getParameter('lat'),
+         ));
+      }
+    
+      if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('lugar/form', array('form' => $this->form , 'titulo' => 'Editar Lugar'));
+            }
+    
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -53,16 +90,29 @@ class lugarActions extends sfActions
     $this->form = new LugarForm($lugar);
 
     $this->processForm($request, $this->form);
+    
+     if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('lugar/form', array('form' => $this->form , 'titulo' => 'Editar Lugar'));
+            }
 
     $this->setTemplate('edit');
   }
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+   // $request->checkCSRFProtection();
+      
+    $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));   
+    $custom_logger->notice(" {controllerLugar}  id_lugar ". $request->getParameter('id_lugar') );  
+      
 
     $this->forward404Unless($lugar = Doctrine_Core::getTable('Lugar')->find(array($request->getParameter('id_lugar'))), sprintf('Object lugar does not exist (%s).', $request->getParameter('id_lugar')));
     $lugar->delete();
+    
+    
+      if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('global/mensaje', array('mensaje' => 'Lugar eliminado correctamente'));
+            }
 
     $this->redirect('lugar/index');
   }
@@ -74,7 +124,7 @@ class lugarActions extends sfActions
     {
       $lugar = $form->save();
 
-      $this->redirect('lugar/edit?id_lugar='.$lugar->getIdLugar());
+      $this->redirect('lugar/edit?id_lugar='.$lugar->getid_lugar());
     }
   }
 }

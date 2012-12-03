@@ -13,7 +13,7 @@ class temaActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->temas = Doctrine_Core::getTable('Tema')
-      ->createQuery('a')
+      ->createQuery('b')
       ->execute();
   }
 

@@ -20,6 +20,7 @@ class proyectoActions extends sfActions {
 
     public function executeNew(sfWebRequest $request) {
         $this->form = new ProyectoForm();
+      
     }
 
     public function executeCreate(sfWebRequest $request) {

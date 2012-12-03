@@ -12,4 +12,11 @@
  */
 class Lugar extends BaseLugar
 {
+
+    
+      public function __toString() {
+
+        return $this->getTituloLugar();
+    }
+    
 }

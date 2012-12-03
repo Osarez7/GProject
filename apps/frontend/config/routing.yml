@@ -11,9 +11,12 @@ logout:
   
  
 login:
-  url: /login/index
-  param: { module: login, action: index }
- 
+ url: /login/index
+ param: { module: login, action: index }
+  
+nuevo_lugar:
+  url: /lugar/nuevo/:idMapa/:lon/:lat
+  param: { module: lugar, action: new}
 
 index_lugar:
   url: /lugares/:idMapa/index.:sf_format

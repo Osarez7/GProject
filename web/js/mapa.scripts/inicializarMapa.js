@@ -8,7 +8,38 @@ jQuery(document).ready(function(){
  
 });
 
+  var  customStrategies = [new OpenLayers.Strategy.BBOX(), 
+    new OpenLayers.Strategy.Refresh({
+        interval: 5000,
+        refresh: function() {
+        //   wms_layer.refresh({force:true})
+        }
 
+    })
+    ] 
+        
+
+
+function popUpSelect (evt){
+    
+    var feature = evt.feature;
+    var popup = new OpenLayers.Popup.FramedCloud("popup",
+        OpenLayers.LonLat.fromString(feature.geometry.toShortString()),
+        null,
+        "<div class='content-popup' >Titulo: " + feature.attributes.titulo+"<br> Descripci&oacute;n:"+feature.attributes.descripcion+"</div>",
+        null,
+        true
+        );
+    feature.popup = popup;
+    map.addPopup(popup);
+}
+
+function popUpUnSelect (evt){
+      var feature = evt.feature;
+    map.removePopup(feature.popup);
+    feature.popup.destroy();
+    feature.popup = null;
+}
 
 function renderMapaLugares(){
     //Configuracion de opelayers

@@ -4,18 +4,12 @@
 jQuery(window).load(function(){
 
 
-    jQuery('.dialog').dialog({
-        autoOpen: false,
-        show: "fade",
-        hide: "fade",
-        modal: true,
-        draggable: false
-    });
+   jQuery(".default-selected").attr("selected","selected");
 
             
     jQuery(".aimLink").live("click",function(){
         window.location.href =  jQuery(this).attr("href");
-    });
+    }); 
 
      
     jQuery('.dialogLink').live("click",function(event){
@@ -27,10 +21,10 @@ jQuery(window).load(function(){
      
        if(!$dialogLink .hasClass("action-confirm")){
 
-jQuery.ajax({
+            jQuery.ajax({
             type:"GET",
             contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
-            url: $dialogLink .attr('href'),
+            url: $dialogLink.attr('href'),
             dataType:"html",
             success:function (msg) {
       
@@ -106,7 +100,7 @@ function createConfirmBox($elementConfirm) {
             autoOpen: false,
             resizable: false,
             height:140,
-            modal: true,
+            modal: false,
             buttons: {
                 "Si": function() {
                 jQuery(this).dialog( "close" );  
