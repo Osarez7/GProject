@@ -9,6 +9,7 @@ $t = new lime_test(6);
 
  $usuarioTable = Doctrine_Core::getTable('Usuario')->getQueryUsurioByProyecto(1);
 
+
  $t->diag('Prueba getQueryUsurioByProyecto');
  $t->isa_ok('$usuarioTable', 'string', 'La respuesta  es un  string '.$usuarioTable);
 
