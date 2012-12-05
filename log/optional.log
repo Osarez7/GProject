@@ -10790,3 +10790,10 @@ Dec 02 21:43:08 symfony [notice]  {controllerLugar}  id_lugar undefined
 Dec 02 21:43:12 symfony [notice]  {controllerLugar}  longitud -74.067178570135
 Dec 02 21:43:22 symfony [notice]  {controllerLugar}  id_lugar undefinedLugar
 Dec 02 21:43:39 symfony [notice]  {controllerLugar}  id_lugar undefinedLugar
+Dec 03 21:50:24 symfony [notice]  {controllerLugar}  id_lugar 6
+Dec 03 21:50:26 symfony [notice]  {controllerLugar}  id_lugar 6
+Dec 03 21:50:29 symfony [notice]  {controllerLugar}  longitud -22.976718748543
+Dec 03 21:50:40 symfony [notice]  {controllerLugar}  id_lugar undefined
+Dec 03 21:50:42 symfony [notice]  {controllerLugar}  id_lugar 3
+Dec 03 21:52:15 symfony [notice]  {controllerLugar}  id_lugar undefined
+Dec 03 21:52:17 symfony [notice]  {controllerLugar}  id_lugar 6
