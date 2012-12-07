@@ -17,14 +17,32 @@ class ProyectoForm extends BaseProyectoForm
     );
     
    
+  $this->widgetSchema->setLabels(array(
+     'statusFK'      => 'Estado',
+      'usuario_list'      => 'Participantes',
+      'fechaInicio'       => 'Fecha de Inicio',
+      'fechaFinal'        => 'Fecha de Finalización',
+        'horasEstimadas'   => 'Horas Estimadas',
+         'prioridadFK'  =>  'Prioridad'
+      ));
+
  
 
- $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+
+  $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
               array('image'=> '/images/calendar_view_month.png',
 		'include_time'=> false));
 		;
 
+
+  $this->widgetSchema['fechaFinal'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
+              array('image'=> '/images/calendar_view_month.png',
+		'include_time'=> false));
+		;
+
+
   
    $this->widgetSchema['descProyecto'] = new sfWidgetFormTextarea();
+  $this->widgetSchema->setLabel('descProyecto','Descripción');
   }
 }

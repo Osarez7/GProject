@@ -13,12 +13,6 @@ class EventoForm extends BaseEventoForm
   public function configure()
   {
 
- $this->widgetSchema->setLabels(array(
-      'tituloAvance'      => 'Título',
-      'resumen'           => 'Resumen',
-      'fechaInicio'       => 'Fecha de Inicio',
-      'fechaFinal'        => 'Fecha de Finalización',
-    ));
 
 
 
@@ -62,9 +56,15 @@ unset(
    $this->widgetSchema['descEvento'] = new sfWidgetFormTextarea();
    
    
-    
+     $this->widgetSchema->setLabels(array(
+      'diaCompleto'      => 'Día Completo',
+      'descEvento'           => 'Descripción',
+      'fechaInicio'       => 'Fecha de Inicio',
+      'fechaFinal'        => 'Fecha de Finalización',
+     'nombreEvento' => 'Nombre del Evento'
+    ));
+
    
   }
   
- 
 }

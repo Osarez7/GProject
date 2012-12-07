@@ -14,14 +14,7 @@ jQuery(document).ready(function(){
 	 });
 
 
-      jQuery(".expander").live("click",function(){
-
-            var idRow =  jQuery(this).parents('tr').attr("id");
-             jQuery(".child-of-row-"+idRow).slideToggle();
-
-          });
-
-
+      jQuery("#content-left-gantt").resizable();
 
        /* $("#content-slider").slider({ 
          animate: true, 

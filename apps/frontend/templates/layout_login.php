@@ -3,30 +3,34 @@
     <head>
         <title>Acceso</title>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <?php include_javascripts() ?>
-        <?php include_stylesheets() ?>
+           <?php include_stylesheets() ?>   
+           <?php include_javascripts() ?>
+   
     </head>
 
 
     <body>
+      
+
+      <div id="login-wrapper">
+            <div id="header"></div>
+
         <div id="login-content">
-            <div id="header">
-
-            </div>
-
-
-            <div id="login-contenido">
-                <div id="login-box">
-                <div id="login-box-header" class="shadow">Ingreso a usuarios</div>
-                <div id="login-box-content" class="shadow">
-                    <?php echo $sf_content ?>
-                </div>
-
-             </div>
-            </div>
-            <div id="pie">
-            </div>
+           
+          <div id="container">  
+          <div id="sub-container-left">
+		  <?php echo $sf_content ?>
+           </div>
+ 
+          </div>
+          
+            <div id="pie">  </div>
         </div>
+
+
     </body>
 
 </html>
+
+
+

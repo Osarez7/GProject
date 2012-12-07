@@ -8,7 +8,8 @@
  * @property integer $idProyecto
  * @property string $nombre
  * @property timestamp $fechaInicio
- * @property integer $diasEstimados
+ * @property timestamp $fechaFinal
+ * @property integer $horasEstimadas
  * @property string $descProyecto
  * @property integer $statusFK
  * @property integer $prioridadFK
@@ -24,7 +25,8 @@
  * @method integer             getIdProyecto()      Returns the current record's "idProyecto" value
  * @method string              getNombre()          Returns the current record's "nombre" value
  * @method timestamp           getFechaInicio()     Returns the current record's "fechaInicio" value
- * @method integer             getDiasEstimados()   Returns the current record's "diasEstimados" value
+ * @method timestamp           getFechaFinal()      Returns the current record's "fechaFinal" value
+ * @method integer             getHorasEstimadas()  Returns the current record's "horasEstimadas" value
  * @method string              getDescProyecto()    Returns the current record's "descProyecto" value
  * @method integer             getStatusFK()        Returns the current record's "statusFK" value
  * @method integer             getPrioridadFK()     Returns the current record's "prioridadFK" value
@@ -39,7 +41,8 @@
  * @method Proyecto            setIdProyecto()      Sets the current record's "idProyecto" value
  * @method Proyecto            setNombre()          Sets the current record's "nombre" value
  * @method Proyecto            setFechaInicio()     Sets the current record's "fechaInicio" value
- * @method Proyecto            setDiasEstimados()   Sets the current record's "diasEstimados" value
+ * @method Proyecto            setFechaFinal()      Sets the current record's "fechaFinal" value
+ * @method Proyecto            setHorasEstimadas()  Sets the current record's "horasEstimadas" value
  * @method Proyecto            setDescProyecto()    Sets the current record's "descProyecto" value
  * @method Proyecto            setStatusFK()        Sets the current record's "statusFK" value
  * @method Proyecto            setPrioridadFK()     Sets the current record's "prioridadFK" value
@@ -76,7 +79,11 @@ abstract class BaseProyecto extends sfDoctrineRecord
              'type' => 'timestamp',
              'notnull' => true,
              ));
-        $this->hasColumn('diasEstimados', 'integer', null, array(
+        $this->hasColumn('fechaFinal', 'timestamp', null, array(
+             'type' => 'timestamp',
+             'notnull' => true,
+             ));
+        $this->hasColumn('horasEstimadas', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
              ));

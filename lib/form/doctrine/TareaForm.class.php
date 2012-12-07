@@ -18,11 +18,13 @@ class TareaForm extends BaseTareaForm {
 $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));
 
 
- 
-              $this->setWidget('parent', new sfWidgetFormInputHidden());
-       
-            //   $this->setWidget('parent',  new sfWidgetFormInputText());
 
+
+
+
+ 
+       $this->setWidget('parent', new sfWidgetFormInputHidden());
+       
         $this->setWidget('fechaInicio', new sfWidgetFormTextDateInputJQueryDatePicker(
         array('image' => '/images/calendar_view_month.png',
         'include_time' => false))
@@ -60,6 +62,21 @@ $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfCon
         unset(
                 $this['root_id'], $this['level'], $this['rgt'], $this['lft'], $this['tar_fecha_creacion'], $this['usuario_list'], $this['tar_fecha_actulizacion']
         );
+
+
+
+
+
+
+
+
+  $this->widgetSchema->setLabels(array(
+     'statusFK'      => 'Estado',
+      'fechaInicio'       => 'Fecha de Inicio',
+      'fechaFinal'        => 'Fecha de Finalización',
+        'horasEstimadas'   => 'Horas Estimadas',
+         'prioridadFK'  =>  'Prioridad'
+      ));
     }
 
     

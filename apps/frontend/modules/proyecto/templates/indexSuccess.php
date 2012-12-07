@@ -38,15 +38,24 @@
            
             <td>
 
-                   
-                            <a  href="<?php echo url_for('proyecto/show?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button show  icon custom-button">Ver Detalles</a>
-                <a  href="<?php echo url_for('proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto()) ?>" class="button edit icon custom-button">Editar</a>
-            </td>
+                  <?php  echo link_to(' ', 'proyecto/show?id_proyecto=' . $proyecto->getIdProyecto(), array(
+                        'class' => ' custom-button icon ver '
+                        ,'title' => 'Ver detalles'
+                    ));
+?>
+
+   <?php  echo link_to(' ', 'proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto(), array(
+                        'class' => ' custom-button icon editar dialogLink '
+                        ,'title' => 'Ver detalles'
+                    ));
+
+?>
+ 
 
 </tr>
      
 <?php endforeach; ?>
 </tbody>
 </table>
-<a href="<?php echo url_for('proyecto/new') ?>" class="button  icon add">Nuevo Proyecto</a>
+<a href="<?php echo url_for('proyecto/new') ?>" class="dialogLink button  icon add">Nuevo Proyecto</a>
 

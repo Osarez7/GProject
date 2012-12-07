@@ -15,10 +15,10 @@
                    <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
 	        </td>
               <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'g', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaInicio'], 'u', 'es_CL') ?> 
  </td>
                         <td> 
-         <?php echo format_datetime($node['fechaFinal'], 'g', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaFinal'], 'u', 'es_CL') ?> 
  </td>
         
             </tr>

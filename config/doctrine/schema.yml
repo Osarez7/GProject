@@ -30,7 +30,8 @@ Proyecto:
    idProyecto: { type: integer , primary: true, autoincrement: true} 
    nombre: { type: string(100) , notnull: true }
    fechaInicio:  { type: timestamp, notnull: true}
-   diasEstimados: { type: integer , notnull: true}
+   fechaFinal:  { type: timestamp, notnull: true}
+   horasEstimadas: { type: integer , notnull: true}
    descProyecto: { type: string(200) , notnull: true}
    statusFK: { type: integer , notnull: true}
    prioridadFK: { type: integer , notnull: true} 
@@ -188,10 +189,10 @@ Evento:
       type: timestamp
   columns:
     idEvento: { type: integer , primary: true, autoincrement: true} 
+    nombreEvento: { type: string(100), notnull: true}
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: true}
     diaCompleto: { type: boolean, notnull: true, default: 1}
-    nombreEvento: { type: string(100), notnull: true}
     descEvento: { type: string(200), notnull: false}
     proyectoFK:  { type: integer , notnull: true}
   relations:

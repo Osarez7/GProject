@@ -2,36 +2,41 @@
 <div id="home-content">
 
 
-    <?php if ($sf_user->hasCredential('admin')): ?>
+<div id="content-lateral-1">
+  <div id="ultimos-avances">
+    <ul>
+           <li>Casos de uso</li>
+           <li>Diagrama de clases</li> 
+           <li>Manuales de usuario</li>
+     <ul>
 
-        <div id="admin-home">
+  </div>
 
-            <ul id="menu-admin">
-                <li id="home-admin">
 
-                    <img src="/images/fugue-icons-3.5/icons/alarm-clock.png">
-                    Tareas
-                </li>
+  <div id="ultimos-comentarios">
+        <ul>
+           <li>Casos de uso</li>
+           <li>Diagrama de clases</li> 
+           <li>Manuales de usuario</li>
+        <ul>
 
-                <li id="user-admin">
-                    <img src="/images/fugue-icons-3.5/icons/user.png">
-                    <span>Usuarios</span>
-                </li>
+  </div>
+<div>
 
-                <li id="system-admin">
-                    <img src="/images/fugue-icons-3.5/icons/wrench-screwdriver.png">
-                    <span> Sistema</span>
-                </li>
 
-                <li id="system-admin">
-                    <img src="/images/fugue-icons-3.5/icons/palette.png">
-                    <span> Estilos </span>
-                </li>
-            </ul>     
+<div id="content-central">
 
-        </div>
 
-    <?php endif; ?>
+    <div id="mis-tareas">
+  
+
+  </div>
+
+  
+  <div id="mis-proyectos">
+  
+
+  </div>
 
 
 
@@ -84,6 +89,26 @@
                 <?php endforeach; ?>
             </table>   
         </div>
-    <?php endif; ?>   
+    <?php endif; ?> 
+  
+<div>
+
+
+
+<div id="content-lateral-2">
+    <div id="ultimos-eventos">
+  
+
+  </div>
+ 
+
+  <div id="ultimos-mapas">
+  
+
+  </div>
+
+<div>
+
+
 
 </div>

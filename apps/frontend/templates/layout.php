@@ -43,7 +43,7 @@
 
 
                         <?php if ($sf_user->hasCredential('gerente')): ?>
-                            <?php // echo link_to('Reportes', 'reporte/index', array('class' => 'button'))?>
+                            <?php  echo link_to('Reportes', 'reporte/index', array('class' => 'button'))?>
                         <?php endif; ?>
 
                         <?php if ($sf_user->hasCredential('admin')): ?>

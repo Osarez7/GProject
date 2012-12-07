@@ -79,7 +79,7 @@ body{
 
     border-radius: 5px 5px;
     background: url("/images/patrones-fondo/cardboard_flat.png") repeat; 
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;
@@ -118,7 +118,7 @@ input , textarea{
 
 input:focus {
     border-color: #1C94C4;
-    background-color: #F7F6BE;
+    background-color: #F4F4DE;
     outline: none;
 
 }
@@ -201,6 +201,8 @@ div#menu-lateral{
     height: 17px;
 }
 
+
+
 #pie {
     clear: both;
     height: 50px;
@@ -209,7 +211,7 @@ div#menu-lateral{
     background-image: -moz-linear-gradient(#0E5187, #003B68);
     background-image: -o-linear-gradient (#0E5187, #003B68);
     background-image: linear-gradient(#0E5187, #003B68);
-    border-radius: 5px 5px;
+/*    border-radius: 5px 5px;  */
 
 }
 
@@ -246,9 +248,6 @@ table.info td , table.info th{
 
 }
 
-.odd{
-
-}
 
 #componente-calendario{
     font-size: 7px;
@@ -363,8 +362,20 @@ table.listado thead .celda-final{
 
 
 .odd{
-    background:  #D4E8F7; 
+  /*  background:  #D4E8F7; */
 }
+
+table.listado tbody{
+
+    background-color: #FAFAFA;
+    /*  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#2E373F));  */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FAFAFA), to(#EAEAEA));
+    background-image: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -o-linear-gradient (#FAFAFA, #EAEAEA);
+    background-image: linear-gradient(#FAFAFA, #EAEAEA);
+
+}
+
 
 
 div.ui-dialog{
@@ -723,4 +734,8 @@ td.primera-celda-arbol{
 #map-control-content select{
    float: left; 
     
+}
+
+#content-form-proyecto{
+ height: 460px;
 }

@@ -6,15 +6,14 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
+    title:        Login
     #description:  symfony project
     #keywords:     symfony, project
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css,login.css,menu_style.css]
-
+  stylesheets:    [main.css,login.css,menu_style.css,login/animate.css,login/reset.css,login/styles.css,gh-buttons.css]
   javascripts:    [jquery-1.7.2.js]
 
-  has_layout:     true
+  has_layout:     true 
   layout:         layout_login
