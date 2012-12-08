@@ -35,11 +35,12 @@
 
 
         <div  id='panel_div' class="button-group ">
-            <input type="button"  class="button  primary icon add pill" value="Adicionar" onclick="toggleControl('drawCtrl')" />
-            <input type="button"  class="button icon edit pill" value="Mover" onclick="toggleControl('dragCtrl')" />
-            <input type="button" class="button icon danger trash pill" value="Editar" onclick="toggleControl('selectCtrl')"/>         
+            <input type="button"  class="button" value="Adicionar" onclick="toggleControl('drawCtrl',this)" />
+            <input type="button"  class="button" value="Mover" onclick="toggleControl('dragCtrl',this)" />
+            <input type="button"  class="button " value="Editar" onclick="toggleControl('selectCtrl',this)"/>         
         </div>
-
+        
+       
     </div>
 
 

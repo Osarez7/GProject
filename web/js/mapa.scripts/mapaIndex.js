@@ -22,7 +22,11 @@ jQuery(document).ready(function(){
             $warningBox.dialog("open");
         }
        
-    })
+    });
+    
+    
+    jQuery( "#radio" ).buttonset();
+    
  
 });
 
@@ -167,7 +171,7 @@ function initControls(layer){
     controls = {
         "selectCtrl":new OpenLayers.Control.SelectFeature(layer,{
             hover: false,
-            autoActivate:true
+            autoActivate: false
         }),
         "drawCtrl": new OpenLayers.Control.DrawFeature(layer,
             OpenLayers.Handler.Point, {
@@ -216,7 +220,7 @@ function initControls(layer){
     
         
             },
-            autoActivate: true   
+            autoActivate: false  
         })
          
 
@@ -234,7 +238,20 @@ function initControls(layer){
 }
 
 
-function toggleControl(controlName) {
+function toggleControl(controlName, $elementButton) {
+    
+   jQuery("#panel_div input").each(function(){
+	   
+           if(jQuery(this).val() == jQuery($elementButton).val()){
+			   
+			    jQuery(this).addClass('control_active');
+			   }else{
+				    jQuery(this).removeClass('control_active');
+				   }	   
+	   
+	   
+	   
+	   });
    
     for(var key in controls) {
        
