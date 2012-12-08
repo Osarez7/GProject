@@ -12,7 +12,7 @@
 
 <?php use_javascript("tarea.scripts/inicializarTareas.js")  ?>
 
-<?/*php  use_javascript("/js/jQueryGantt/libs/jquery.livequery.min.js") ?>
+<?php /* use_javascript("/js/jQueryGantt/libs/jquery.livequery.min.js") ?>
 <?php  use_javascript("/js/jQueryGantt/libs/jquery.timers.js") ?>
 <?php  use_javascript("/js/jQueryGantt/libs/platform.js") ?>
 <?php  use_javascript("/js/jQueryGantt/libs/date.js") */?>

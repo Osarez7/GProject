@@ -25,7 +25,7 @@ jQuery(document).ready(function(){
     });
     
     
-    jQuery( "#radio" ).buttonset();
+   jQuery('#scrollbar1').tinyscrollbar();
     
  
 });
