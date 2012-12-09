@@ -18,6 +18,12 @@ class Usuario extends BaseUsuario {
         return $this->getUsrNick();
     }
 
+    
+    public function inactivar(){
+        
+        //TODO
+    }
+    
     public function getNombreCompleto() {
 
         return $this->getUsrNombre() . " " . $this->getUsrApellido1() . " " . $this->getUsrApellido2();

@@ -6,10 +6,13 @@ jQuery(window).load(function(){
 
    jQuery(".default-selected").attr("selected","selected");
 
-            
+   
+     
     jQuery(".aimLink").live("click",function(){
         window.location.href =  jQuery(this).attr("href");
     }); 
+    
+      
 
      
     jQuery('.dialogLink').live("click",function(event){
@@ -29,8 +32,8 @@ jQuery(window).load(function(){
             success:function (msg) {
       
                 jQuery("#customDialogConent").html(msg);
-                 jQuery("#ui-dialog-title-customDialogConent").html($dialogLink.text());
-                jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width());
+               //  jQuery("#ui-dialog-title-customDialogConent").html($dialogLink.text());
+                jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width()+10);
                    
 
 
@@ -44,7 +47,11 @@ jQuery(window).load(function(){
 
     jQuery(".dialogSubmit").live("click",function(event){
 
-        event.preventDefault();
+      event.preventDefault();
+            
+    jQuery(this).parents('form').find('.double_list_select-selected option').each(function(){
+           jQuery(this).attr("selected", 'selected')
+        });  
         
       if(!jQuery(this).hasClass("action-confirm")){
 

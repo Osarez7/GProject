@@ -56,7 +56,7 @@
                 <?php foreach ($proyectos as $i => $proyecto): ?>
 
                     <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
-                        <td><?php echo $proyecto->getNombre() ?></td> 
+                        <td class="primera-celda"><?php echo $proyecto->getNombre() ?></td> 
                         <td><?php echo $proyecto->getPrioridad() ?></td> 
                         <td><?php echo $proyecto->getFechaInicio() ?></td> 
                     </tr>

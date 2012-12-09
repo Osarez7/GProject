@@ -58,12 +58,13 @@ Usuario:
   columns:
     idUsuario: { type: integer , primary: true, autoincrement: true} 
     perfilFK: { type: integer, notnull: true}
-    usr_nombre: { type: string(100), notnull: true }
-    usr_apellido1: { type: string(20), notnull: true }
-    usr_apellido2: { type: string(20), notnull: true }
-    email: { type: string(150), notnull: true}
-    usr_nick: { type: string(20), notnull: true, unique: true }
-    password: { type: string(32), notnull: true }
+    usr_nombre: { type: string(255), notnull: true }
+    usr_apellido1: { type: string(255), notnull: true }
+    usr_apellido2: { type: string(255), notnull: true }
+    fotoPerfil: { type: string(255), notnull: true }
+    email: { type: string(200), notnull: true}
+    usr_nick: { type: string(200), notnull: true, unique: true }
+    password: { type: string(200), notnull: true }
   relations:
    Perfil: {onDelete: CASCADE, local: perfilFK, foreign: idPerfil, foreignAlias: Usuarios}
    Tarea: {local: idUsuario, foreign: idTarea, foreignAlias: Tareas, refClass: UsuarioTarea}
@@ -189,9 +190,9 @@ Evento:
       type: timestamp
   columns:
     idEvento: { type: integer , primary: true, autoincrement: true} 
-    nombreEvento: { type: string(100), notnull: true}
     fechaInicio: { type: timestamp, notnull: true}
     fechaFinal: { type: timestamp, notnull: true}
+    nombreEvento: { type: string(100), notnull: true}
     diaCompleto: { type: boolean, notnull: true, default: 1}
     descEvento: { type: string(200), notnull: false}
     proyectoFK:  { type: integer , notnull: true}
@@ -211,8 +212,8 @@ Grupo_Usuario:
 Mapa:
   columns: 
    idMapa: { type: integer , primary: true, autoincrement: true} 
-   nombreMapa: { type: string(150), notnull: true}
-   descMapa: { type: string(200), notnull: false}
+   nombreMapa: { type: string(255), notnull: true}
+   descMapa: { type: string(4000), notnull: false}
    proyectoFK: { type: integer }
   relations:
     Proyecto:  { onDelete: CASCADE, local: proyectoFK, foreign: idProyecto , foreignAlias: Mapas}    
@@ -221,8 +222,8 @@ Mapa:
 Lugar:
  columns:
    idLugar: { type: integer , primary: true, autoincrement: true} 
-   tituloLugar: {type: string(150)}
-   infoLugar: {type: string(150)}
+   tituloLugar: {type: string(255)}
+   infoLugar: {type: string(4000)}
    latitud:  { type: decimal , notnull: true}
    longitud: { type: decimal , notnull: true}
    mapaFK: { type: integer , notnull: true} 
@@ -242,7 +243,7 @@ Tema:
      type: timestamp
  columns:
    idTema: { type: integer , primary: true, autoincrement: true} 
-   tituloTema: {type: string(150)}
+   tituloTema: {type: string(500)}
    proyectoFK: { type: integer , notnull: true} 
    usuarioFK: { type: integer , notnull: true} 
  relations: 
@@ -264,7 +265,7 @@ Comentario:
       rootColumnName: root_id    
  columns:
    idComentario: { type: integer , primary: true, autoincrement: true} 
-   contenidoComentario: {type: string(200)}
+   contenidoComentario: {type: string(4000)}
    usuarioFK: { type: integer , notnull: true} 
    temaFK: { type: integer , notnull: true} 
  relations: 

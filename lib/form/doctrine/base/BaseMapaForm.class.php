@@ -17,14 +17,14 @@ abstract class BaseMapaForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'idMapa'     => new sfWidgetFormInputHidden(),
       'nombreMapa' => new sfWidgetFormInputText(),
-      'descMapa'   => new sfWidgetFormInputText(),
+      'descMapa'   => new sfWidgetFormTextarea(),
       'proyectoFK' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'idMapa'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idMapa')), 'empty_value' => $this->getObject()->get('idMapa'), 'required' => false)),
-      'nombreMapa' => new sfValidatorString(array('max_length' => 150)),
-      'descMapa'   => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'nombreMapa' => new sfValidatorString(array('max_length' => 255)),
+      'descMapa'   => new sfValidatorString(array('max_length' => 4000, 'required' => false)),
       'proyectoFK' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'required' => false)),
     ));
 

@@ -1,5 +1,7 @@
 <div id="content-asignar-usuario">
-
+ <?php if ($sf_user->hasFlash('OK')): ?>
+    <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>
+<?php endif; ?> 
 <h1>Asignar Usuario a <?php  echo $tarea ?></h1>
 
 <form action="<?php echo url_for('tarea/updateAsignar?idTarea='.$form->getObject()->getIdTarea())?>"

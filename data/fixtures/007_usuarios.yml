@@ -1,42 +1,106 @@
 Usuario:
- <?php for ($i = 1; $i <= 4; $i++): ?>
- consultor_<?php echo $i ?>:
-    idUsuario: <?php echo $i."\n" ?> 
-    perfilFK: 1
-    usr_nombre: Usuario	
-    usr_apellido1: Consultor
-    usr_apellido2: <?php echo $i."\n" ?> 
-    email: impresionesosarez7@gmail.com
-    usr_nick: consultor<?php echo $i."\n" ?> 
-    password: consultor<?php echo $i."\n" ?> 
- <?php endfor ?>
  
- <?php for ($i = 1; $i <= 4; $i++): ?>
- ejecutor_<?php echo $i ?>:
-    idUsuario: <?php echo ($i+5) ."\n" ?> 
+ alvaro:
+    idUsuario: 9
     perfilFK: 2
-    usr_nombre: Usuario 	
-    usr_apellido1: Ejecutor
-    usr_apellido2: <?php echo $i."\n" ?> 
-    email: impresionesosarez7@gmail.com
-    usr_nick: ejecutor<?php echo $i."\n" ?> 
-    password: ejecutor<?php echo $i."\n" ?> 
- <?php endfor ?>
+    usr_nombre: Alvaro  	
+    usr_apellido1: Javier
+    usr_apellido2: Ardila 
+    email:  alvaro.ardila@example.com
+    usr_nick: alvaro.ardila
+    password: password
  
- <?php for ($i = 1; $i <= 4; $i++): ?>
- gerente_<?php echo $i ?>:
-    idUsuario: <?php echo ($i+9)."\n" ?> 
+ juan:
+    idUsuario: 10 
+    perfilFK: 2
+    usr_nombre: Juan Jośe	
+    usr_apellido1: Orjuela
+    usr_apellido2: Orjuela 
+    email: juan.orjuela@example.com
+    usr_nick: juan.jose
+    password: password
+    
+ jenny:
+    idUsuario: 11 
+    perfilFK: 2
+    usr_nombre: Jenny
+    usr_apellido1: Ortiz
+    usr_apellido2: Ortiz 
+    email:  jenny.ortiz@example.com
+    usr_nick: jenny.ortiz
+    password: password   
+ 
+ viviana:
+    idUsuario: 12
+    perfilFK: 2
+    usr_nombre: Viviana  	
+    usr_apellido1: Buticara
+    usr_apellido2: Buticara 
+    email:  viviana.buticara@example.com
+    usr_nick: viviana.buticara
+    password: password      
+    
+ liliana:
+    idUsuario: 13
     perfilFK: 3
-    usr_nombre: Usuario 	
-    usr_apellido1: Gerente
-    usr_apellido2: <?php echo $i."\n" ?> 
-    email: julio.minato@gmail.com
-    usr_nick: gerente<?php echo $i."\n" ?> 
-    password: gerente<?php echo $i."\n" ?> 
- <?php endfor ?>
+    usr_nombre: liliana 	
+    usr_apellido1: gaona
+    usr_apellido2: gaona 
+    email: liliana.gaona@example.com
+    usr_nick: liliana.gaona 
+    password: password 
+    
+ nelson:
+    idUsuario: 14
+    perfilFK: 3
+    usr_nombre: nelson	
+    usr_apellido1: arturo
+    usr_apellido2: arturo 
+    email: nelson.arturo@example.com
+    usr_nick: nelson.arturo 
+    password: password     
+    
+    
+ julio:
+    idUsuario: 31
+    perfilFK: 3
+    usr_nombre: Julio César 	
+    usr_apellido1: Saldaña
+    usr_apellido2: Báez
+    email: julio.saldana@example.com
+    usr_nick: julio.saldana 
+    password: password
  
+ Daniel:
+    idUsuario: 32
+    perfilFK: 3
+    usr_nombre: Daniel 	
+    usr_apellido1: Martin
+    usr_apellido2: Niño
+    email: daniel.nino@example.com
+    usr_nick: daniel.nino 
+    password: password    
+    
+    
+ adriana:
+    idUsuario: 33
+    perfilFK: 3
+    usr_nombre: Adriana 	
+    usr_apellido1: Cepeda
+    usr_apellido2: Manjarres 
+    email: adriana.cepeda@example.com
+    usr_nick: adriana.cepeda 
+    password: password
+   
+ william:
+    idUsuario: 34
+    perfilFK: 3
+    usr_nombre: William  	
+    usr_apellido1: Manjarres
+    usr_apellido2: Manjarres 
+    email: william.manjarres@example.com
+    usr_nick: william.manjarres
+    password: password 
+    
 
-
-
-
-
+ 

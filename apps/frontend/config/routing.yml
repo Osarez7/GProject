@@ -17,6 +17,7 @@ login:
 nuevo_lugar:
   url: /lugar/nuevo/:idMapa/:lon/:lat
   param: { module: lugar, action: new}
+  
 
 index_lugar:
   url: /lugares/:idMapa/index.:sf_format
@@ -38,7 +39,7 @@ index_eventos:
    sf_format: (?:html|json)
 
 nuevo_evento:
-   url: /evento/nuevo/:idProyecto
+   url: /evento/nuevo/:idProyecto/:defaultDate/:allDay
    param: { module: evento, action: new }
 
 nuevo_avance:

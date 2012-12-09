@@ -12,14 +12,12 @@ class eventoActions extends sfActions
 {
 
    
-  
-
   public function executeIndex(sfWebRequest $request)
   {
     
     $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') . '/optional.log'));
 
-        $custom_logger->notice("inicio es  " . $request->getParameter('start'));
+        $custom_logger->notice("inicio es  " . $request->getParameter('start')."  ". $request->getParameter('start'));
 
       
   $this->proyecto = Doctrine_Core::getTable('Proyecto')
@@ -27,16 +25,7 @@ class eventoActions extends sfActions
   $this->forward404Unless($this->proyecto);
  
   
-      
-    $this->eventos = Doctrine_Core::getTable('Evento')->getEventosByProyectoAndRango($request->getParameter('idProyecto'),$this->milisecondsToDate($request->getParameter('start')),$this->milisecondsToDate($request->getParameter('end')));
-  
- 
-   
-    //  $this->eventos = Doctrine_Core::getTable('Evento')->getEventosByProyecto($request->getParameter('idProyecto'));  
-      
-
-
-  
+  $this->eventos = Doctrine_Core::getTable('Evento')->getEventosByProyectoAndRango($request->getParameter('idProyecto'),$this->milisecondsToDate($request->getParameter('start')),$this->milisecondsToDate($request->getParameter('end')));
   $this->tareas = Doctrine_Core::getTable('Tarea')->getArbolTareas($request->getParameter('idProyecto')); 
        
     
@@ -53,8 +42,20 @@ class eventoActions extends sfActions
   
 
  $this->form = new EventoForm();
+ 
+ 
+ $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') .'/optional.log'));
 
-    $this->form->setDefault('proyectoFK', $request->getParameter('idProyecto'));
+ $custom_logger->notice("default date es ". $request->getParameter('defaultDate') . " ,". $this->milisecondsToDate($request->getParameter('defaultDate')). " " . $request->getParameter('allDay'));
+
+
+
+    $this->form->setDefaults(array(
+          "proyectoFK" => $request->getParameter('idProyecto'),
+          "fechaInicio" => $this->milisecondsToDate($request->getParameter('defaultDate')),
+          "fechaFinal" => $this->milisecondsToDate($request->getParameter('defaultDate')),
+          "diaCompleto" => 0
+        ));
  
             if ($request->isXmlHttpRequest()) {
                 return $this->renderPartial('evento/form', array('form' => $this->form));
@@ -94,11 +95,15 @@ class eventoActions extends sfActions
 
   public function executeDelete(sfWebRequest $request)
   {
-    $request->checkCSRFProtection();
+   //  $request->checkCSRFProtection();
 
     $this->forward404Unless($evento = Doctrine_Core::getTable('Evento')->find(array($request->getParameter('id_evento'))), sprintf('Object evento does not exist (%s).', $request->getParameter('id_evento')));
     $evento->delete();
 
+       if ($request->isXmlHttpRequest()) {
+                return $this->renderPartial('global/mensaje', array('mensaje' => 'Evento borrado correctamente'));
+            }
+    
     $this->redirect('evento/index');
   }
 
@@ -125,6 +130,8 @@ class eventoActions extends sfActions
   
   
     private function  milisecondsToDate($timeMiliseconds){
+        $custom_logger = new sfFileLogger(new sfEventDispatcher(), array('file' => sfConfig::get('sf_log_dir') . '/optional.log'));
+        $custom_logger->notice("convierte " . $timeMiliseconds);
 
         return  date('Y-m-d H:i:s',$timeMiliseconds);
     }

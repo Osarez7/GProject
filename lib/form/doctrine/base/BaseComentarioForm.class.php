@@ -16,7 +16,7 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'idComentario'        => new sfWidgetFormInputHidden(),
-      'contenidoComentario' => new sfWidgetFormInputText(),
+      'contenidoComentario' => new sfWidgetFormTextarea(),
       'usuarioFK'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'), 'add_empty' => false)),
       'temaFK'              => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Tema'), 'add_empty' => false)),
       'fecha_creacion'      => new sfWidgetFormDateTime(),
@@ -25,7 +25,7 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idComentario'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idComentario')), 'empty_value' => $this->getObject()->get('idComentario'), 'required' => false)),
-      'contenidoComentario' => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'contenidoComentario' => new sfValidatorString(array('max_length' => 4000, 'required' => false)),
       'usuarioFK'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Usuario'))),
       'temaFK'              => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Tema'))),
       'fecha_creacion'      => new sfValidatorDateTime(),

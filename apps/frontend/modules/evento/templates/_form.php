@@ -12,9 +12,9 @@
         <td colspan="2">
           &nbsp;<a style="display:none" href="<?php echo url_for('evento/index') ?>">Back to list</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'evento/delete?id_evento='.$form->getObject()->getIdEvento(), array('method' => 'delete', 'class' =>"button icon trash danger dialogSubmit  action-confirm")); ?>
+            &nbsp;<?php echo link_to('Delete', 'evento/delete?id_evento='.$form->getObject()->getIdEvento(), array( 'class' =>"button icon trash danger   action-confirm  dialogLink updateCalendar")); ?>
           <?php endif; ?>
-          <input type="submit" value="Guardar" class="dialogSubmit button"  />
+          <input type="submit" value="Guardar" class="dialogSubmit button updateCalendar"  />
         </td>
       </tr>
     </tfoot>

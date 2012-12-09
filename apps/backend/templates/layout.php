@@ -22,7 +22,47 @@
                 
 </div>
 
+<div id="menu_admin">
+    <ul>
+                <li id="home-admin">
 
+                    <img src="/images/fugue-icons-3.5/icons/alarm-clock.png">
+                    Tareas
+                </li>
+
+                <li id="user-admin">
+                  
+                    <img src="/images/fugue-icons-3.5/icons/user.png">
+                   <?php echo link_to('Usuarios', 'usuario') ?>
+                </li>
+
+                 <li id="user-admin">
+                    <img src="/images/fugue-icons-3.5/icons/user.png">
+                   <?php echo link_to('Perfiles', 'perfil') ?>
+                </li>
+
+                  <li id="user-admin">
+                    <img src="/images/fugue-icons-3.5/icons/user.png">
+                   <?php echo link_to('Niveles de prioridad', 'prioridad') ?>
+                </li>
+        
+        
+                 <li id="user-admin">
+                    <img src="/images/fugue-icons-3.5/icons/user.png">
+                   <?php echo link_to('Estados', 'status') ?>
+                </li>
+        
+                <li id="system-admin">
+                    <img src="/images/fugue-icons-3.5/icons/wrench-screwdriver.png">
+                    <span> Sistema</span>
+                </li>
+
+                <li id="system-admin">
+                    <img src="/images/fugue-icons-3.5/icons/palette.png">
+                    <span> Estilos </span>
+                </li>
+            </ul>     
+</div> 
 <div id="content">
 
 <?php echo $sf_content ?>

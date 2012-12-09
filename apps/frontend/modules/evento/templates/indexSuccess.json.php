@@ -17,7 +17,9 @@ if ($eventos) {
             'title' => $evento->getNombreEvento(),
             'start' => date('Y-m-d H:i', strtotime($evento->getFechaInicio())),
             'end' => date('Y-m-d H:i', strtotime($evento->getFechaFinal())),
-            'url' => url_for('evento/show?id_evento=' . $evento->getIdEvento()),
+            //'url' => url_for('evento/show?id_evento=' . $evento->getIdEvento()),
+            'showEvento' => url_for('evento/show?id_evento=' . $evento->getIdEvento()),
+            'editEvento' => url_for('evento/edit?id_evento=' . $evento->getIdEvento()),
             'allDay' => $all,
         );
     }

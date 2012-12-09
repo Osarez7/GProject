@@ -18,7 +18,7 @@
 <?php foreach ($proyectos as $i => $proyecto): ?>
  
 <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
-        <td>
+        <td class="primera-celda">
              <?php echo $proyecto->getNombre() ?>
           </td>
 
@@ -46,7 +46,7 @@
 
    <?php  echo link_to(' ', 'proyecto/edit?id_proyecto=' . $proyecto->getIdProyecto(), array(
                         'class' => ' custom-button icon editar dialogLink '
-                        ,'title' => 'Ver detalles'
+                        ,'title' => 'Editar'
                     ));
 
 ?>

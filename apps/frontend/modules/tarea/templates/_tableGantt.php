@@ -15,10 +15,10 @@
                    <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
 	        </td>
               <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'u', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaInicio'], 'u') ?> 
  </td>
                         <td> 
-         <?php echo format_datetime($node['fechaFinal'], 'u', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaFinal'], 'u') ?> 
  </td>
         
             </tr>
@@ -36,10 +36,12 @@
                    <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
 	        </td>
               <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'u', 'es_CL') ?> 
+         <?php echo format_datetime($node['fechaInicio'], 'u') ?> 
  </td>
                         <td> 
-         <?php echo format_datetime($node['fechaFinal'], 'u', 'es_CL') ?> 
+         <?php echo /* $job->getDateTimeObject('created_at')->format('m/d/Y')
+*/ 
+         format_datetime($node['fechaFinal'], 'u') ?> 
  </td>
         
             </tr>

@@ -10,6 +10,7 @@
  * @property string $usr_nombre
  * @property string $usr_apellido1
  * @property string $usr_apellido2
+ * @property string $fotoPerfil
  * @property string $email
  * @property string $usr_nick
  * @property string $password
@@ -24,6 +25,7 @@
  * @method string              getUsrNombre()     Returns the current record's "usr_nombre" value
  * @method string              getUsrApellido1()  Returns the current record's "usr_apellido1" value
  * @method string              getUsrApellido2()  Returns the current record's "usr_apellido2" value
+ * @method string              getFotoPerfil()    Returns the current record's "fotoPerfil" value
  * @method string              getEmail()         Returns the current record's "email" value
  * @method string              getUsrNick()       Returns the current record's "usr_nick" value
  * @method string              getPassword()      Returns the current record's "password" value
@@ -37,6 +39,7 @@
  * @method Usuario             setUsrNombre()     Sets the current record's "usr_nombre" value
  * @method Usuario             setUsrApellido1()  Sets the current record's "usr_apellido1" value
  * @method Usuario             setUsrApellido2()  Sets the current record's "usr_apellido2" value
+ * @method Usuario             setFotoPerfil()    Sets the current record's "fotoPerfil" value
  * @method Usuario             setEmail()         Sets the current record's "email" value
  * @method Usuario             setUsrNick()       Sets the current record's "usr_nick" value
  * @method Usuario             setPassword()      Sets the current record's "password" value
@@ -65,36 +68,41 @@ abstract class BaseUsuario extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('usr_nombre', 'string', 100, array(
+        $this->hasColumn('usr_nombre', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 100,
+             'length' => 255,
              ));
-        $this->hasColumn('usr_apellido1', 'string', 20, array(
+        $this->hasColumn('usr_apellido1', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 20,
+             'length' => 255,
              ));
-        $this->hasColumn('usr_apellido2', 'string', 20, array(
+        $this->hasColumn('usr_apellido2', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 20,
+             'length' => 255,
              ));
-        $this->hasColumn('email', 'string', 150, array(
+        $this->hasColumn('fotoPerfil', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 150,
+             'length' => 255,
              ));
-        $this->hasColumn('usr_nick', 'string', 20, array(
+        $this->hasColumn('email', 'string', 200, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 200,
+             ));
+        $this->hasColumn('usr_nick', 'string', 200, array(
              'type' => 'string',
              'notnull' => true,
              'unique' => true,
-             'length' => 20,
+             'length' => 200,
              ));
-        $this->hasColumn('password', 'string', 32, array(
+        $this->hasColumn('password', 'string', 200, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 32,
+             'length' => 200,
              ));
     }
 

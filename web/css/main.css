@@ -104,7 +104,6 @@ textarea{
     border-radius: 5px 5px;
     color: #3791B5;
     font-size: 21px;
-    padding: 0 20px;
 }
 
 
@@ -140,7 +139,57 @@ a:link {
     color: #3792b3;
 }
 
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #427F93;
+}
 
+a:hover, a:active {
+    text-decoration: underline;
+    color: #427F93;
+}
+
+#sf_admin_container td, #sf_admin_container th {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD -moz-use-text-color;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-style: solid none;
+    border-width: 1px 0;
+    text-align: left;
+    vertical-align: top;
+}
+default.css (línea 26)
+#sf_admin_container th {
+    background-color: #E7EEF6;
+    white-space: nowrap;
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    padding: 7px;
+}
+th {
+    font-weight: bold;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #000000;
+    padding: 0.5em;
+}
+caption, th {
+    text-align: left;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
 
 #btn-cerrar{
     float: right;
@@ -211,7 +260,7 @@ div#menu-lateral{
     background-image: -moz-linear-gradient(#0E5187, #003B68);
     background-image: -o-linear-gradient (#0E5187, #003B68);
     background-image: linear-gradient(#0E5187, #003B68);
-/*    border-radius: 5px 5px;  */
+    /*    border-radius: 5px 5px;  */
 
 }
 
@@ -362,7 +411,7 @@ table.listado thead .celda-final{
 
 
 .odd{
-  /*  background:  #D4E8F7; */
+    /*  background:  #D4E8F7; */
 }
 
 table.listado tbody{
@@ -459,7 +508,7 @@ table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-
 }
 
 #evento-form-content{
-    width: 430px;
+    width: 550px;
 }
 
 
@@ -697,17 +746,14 @@ table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-
 
 
 #panel_div{
- 
+
     float: left;
     margin-left: 195px;
 }
 
-
-
-td.primera-celda-arbol{
-
+td.primera-celda-arbol, td.primera-celda{
     text-align: left !important;
-    padding-left: 18px !important;
+
 }
 
 .convensiones-table td{
@@ -718,13 +764,13 @@ td.primera-celda-arbol{
 }
 
 .table-form th{
-    
-   text-align: left;
-   padding-left: 3px;
+
+    text-align: left;
+    padding-left: 3px;
 }
 
 #map-control-content{
-    
+
     background: none repeat scroll 0 0 #CCCCCC;
     height: 29px;
     margin: 0;
@@ -732,10 +778,16 @@ td.primera-celda-arbol{
 
 
 #map-control-content select{
-   float: left; 
-    
+    float: left; 
+
 }
 
-#content-form-proyecto{
- height: 460px;
+
+a.expander{
+    margin-left: -7px !important;
+
 }
+#content-form-proyecto{
+    height: 460px;
+}
+

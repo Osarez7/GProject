@@ -16,9 +16,9 @@ abstract class BaseEventoForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'idEvento'            => new sfWidgetFormInputHidden(),
-      'nombreEvento'        => new sfWidgetFormInputText(),
       'fechaInicio'         => new sfWidgetFormDateTime(),
       'fechaFinal'          => new sfWidgetFormDateTime(),
+      'nombreEvento'        => new sfWidgetFormInputText(),
       'diaCompleto'         => new sfWidgetFormInputCheckbox(),
       'descEvento'          => new sfWidgetFormInputText(),
       'proyectoFK'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'), 'add_empty' => false)),
@@ -28,9 +28,9 @@ abstract class BaseEventoForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'idEvento'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idEvento')), 'empty_value' => $this->getObject()->get('idEvento'), 'required' => false)),
-      'nombreEvento'        => new sfValidatorString(array('max_length' => 100)),
       'fechaInicio'         => new sfValidatorDateTime(),
       'fechaFinal'          => new sfValidatorDateTime(),
+      'nombreEvento'        => new sfValidatorString(array('max_length' => 100)),
       'diaCompleto'         => new sfValidatorBoolean(array('required' => false)),
       'descEvento'          => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'proyectoFK'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Proyecto'))),

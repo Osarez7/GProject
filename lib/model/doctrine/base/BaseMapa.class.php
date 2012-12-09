@@ -40,15 +40,15 @@ abstract class BaseMapa extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('nombreMapa', 'string', 150, array(
+        $this->hasColumn('nombreMapa', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => 150,
+             'length' => 255,
              ));
-        $this->hasColumn('descMapa', 'string', 200, array(
+        $this->hasColumn('descMapa', 'string', 4000, array(
              'type' => 'string',
              'notnull' => false,
-             'length' => 200,
+             'length' => 4000,
              ));
         $this->hasColumn('proyectoFK', 'integer', null, array(
              'type' => 'integer',

@@ -1,65 +1,118 @@
 Tarea:
-  t1:
+  Primera Fase:
     idTarea: 1
-    nombreTarea: Root1
+    nombreTarea: Primera Fase
+    fechaInicio: '2012-01-20 00:01:00'  
+    fechaFinal: '2012-02-20 00:01:00'
+    horasEstimadas: 67
     statusFk: 1
     prioridadFK: 1
     proyectoFK: 1
     children:
       t2:
         idTarea: 2
-        nombreTarea: Child 1
+        nombreTarea: Investigación
+        fechaInicio: '2012-01-20 00:01:00'  
+        fechaFinal: '2012-01-27 00:01:00'
+        horasEstimadas: 23
         statusFk: 1
         prioridadFK: 1
         proyectoFK: 1
       t3:
         idTarea: 3
-        nombreTarea: Child 2
+        nombreTarea: Levantamiento de información
+        fechaInicio: '2012-01-20 00:01:00'  
+        fechaFinal: '2012-01-27 00:01:00'
+        horasEstimadas: 34
         statusFk: 1
         prioridadFK: 1
         proyectoFK: 1
         children:
           t4:
             idTarea: 4
-            nombreTarea: GrandChild 1
+            nombreTarea: Entrevistas
+            fechaInicio: '2012-01-20 00:01:00'  
+            fechaFinal: '2012-01-27 00:01:00'
+            horasEstimadas: 10 
             statusFk: 1
             prioridadFK: 1
             proyectoFK: 1
           t5:
             idTarea: 5
-            nombreTarea: GrandChild 2
+            nombreTarea: Encuestas
+            fechaInicio: '2012-01-20 00:01:00'  
+            fechaFinal: '2012-01-27 00:01:00'
+            horasEstimadas: 3
             statusFk: 1
             prioridadFK: 1
             proyectoFK: 1
           t6:
             idTarea: 6
-            nombreTarea: GrandChild 3
+            nombreTarea: Visita a campo
+            fechaInicio: '2012-01-20 00:01:00'  
+            fechaFinal: '2012-01-27 00:01:00'
+            horasEstimadas: 10
             statusFk: 1
             prioridadFK: 1
             proyectoFK: 1
       t7:
         idTarea: 7
-        nombreTarea: Another child 3
+        nombreTarea: Análisis de Requisitos
+        fechaInicio: '2012-01-20 00:01:00'  
+        fechaFinal: '2012-01-27 00:01:00'
+        horasEstimadas: 30 horas
         statusFk: 1
         prioridadFK: 1
         proyectoFK: 1
       t8:
         idTarea: 8
-        nombreTarea: Last child
+        nombreTarea: Modelado
+        fechaInicio: '2012-01-20 00:01:00'  
+        fechaFinal: '2012-01-27 00:01:00'
+        horasEstimadas: 30 horas
         statusFk: 1
         prioridadFK: 1
         proyectoFK: 1
         children:
           t9:
             idTarea: 9
-            nombreTarea: Last grandchild
+            nombreTarea: Diseño de casos de uso
+            fechaInicio: '2012-01-20 00:01:00'  
+            fechaFinal: '2012-01-27 00:01:00'
+            horasEstimadas: 10 horas
             statusFk: 1
             prioridadFK: 1
             proyectoFK: 1
-  t10:
+  Segunda Fase:
     idTarea: 10
-    nombreTarea: One more Root element
+    nombreTarea:  Segunda Fase
+    fechaInicio: '2012-01-28 00:01:00'  
+    fechaFinal: '2012-02-25 00:01:00'
+    horasEstimadas: 10 horas
+    statusFk: 1
+    prioridadFK: 1
+    proyectoFK: 1
+ 
+
+  Primera Fase Workflow:
+    idTarea: 11
+    nombreTarea: Primera Fase
+    fechaInicio: '2012-01-20 00:01:00'  
+    fechaFinal: '2012-02-20 00:01:00'
+    horasEstimadas: 67
     statusFk: 1
     prioridadFK: 1
     proyectoFK: 2
-
+    children:
+     Levantamiento de requisistos:
+       idTarea: 12
+       nombreTarea:  Levantamiento de requisistos
+       statusFk: 1
+       prioridadFK: 1
+       proyectoFK: 2
+     Análisis de Requisitos:
+       idTarea: 13
+       nombreTarea: Análisis de Requisitos
+       statusFk: 1
+       prioridadFK: 1
+       proyectoFK: 2   

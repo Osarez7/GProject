@@ -39,7 +39,7 @@
 
 <div class="content-info">
     <h1><?php echo $proyecto->getNombre() ?></h1>
-      
+    <h4> Ver detalles</h4>
 <table class="tbl-show">
   <tbody>
     <tr>
@@ -78,14 +78,14 @@
 <div id="content-left-gantt"> 
     
     <div id="wrapper-left-gantt"> 
-    <table id="table-tareas" class="gantt-table listado">
+    <table id="table-tareas" class="gantt-table">
                 
                         <thead> 
                             <tr>
-                                <th class="celda-inicial">Tarea</th>
+                                <th >Tarea</th>
                                 <th>Acciones</th>
                                 <th>Fecha Inicial</th>   
-                                <th class="celda-final">Fecha Final</th> 
+                                <th>Fecha Final</th> 
                             </tr>
                         </thead>
 

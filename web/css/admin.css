@@ -9,6 +9,15 @@ body
   background: none;
 }
 
+#menu_admin{
+    
+    background: none repeat scroll 0 0 #E7EEF6;
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    height: 700px;
+    width: 191px;
+}
+
 #content
 {
   padding: 25px;

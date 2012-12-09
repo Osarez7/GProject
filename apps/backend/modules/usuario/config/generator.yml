@@ -4,7 +4,7 @@ generator:
     model_class:           Usuario
     theme:                 admin
     non_verbose_templates: true
-    with_show:             false
+    with_show:             true
     singular:              ~
     plural:                ~
     route_prefix:          usuario
@@ -15,11 +15,25 @@ generator:
       actions: ~
       fields:  
         usr_nombre: {label: Nombre}
+        usr_nick: {label: Nickname}
       list:    
          title: Usuarios
+         sort: [usr_nombre, desc]
+         max_per_page: 10
          display: [=usr_nombre, email, usr_nick ]
-      filter:  ~
-      form:    ~
+         batch_actions:
+           _delete: ~
+           inactivar: ~
+         object_actions:
+           _edit: ~
+           _delete: ~ 
+           inactivar: ~
+      filter:  
+        display: [idUsuario, perfilFK, usr_nombre, usr_apellido1, usr_apellido2, email, usr_nick]
+
+      form: 
+        class:  BackendUsuarioForm
+        
       edit:    
         title: Editar Usuario
       new:      

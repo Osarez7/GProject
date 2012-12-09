@@ -43,9 +43,9 @@ abstract class BaseTema extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('tituloTema', 'string', 150, array(
+        $this->hasColumn('tituloTema', 'string', 500, array(
              'type' => 'string',
-             'length' => 150,
+             'length' => 500,
              ));
         $this->hasColumn('proyectoFK', 'integer', null, array(
              'type' => 'integer',

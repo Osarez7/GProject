@@ -73,7 +73,7 @@ class tareaActions extends sfActions {
 
             if ($tarea) {
                 $this->form = new TareaForm($tarea);
-                $this->getUser()->setFlash('OK', 'La tarea fue creada exitosamente');
+                $this->getUser()->setFlash('OK', 'La tarea fue creada exitosamente',false);
                 $this->redirect('tarea/edit?id_tarea=' . $tarea->getIdTarea());
             }
 
@@ -105,7 +105,7 @@ class tareaActions extends sfActions {
             $tarea = $this->processForm($request, $this->form);
 
             if ($tarea) {
-                $this->getUser()->setFlash('OK', 'Actualización Correcta');
+                $this->getUser()->setFlash('OK', 'Actualización Correcta',false);
                 $this->redirect('tarea/edit?id_tarea=' . $tarea->getIdTarea());
             }
 
@@ -119,7 +119,7 @@ class tareaActions extends sfActions {
               ->forward404Unless($tarea =
                                Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('id_tarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('id_tarea')));
             
-            $this->getUser()->setFlash('OK', 'La tarea fue creada borrada');
+            $this->getUser()->setFlash('OK', 'La tarea fue creada borrada',false);
             $tarea->getNode()->delete();
 
              if (!$request->isXmlHttpRequest()) {
@@ -141,7 +141,8 @@ class tareaActions extends sfActions {
             $this->forward404Unless($this->tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('La tarea no existe (%s).', $request->getParameter('idTarea')));
 
             $this->form = new LinkTareaUsuario($this->tarea);
-
+           
+            
             if ($request->isXmlHttpRequest()) {
                 return $this->renderPartial('tarea/asignarUsuario', array('form' => $this->form, 'tarea' => $this->tarea));
             }
@@ -151,11 +152,17 @@ class tareaActions extends sfActions {
 
             $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
             $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('idTarea')));
-            $this->form = new LinkTareaUsuario($tarea);
-
-            $this->tarea = $this->processForm($request, $this->form);
-            $this->getUser()->setFlash('OK', 'Asignación correcta');
            
+            $this->form = new LinkTareaUsuario($tarea);
+            $this->tarea = $this->processForm($request, $this->form);
+          
+          // 
+           
+            if ($tarea) {
+                 $this->getUser()->setFlash('OK', 'Asignación correcta',false);
+        
+            }
+            
             if ($request->isXmlHttpRequest()) {
                 return $this->renderPartial('tarea/asignarUsuario', array('form' => $this->form, 'tarea' => $this->tarea));
             }

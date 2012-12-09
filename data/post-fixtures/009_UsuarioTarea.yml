@@ -2,33 +2,25 @@
 ---
 
 UsuarioTarea:
-  relacion1:
+  fase1_alvaro:
     idTarea: 1
-    idUsuario: 14
-  relacion2:
-    idTarea: 2
-    idUsuario: 14 
-  relacion3:
-    idTarea: 3
-    idUsuario: 14 
-  relacion4:
-    idTarea: 4
-    idUsuario: 14 
-  relacion5:
-    idTarea: 5
-    idUsuario: 14 
-  relacion11:
-    idTarea: 6
+    idUsuario: 9
+  fase1_juan:
+    idTarea: 1
     idUsuario: 10
-  relacion12:
-    idTarea: 7
-    idUsuario: 10 
-  relacion13:
-    idTarea: 8
-    idUsuario: 10 
-  relacion14:
-    idTarea: 9
-    idUsuario: 10 
-  relacion15:
-    idTarea: 10
-    idUsuario: 10  
+  fase1_jenny:
+    idTarea: 1
+    idUsuario: 11 
+  fase1_viviana:
+    idTarea: 1
+    idUsuario: 12
+  investigacion_alvaro:
+    idTarea: 2
+    idUsuario: 9
+  investigacion_juan:
+    idTarea: 2
+    idUsuario: 10
+
+
+    
+  

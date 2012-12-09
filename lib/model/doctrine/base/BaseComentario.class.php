@@ -40,9 +40,9 @@ abstract class BaseComentario extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('contenidoComentario', 'string', 200, array(
+        $this->hasColumn('contenidoComentario', 'string', 4000, array(
              'type' => 'string',
-             'length' => 200,
+             'length' => 4000,
              ));
         $this->hasColumn('usuarioFK', 'integer', null, array(
              'type' => 'integer',
