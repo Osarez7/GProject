@@ -26,6 +26,8 @@ index_lugar:
    sf_format: (?:html|json)
 
 
+
+
 index_mapa:
   url: /mapas/:idProyecto/index.:sf_format
   param: {module: map , action: index , sf_format: html}
@@ -83,6 +85,21 @@ addChild:
 
 
 
+asociar_usuarios:
+  url:  /asociar/:idProyecto
+  class: sfDoctrineRoute
+  options:
+     model: Proyecto
+     type:  object
+  param: {module: proyecto, action: asociarUsuarios}
+  requirements:
+    idTarea: \d+
+    sf_method: [GET]
+    
+update_asociar:
+   url: /update/asociar/:idProyecto
+   param: {module: proyecto, action: updateAsociar }
+   
 asignar:
   url:  /asignar/:idTarea
   class: sfDoctrineRoute
@@ -100,7 +117,6 @@ update_asignar:
    param: {module: tarea, action: updateAsignar}
    
 
-
 homepage:
   url:   /
   param: { module: home, action: index }
@@ -112,8 +128,8 @@ default:
   url:   /:module/:action/*
 
 
-default_index:
-  url:   /:module
-  param: { action: index }
+#default_index:
+#  url:   /:module
+#  param: { action: index }
 
 

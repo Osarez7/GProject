@@ -47,5 +47,15 @@ class Proyecto extends BaseProyecto {
      
     }
     
+    
+    
+    public function asignarUsuario($idUsuario){
+        
+        $proyectoUsuario = new ProyectoUsuario();
+        $proyectoUsuario->setIdProyecto($this->getIdProyecto());
+        $proyectoUsuario->setIdUsuario($idUsuario);
+        $proyectoUsuario->save();
+    }
+    
 
 }

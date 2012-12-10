@@ -13214,3 +13214,423 @@ Dec 08 22:05:52 symfony [notice] inicio es  1353819600  1353819600
 Dec 08 22:05:52 symfony [notice] convierte 1353819600
 Dec 08 22:05:52 symfony [notice] convierte 1357448400
 Dec 08 22:05:52 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 10:25:28 symfony [notice] inicio es    
+Dec 09 10:25:28 symfony [notice] convierte 
+Dec 09 10:25:28 symfony [notice] convierte 
+Dec 09 10:25:28 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 10:25:33 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 10:25:33 symfony [notice] convierte 1353819600
+Dec 09 10:25:33 symfony [notice] convierte 1357448400
+Dec 09 10:25:33 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 10:25:40 symfony [notice] inicio es  1351400400  1351400400
+Dec 09 10:25:40 symfony [notice] convierte 1351400400
+Dec 09 10:25:40 symfony [notice] convierte 1355029200
+Dec 09 10:25:40 symfony [notice] inicio en rago es  2012-10-28 00:00:00
+Dec 09 10:25:40 symfony [notice] inicio es  1348981200  1348981200
+Dec 09 10:25:40 symfony [notice] convierte 1348981200
+Dec 09 10:25:40 symfony [notice] convierte 1352610000
+Dec 09 10:25:40 symfony [notice] inicio en rago es  2012-09-30 00:00:00
+Dec 09 10:25:41 symfony [notice] inicio es  1345957200  1345957200
+Dec 09 10:25:41 symfony [notice] convierte 1345957200
+Dec 09 10:25:41 symfony [notice] convierte 1349586000
+Dec 09 10:25:41 symfony [notice] inicio en rago es  2012-08-26 00:00:00
+Dec 09 10:25:43 symfony [notice] inicio es  1343538000  1343538000
+Dec 09 10:25:43 symfony [notice] convierte 1343538000
+Dec 09 10:25:43 symfony [notice] convierte 1347166800
+Dec 09 10:25:43 symfony [notice] inicio en rago es  2012-07-29 00:00:00
+Dec 09 10:25:43 symfony [notice] inicio es  1341118800  1341118800
+Dec 09 10:25:44 symfony [notice] convierte 1341118800
+Dec 09 10:25:44 symfony [notice] convierte 1344747600
+Dec 09 10:25:44 symfony [notice] inicio en rago es  2012-07-01 00:00:00
+Dec 09 10:25:44 symfony [notice] inicio es  1333256400  1333256400
+Dec 09 10:25:44 symfony [notice] convierte 1333256400
+Dec 09 10:25:44 symfony [notice] convierte 1336885200
+Dec 09 10:25:44 symfony [notice] inicio en rago es  2012-04-01 00:00:00
+Dec 09 10:25:44 symfony [notice] inicio es  1338094800  1338094800
+Dec 09 10:25:44 symfony [notice] convierte 1338094800
+Dec 09 10:25:44 symfony [notice] convierte 1341723600
+Dec 09 10:25:44 symfony [notice] inicio en rago es  2012-05-27 00:00:00
+Dec 09 10:25:44 symfony [notice] inicio es  1335675600  1335675600
+Dec 09 10:25:44 symfony [notice] convierte 1335675600
+Dec 09 10:25:44 symfony [notice] convierte 1339304400
+Dec 09 10:25:44 symfony [notice] inicio en rago es  2012-04-29 00:00:00
+Dec 09 10:25:45 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:25:45 symfony [notice] convierte 1330232400
+Dec 09 10:25:45 symfony [notice] convierte 1333861200
+Dec 09 10:25:45 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:25:46 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:25:46 symfony [notice] convierte 1327813200
+Dec 09 10:25:46 symfony [notice] convierte 1331442000
+Dec 09 10:25:46 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:25:47 symfony [notice] inicio es  1325394000  1325394000
+Dec 09 10:25:47 symfony [notice] convierte 1325394000
+Dec 09 10:25:47 symfony [notice] convierte 1329022800
+Dec 09 10:25:47 symfony [notice] inicio en rago es  2012-01-01 00:00:00
+Dec 09 10:25:47 symfony [notice] inicio es  1322370000  1322370000
+Dec 09 10:25:47 symfony [notice] convierte 1322370000
+Dec 09 10:25:47 symfony [notice] convierte 1325998800
+Dec 09 10:25:47 symfony [notice] inicio en rago es  2011-11-27 00:00:00
+Dec 09 10:25:47 symfony [notice] inicio es  1325394000  1325394000
+Dec 09 10:25:47 symfony [notice] convierte 1325394000
+Dec 09 10:25:47 symfony [notice] convierte 1329022800
+Dec 09 10:25:47 symfony [notice] inicio en rago es  2012-01-01 00:00:00
+Dec 09 10:25:48 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:25:48 symfony [notice] convierte 1327813200
+Dec 09 10:25:48 symfony [notice] convierte 1331442000
+Dec 09 10:25:48 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:26:30 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:26:30 symfony [notice] convierte 1330232400
+Dec 09 10:26:30 symfony [notice] convierte 1333861200
+Dec 09 10:26:30 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:26:30 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:26:31 symfony [notice] convierte 1327813200
+Dec 09 10:26:31 symfony [notice] convierte 1331442000
+Dec 09 10:26:31 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:26:57 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:26:57 symfony [notice] convierte 1330232400
+Dec 09 10:26:57 symfony [notice] convierte 1333861200
+Dec 09 10:26:57 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:26:57 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:26:57 symfony [notice] convierte 1327813200
+Dec 09 10:26:57 symfony [notice] convierte 1331442000
+Dec 09 10:26:57 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:27:08 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:27:08 symfony [notice] convierte 1330232400
+Dec 09 10:27:08 symfony [notice] convierte 1333861200
+Dec 09 10:27:08 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:27:09 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:27:09 symfony [notice] convierte 1327813200
+Dec 09 10:27:09 symfony [notice] convierte 1331442000
+Dec 09 10:27:09 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:27:11 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:27:11 symfony [notice] convierte 1330232400
+Dec 09 10:27:11 symfony [notice] convierte 1333861200
+Dec 09 10:27:11 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:27:11 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:27:11 symfony [notice] convierte 1327813200
+Dec 09 10:27:11 symfony [notice] convierte 1331442000
+Dec 09 10:27:11 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:27:39 symfony [notice] inicio es  1330232400  1330232400
+Dec 09 10:27:39 symfony [notice] convierte 1330232400
+Dec 09 10:27:39 symfony [notice] convierte 1333861200
+Dec 09 10:27:39 symfony [notice] inicio en rago es  2012-02-26 00:00:00
+Dec 09 10:27:40 symfony [notice] inicio es  1327813200  1327813200
+Dec 09 10:27:40 symfony [notice] convierte 1327813200
+Dec 09 10:27:40 symfony [notice] convierte 1331442000
+Dec 09 10:27:40 symfony [notice] inicio en rago es  2012-01-29 00:00:00
+Dec 09 10:27:52 symfony [notice] convierte 1329282000
+Dec 09 10:27:52 symfony [notice] default date es 1329282000 ,2012-02-15 00:00:00 true
+Dec 09 10:27:52 symfony [notice] convierte 1329282000
+Dec 09 10:27:52 symfony [notice] convierte 1329282000
+Dec 09 10:28:39 symfony [notice] convierte 1328191200
+Dec 09 10:28:39 symfony [notice] default date es 1328191200 ,2012-02-02 09:00:00 false
+Dec 09 10:28:39 symfony [notice] convierte 1328191200
+Dec 09 10:28:39 symfony [notice] convierte 1328191200
+Dec 09 10:28:51 symfony [notice] convierte 1327874400
+Dec 09 10:28:51 symfony [notice] default date es 1327874400 ,2012-01-29 17:00:00 false
+Dec 09 10:28:51 symfony [notice] convierte 1327874400
+Dec 09 10:28:51 symfony [notice] convierte 1327874400
+Dec 09 10:29:02 symfony [notice] convierte 1328072400
+Dec 09 10:29:02 symfony [notice] default date es 1328072400 ,2012-02-01 00:00:00 true
+Dec 09 10:29:02 symfony [notice] convierte 1328072400
+Dec 09 10:29:02 symfony [notice] convierte 1328072400
+Dec 09 10:29:09 symfony [notice] convierte 1328090400
+Dec 09 10:29:09 symfony [notice] default date es 1328090400 ,2012-02-01 05:00:00 false
+Dec 09 10:29:09 symfony [notice] convierte 1328090400
+Dec 09 10:29:09 symfony [notice] convierte 1328090400
+Dec 09 10:29:20 symfony [notice] convierte 1328094000
+Dec 09 10:29:20 symfony [notice] default date es 1328094000 ,2012-02-01 06:00:00 false
+Dec 09 10:29:20 symfony [notice] convierte 1328094000
+Dec 09 10:29:20 symfony [notice] convierte 1328094000
+Dec 09 10:29:44 symfony [notice] convierte 1328094000
+Dec 09 10:29:44 symfony [notice] default date es 1328094000 ,2012-02-01 06:00:00 false
+Dec 09 10:29:44 symfony [notice] convierte 1328094000
+Dec 09 10:29:44 symfony [notice] convierte 1328094000
+Dec 09 10:31:05 symfony [notice]  {controllerLugar}  longitud -76.941562496393
+Dec 09 10:31:35 symfony [notice]  {controllerLugar}  longitud -54.441562497291
+Dec 09 10:31:36 symfony [notice]  {controllerLugar}  longitud 152.27718749446
+Dec 09 10:31:53 symfony [notice]  {controllerLugar}  id_lugar undefined
+Dec 09 10:31:55 symfony [notice]  {controllerLugar}  id_lugar undefined
+Dec 09 10:31:59 symfony [notice]  {controllerLugar}  id_lugar undefined
+Dec 09 10:32:23 symfony [notice]  {controllerLugar}  id_lugar undefinedLugar
+Dec 09 10:32:50 symfony [notice]  {controllerLugar}  id_lugar 3Lugar
+Dec 09 10:33:30 symfony [notice]  {controllerLugar}  id_lugar 1Lugar
+Dec 09 10:33:38 symfony [notice]  {controllerLugar}  id_lugar 1
+Dec 09 10:34:53 symfony [notice]  {controllerLugar}  longitud 94.972499996744
+Dec 09 22:23:22 symfony [notice] ---- El padre sera 
+Dec 09 22:23:22 symfony [notice] prueba primer else parent
+Dec 09 22:24:51 symfony [notice] ---- El padre sera 
+Dec 09 22:24:51 symfony [notice] prueba primer else parent
+Dec 09 22:25:44 symfony [notice] inicio es    
+Dec 09 22:25:44 symfony [notice] convierte 
+Dec 09 22:25:44 symfony [notice] convierte 
+Dec 09 22:25:44 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:25:47 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:25:47 symfony [notice] convierte 1353819600
+Dec 09 22:25:47 symfony [notice] convierte 1357448400
+Dec 09 22:25:47 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:25:55 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:25:56 symfony [notice] convierte 1356843600
+Dec 09 22:25:56 symfony [notice] convierte 1360472400
+Dec 09 22:25:56 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:25:57 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:25:57 symfony [notice] convierte 1359262800
+Dec 09 22:25:57 symfony [notice] convierte 1362891600
+Dec 09 22:25:57 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:25:58 symfony [notice] convierte 1360126800
+Dec 09 22:25:58 symfony [notice] default date es 1360126800 ,2013-02-06 00:00:00 true
+Dec 09 22:25:58 symfony [notice] convierte 1360126800
+Dec 09 22:25:58 symfony [notice] convierte 1360126800
+Dec 09 22:26:24 symfony [notice] inicio es  1361682000  1361682000
+Dec 09 22:26:24 symfony [notice] convierte 1361682000
+Dec 09 22:26:24 symfony [notice] convierte 1365310800
+Dec 09 22:26:24 symfony [notice] inicio en rago es  2013-02-24 00:00:00
+Dec 09 22:26:24 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:26:25 symfony [notice] convierte 1359262800
+Dec 09 22:26:25 symfony [notice] convierte 1362891600
+Dec 09 22:26:25 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:26:44 symfony [notice] convierte 1361077200
+Dec 09 22:26:44 symfony [notice] default date es 1361077200 ,2013-02-17 00:00:00 true
+Dec 09 22:26:44 symfony [notice] convierte 1361077200
+Dec 09 22:26:44 symfony [notice] convierte 1361077200
+Dec 09 22:26:49 symfony [notice] inicio es  1361682000  1361682000
+Dec 09 22:26:50 symfony [notice] convierte 1361682000
+Dec 09 22:26:50 symfony [notice] convierte 1365310800
+Dec 09 22:26:50 symfony [notice] inicio en rago es  2013-02-24 00:00:00
+Dec 09 22:26:50 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:26:50 symfony [notice] convierte 1359262800
+Dec 09 22:26:50 symfony [notice] convierte 1362891600
+Dec 09 22:26:50 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:26:58 symfony [notice] inicio es  1361682000  1361682000
+Dec 09 22:26:58 symfony [notice] convierte 1361682000
+Dec 09 22:26:58 symfony [notice] convierte 1365310800
+Dec 09 22:26:58 symfony [notice] inicio en rago es  2013-02-24 00:00:00
+Dec 09 22:26:58 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:26:58 symfony [notice] convierte 1359262800
+Dec 09 22:26:58 symfony [notice] convierte 1362891600
+Dec 09 22:26:58 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:27:11 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:27:11 symfony [notice] convierte 1359262800
+Dec 09 22:27:11 symfony [notice] convierte 1362891600
+Dec 09 22:27:11 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:27:11 symfony [notice] inicio es  1361682000  1361682000
+Dec 09 22:27:11 symfony [notice] convierte 1361682000
+Dec 09 22:27:11 symfony [notice] convierte 1365310800
+Dec 09 22:27:11 symfony [notice] inicio en rago es  2013-02-24 00:00:00
+Dec 09 22:27:17 symfony [notice] inicio es  1361682000  1361682000
+Dec 09 22:27:17 symfony [notice] convierte 1361682000
+Dec 09 22:27:17 symfony [notice] convierte 1365310800
+Dec 09 22:27:17 symfony [notice] inicio en rago es  2013-02-24 00:00:00
+Dec 09 22:27:17 symfony [notice] inicio es  1359262800  1359262800
+Dec 09 22:27:17 symfony [notice] convierte 1359262800
+Dec 09 22:27:17 symfony [notice] convierte 1362891600
+Dec 09 22:27:17 symfony [notice] inicio en rago es  2013-01-27 00:00:00
+Dec 09 22:31:55 symfony [notice] inicio es    
+Dec 09 22:31:55 symfony [notice] convierte 
+Dec 09 22:31:55 symfony [notice] convierte 
+Dec 09 22:31:55 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:32:02 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:32:03 symfony [notice] convierte 1353819600
+Dec 09 22:32:03 symfony [notice] convierte 1357448400
+Dec 09 22:32:03 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:32:12 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:32:12 symfony [notice] convierte 1356843600
+Dec 09 22:32:12 symfony [notice] convierte 1360472400
+Dec 09 22:32:12 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:32:15 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:32:15 symfony [notice] convierte 1353819600
+Dec 09 22:32:15 symfony [notice] convierte 1357448400
+Dec 09 22:32:15 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:32:17 symfony [notice] inicio es  1351400400  1351400400
+Dec 09 22:32:17 symfony [notice] convierte 1351400400
+Dec 09 22:32:17 symfony [notice] convierte 1355029200
+Dec 09 22:32:17 symfony [notice] inicio en rago es  2012-10-28 00:00:00
+Dec 09 22:32:18 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:32:18 symfony [notice] convierte 1353819600
+Dec 09 22:32:18 symfony [notice] convierte 1357448400
+Dec 09 22:32:18 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:32:19 symfony [notice] convierte 1354338000
+Dec 09 22:32:19 symfony [notice] default date es 1354338000 ,2012-12-01 00:00:00 true
+Dec 09 22:32:19 symfony [notice] convierte 1354338000
+Dec 09 22:32:19 symfony [notice] convierte 1354338000
+Dec 09 22:32:42 symfony [notice] inicio es    
+Dec 09 22:32:42 symfony [notice] convierte 
+Dec 09 22:32:42 symfony [notice] convierte 
+Dec 09 22:32:42 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:32:47 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:32:47 symfony [notice] convierte 1353819600
+Dec 09 22:32:47 symfony [notice] convierte 1357448400
+Dec 09 22:32:47 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:32:51 symfony [notice] convierte 1354683600
+Dec 09 22:32:51 symfony [notice] default date es 1354683600 ,2012-12-05 00:00:00 true
+Dec 09 22:32:51 symfony [notice] convierte 1354683600
+Dec 09 22:32:51 symfony [notice] convierte 1354683600
+Dec 09 22:33:09 symfony [notice] inicio es    
+Dec 09 22:33:10 symfony [notice] convierte 
+Dec 09 22:33:10 symfony [notice] convierte 
+Dec 09 22:33:10 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:33:14 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:33:14 symfony [notice] convierte 1353819600
+Dec 09 22:33:14 symfony [notice] convierte 1357448400
+Dec 09 22:33:14 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:33:18 symfony [notice] convierte 1354510800
+Dec 09 22:33:18 symfony [notice] default date es 1354510800 ,2012-12-03 00:00:00 true
+Dec 09 22:33:18 symfony [notice] convierte 1354510800
+Dec 09 22:33:18 symfony [notice] convierte 1354510800
+Dec 09 22:33:27 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:33:27 symfony [notice] convierte 1356843600
+Dec 09 22:33:27 symfony [notice] convierte 1360472400
+Dec 09 22:33:27 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:33:27 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:33:28 symfony [notice] convierte 1353819600
+Dec 09 22:33:28 symfony [notice] convierte 1357448400
+Dec 09 22:33:28 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:33:44 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:33:44 symfony [notice] convierte 1356843600
+Dec 09 22:33:44 symfony [notice] convierte 1360472400
+Dec 09 22:33:44 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:33:44 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:33:44 symfony [notice] convierte 1353819600
+Dec 09 22:33:44 symfony [notice] convierte 1357448400
+Dec 09 22:33:44 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:33:52 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:33:52 symfony [notice] convierte 1356843600
+Dec 09 22:33:52 symfony [notice] convierte 1360472400
+Dec 09 22:33:52 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:33:54 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:33:54 symfony [notice] convierte 1353819600
+Dec 09 22:33:54 symfony [notice] convierte 1357448400
+Dec 09 22:33:54 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:33:58 symfony [notice] convierte 1354683600
+Dec 09 22:33:58 symfony [notice] default date es 1354683600 ,2012-12-05 00:00:00 true
+Dec 09 22:33:59 symfony [notice] convierte 1354683600
+Dec 09 22:33:59 symfony [notice] convierte 1354683600
+Dec 09 22:34:39 symfony [notice] inicio es    
+Dec 09 22:34:39 symfony [notice] convierte 
+Dec 09 22:34:39 symfony [notice] convierte 
+Dec 09 22:34:39 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:34:46 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:34:46 symfony [notice] convierte 1353819600
+Dec 09 22:34:46 symfony [notice] convierte 1357448400
+Dec 09 22:34:46 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:35:12 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:35:13 symfony [notice] convierte 1356843600
+Dec 09 22:35:13 symfony [notice] convierte 1360472400
+Dec 09 22:35:13 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:35:13 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:35:13 symfony [notice] convierte 1353819600
+Dec 09 22:35:13 symfony [notice] convierte 1357448400
+Dec 09 22:35:13 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:36:04 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:36:04 symfony [notice] convierte 1356843600
+Dec 09 22:36:04 symfony [notice] convierte 1360472400
+Dec 09 22:36:04 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:36:05 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:36:05 symfony [notice] convierte 1353819600
+Dec 09 22:36:05 symfony [notice] convierte 1357448400
+Dec 09 22:36:05 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:36:38 symfony [notice] convierte 1354338000
+Dec 09 22:36:38 symfony [notice] default date es 1354338000 ,2012-12-01 00:00:00 true
+Dec 09 22:36:38 symfony [notice] convierte 1354338000
+Dec 09 22:36:38 symfony [notice] convierte 1354338000
+Dec 09 22:36:53 symfony [notice] inicio es    
+Dec 09 22:36:53 symfony [notice] convierte 
+Dec 09 22:36:53 symfony [notice] convierte 
+Dec 09 22:36:53 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:37:00 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:37:00 symfony [notice] convierte 1353819600
+Dec 09 22:37:00 symfony [notice] convierte 1357448400
+Dec 09 22:37:00 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:37:07 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:37:07 symfony [notice] convierte 1356843600
+Dec 09 22:37:07 symfony [notice] convierte 1360472400
+Dec 09 22:37:07 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:37:07 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:37:07 symfony [notice] convierte 1353819600
+Dec 09 22:37:07 symfony [notice] convierte 1357448400
+Dec 09 22:37:07 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:37:10 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:37:10 symfony [notice] convierte 1356843600
+Dec 09 22:37:10 symfony [notice] convierte 1360472400
+Dec 09 22:37:10 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:37:11 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:37:11 symfony [notice] convierte 1353819600
+Dec 09 22:37:11 symfony [notice] convierte 1357448400
+Dec 09 22:37:11 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:37:18 symfony [notice] convierte 1354597200
+Dec 09 22:37:18 symfony [notice] default date es 1354597200 ,2012-12-04 00:00:00 true
+Dec 09 22:37:18 symfony [notice] convierte 1354597200
+Dec 09 22:37:18 symfony [notice] convierte 1354597200
+Dec 09 22:37:43 symfony [notice] convierte 1354078800
+Dec 09 22:37:43 symfony [notice] default date es 1354078800 ,2012-11-28 00:00:00 true
+Dec 09 22:37:43 symfony [notice] convierte 1354078800
+Dec 09 22:37:43 symfony [notice] convierte 1354078800
+Dec 09 22:37:52 symfony [notice] convierte 1355202000
+Dec 09 22:37:52 symfony [notice] default date es 1355202000 ,2012-12-11 00:00:00 true
+Dec 09 22:37:52 symfony [notice] convierte 1355202000
+Dec 09 22:37:52 symfony [notice] convierte 1355202000
+Dec 09 22:38:14 symfony [notice] convierte 1355029200
+Dec 09 22:38:14 symfony [notice] default date es 1355029200 ,2012-12-09 00:00:00 true
+Dec 09 22:38:14 symfony [notice] convierte 1355029200
+Dec 09 22:38:14 symfony [notice] convierte 1355029200
+Dec 09 22:38:32 symfony [notice] inicio es    
+Dec 09 22:38:32 symfony [notice] convierte 
+Dec 09 22:38:32 symfony [notice] convierte 
+Dec 09 22:38:32 symfony [notice] inicio en rago es  1969-12-31 19:00:00
+Dec 09 22:38:39 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:38:39 symfony [notice] convierte 1353819600
+Dec 09 22:38:39 symfony [notice] convierte 1357448400
+Dec 09 22:38:39 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:38:40 symfony [notice] convierte 1355029200
+Dec 09 22:38:40 symfony [notice] default date es 1355029200 ,2012-12-09 00:00:00 true
+Dec 09 22:38:40 symfony [notice] convierte 1355029200
+Dec 09 22:38:40 symfony [notice] convierte 1355029200
+Dec 09 22:38:52 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:38:52 symfony [notice] convierte 1356843600
+Dec 09 22:38:52 symfony [notice] convierte 1360472400
+Dec 09 22:38:52 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:38:52 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:38:52 symfony [notice] convierte 1353819600
+Dec 09 22:38:52 symfony [notice] convierte 1357448400
+Dec 09 22:38:52 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:38:58 symfony [notice] convierte 1354597200
+Dec 09 22:38:58 symfony [notice] default date es 1354597200 ,2012-12-04 00:00:00 true
+Dec 09 22:38:58 symfony [notice] convierte 1354597200
+Dec 09 22:38:58 symfony [notice] convierte 1354597200
+Dec 09 22:39:06 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:39:06 symfony [notice] convierte 1353819600
+Dec 09 22:39:06 symfony [notice] convierte 1357448400
+Dec 09 22:39:06 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:39:06 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:39:06 symfony [notice] convierte 1356843600
+Dec 09 22:39:06 symfony [notice] convierte 1360472400
+Dec 09 22:39:06 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:39:17 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:39:17 symfony [notice] convierte 1356843600
+Dec 09 22:39:17 symfony [notice] convierte 1360472400
+Dec 09 22:39:17 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:39:19 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:39:19 symfony [notice] convierte 1353819600
+Dec 09 22:39:19 symfony [notice] convierte 1357448400
+Dec 09 22:39:19 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:39:22 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:39:22 symfony [notice] convierte 1356843600
+Dec 09 22:39:22 symfony [notice] convierte 1360472400
+Dec 09 22:39:22 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:39:22 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:39:22 symfony [notice] convierte 1353819600
+Dec 09 22:39:22 symfony [notice] convierte 1357448400
+Dec 09 22:39:22 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:39:30 symfony [notice] inicio es  1356843600  1356843600
+Dec 09 22:39:30 symfony [notice] convierte 1356843600
+Dec 09 22:39:30 symfony [notice] convierte 1360472400
+Dec 09 22:39:30 symfony [notice] inicio en rago es  2012-12-30 00:00:00
+Dec 09 22:39:31 symfony [notice] inicio es  1353819600  1353819600
+Dec 09 22:39:31 symfony [notice] convierte 1353819600
+Dec 09 22:39:31 symfony [notice] convierte 1357448400
+Dec 09 22:39:31 symfony [notice] inicio en rago es  2012-11-25 00:00:00
+Dec 09 22:48:23 symfony [notice]  {controllerLugar}  longitud -73.250156246536
+Dec 09 22:48:36 symfony [notice]  {controllerLugar}  id_lugar 4
+Dec 09 22:48:45 symfony [notice]  {controllerLugar}  id_lugar 4
+Dec 09 22:48:50 symfony [notice]  {controllerLugar}  id_lugar 4
+Dec 09 22:49:04 symfony [notice]  {controllerLugar}  longitud -34.929843748066

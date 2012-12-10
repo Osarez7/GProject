@@ -13,7 +13,9 @@ class ProyectoForm extends BaseProyectoForm
   public function configure()
   {
   unset(
-      $this['fecha_actualizacion'], $this['fecha_creacion']
+      $this['fecha_actualizacion'], $this['fecha_creacion'],
+      $this['usuario_list']
+      
     );
     
    
@@ -28,7 +30,7 @@ class ProyectoForm extends BaseProyectoForm
 
  
 
-
+		
   $this->widgetSchema['fechaInicio'] =  new sfWidgetFormTextDateInputJQueryDatePicker(
               array('image'=> '/images/calendar_view_month.png',
 		'include_time'=> false));
@@ -40,9 +42,8 @@ class ProyectoForm extends BaseProyectoForm
 		'include_time'=> false));
 		;
 
-
   
-   $this->widgetSchema['descProyecto'] = new sfWidgetFormTextarea();
+  $this->widgetSchema['descProyecto'] = new sfWidgetFormTextarea();
   $this->widgetSchema->setLabel('descProyecto','Descripción');
   }
 }

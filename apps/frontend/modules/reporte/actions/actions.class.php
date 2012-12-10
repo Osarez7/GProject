@@ -19,4 +19,18 @@ class reporteActions extends sfActions
   {
     $this->filter = new ProyectoFormFilter();
   }
+  
+  
+  public function executeReporteProyectos(){
+      
+  }
+  
+  
+  public function executeReporteUsuarios(){
+      
+  }
+  
+  public function executeReporteTareas(){
+      
+  }
 }

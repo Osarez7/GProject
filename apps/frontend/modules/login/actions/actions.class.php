@@ -17,9 +17,10 @@ class loginActions extends sfActions {
      */
     public function executeIndex(sfWebRequest $request) {
 
-
-
+       
         if ($request->getParameter('login')) {
+            
+            $this->getUser()->clearCredentials();
 
             $usuario = Doctrine::getTable('Usuario')->existeUsuario($request->getParameter('user'), $request->getParameter('password'));
 
@@ -48,7 +49,7 @@ class loginActions extends sfActions {
 
 
         if ($this->getUser()->isAuthenticated()) {
-            $this->redirect('/');
+           $this->redirect('home/index');
         }
 
         $this->form = new LoginForm();

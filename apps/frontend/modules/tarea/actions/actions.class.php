@@ -151,7 +151,7 @@ class tareaActions extends sfActions {
         public function executeUpdateAsignar(sfWebRequest $request) {
 
             $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-            $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('Object tarea does not exist (%s).', $request->getParameter('idTarea')));
+            $this->forward404Unless($tarea = Doctrine_Core::getTable('Tarea')->find(array($request->getParameter('idTarea'))), sprintf('La tarea (%s) no existe.', $request->getParameter('idTarea')));
            
             $this->form = new LinkTareaUsuario($tarea);
             $this->tarea = $this->processForm($request, $this->form);

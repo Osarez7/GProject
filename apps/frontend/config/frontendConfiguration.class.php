@@ -6,6 +6,8 @@ class frontendConfiguration extends sfApplicationConfiguration
  
   public function generateBackEndUrl($name, $parameters = array())
   {
+     $env = sfConfig::get('sf_environment'); 
+      
     return '/backend_dev.php'.$this->getBackEndRouting()->generate($name, $parameters);
   }
 

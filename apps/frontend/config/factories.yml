@@ -7,7 +7,6 @@ prod:
     param:
       level:   err
       loggers: ~
-
 test:
   storage:
     class: sfSessionTestStorage
@@ -27,7 +26,6 @@ dev:
   mailer:
     param:
       delivery_strategy: none
-
 all:
   routing:
     class: sfPatternRouting

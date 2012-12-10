@@ -12,7 +12,7 @@ $(document).ready(function() {
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
-     //   editable: true,
+        //   editable: true,
         theme:true,
         events: url_for_eventos_index,
         dayClick: function(date, allDay, jsEvent, view) {
@@ -27,8 +27,8 @@ $(document).ready(function() {
            
         },
         eventMouseover: function(calEvent, jsEvent, view) {
-            //   globalEvent = calEvent; 
-            // ajaxCall(calEvent.showEvento);
+        //   globalEvent = calEvent; 
+        // ajaxCall(calEvent.showEvento);
         },
         monthNames:['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
         ,
@@ -48,12 +48,13 @@ $(document).ready(function() {
         slotMinutes: 60
     });
     
-     jQuery(".updateCalendar").live('click',function(){
-         
-            jQuery('#calendar').fullCalendar('next');
-            jQuery('#calendar').fullCalendar('prev');
-         
-     });
+    jQuery(".updateCalendar").live('click',function(){
+        
+                jQuery('#calendar').fullCalendar('next');
+                jQuery('#calendar').fullCalendar('prev'); 
+      
+       
+    });
  
 });
 
@@ -61,20 +62,20 @@ $(document).ready(function() {
 
 function ajaxCall(url){
     
-      crearContentDialog();
-            jQuery.ajax({
+    crearContentDialog();
+    jQuery.ajax({
                 
-                type:"GET",
-                contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
-                url: url,
-                dataType:"html",
-                success:function (msg) {
+        type:"GET",
+        contentType:"application/x-www-form-urlencoded;charset=ISO-8859-1",
+        url: url,
+        dataType:"html",
+        success:function (msg) {
       
-                    jQuery("#customDialogConent").html(msg);         
-                    jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width());
+            jQuery("#customDialogConent").html(msg);         
+            jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width());
                    
 
 
-                }
-            });
+        }
+    });
 }

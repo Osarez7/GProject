@@ -32,15 +32,29 @@
  height: 500px;
 }
 
-#lista-lugares{
+#lista-lugares {
+    border-left: 1px solid #CCCCCC;
     float: left;
+    height: 294px;
+    overflow: auto;
+    width: 328px;
 }
 
-#content-mapas-info{
-    
-     border: 1px solid #0099FF;
+#content-mapas-info {
+    border: 1px solid #CCCCCC;
     height: 502px;
-    width: 950px;
+    width: 923px;
+}
+
+#map-control-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 29px;
+    margin: 0;
+}
+
+#map-control-content select{
+    float: left; 
+
 }
 
 .olPopupCloseBox{

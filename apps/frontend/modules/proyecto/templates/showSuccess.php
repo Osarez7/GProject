@@ -39,21 +39,32 @@
 
 <div class="content-info">
     <h1><?php echo $proyecto->getNombre() ?></h1>
-    <h4> Ver detalles</h4>
-<table class="tbl-show">
-  <tbody>
+    <span id="control-detalles"> Ver detalles</span>
+    <div id="detalle-proyecto-content">
+        <label> Descripción del proyecto: </labe> <br/>
+       <?php echo $proyecto->getDescProyecto() ?>
+       
+       <table>
+           <tr>
+               <td>
+                  <label>  Estado: </label>  <?php echo $proyecto->getStatus() ?>
+               </td>
+               <td>
+                  <label>  Prioridad :  </label> <?php echo $proyecto->getPrioridad() ?>
+               </td>
+           </tr>
+       </table>
+       
+    </div>
     <tr>
-      <th>Desc proyecto:</th>
-      <td><?php echo $proyecto->getDescProyecto() ?></td>
+      <th></th>
+      <td></td>
     </tr>
     <tr>
-      <th>Status :</th>
-      <td><?php echo $proyecto->getStatus() ?></td>
+      
     </tr>
     <tr>
-      <th>Prioridad :</th>
-      <td><?php echo $proyecto->getPrioridad() ?></td>
-    </tr>
+      <
   </tbody>
 </table>
   
@@ -78,7 +89,7 @@
 <div id="content-left-gantt"> 
     
     <div id="wrapper-left-gantt"> 
-    <table id="table-tareas" class="gantt-table">
+    <table id="table-tareas" class="gantt-table list">
                 
                         <thead> 
                             <tr>
@@ -91,7 +102,12 @@
 
 
     <?php include_partial('tarea/tableGantt',array('arbolTarea' =>$proyecto->getArbolTareas(), 'proyecto' => $proyecto , 'parent' => '0')); ?>
-       </table>
+       
+    <tfoot>
+        
+    </tfoot>
+    
+    </table>
  </div>
 </div>
 
@@ -111,7 +127,7 @@
 
 
 
-  <a  class="button icon add dialogLink" href="<?php echo url_for('tarea/new') ?>">Nueva Tarea</a>
+  <a  class="button icon add dialogLink" href="<?php echo url_for('tarea/new?idProyecto='.$proyecto->getIdProyecto()) ?>">Nueva Tarea</a>
 
 
 <?php    slot('menu_lateral') ?>

@@ -25,11 +25,16 @@
     cursor: pointer;
     outline: none;
     background-color: #ececec;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#DDD));
+    background-image: -moz-linear-gradient(#f4f4f4,#DDD);
+    background-image: -ms-linear-gradient(#f4f4f4, #DDD);
+    background-image: -o-linear-gradient(#f4f4f4,#DDD);
+    background-image: linear-gradient(#f4f4f4, #DDD);
+/*    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
     background-image: -moz-linear-gradient(#f4f4f4, #ececec);
     background-image: -ms-linear-gradient(#f4f4f4, #ececec);
     background-image: -o-linear-gradient(#f4f4f4, #ececec);
-    background-image: linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);*/
     -moz-background-clip: padding; /* for Firefox 3.6 */
     background-clip: padding-box;
     border-radius: 0.2em;
