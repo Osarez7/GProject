@@ -12,7 +12,7 @@ abstract class BaseUsuarioGeneratorConfiguration extends sfModelGeneratorConfigu
 {
   public function getActionsDefault()
   {
-    return array();
+    return array(  'new' =>   array(    'label' => 'Nuevo',  ),);
   }
 
   public function getFormActions()

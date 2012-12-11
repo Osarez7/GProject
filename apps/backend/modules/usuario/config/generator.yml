@@ -12,7 +12,8 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions: ~
+      actions: 
+        new: {label: Nuevo}
       fields:  
         usr_nombre: {label: Nombre}
         usr_nick: {label: Nickname}

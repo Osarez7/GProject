@@ -14,6 +14,8 @@
     <?php include_partial('usuario/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
   </div>
 
+  <br/><br/>
+  
   <div id="sf_admin_content">
     <form action="<?php echo url_for('usuario_collection', array('action' => 'batch')) ?>" method="post">
     <?php include_partial('usuario/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)) ?>

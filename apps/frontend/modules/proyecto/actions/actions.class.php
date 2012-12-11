@@ -6,14 +6,12 @@ class proyectoActions extends sfActions {
     public function executeIndex(sfWebRequest $request) {
       
         $this->proyectos = Doctrine_Core::getTable('Proyecto')->getProyectoByUsuario($this->getUser()->getAttribute('idUsuario'));
-     
     }
 
     public function executeShow(sfWebRequest $request) {
        
        $this->proyecto = Doctrine_Core::getTable('Proyecto')
              ->find(array($request->getParameter('id_proyecto')));
-        
         $this->forward404Unless($this->proyecto);
     }
 

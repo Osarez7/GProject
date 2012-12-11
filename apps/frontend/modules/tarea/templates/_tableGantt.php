@@ -5,45 +5,46 @@
             <tr 
                 id="node-<?php echo $node['idTarea'] ?>" 
                 <?php if ($parent != '0'): ?> 
-                     class="child-of-node-<?php echo $parent ?> "
+                    class="child-of-node-<?php echo $parent ?> "
                 <?php endif; ?>
-              >
+                >
 
 
                 <td class="primera-celda-arbol"> <?php echo $node['nombreTarea'] ?> </td>
                 <td>
-                   <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
-	        </td>
-              <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'u') ?> 
- </td>
-                        <td> 
-         <?php echo format_datetime($node['fechaFinal'], 'u') ?> 
- </td>
-        
+                    <?php include_partial('tarea/accionesTarea', array('node' => $node, 'proyecto' => $proyecto)); ?>
+                </td>
+                <td> 
+                    <?php echo format_datetime($node['fechaInicio'], 'I') ?> 
+                </td>
+                <td> 
+                    <?php echo format_datetime($node['fechaFinal'], 'I') ?> 
+                </td>
+
             </tr>
             <?php include_partial('tarea/tableGantt', array('arbolTarea' => $node, 'proyecto' => $proyecto, 'parent' => $node['idTarea'])); ?>  
 
         <?php else: ?>
-          <tr  id="node-<?php echo $node['idTarea'] ?> " 
-                <?php if ($parent != '0'): ?> 
+            <tr  id="node-<?php echo $node['idTarea'] ?> " 
+            <?php if ($parent != '0'): ?> 
                      class="child-of-node-<?php echo $parent ?>"
-                <?php endif; ?>
-              >
+                 <?php endif; ?>
+                 >
                 <td class="primera-celda-arbol"><?php echo $node['nombreTarea'] ?></td>
 
-               <td>
-                   <?php include_partial('tarea/accionesTarea',array('node' =>$node,'proyecto'=>$proyecto)); ?>
-	        </td>
-              <td> 
-         <?php echo format_datetime($node['fechaInicio'], 'u') ?> 
- </td>
-                        <td> 
-         <?php echo /* $job->getDateTimeObject('created_at')->format('m/d/Y')
-*/ 
-         format_datetime($node['fechaFinal'], 'u') ?> 
- </td>
-        
+                <td>
+                    <?php include_partial('tarea/accionesTarea', array('node' => $node, 'proyecto' => $proyecto)); ?>
+                </td>
+                <td> 
+                    <?php echo format_datetime($node['fechaInicio'], 'I') ?> 
+                </td>
+                <td> 
+                    <?php echo /* $job->getDateTimeObject('created_at')->format('m/d/Y')
+                     */
+                    format_datetime($node['fechaFinal'], 'I')
+                    ?> 
+                </td>
+
             </tr>
         <?php endif; ?>
 

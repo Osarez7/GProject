@@ -22,6 +22,19 @@ body
 {
   padding: 25px;
   padding-top: 0;
+  float: left;
+  width: 831px;
+}
+
+
+#admin-home h1 {
+     color: #3791B5  !important;;
+    font-size: 21px  !important;;
+}
+#admin-home  {
+         font-family: "Helvetica Neue",Helvetica,sans-serif !important;
+    font-size: 12px   !important;
+       ; 
 }
 
 #menu

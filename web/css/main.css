@@ -19,7 +19,7 @@ body{
 
     border-radius: 5px 5px;
     background: url("/images/patrones-fondo/cardboard_flat.png") repeat; 
-    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,sans-serif !important;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;
@@ -37,7 +37,9 @@ textarea{
 }
 
 
-
+label{
+    font-weight: bold;
+}
 #contenido h1, div.ui-dialog h1{
     /* background: -moz-linear-gradient(center top , #007D9A 0%, #87AEDD 100%) repeat scroll 0 0 transparent; */
     border-radius: 5px 5px;
@@ -137,7 +139,11 @@ div#menu-lateral{
     height: auto !important;
     min-height: 390px;
     padding: 20px 35px;
-    width: 890px;
+    width:91.3%;
+}
+
+#menu_admin li{
+    list-style: none;
 }
 
 #header{
@@ -412,6 +418,10 @@ table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-
 #evento-form-content{
     width: 550px;
 }
+
+form-tarea-cotent{
+    width: 490px;
+} 
 
 
 

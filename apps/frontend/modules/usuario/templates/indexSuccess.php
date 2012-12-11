@@ -11,8 +11,6 @@
 
 <div id="lista-usuarios">
  <?php include_partial('usuario/list', array('usuarios' => $pager->getResults())) ?>
-  
-  
 <div>
 
 

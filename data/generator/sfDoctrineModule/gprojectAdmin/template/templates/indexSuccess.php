@@ -16,6 +16,8 @@
   </div>
 <?php endif; ?>
 
+  <br/><br/>
+  
   <div id="sf_admin_content">
 <?php if ($this->configuration->getValue('list.batch_actions')): ?>
     <form action="[?php echo url_for('<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'batch')) ?]" method="post">

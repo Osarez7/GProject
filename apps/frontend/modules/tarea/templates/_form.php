@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<div id="form-cotent">
+<div id="form-tarea-cotent">
 
 <?php if ($sf_user->hasFlash('OK')): ?>
     <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>

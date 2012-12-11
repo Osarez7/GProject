@@ -1,8 +1,31 @@
+<?php use_helper('Date') ?>
+
 <table class="list">
     <th>
        Tarea
     </th>
+    
     <th>
+      Fecha inicial
+    </th>
+    
+    <th>
+      Fecha Final
+    </th>
+    
+    <th>
+      horas estimadas
+    </th>
+    <th>
+      estado
+    </th>
+    
+    <th>
+      prioridad
+    </th>
+   
+   
+<!--    <th>
         Total horas
     </th>
     
@@ -22,41 +45,43 @@
     <th>
         Horas trabajadas
     </th>
-    
-    
-    <th>
-      estado
-    </th>
-    
-    <th>
-      prioridad
-    </th>
-   
-    <th>
-        Tareas En Proceso
-    </th>
-    
-    <th>
-        Tareas Pendientes
-    </th>
+    -->
+        
+ 
     
     <?php foreach($lstResultados as $itemResultado): ?>
     <tr>
         <td>
-            <?php echo $itemResultado['nombreProyecto'] ?>
+            <?php echo $itemResultado->getNombreTarea() ?>
         </td>
-        <td>
-            <?php echo $itemResultado['participantes'] ?>
+       
+        
+        
+        
+        
+         <td>
+            <?php echo format_datetime($itemResultado['fechaInicio'] , 'I') ?> 
         </td>
+        
+        
+         <td>
+            <?php echo  format_datetime($itemResultado['fechaFinal'] , 'I') ?> 
+        </td>
+        
         <td>
             <?php echo $itemResultado['horasEstimadas'] ?>
         </td>
+        
         <td>
-            <?php echo $itemResultado[horasRealizadas] ?>
+            <?php echo $itemResultado->getStatus()  ?>
         </td>
-        <td>
-            <?php echo $itemResultado[diasRestantes] ?>
+         <td>
+            <?php echo $itemResultado->getPrioridad() ?>
         </td>
+        
+        
+        
+        
     </tr>
     
     <?php endforeach;?>

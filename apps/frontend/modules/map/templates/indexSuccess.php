@@ -29,7 +29,7 @@
             <option value ="0" class="default-selected"> -- Seleccione un mapa -</option>
             <?php foreach ($mapas as $mapa): ?>
                 <option value = "<?php echo $mapa->getIdMapa() ?>"> <?php echo $mapa->getNombreMapa() ?></option> 
-                </tr>
+                
             <?php endforeach; ?>
         </select>
 
