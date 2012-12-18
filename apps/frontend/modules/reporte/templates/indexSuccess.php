@@ -7,7 +7,7 @@
 
 
                         <?php
-                          echo link_to('Reporte Proyectos', 'reporte/reporteProyectos', array('class' => 'button  pill reporteButton'))
+                          echo link_to('Reporte Proyectos', 'reporte/reporteProyectos', array('class' => 'button primary  pill reporteButton'))
                         ?>
 
                          <?php
@@ -21,11 +21,14 @@
 
     
 </div>
-
+<br/><br/>
 <div id="filter-content">
-    
+         <?php include_partial('reporte/filtroReporteProyectos', array('filter' =>  $filter)); ?>
     
 </div>
+
+<br/>
+
 <div id="resultado-reporte">
     
 <!--    <div>

@@ -420,7 +420,7 @@ table.treeTable.fixed td { table-layout:fixed; overflow:hidden; word-wrap:break-
 }
 
 form-tarea-cotent{
-    width: 490px;
+    width: 520px;
 } 
 
 
@@ -653,7 +653,7 @@ form-tarea-cotent{
 #panel_div{
 
     float: left;
-    margin-left: 195px;
+    margin-left: 405px;
 }
 
 td.primera-celda-arbol, td.primera-celda{
@@ -684,7 +684,7 @@ a.expander{
 
 }
 #content-form-proyecto{
-    height: 460px;
+    width: 480px;
 }
 
 #content-asociar-usuario{

@@ -24673,3 +24673,35 @@ Dec 11 08:37:30 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_batch_a
 Dec 11 08:37:30 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_actions" 1.55 ms (1)
 Dec 11 08:37:30 symfony [info] {sfWebDebugLogger} Partial "usuario/_list_footer" 1.14 ms (1)
 Dec 11 08:37:30 symfony [info] {sfWebResponse} Send content (135253 o)
+Dec 11 20:26:01 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 11 20:26:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:26:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 11 20:26:01 symfony [info] {sfBasicSecurityFilter} Action "usuario/index" requires authentication, forwarding to "login/login"
+Dec 11 20:26:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:26:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 11 20:26:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:26:01 symfony [info] {loginActions} Call "loginActions->executeLogin()"
+Dec 11 20:26:01 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/login/index"
+Dec 11 20:26:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 11 20:26:01 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/login/index"
+Dec 11 20:26:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:26:01 symfony [info] {sfWebDebugLogger} Configuration 112.33 ms (14)
+Dec 11 20:26:01 symfony [info] {sfWebDebugLogger} Factories 284.04 ms (1)
+Dec 11 20:26:01 symfony [info] {sfWebDebugLogger} Action "login/login" 48.85 ms (1)
+Dec 11 20:26:01 symfony [info] {sfWebResponse} Send content (100 o)
+Dec 12 09:05:01 symfony [info] {sfPatternRouting} Match route "usuario" (/usuario.:sf_format) for /usuario with parameters array (  'module' => 'usuario',  'action' => 'index',  'sf_format' => 'html',)
+Dec 12 09:05:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 12 09:05:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 12 09:05:02 symfony [info] {sfBasicSecurityFilter} Action "usuario/index" requires authentication, forwarding to "login/login"
+Dec 12 09:05:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 12 09:05:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 12 09:05:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 12 09:05:02 symfony [info] {loginActions} Call "loginActions->executeLogin()"
+Dec 12 09:05:02 symfony [info] {sfFrontWebController} Redirect to "/frontend_dev.php/login/index"
+Dec 12 09:05:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 12 09:05:02 symfony [info] {sfWebResponse} Send header "Location: /frontend_dev.php/login/index"
+Dec 12 09:05:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 09:05:02 symfony [info] {sfWebDebugLogger} Configuration 26.72 ms (13)
+Dec 12 09:05:02 symfony [info] {sfWebDebugLogger} Factories 998.12 ms (1)
+Dec 12 09:05:02 symfony [info] {sfWebDebugLogger} Action "login/login" 92.93 ms (1)
+Dec 12 09:05:02 symfony [info] {sfWebResponse} Send content (100 o)

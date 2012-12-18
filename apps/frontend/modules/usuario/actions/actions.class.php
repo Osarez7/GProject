@@ -76,9 +76,9 @@ $this->pager->init();
   public function executeEdit(sfWebRequest $request)
           
   {
-    if($this->getUser()->hasCredential('admin')  ||$this->getUser()->getAttribute('idUsuario') == $request->getParameter('idUsuario') )
+    if($this->getUser()->hasCredential('admin')  ||$this->getUser()->getAttribute('idUsuario') == $request->getParameter('idUsuario')  )
    {  
-    $this->forward404Unless($usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('id_usuario'))), sprintf('Object usuario does not exist (%s).', $request->getParameter('id_usuario')));
+    $this->forward404Unless($usuario = Doctrine_Core::getTable('Usuario')->find(array($request->getParameter('idUsuario') )), sprintf('Object usuario does not exist (%s).', $request->getParameter('idUsuario') ));
     $this->form = new UsuarioForm($usuario);
    }else{
         $this->forward404Unless('false');

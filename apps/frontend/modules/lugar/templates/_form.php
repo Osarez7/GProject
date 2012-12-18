@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-
+<div id="lugar-form-content" class="cotent-form">
 <?php if($titulo): ?>
  <h1> <?php  echo $titulo ?>  </h1>
 <?php endif; ?>
@@ -27,3 +27,5 @@
     </tbody>
   </table>
 </form>
+
+</div> 

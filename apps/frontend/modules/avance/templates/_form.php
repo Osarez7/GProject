@@ -1,6 +1,9 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
+
+<div id="form-mapa-content" class="cotent-form">
+
 <form action="<?php echo url_for('avance/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id_avance='.$form->getObject()->getIdAvance() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
@@ -11,7 +14,7 @@
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'avance/delete?id_avance='.$form->getObject()->getIdAvance(), array('method' => 'delete', 'class' => 'button icon trash  danger action-confirm')) ?>
+            &nbsp;<?php echo link_to('Borrar', 'avance/delete?id_avance='.$form->getObject()->getIdAvance(), array('method' => 'delete', 'class' => 'button icon trash  danger action-confirm')) ?>
           <?php endif; ?>
           <input type="submit" value="Guardar" class="button icon add dialogSubmit" />
         </td>
@@ -58,3 +61,5 @@
     </tbody>
   </table>
 </form>
+
+</div>

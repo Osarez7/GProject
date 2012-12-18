@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
             success:function (msg) {
       
                 jQuery("#filter-content").html(msg);
-         
+                 jQuery("#resultado-reporte").html("");
 
             }
         });

@@ -8,12 +8,8 @@
   <table>
     <tfoot>
       <tr>
-        <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('usuario/index') ?>">Back to list</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'usuario/delete?id_usuario='.$form->getObject()->getIdUsuario(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Save" />
+        <td colspan="2"> 
+          <input type="submit" value="Guardar"  class="button" />
         </td>
       </tr>
     </tfoot>

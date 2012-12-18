@@ -1,7 +1,11 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<div id="content-form-proyecto">
+<div id="content-form-proyecto" class="cotent-form">
+
+<?php if ($sf_user->hasFlash('OK')): ?>
+    <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>
+<?php endif; ?>
 
 
 <form action="<?php echo url_for('proyecto/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id_proyecto='.$form->getObject()->getIdProyecto() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>

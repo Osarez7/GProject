@@ -21,17 +21,17 @@ class UsuarioForm extends BaseUsuarioForm {
         
         
       
-         $this->setWidget('fotoPerfil', new sfWidgetFormInputFile( ));
+       //  $this->setWidget('fotoPerfil', new sfWidgetFormInputFile( ));
 
         
-        $this->validatorSchema['fotoPerfil'] = new sfValidatorFile(array(
+    /*    $this->validatorSchema['fotoPerfil'] = new sfValidatorFile(array(
                     'required'
                     => false,
                     'path'
                     => sfConfig::get('sf_upload_dir') . '/fotos',
                     'mime_types' => 'web_images',
                 ));
-
+*/
 
         $this->widgetSchema->setLabels(array(
             'perfilFK' => 'Perfil',
@@ -41,7 +41,6 @@ class UsuarioForm extends BaseUsuarioForm {
             'usr_apellido2' => 'Segundo  Apellido',
             'email' => 'Correo el&eacute;ctronico',
             'usr_nick' => 'Nick',
-            'fotoPefil' => 'Foto de perfil',
         ));
 
         

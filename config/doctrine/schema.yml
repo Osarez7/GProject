@@ -61,7 +61,6 @@ Usuario:
     usr_nombre: { type: string(255), notnull: true }
     usr_apellido1: { type: string(255), notnull: true }
     usr_apellido2: { type: string(255), notnull: true }
-    fotoPerfil: { type: string(255), notnull: true }
     email: { type: string(200), notnull: true}
     usr_nick: { type: string(200), notnull: true, unique: true }
     password: { type: string(200), notnull: true }

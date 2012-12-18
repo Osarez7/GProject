@@ -4,28 +4,36 @@ Proyecto:
    nombre: Sistema de información para gestión de proyectos
    descProyecto:  Sistema web con funcionalidades para la creación, control y seguimiento de proyectos.
    statusFK:     1
-   prioridadFK:  2
+   prioridadFK:  3
+   fechaInicio: '2012-02-20 00:00:00'
+   fechaFinal:  '2012-02-20 00:00:00'
    
   Sistema de Workflow:
    idProyecto: 2
    nombre: Workflow
    descProyecto:  Administrador de workflows dinamicos.
    statusFK:     1
-   prioridadFK:  2  
+   prioridadFK:  2 
+   fechaInicio: '2012-03-10 00:00:00'
+   fechaFinal:  '2012-03-10 00:00:00' 
     
   Sistema indicadores:
    idProyecto: 3
    nombre: Sistema de siguimiento de objetivos
    descProyecto:  Sistema web para la creación   y seguiento de obetivos según metas.
    statusFK:     1
-   prioridadFK:  2 
+   prioridadFK:  3 
+   fechaInicio: '2012-03-15 00:00:00'
+   fechaFinal:  '2012-03-15 00:00:00' 
    
   Sistema gestion centro médico:
    idProyecto: 4
    nombre: Sistema de gestión de centros médicos
    descProyecto:  Sistema para la administración de agendas médicas asignación , pago y cancelación de citas      
    statusFK:     1
-   prioridadFK:  2 
+   prioridadFK:  1
+   fechaInicio: '2012-04-15 00:00:00'
+   fechaFinal:  '2012-04-15 00:00:00'  
    
   Seguimiento de violación de derechos humanos en ciudad bolivar:
    idProyecto: 5
@@ -33,20 +41,26 @@ Proyecto:
    descProyecto: Iniciativa para la defensa de derechos humanos en la localidad de ciudad bolivar.
    statusFK:     1
    prioridadFK:  2 
+   fechaInicio: '2012-04-15 00:00:00'
+   fechaFinal:  '2012-04-15 00:00:00' 
    
   Protección animal:
    idProyecto: 6
    nombre: Protección animal en la localidad de suba
    descProyecto: Iniciativa para extender la protección animal en la localidad de suba 
    statusFK:     1
-   prioridadFK:  2 
+   prioridadFK:  1 
+   fechaInicio: '2012-06-15 00:00:00'
+   fechaFinal:  '2012-06-15 00:00:00' 
    
   Reverva:
    idProyecto: 7
    nombre: Reserva de vida silvestre
    descProyecto: Convervación de vida silvestre en la reserva forestal.
    statusFK:     1
-   prioridadFK:  2
+   prioridadFK:  3
+   fechaInicio: '2012-07-14 00:00:00'
+   fechaFinal:  '2012-07-14 00:00:00'
    
    
    

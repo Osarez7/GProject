@@ -14,11 +14,14 @@ jQuery(document).ready(function(){
            
             changeLayer(url_index_lugares.replace('data',mapSelected));
             mostraListaLugares(url_index_lugares.replace('data',mapSelected));
+
+ jQuery("#panel_div").show();
            
         }else{
             
             var $warningBox = createWarningBox();
-            $warningBox.html("Debe seleccionar un mapa"); 
+            $warningBox.html("Debe seleccionar un mapa");
+            
             $warningBox.dialog("open");
         }
        
@@ -99,8 +102,7 @@ function  createLayer(url){
             'featureselected': function (evt){
     
                 var feature = evt.feature;
-                alert("Voy a editar el lugar " + feature.attributes.idLugar) 
-                    
+              
                 crearContentDialog();
                 jQuery.ajax({
                     type:"GET",
@@ -181,8 +183,7 @@ function initControls(layer){
                     var fromProjection   = new OpenLayers.Projection("EPSG:900913");
     
                     var lonlat =  position.transform( fromProjection, toProjection);  
-                    alert("Dibujando en cordanadas lon :" + lonlat.lon  );
-               
+                  
                     crearContentDialog();
                    
                     jQuery.ajax({
@@ -193,7 +194,7 @@ function initControls(layer){
                         success:function (msg) {
       
                             jQuery("#customDialogConent").html(msg);
-                            jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width());
+                            jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div.cotent-form").width());
                    
 
                         }

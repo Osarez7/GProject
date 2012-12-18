@@ -33,13 +33,10 @@
                     <div class="button-group">
 
 
-                        <?php echo link_to('Home', 'home/index', array('class' => 'button primary icon home'))
+                        <?php echo link_to('Mis proyectos', 'proyecto/index', array('class' => 'button primary icon home'))
                         ?>
 
-                        <?php
-                        echo link_to('Proyectos', 'proyecto/index', array('class' => 'button icon user'))
-                        ?>
-
+                     
 
 
                         <?php if ($sf_user->hasCredential('gerente')): ?>

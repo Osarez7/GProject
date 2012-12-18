@@ -3,13 +3,13 @@
 Mapa:
   mapa1:
     idMapa: 1
-    nombreMapa: Sedes U.Distrital
-    descMapa: Mapa de todas las sedes de la u distrital
+    nombreMapa: Lugares de interés
+    descMapa: Lugares de interés
     proyectoFK: 1
   mapa2:
     idMapa: 2
-    nombreMapa: Bibliotecas distritales
-    descMapa: Maa de las blibiotecas distritales
+    nombreMapa: Visita a campo
+    descMapa: blibiotecas distritales
     proyectoFK: 1
   mapa3:
     idMapa: 3

@@ -32,6 +32,7 @@ class frontendConfiguration extends sfApplicationConfiguration
       sfValidatorBase::setDefaultMessage('required','Este campo es obligatorio.');
       sfValidatorBase::setDefaultMessage('invalid', 'Dato inválido.');
       sfValidatorDateTime::setDefaultMessage("bad_format", "%value% no es una fecha válida.");
-      
+      sfValidatorNumber::setDefaultMessage('invalid', "%value% no es un número");
+      sfValidatorDateRange::setDefaultMessage('invalid', '%value% no concuertada con el formato (%time_format%)');
    }
 }

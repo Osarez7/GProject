@@ -1,4 +1,4 @@
-<div id="content-asignar-usuario">
+<div id="content-asignar-usuario" class="cotent-form">
  <?php if ($sf_user->hasFlash('OK')): ?>
     <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>
 <?php endif; ?> 

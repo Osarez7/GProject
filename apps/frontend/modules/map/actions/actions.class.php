@@ -15,7 +15,9 @@ class mapActions extends sfActions
   
  $this->logMessage("Id de proyecto es ".$request->getParameter('idProyecto'), "notice");
 
-    $this->idProyecto = $request->getParameter('idProyecto');
+   $this->proyecto = Doctrine_Core::getTable('Proyecto')
+             ->find(array($request->getParameter('idProyecto')));
+
     $this->mapas = Doctrine_Core::getTable('Mapa')
       ->getMapasPorProyecto($request->getParameter('idProyecto'));
     
@@ -26,6 +28,9 @@ class mapActions extends sfActions
     $this->mapa = Doctrine_Core::getTable('Mapa')->find(array($request->getParameter('id_mapa')));
     $this->forward404Unless($this->mapa);
   }
+
+
+
 
   public function executeNew(sfWebRequest $request)
   {

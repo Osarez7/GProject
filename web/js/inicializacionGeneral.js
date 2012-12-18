@@ -33,7 +33,7 @@ jQuery(window).load(function(){
       
                 jQuery("#customDialogConent").html(msg);
                //  jQuery("#ui-dialog-title-customDialogConent").html($dialogLink.text());
-                jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div:first-child").width()+10);
+                jQuery( "#customDialogConent" ).dialog( "open" ).parents("div.ui-dialog").css("width", jQuery("#customDialogConent div.cotent-form").width());
                    
 
 

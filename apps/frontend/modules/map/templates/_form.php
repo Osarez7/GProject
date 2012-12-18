@@ -2,7 +2,17 @@
 <?php use_javascripts_for_form($form) ?>
 
 
-<div id="form-mapa-content">
+<div id="form-mapa-content" class="cotent-form">
+
+
+<?php if ($form->getObject()->isNew()): ?>
+<h1>Nuevo Mapa</h1>
+
+<?php else: ?>
+<h1>Editar Mapa</h1>
+<?php endif; ?>
+
+
 <form action="<?php echo url_for('map/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id_mapa='.$form->getObject()->getIdMapa() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />

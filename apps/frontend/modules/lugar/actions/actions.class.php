@@ -24,6 +24,18 @@ class lugarActions extends sfActions
     $this->forward404Unless($this->lugar);
   }
 
+
+ public function executeMove(sfWebRequest $request)
+  {
+     $this->lugar = Doctrine_Core::getTable('Lugar')->find(array($request->getParameter('id_lugar')));
+   $this->forward404Unless($this->lugar);
+   // $this->lugar->setLatitud(request->getParameter('lat'));
+ //   $this->lugar->setLongitud(request->getParameter('lon'));
+     $this->lugar->save();
+
+     return $this->renderPartial('lugar/form', array('form' => $this->form,'titulo' =>'Nuevo Lugar'));
+  }
+
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new LugarForm();

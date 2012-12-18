@@ -15,7 +15,7 @@
 
 
     <?php echo $form['password']->renderLabel() ?>:
-    <p><a href="#">¿Olvidó su  contraseña?</a>
+   <!--  <p><a href="#">¿Olvidó su  contraseña?</a> -->
         <?php echo $form['password']->renderError() ?>
 
         <?php echo $form['password'] ?>
@@ -24,7 +24,7 @@
 
 
     <div id="lower">
-        <input type="checkbox"><label class="check" for="checkbox">Recordarme</label>
+      <!--   <input type="checkbox"><label class="check" for="checkbox">Recordarme</label>  -->
         <input class="button" type="submit" value="Ingresar" name="login">
     </div>
 

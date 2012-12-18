@@ -42,14 +42,14 @@ class loginActions extends sfActions {
                     
                     $this->redirect($this->getContext()->getConfiguration()->generateBackEndUrl('homepage', array()));
                 }
-                $this->redirect('home/index');
+                $this->redirect('proyecto/index');
             }
         }
 
 
 
         if ($this->getUser()->isAuthenticated()) {
-           $this->redirect('home/index');
+           $this->redirect('proyecto/index');
         }
 
         $this->form = new LoginForm();

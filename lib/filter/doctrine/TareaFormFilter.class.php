@@ -12,7 +12,7 @@ class TareaFormFilter extends BaseTareaFormFilter
 {
   public function configure() {
         $this->useFields(array(
-           
+   
             'fechaInicio',
             'fechaFinal',
             'statusFK',
@@ -30,7 +30,7 @@ class TareaFormFilter extends BaseTareaFormFilter
                     'to_date' => new sfWidgetFormTextDateInputJQueryDatePicker(
                             array('image' => '/images/calendar_view_month.png',
                                 'include_time' => false)), 'with_empty' => false,
-                    'template' => 'desde %from_date% hasta %to_date%'
+                    'template' => 'Desde %from_date% Hasta %to_date%'
                         )
         );
 
@@ -42,7 +42,7 @@ class TareaFormFilter extends BaseTareaFormFilter
                     'to_date' => new sfWidgetFormTextDateInputJQueryDatePicker(
                             array('image' => '/images/calendar_view_month.png',
                                 'include_time' => false)), 'with_empty' => false,
-                    'template' => 'desde %from_date% hasta %to_date%'
+                    'template' => 'Desde %from_date% Hasta %to_date%'
                         )
         );
 

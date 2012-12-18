@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<div id="form-tarea-cotent">
+<div id="form-tarea-cotent" class="cotent-form">
 
 <?php if ($sf_user->hasFlash('OK')): ?>
     <div class="flash_ok"><?php echo $sf_user->getFlash('OK') ?></div>
@@ -29,5 +29,5 @@
     </table>
 </form>
 
-<div>
+</div>
 

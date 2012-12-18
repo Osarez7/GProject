@@ -29,7 +29,7 @@ class ProyectoFormFilter extends BaseProyectoFormFilter {
                     'to_date' => new sfWidgetFormTextDateInputJQueryDatePicker(
                             array('image' => '/images/calendar_view_month.png',
                                 'include_time' => false)), 'with_empty' => false,
-                    'template' => 'desde %from_date% hasta %to_date%'
+                    'template' => 'Desde %from_date% Hasta %to_date%'
                         )
         );
 
@@ -41,7 +41,7 @@ class ProyectoFormFilter extends BaseProyectoFormFilter {
                     'to_date' => new sfWidgetFormTextDateInputJQueryDatePicker(
                             array('image' => '/images/calendar_view_month.png',
                                 'include_time' => false)), 'with_empty' => false,
-                    'template' => 'desde %from_date% hasta %to_date%'
+                    'template' => 'Desde %from_date% Hasta %to_date%'
                         )
         );
 

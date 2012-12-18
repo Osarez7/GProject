@@ -37,9 +37,9 @@
 
 <div class="content-info">
     <h1><?php echo $proyecto->getNombre() ?></h1>
-    <span id="control-detalles"> Ver detalles</span>
+  
     <div id="detalle-proyecto-content">
-        <label> Descripción del proyecto: </labe> <br/>
+        <label> Descripción del proyecto: </label> <br/>
             <?php echo $proyecto->getDescProyecto() ?>
 
             <table>
@@ -47,10 +47,12 @@
                     <td>
                         <label>  Estado: </label>  <?php echo $proyecto->getStatus() ?>
                     </td>
-                    <td>
-                        <label>  Prioridad :  </label> <?php echo $proyecto->getPrioridad() ?>
-                    </td>
+                  
                 </tr>
+
+<tr> <td>
+                        <label>  Prioridad :  </label> <?php echo $proyecto->getPrioridad() ?>
+                    </td></tr>
             </table>
 
     </div>
@@ -97,6 +99,12 @@
 </div>
 
 
+
+
+
+
+<a  class="button icon add dialogLink" href="<?php echo url_for('tarea/new?idProyecto=' . $proyecto->getIdProyecto()) ?>">Nueva Tarea</a>
+
 <br/>
 
 <p>Convensiones<p>
@@ -109,11 +117,6 @@
         <td><img src="/images/raster/magenta/fork_11x12.png" alt="Nueva Sub Tarea" /> Nueva Sub Tarea</td>
     </tr>
 </table>
-
-
-
-<a  class="button icon add dialogLink" href="<?php echo url_for('tarea/new?idProyecto=' . $proyecto->getIdProyecto()) ?>">Nueva Tarea</a>
-
 
 <?php slot('menu_lateral') ?>
 <?php include_partial('proyecto/menu-lateral-proyecto', array('proyecto' => $proyecto)) ?>
